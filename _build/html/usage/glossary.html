@@ -1,0 +1,493 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>13. Glossary &mdash; ASGARD Analysis Cockpit Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="12. FAQs" href="faqs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ASGARD Analysis Cockpit Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">2. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">3. Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-setup-guide.html">4. Quick Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps.html">5. First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-concepts.html">6. Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">7. Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselining-best-practices.html">8. Baselining Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-management-best-practices.html">9. Case Management Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">10. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="typical-pitfalls.html">11. Typical Pitfalls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">12. FAQs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">13. Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#baselining">13.1. Baselining</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#auto-baselining">13.1.1. Auto Baselining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optimization">13.1.2. Optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cases">13.2. Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#auto-case-id-formerly-group-id">13.2.1. Auto Case ID (formerly Group ID)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamic-auto-case-id">13.2.2. Dynamic Auto Case ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filter-priority">13.2.3. Filter Priority</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#external-id">13.2.4. External ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#difference-between-summary-and-assessment">13.2.5. Difference between Summary and Assessment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#difference-between-false-positive-and-legitimate-anomaly">13.2.6. Difference between False Positive and Legitimate Anomaly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case-types">13.2.7. Case Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#invisible-backend">13.3. Invisible (Backend)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#filter-templates">13.3.1. Filter Templates</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASGARD Analysis Cockpit Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>13. Glossary</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/usage/glossary.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="glossary">
+<h1>13. Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="baselining">
+<h2>13.1. Baselining<a class="headerlink" href="#baselining" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Baselining</span></code> section is meant to assign all unassigned events to
+cases, so that newly incoming events are immediately assigns to existing
+cases and only differences to the last scan have to be reviewed. (new
+malware, new signatures)</p>
+<div class="section" id="auto-baselining">
+<h3>13.1.1. Auto Baselining<a class="headerlink" href="#auto-baselining" title="Permalink to this headline">¶</a></h3>
+<p>The Auto Baselining feature can be used to assign events to new and
+automatically generated cases. Auto Casing makes use of the so-called
+Auto Case ID, which is the same for all events of a certain type (see
+Glossary &gt; Cases &gt; Auto Case ID for details).</p>
+<p>Auto Baselining is typically used to quickly reduce the remaining events
+in the Baselining section. It reduced the burden to manually group
+together events of a similar type.</p>
+<p>Automatically cased events can then be reviewed in the <code class="docutils literal notranslate"><span class="pre">Cases</span></code> section.</p>
+<p>Auto Baselining uses a threshold that defines the minimum number of
+events required in each of these automatically generated cases. A
+threshold of 10 instructs the process to create only cases for groups of
+at least 10 similar events. Obviously, we do not recommend using
+threshold of 1, but everything higher than 1 can be reasonable.</p>
+<p>The best practice is to start the Auto Baselining process with a
+relatively high threshold (e.g., 10) and then subsequently perform
+iterations with lower thresholds.</p>
+</div>
+<div class="section" id="optimization">
+<h3>13.1.2. Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">¶</a></h3>
+<p>The Optimization is used to assign unassigned events to cases based on
+their filters.</p>
+<p>Usually, an analyst selects events and creates a case with these events.
+During the case creation a set of filters gets generated to
+automatically assign newly incoming events to this case.</p>
+<p>Often, characteristics of existing older events also align with the
+criteria described in the filters of the new case. However, they do not
+get assigned to that case, because they’re already in the database and
+the case assignment only happens when new events arrive.</p>
+<p>Optimization is used to assign unassigned events to existing cases.</p>
+</div>
+</div>
+<div class="section" id="cases">
+<h2>13.2. Cases<a class="headerlink" href="#cases" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="auto-case-id-formerly-group-id">
+<h3>13.2.1. Auto Case ID (formerly Group ID)<a class="headerlink" href="#auto-case-id-formerly-group-id" title="Permalink to this headline">¶</a></h3>
+<p>The Auto Case ID is an automatically generated ID for a group of events.</p>
+<p>This group has been formed automatically by the use filters generated
+from predefined filter templates (see Glossary &gt; Invisible &gt; Filter
+Templates).</p>
+<p>Auto Case IDs identify a groupable set of events.</p>
+<p>The Auto Case IDs are used in case creation as the default method to
+assign new events to a case. You can review the Auto Case IDs used to
+assign new events to a case in the Tab <code class="docutils literal notranslate"><span class="pre">Grouping</span> <span class="pre">Criteria</span></code> of each case.</p>
+<div class="figure">
+<a class="reference external image-reference" href="../_images/image96.png"><img alt="Create Case" src="../_images/image96.png" /></a>
+</div>
+<p>They are also used in “Auto Casing” and “Optimization”. (see Glossary &gt;
+Baselining)</p>
+</div>
+<div class="section" id="dynamic-auto-case-id">
+<h3>13.2.2. Dynamic Auto Case ID<a class="headerlink" href="#dynamic-auto-case-id" title="Permalink to this headline">¶</a></h3>
+<p>The Dynamic Auto Case IDs are generated for events that don’t have a
+corresponding filter template defined. This is often the case for very
+rare event types or events of a low level (Info, Notice).</p>
+<p>You can think of them as a fallback in form of a less efficient grouping
+method.</p>
+<p>They are usually created of all fields of an event except the ones that
+are highly specific, like the HOSTNAME field.</p>
+<p>If your case uses many Dynamic Auto Case IDs, distinguishable by the
+leading uppercase “D”, then automatic event assignment is nearly
+impossible. In these cases, you should rather use a string conditions to
+group events into that case and assign new incoming events
+automatically.</p>
+</div>
+<div class="section" id="filter-priority">
+<h3>13.2.3. Filter Priority<a class="headerlink" href="#filter-priority" title="Permalink to this headline">¶</a></h3>
+<p>It is possible that two or more cases include filters that would assign
+a new incoming event to them. This often happens when one case uses Auto
+Case ID (see Glossary section) and another case uses a string selection
+(String Condition).</p>
+<p>The filter priority can be used to prioritize the filters of a case so
+that newly incoming events go to that prioritized case and not the one
+with the default priority.</p>
+<p>You could also create fallback cases, e.g., for all events of the level
+“Notice” and intentionally reduce the priority of this case so that
+other cases that select events of that level always come first.</p>
+<p>The full prioritization process looks like:</p>
+<ul class="simple">
+<li>Case with higher priority takes the event</li>
+<li>If both cases have the same priority, the case with the higher “Type”
+takes the event (Incident &gt; Noteworthy)</li>
+<li>If both cases have the same priority and the same type, the case with
+the smaller case ID (older case) takes the events</li>
+</ul>
+</div>
+<div class="section" id="external-id">
+<h3>13.2.4. External ID<a class="headerlink" href="#external-id" title="Permalink to this headline">¶</a></h3>
+<p>This field is optional and can be used to refer to an ID that you use in
+a different system, like a ticket management system or an incident
+response platform.</p>
+</div>
+<div class="section" id="difference-between-summary-and-assessment">
+<h3>13.2.5. Difference between Summary and Assessment<a class="headerlink" href="#difference-between-summary-and-assessment" title="Permalink to this headline">¶</a></h3>
+<p>The field <code class="docutils literal notranslate"><span class="pre">Summary</span></code> is meant to include the elements (fields) of events
+that are used as characteristics to perform an assessment. You can think
+of it as the values that you as an analyst want to highlight for other
+analysts that review that specific case. It’s often a special file name
+and location or a process name and YARA rule match on that process.</p>
+<p>You can use the “Auto Summary” feature to get an auto-recommended
+content for this field.</p>
+<p>The field <code class="docutils literal notranslate"><span class="pre">Assessment</span></code> is the one that requires the most effort. It
+contains the findings of the analyst’s review.</p>
+</div>
+<div class="section" id="difference-between-false-positive-and-legitimate-anomaly">
+<h3>13.2.6. Difference between False Positive and Legitimate Anomaly<a class="headerlink" href="#difference-between-false-positive-and-legitimate-anomaly" title="Permalink to this headline">¶</a></h3>
+<p>We use “False Positive” and “Legitmate Anomaly” to distinguish between
+situations in which the scanner (THOR) made an error and situations in
+which a customer environment contains suspicious or malicious elements
+that are known.</p>
+<p>E.g., a Winrar used by admins as “r.exe” in “C:\users\public” for
+software rollout purposes is not considered a “False Positive” but a
+“Legitmate Anomaly”. It is a finding which doesn’t have to be fixed in
+THOR’s signature set but is simply a specific situation in the analyzed
+environment.</p>
+<p>Matches that are clearly an error in THOR signatures should be
+classified as “False Positive”.</p>
+<p>Examples for Legitimate Anomalies”:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Word documents with Macros that write to the filesystem and include a</dt>
+<dd>“AutoOpen” event trigger</dd>
+</dl>
+</li>
+<li>Procdump.exe findings</li>
+<li>Suspicious RUN Key entries that use customer software</li>
+<li><dl class="first docutils">
+<dt>Custom software that uses suspicious folders, e.g. C:\Users\Public,</dt>
+<dd>%AppData%</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Process memory match with a “ReflectiveLoader” YARA rule on a third</dt>
+<dd>party EDR agent process</dd>
+</dl>
+</li>
+</ul>
+<p>Examples for “False Positives”:</p>
+<ul class="simple">
+<li>YARA rule match on Bloomberg or SAP software</li>
+<li>Filename IOC match “w64.exe” on a Perl for Windows build tool</li>
+<li><dl class="first docutils">
+<dt>YARA rule match with “Putty_Anomaly” on a legitimate and signed</dt>
+<dd>putty.exe</dd>
+</dl>
+</li>
+</ul>
+<p>Another good example is one of the many anomaly signatures that triggers
+on an XORed MS-DOS Stub. A match with such a signature only qualifies as
+false positives when there is no XORed MS-DOS stub in that file and not
+when it turns out to be a legitimate file. The signature detects what it
+is designed to detect.</p>
+<p>A signature with a rule named MAL_Xrat_Mar21_1 that triggers on a
+legitimate and signed executable, however, is a false positive.</p>
+</div>
+<div class="section" id="case-types">
+<h3>13.2.7. Case Types<a class="headerlink" href="#case-types" title="Permalink to this headline">¶</a></h3>
+<p>The following table describes the cases types taxonomy used in Analysis
+Cockpit.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Incident</td>
+<td><div class="first last line-block">
+<div class="line">Incident cases report a clear threat, indicated by a hard match and verified by</div>
+<div class="line">research. Analysts create incident cases to indicate the highest possible</div>
+<div class="line">certainty and risk. Incident cases are also characterized by the fact that they</div>
+<div class="line">do not need to be verified by someone else. The either indicate malware, threat</div>
+<div class="line">group or penetration testing activity and should trigger immediate response.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>Suspicious</td>
+<td><div class="first last line-block">
+<div class="line">Suspicious cases are based on significant indicators that require a review by</div>
+<div class="line">someone within the organization or more evidence to come to a final conclusion.</div>
+<div class="line">Often, file samples or process memory dumps are required to verify/falsify a</div>
+<div class="line">verdict. Cases of this type usually trigger evidence collection or review actions.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>Noteworthy</td>
+<td><div class="first last line-block">
+<div class="line">Noteworthy cases are based on soft indicators or elements that should be</div>
+<div class="line">reviewed whenever there is time to do that. They include all kinds of events that</div>
+<div class="line">cannot be dismissed as false positives or anomalies but are likely uncritical.</div>
+<div class="line">Noteworthy cases don’t trigger an immediate response but should be reviewed</div>
+<div class="line">whenever there is time to do that.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>Vulnerability</td>
+<td><div class="first last line-block">
+<div class="line">Vulnerability cases contain detected software or configuration weaknesses that</div>
+<div class="line">system integrity. The reported vulnerabilities often include easy to exploit</div>
+<div class="line">weaknesses that are frequently used by threat groups to executed code remotely,</div>
+<div class="line">gain access or escalate privileges on affected systems. Cases classified as</div>
+<div class="line">Vulnerability are typically integrated into a vulnerability management process</div>
+<div class="line">as additional input channel.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">Legitimate</div>
+<div class="line">Anomaly</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Legitimate Anomaly cases contain events that related to legitimate elements</div>
+<div class="line">that are suspicious but in the context of the analyzed organization an ordinary</div>
+<div class="line">finding. The reason for an anomaly is not a malfunction of the scanner but a</div>
+<div class="line">peculiarity within the analyzed environment. Legitimate Anomalies don’t trigger</div>
+<div class="line">any further activity.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>False Positive</td>
+<td><div class="first last line-block">
+<div class="line">False Positive cases contain events that indicate suspicious or malicious activity,</div>
+<div class="line">but the review revealed that is actually legitimate software or other elements.</div>
+<div class="line">The only reason for a false positive is a scanner malfunction or signatures that</div>
+<div class="line">falsely report a threat (see the section 13.2.6 “Difference between False Positive</div>
+<div class="line">and Legitimate Anomaly” for more details). A false positive usually triggers a</div>
+<div class="line">review by Nextron Systems and a signature adjustment.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>Unknown</td>
+<td>The default state of newly created cases.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="invisible-backend">
+<h2>13.3. Invisible (Backend)<a class="headerlink" href="#invisible-backend" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="filter-templates">
+<h3>13.3.1. Filter Templates<a class="headerlink" href="#filter-templates" title="Permalink to this headline">¶</a></h3>
+<p>The Analysis Cockpit uses so-called filter templates that describe which
+fields in which event types are specific enough to be used in a filter
+that can be used to automatically group events.</p>
+<p>These groups can be identified by a common so-called “Auto Case ID”
+(formerly Group ID). See the respective entry in this Glossary.</p>
+<p>The filter templates are static and predefined.</p>
+<p>E.g., a typical filter template states that for events in the Module
+“Filescan”, the fields FILE and SHA1 are sufficiently specific to group
+events based on equal values in these two fields.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="faqs.html" class="btn btn-neutral float-left" title="12. FAQs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Nextron Systems GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

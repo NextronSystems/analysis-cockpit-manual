@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9. Case Management Best Practices &mdash; ASGARD Analysis Cockpit Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10. API" href="api.html" />
+    <link rel="prev" title="8. Baselining Best Practices" href="baselining-best-practices.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ASGARD Analysis Cockpit Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">2. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">3. Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-setup-guide.html">4. Quick Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps.html">5. First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-concepts.html">6. Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">7. Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselining-best-practices.html">8. Baselining Best Practices</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Case Management Best Practices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#open-a-case-for-editing">9.1. Open a Case for Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#case-dispatching">9.2. Case Dispatching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#closing-a-case">9.3. Closing a Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generate-and-review-auto-case-ids">9.4. Generate and Review auto_case_ids</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#limitations">9.4.1. Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#more-information-about-cases">9.5. More Information about Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bulk-edit-bulk-delete">9.6. Bulk Edit / Bulk Delete</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">10. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="typical-pitfalls.html">11. Typical Pitfalls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">12. FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">13. Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASGARD Analysis Cockpit Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>9. Case Management Best Practices</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/usage/case-management-best-practices.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="case-management-best-practices">
+<h1>9. Case Management Best Practices<a class="headerlink" href="#case-management-best-practices" title="Permalink to this headline">¶</a></h1>
+<p>This section assumes, that a 2-Level model as described in in chapter
+6.3 “Understanding Users, Roles, Rights and Case Status” is used.</p>
+<p>The following actions will be explained:</p>
+<ul class="simple">
+<li>Opening a case</li>
+<li>Handing a case over to the next level</li>
+<li>Closing a case</li>
+<li>Reviewing the rules that add future logs to this case (Grouping
+Criteria)</li>
+</ul>
+<div class="section" id="open-a-case-for-editing">
+<h2>9.1. Open a Case for Editing<a class="headerlink" href="#open-a-case-for-editing" title="Permalink to this headline">¶</a></h2>
+<p>The picture below shows the Case Management view with cases that have
+been created with the <code class="docutils literal notranslate"><span class="pre">Auto</span> <span class="pre">Case</span></code> feature.</p>
+<div class="figure" id="id1">
+<a class="reference external image-reference" href="../_images/image84.png"><img alt="Opening a Case for editing" src="../_images/image84.png" /></a>
+<p class="caption"><span class="caption-text">Opening a Case for editing</span></p>
+</div>
+<p>In our example a Level 1 Analyst would now pick one of these open cases
+and set the Status to “Level 1 Working” by opening the case (clicking on
+the magnifier button), modifying the status and then clicking <code class="docutils literal notranslate"><span class="pre">Update</span></code>.</p>
+<div class="figure" id="id2">
+<a class="reference external image-reference" href="../_images/image85.png"><img alt="Change Status" src="../_images/image85.png" /></a>
+<p class="caption"><span class="caption-text">Change Status</span></p>
+</div>
+<p>Now the logs within the case can be analyzed and results can be
+documented in the assessment field. Recommendations can be set from the
+canned recommendations list. Columns can be faded in and out and
+comments can be added.</p>
+</div>
+<div class="section" id="case-dispatching">
+<h2>9.2. Case Dispatching<a class="headerlink" href="#case-dispatching" title="Permalink to this headline">¶</a></h2>
+<p>Let’s assume, our Level 1 Analyst concludes, that this is a “Legitmate Anomaly”.
+He will now set the status to “Level 1 Finished” and update
+the case. After setting the case to “Level 1 Finished” the case becomes
+visible to the Level 2 Analyst.</p>
+</div>
+<div class="section" id="closing-a-case">
+<h2>9.3. Closing a Case<a class="headerlink" href="#closing-a-case" title="Permalink to this headline">¶</a></h2>
+<p>Let’s assume, that a Level 2 Analyst now picks one of the cases in
+status “Level 1 Finished” and starts working on this case.</p>
+<p>In this respect we assume, that something suspicious has been found,
+that needs further analysis by the system administration team. In most
+organizations this will be controlled through the organization’s action
+request or ticketing system. So, we assume, that we will close the case
+in the Analysis Cockpit as it is progressed in another system. Thus, the
+status is changed to closed and the case gets updated.</p>
+<div class="figure" id="id3">
+<a class="reference external image-reference" href="../_images/image86.png"><img alt="Closing a Case" src="../_images/image86.png" /></a>
+<p class="caption"><span class="caption-text">Closing a Case</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Analysis Cockpit provides interfacing to action-request and
+external ticketing systems using the API.</p>
+</div>
+</div>
+<div class="section" id="generate-and-review-auto-case-ids">
+<h2>9.4. Generate and Review auto_case_ids<a class="headerlink" href="#generate-and-review-auto-case-ids" title="Permalink to this headline">¶</a></h2>
+<p>These auto_case_ids can be reviewed in the <code class="docutils literal notranslate"><span class="pre">Grouping</span> <span class="pre">Criteria</span></code> section
+of the case.</p>
+<div class="figure" id="id4">
+<a class="reference external image-reference" href="../_images/image87.png"><img alt="Reviewing Grouping Criteria" src="../_images/image87.png" /></a>
+<p class="caption"><span class="caption-text">Reviewing Grouping Criteria</span></p>
+</div>
+<p>In our example, three auto_case_ids were added that match all 1,000
+loglines. In the future all incoming logs, that match one of the three
+“Detailed Reasons” will be added to this case directly and will not show
+up in the Log Management section.</p>
+<div class="section" id="limitations">
+<h3>9.4.1. Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h3>
+<p>There are limitations to the visibility of grouping criteria. Grouping
+Criteria are only calculated for Alerts and Warnings. For all other
+types of logs (Notices, Info, Error) auto_case_ids are not calculated,
+so every logline gets its own highly specific filter that matches future
+occurrences of exactly the same logline but will not do any kind of
+generic matching. These highly specific filters are not displayed in the
+case for simplicities sake.</p>
+<p>In rare cases the Analysis Cockpit will find it difficult to calculate
+auto_case_ids even for Alerts and Warnings. These logs will get tagged
+with <code class="docutils literal notranslate"><span class="pre">optimized\_template=false</span></code>. In this case, the behavior is like for
+Notices, Info and Error messages. Grouping Criteria will not show up as
+it will be one highly specific filter per logline.</p>
+</div>
+</div>
+<div class="section" id="more-information-about-cases">
+<h2>9.5. More Information about Cases<a class="headerlink" href="#more-information-about-cases" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Assets</span></code> tab of a case shows assets that have contributes at least
+one log line to this case. In this example 1.169 assets are affected.
+All of them have the same operating system “Debian GNU/Linux 9
+(stretch)”.</p>
+<div class="figure" id="id5">
+<a class="reference external image-reference" href="../_images/image88.png"><img alt="Case - Assets Tab" src="../_images/image88.png" /></a>
+<p class="caption"><span class="caption-text">Case – Assets Tab</span></p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Scans</span></code> tab shows information about the scans (scan ID, group scan
+ID) the events have been found in.</p>
+<div class="figure" id="id6">
+<a class="reference external image-reference" href="../_images/image89.png"><img alt="Case - Scans tab" src="../_images/image89.png" /></a>
+<p class="caption"><span class="caption-text">Case – Scans tab</span></p>
+</div>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Comments</span> <span class="pre">/</span> <span class="pre">Attachments</span></code> tab you can add comments and attachments
+to this case. Attachments can be used to pass additional information to
+members of the analysis team (e.g. memory dump for further analysis).</p>
+<div class="figure" id="id7">
+<a class="reference external image-reference" href="../_images/image90.png"><img alt="Case - Comments / Attachments tab" src="../_images/image90.png" /></a>
+<p class="caption"><span class="caption-text">Case – Comments / Attachments tab</span></p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Changes</span></code> tab shows information about changes to this case.</p>
+<p>In other words: This your case audit log.</p>
+<div class="figure" id="id8">
+<a class="reference external image-reference" href="../_images/image91.png"><img alt="Case - Changes tab" src="../_images/image91.png" /></a>
+<p class="caption"><span class="caption-text">Case – Changes tab</span></p>
+</div>
+</div>
+<div class="section" id="bulk-edit-bulk-delete">
+<h2>9.6. Bulk Edit / Bulk Delete<a class="headerlink" href="#bulk-edit-bulk-delete" title="Permalink to this headline">¶</a></h2>
+<p>The Analysis Cockpit features a convenient way to make certain changes
+to groups of cases. Just select the case in the left column and click
+the <code class="docutils literal notranslate"><span class="pre">Bulk</span> <span class="pre">Edit</span> <span class="pre">/</span> <span class="pre">Bulk</span> <span class="pre">Delete</span></code> button. Now you can select what you want
+to change and click the <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Selected</span> <span class="pre">Cases</span></code> button to edit. If you
+want to delete all of those selected cases, just click the
+<code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">Selected</span> <span class="pre">Cases</span></code> button.</p>
+<div class="figure" id="id9">
+<a class="reference external image-reference" href="../_images/image92.png"><img alt="Bulk Edit / Bulk Delete" src="../_images/image92.png" /></a>
+<p class="caption"><span class="caption-text">Bulk Edit / Bulk Delete</span></p>
+</div>
+<p>In this example clicking the <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Selected</span> <span class="pre">Cases</span></code> Button would set the
+type to “Noteworthy” and the status to
+“Level 1 Finished” for cases with
+ID 392 and 393. No comments would have been added. Clicking the <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">Selected</span> <span class="pre">Cases</span></code>
+button would delete those cases. As a consequence of
+deleting the cases all logs within the deleted cases would show up in
+the baselining section.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="10. API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="baselining-best-practices.html" class="btn btn-neutral float-left" title="8. Baselining Best Practices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Nextron Systems GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

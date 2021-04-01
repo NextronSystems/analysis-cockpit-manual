@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Requirements &mdash; ASGARD Analysis Cockpit Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Architecture" href="architecture.html" />
+    <link rel="prev" title="1. Introduction" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ASGARD Analysis Cockpit Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-requirement">2.1. Hardware Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#network-requirments">2.2. Network Requirments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#from-management-workstation-to-analysis-cockpit">2.2.1. From Management Workstation to Analysis Cockpit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-analyst-workstation-to-analysis-cockpit">2.2.2. From Analyst Workstation to Analysis Cockpit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-asgard-management-center-to-analysis-cockpit">2.2.3. From ASGARD Management Center to Analysis Cockpit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-analysis-cockpit-to-siem-if-needed">2.2.4. From Analysis Cockpit to SIEM (if needed)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-analysis-cockpit-to-the-internet">2.2.5. From Analysis Cockpit to the Internet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-analysis-cockpit-to-sandbox-systems-optional">2.2.6. From Analysis Cockpit to Sandbox Systems (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-synchronization">2.2.7. Time Synchronization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dns">2.2.8. DNS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#internet-access-during-installation">2.3. Internet Access during Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ssl-tls-interception">2.3.1. SSL/TLS Interception</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">3. Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-setup-guide.html">4. Quick Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps.html">5. First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-concepts.html">6. Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">7. Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselining-best-practices.html">8. Baselining Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-management-best-practices.html">9. Case Management Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">10. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="typical-pitfalls.html">11. Typical Pitfalls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">12. FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">13. Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASGARD Analysis Cockpit Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>2. Requirements</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/usage/requirements.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="requirements">
+<h1>2. Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hardware-requirement">
+<h2>2.1. Hardware Requirement<a class="headerlink" href="#hardware-requirement" title="Permalink to this headline">¶</a></h2>
+<p>There are a few things to consider, before you start with the
+installation.</p>
+<p>If you install on VMWare, the minimum requirements for the virtual
+machine are as follows:</p>
+<ul class="simple">
+<li>System memory: 16 GB</li>
+<li>Hard disk: 200 GB</li>
+<li>CPU cores: 2</li>
+</ul>
+<p>The disk size of 200 GB is fine in scenarios where you import only
+Alerts and Warnings into the Cockpit, scan less than 1.000 systems on a
+weekly basis and want to keep the logs for less than one year. If you
+also import Notices and Info messages for these 1.000 servers, we
+recommend a disk size of at least 500 GB.</p>
+<p>For an Installation of up to 20.000 endpoints the following
+specifications are recommended:</p>
+<ul class="simple">
+<li>System memory: 32 GB</li>
+<li>Hard disk: 2 TB SSD</li>
+<li>CPU cores: 4</li>
+</ul>
+</div>
+<div class="section" id="network-requirments">
+<h2>2.2. Network Requirments<a class="headerlink" href="#network-requirments" title="Permalink to this headline">¶</a></h2>
+<p>The Analysis Cockpit requires the following open ports (incoming).</p>
+<div class="section" id="from-management-workstation-to-analysis-cockpit">
+<h3>2.2.1. From Management Workstation to Analysis Cockpit<a class="headerlink" href="#from-management-workstation-to-analysis-cockpit" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Administrative web interface: 443/tcp</li>
+<li>Command line administration: 22/tcp</li>
+</ul>
+</div>
+<div class="section" id="from-analyst-workstation-to-analysis-cockpit">
+<h3>2.2.2. From Analyst Workstation to Analysis Cockpit<a class="headerlink" href="#from-analyst-workstation-to-analysis-cockpit" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Administrative web interface: 443/tcp</li>
+</ul>
+</div>
+<div class="section" id="from-asgard-management-center-to-analysis-cockpit">
+<h3>2.2.3. From ASGARD Management Center to Analysis Cockpit<a class="headerlink" href="#from-asgard-management-center-to-analysis-cockpit" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Syslog forwarder: 514/tcp, 514/udp</li>
+<li>Asset synchronization: 443/tcp</li>
+</ul>
+</div>
+<div class="section" id="from-analysis-cockpit-to-siem-if-needed">
+<h3>2.2.4. From Analysis Cockpit to SIEM (if needed)<a class="headerlink" href="#from-analysis-cockpit-to-siem-if-needed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Syslog forwarder: 514/tcp, 514/udp</li>
+</ul>
+</div>
+<div class="section" id="from-analysis-cockpit-to-the-internet">
+<h3>2.2.5. From Analysis Cockpit to the Internet<a class="headerlink" href="#from-analysis-cockpit-to-the-internet" title="Permalink to this headline">¶</a></h3>
+<p>The Analysis Cockpit is configured to retrieve updates from the
+following URLs:</p>
+<ul class="simple">
+<li>Analysis Cockpit packages: <a class="reference external" href="https://update3.nextron-systems.com">https://update3.nextron-systems.com</a></li>
+</ul>
+<p>A proxy system should be configured to allow access to these URLs
+without TLS/SSL interception (Analysis Cockpit uses client-side SSL
+certificates for authentication). It is possible to configure a proxy
+server, username and password during the setup process of the Analysis
+Cockpit platform. It only supports BASIC authentication, not NTLM
+Authentication.</p>
+</div>
+<div class="section" id="from-analysis-cockpit-to-sandbox-systems-optional">
+<h3>2.2.6. From Analysis Cockpit to Sandbox Systems (optional)<a class="headerlink" href="#from-analysis-cockpit-to-sandbox-systems-optional" title="Permalink to this headline">¶</a></h3>
+<p>Depending on the Sandbox system and your individual configuration.</p>
+<p>Typically, 8080/tcp and 443/tcp are used.</p>
+</div>
+<div class="section" id="time-synchronization">
+<h3>2.2.7. Time Synchronization<a class="headerlink" href="#time-synchronization" title="Permalink to this headline">¶</a></h3>
+<p>Analysis Cockpit tries to reach the public Debian time servers by
+default.</p>
+<ul class="simple">
+<li>123/udp to 0.debian.pool.ntp.org</li>
+<li>123/udp to 1.debian.pool.ntp.org</li>
+<li>123/udp to 2.debian.pool.ntp.org</li>
+</ul>
+<p>The NTP server configuration can be changed after logging in to the Web
+guide.</p>
+</div>
+<div class="section" id="dns">
+<h3>2.2.8. DNS<a class="headerlink" href="#dns" title="Permalink to this headline">¶</a></h3>
+<p>Analysis Cockpit needs to be able to resolve internal and external IP
+addresses.</p>
+</div>
+</div>
+<div class="section" id="internet-access-during-installation">
+<h2>2.3. Internet Access during Installation<a class="headerlink" href="#internet-access-during-installation" title="Permalink to this headline">¶</a></h2>
+<p>The Analysis Cockpit installer requires Internet access during the
+setup. The installation process will fail if required packages cannot be
+loaded from <a class="reference external" href="https://update3.nextron-systems.com">https://update3.nextron-systems.com</a></p>
+<div class="section" id="ssl-tls-interception">
+<h3>2.3.1. SSL/TLS Interception<a class="headerlink" href="#ssl-tls-interception" title="Permalink to this headline">¶</a></h3>
+<p>The installation and update processes do not accept an unknown but valid
+SSL/TLS certificate presented by an intercepting entity and therefore
+don’t support SSL/TLS interception.</p>
+<p>Since our products are usually used in possibly compromised
+environments, the integrity of our software and update packages has
+highest priority.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="architecture.html" class="btn btn-neutral float-right" title="3. Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="1. Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Nextron Systems GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

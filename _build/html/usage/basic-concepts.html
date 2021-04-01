@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. Basic Concepts &mdash; ASGARD Analysis Cockpit Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Setup" href="setup.html" />
+    <link rel="prev" title="5. First Steps" href="first-steps.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ASGARD Analysis Cockpit Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">2. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">3. Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-setup-guide.html">4. Quick Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps.html">5. First Steps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Basic Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#section-events-and-baselining">6.1. Section Events and Baselining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#log-processing-and-cases">6.2. Log Processing and Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-users-roles-rights-and-case-status">6.3. Understanding Users, Roles, Rights and Case Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">7. Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselining-best-practices.html">8. Baselining Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-management-best-practices.html">9. Case Management Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">10. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="typical-pitfalls.html">11. Typical Pitfalls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">12. FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">13. Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASGARD Analysis Cockpit Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>6. Basic Concepts</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/usage/basic-concepts.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-concepts">
+<h1>6. Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-events-and-baselining">
+<h2>6.1. Section Events and Baselining<a class="headerlink" href="#section-events-and-baselining" title="Permalink to this headline">¶</a></h2>
+<p>All events that have been stored by Analysis Cockpit – regardless
+whether they have been assigned a particular case or not – are displayed
+in the section <code class="docutils literal notranslate"><span class="pre">Events</span></code>. This section can be regarded to be your hunting
+pool. The section provides powerful filtering options.</p>
+<div class="figure" id="id1">
+<a class="reference external image-reference" href="../_images/image26.png"><img alt="Events Section" src="../_images/image26.png" /></a>
+<p class="caption"><span class="caption-text">Events Section</span></p>
+</div>
+<p>All events that have NOT been assigned a particular case are displayed
+in the <code class="docutils literal notranslate"><span class="pre">Baselining</span></code> section of Analysis Cockpit.</p>
+<p>Logs that represent the same type of anomaly or incident can be grouped
+together using the various filters and then be stored in a Case for
+further analysis. Grouping can be done manually by filtering and click
+<code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Case</span></code> or automatically simply by clicking
+<code class="docutils literal notranslate"><span class="pre">Automatically</span> <span class="pre">generate</span> <span class="pre">Cases</span></code> in the Auto Baselining section. With
+<code class="docutils literal notranslate"><span class="pre">Automatically</span> <span class="pre">generate</span> <span class="pre">Cases</span></code>, the Cockpit automatically calculates groups of
+“similar” log lines. Once stored in a case, these logs will disappear
+from the Baselining section.</p>
+<p>In an ideal organization, the Baselining section should always be empty
+at the end of a day, as these logs represent suspicious elements that
+have not yet been looked at.</p>
+<div class="figure" id="id2">
+<a class="reference external image-reference" href="../_images/image27.png"><img alt="Baselining Section" src="../_images/image27.png" /></a>
+<p class="caption"><span class="caption-text">Baselining Section</span></p>
+</div>
+<p>Details on using the <code class="docutils literal notranslate"><span class="pre">Baselining</span></code> section can be found below.</p>
+</div>
+<div class="section" id="log-processing-and-cases">
+<h2>6.2. Log Processing and Cases<a class="headerlink" href="#log-processing-and-cases" title="Permalink to this headline">¶</a></h2>
+<p>The Cases section gives a good overview regarding the existing cases and
+also provides various filtering options. Column visibility can be
+configured by clicking on the Columns button of this section.</p>
+<div class="figure" id="id3">
+<a class="reference external image-reference" href="../_images/image28.png"><img alt="Cases Section" src="../_images/image28.png" /></a>
+<p class="caption"><span class="caption-text">Cases Section</span></p>
+</div>
+<p>When a case is created, the state will be “Open” and the type will be
+set to “Noteworthy” by default.</p>
+<p>The following states can be set (by default):</p>
+<ul class="simple">
+<li>Open</li>
+<li>Level 1 Finished</li>
+<li>Level 1 Working</li>
+<li>Level 2 Working</li>
+<li>Closed</li>
+</ul>
+<p>It is possible to configure custom states.</p>
+<p>The following types can be set:</p>
+<ul class="simple">
+<li>Incident</li>
+<li>Suspicious</li>
+<li>Vulnerability</li>
+<li>Noteworthy</li>
+<li>Unknown</li>
+<li>Legitimate Anomaly</li>
+<li>False Positive</li>
+</ul>
+<p>See the Glossary in chapter 13 for a detailed description of these
+terms.</p>
+<p>Within a case, it is possible to add various information, write a
+summary, provide canned recommendations or add assessment information.</p>
+<div class="figure" id="id4">
+<a class="reference external image-reference" href="../_images/image29.png"><img alt="Case" src="../_images/image29.png" /></a>
+<p class="caption"><span class="caption-text">Case</span></p>
+</div>
+<p>The loglines contained in the case can of course be analyzed in detail
+and changes to the case are tracked automatically.</p>
+<p>The cockpit will automatically calculate rules (auto_case_id), that
+make sure, future incoming logs that are similar to the log lines in
+this particular case are automatically assigned to this case and WILL
+NOT SHOW UP in the <code class="docutils literal notranslate"><span class="pre">Baselining</span></code> section if this is chosen for this case.</p>
+<p>In order to understand this better, let’s assume you have decided, a
+group of logs are legitimate anomalies. Then all future logs that are
+similar to these anomalies will automatically be added to this case and
+not show up in the Baselining section.</p>
+<p>In case you have decided a group of loglines represent a security
+incident the same things will happen. Future loglines that represent a
+security incident will show up only in the case and not in the
+Baselining section.</p>
+<p>Most organizations obviously want to be alerted in case of a security
+incident. So, the Cockpit can be configured to forward all logs that are
+automatically assigned to an incident case to the organizations’ SIEM
+System via syslog. Organizations that prefer to handle THOR Events
+entirely within the Analysis Cockpit and not forward anything to a SIEM
+system may choose to configure a notification that shows up in the
+COCKPIT’s Notification Section.</p>
+<p>The following picture shows the recommended log processing.</p>
+<div class="figure" id="id5">
+<a class="reference external image-reference" href="../_images/image30.tif"><img alt="Log Processing" src="../_images/image30.tif" /></a>
+<p class="caption"><span class="caption-text">Log Processing</span></p>
+</div>
+<p>As one can see, an incoming logline only shows up in the <code class="docutils literal notranslate"><span class="pre">Baselining</span></code>
+section when it matches no existing case.</p>
+<p>This behavior is highly configurable and can be changed in the
+<code class="docutils literal notranslate"><span class="pre">Settings</span></code> section of the Analysis Cockpit. One can even decide not to
+forward anything to a SIEM System or may decide to also forward
+suspicious elements in addition.</p>
+<p>In other Words:</p>
+<p>Cases represent the means of setting and maintaining the log baseline
+within the Cockpit. When you scan your infrastructure once, assign all
+logs to cases and then scan it for the second time, the <code class="docutils literal notranslate"><span class="pre">Baselining</span></code>
+section should be empty if nothing has changed. All incoming logs should
+be similar to the ones in the first scan and therefore be assigned to
+the respective cases and not show up in the <code class="docutils literal notranslate"><span class="pre">Baselining</span></code> section.</p>
+<p>Working with cases is explained in detail in the sections below.</p>
+</div>
+<div class="section" id="understanding-users-roles-rights-and-case-status">
+<h2>6.3. Understanding Users, Roles, Rights and Case Status<a class="headerlink" href="#understanding-users-roles-rights-and-case-status" title="Permalink to this headline">¶</a></h2>
+<p>The rights and roles model within the cockpit is aimed to support large
+multinational organizations with different independent users working
+with the case management at the same time. An organization responsible
+for analyzing THOR logs might be split up in groups of analysts.</p>
+<p>Within the cockpit, all users have the right to access the logs and
+create cases. Within the <code class="docutils literal notranslate"><span class="pre">Case</span> <span class="pre">Management</span></code> section, access rights are
+granted depending on the particular state the case is in.</p>
+<p>In order to setup your rights management you must first decide about the
+states you want your cases to have, then assign rights for a particular
+state to a role and after that you add users to that particular role.</p>
+<p>In order to understand this better, let’s look at an example.</p>
+<p>Let’s assume we have an organization where a Level 1 analyst group
+located in Frankfurt is responsible for creating cases and providing an
+initial assessment for cases, while a Level 2 analyst group located in
+Hamburg is responsible for reviewing, final decision and closing of
+cases. In order to support an efficient workflow, you would at least
+need the following states for your cases:</p>
+<ul class="simple">
+<li>Open (nobody is yet working on this case)</li>
+<li>Level 1 Working (Level 1 is working on this case)</li>
+<li>Level 1 Finished (Level 1 has finished and nobody is now working on this case)</li>
+<li>Level 2 Working (Level 2 is working on this case)</li>
+<li>Closed (Case closed)</li>
+</ul>
+<p>A workflow could look like this:</p>
+<div class="figure" id="id6">
+<a class="reference external image-reference" href="../_images/image31.png"><img alt="Workflow open Cases" src="../_images/image31.png" /></a>
+<p class="caption"><span class="caption-text">Workflow open Cases</span></p>
+</div>
+<p>For your convenience, we already did the setup for this example and ship
+all Analysis Cockpit with this workable template by default. You are
+free to use, modify or delete the corresponding rights, statuses and
+roles.</p>
+<p>However, in order to explain the concepts and the setup of roles and
+statuses better we assume for a while, we had an empty cockpit with no
+roles and statuses pre-configured.</p>
+<p>In order to set up our pre-configured example, we navigate to the
+<code class="docutils literal notranslate"><span class="pre">Settings</span></code> section and create the following roles:</p>
+<div class="figure" id="id7">
+<a class="reference external image-reference" href="../_images/image32.png"><img alt="Settings - adding additional roles" src="../_images/image32.png" /></a>
+<p class="caption"><span class="caption-text">Settings – adding additional roles</span></p>
+</div>
+<p>Every role can have different rights. We will explain this in detail in
+the next section. Firstly, we create Level 1 Analyst and Level 2 Analyst
+without rights at all.</p>
+<p>After that we define the following statuses:</p>
+<div class="figure" id="id8">
+<a class="reference external image-reference" href="../_images/image33.png"><img alt="Settings - Case Status" src="../_images/image33.png" /></a>
+<p class="caption"><span class="caption-text">Settings – Case Status</span></p>
+</div>
+<p>In the lower table you can manage the access rights for every role and
+every Case Status. We can give the suitable rights to our generated
+roles by clicking the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Role</span> <span class="pre">Case</span> <span class="pre">Status</span></code> button on the right.</p>
+<div class="figure" id="id9">
+<a class="reference external image-reference" href="../_images/image34.png"><img alt="Edit Rights - Read, Write, Set" src="../_images/image34.png" /></a>
+<p class="caption"><span class="caption-text">Edit Rights – Read, Write, Set</span></p>
+</div>
+<p>For Level 1 Analyst we add the right to read and write all “Open” cases
+and change the case status to this status (set).</p>
+<p>Additionally, we grant Level 1 Analyst the rights to read, write and set
+all cases for “Level 1 Working”.</p>
+<p>Finally, we grant the right to read and set cases for the status <code class="docutils literal notranslate"><span class="pre">Level1</span> <span class="pre">Finished</span></code>.
+This allows Level 1 Analysts to set a particular case to
+“Level 1 Finished” and restricts them from modifying this case once they
+have passed it to this status.</p>
+<p>For Level 2 we now add the rights to read and write cases for
+“Level 1 Finished” and the rights to read, write and set cases for
+“Level 2 Working”. This allows Level 2 analysts to pick cases from the
+“Level 1 Finished” status and start working on them.</p>
+<p>As we do not want Level 2 Analysts to reopen cases, that have already
+been closed we only grant them rights to read and set for the status
+“Closed”.</p>
+<p>Additionally, we give Level 2 Analyst the right to set the case status
+to “Open”.</p>
+<p>After that, the <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">rights</span> <span class="pre">for</span> <span class="pre">Case</span> <span class="pre">Status</span></code> section looks like this:</p>
+<div class="figure" id="id10">
+<a class="reference external image-reference" href="../_images/image35.png"><img alt="Settings - Access rights for Case Status" src="../_images/image35.png" /></a>
+<p class="caption"><span class="caption-text">Settings – Access rights for Case Status</span></p>
+</div>
+<p>Of course, this is only an example. You may of course decide to give
+Level 2 full access to all cases, and it may also be a good means of
+training to grant Level 1 Analysts the right to see the “Level 2 Working”
+and “Closed” cases. You may also want Level 2 Analysts to reopen
+“Closed”
+cases or may restrict this right to an additional role. This just
+illustrates, that the system is highly configurable with an almost
+infinite number of statuses, roles and rights.</p>
+<p>Finally, you simply add users and add them to their particular role.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="setup.html" class="btn btn-neutral float-right" title="7. Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="first-steps.html" class="btn btn-neutral float-left" title="5. First Steps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Nextron Systems GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

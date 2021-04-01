@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8. Baselining Best Practices &mdash; ASGARD Analysis Cockpit Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. Case Management Best Practices" href="case-management-best-practices.html" />
+    <link rel="prev" title="7. Setup" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ASGARD Analysis Cockpit Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">2. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">3. Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-setup-guide.html">4. Quick Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps.html">5. First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-concepts.html">6. Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">7. Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Baselining Best Practices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#customize-your-view">8.1. Customize Your View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manual-case-creation">8.2. Manual Case Creation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-log-messages-for-a-case">8.2.1. Select Log Messages for a Case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case-creation-from-search-results">8.2.2. Case Creation from Search Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case-creation-from-selection">8.2.3. Case Creation from Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case-creation-using-a-custom-condition">8.2.4. Case Creation Using a Custom Condition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case-creation-using-a-regular-expressions">8.2.5. Case Creation Using a Regular Expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#create-cases-automatically">8.3. Create Cases Automatically</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-to-case">8.4. Add to Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customizing-the-detailed-view-of-log-lines">8.5. Customizing the Detailed View of Log Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#more-information-on-assets-and-cases">8.6. More Information on Assets and Cases</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="case-management-best-practices.html">9. Case Management Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">10. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="typical-pitfalls.html">11. Typical Pitfalls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">12. FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">13. Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASGARD Analysis Cockpit Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>8. Baselining Best Practices</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/usage/baselining-best-practices.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="baselining-best-practices">
+<h1>8. Baselining Best Practices<a class="headerlink" href="#baselining-best-practices" title="Permalink to this headline">¶</a></h1>
+<p>This section assumes, that you have read the section 6 “Basic Concepts”.</p>
+<p>All incoming logs, that do not match an existing case, will show up in
+the <code class="docutils literal notranslate"><span class="pre">Baselining</span></code> section.</p>
+<p>While importing the logs, the cockpit will already try to find logs are
+that similar and represent the same type of alert or warning. It will
+group these logs and assign an auto_case_id. In the example below we
+can see that the biggest group with the auto_case_id: “S8AcnJjoWe-U”
+contains more than 10,000 events.</p>
+<div class="figure" id="id1">
+<a class="reference external image-reference" href="../_images/image50.png"><img alt="Baselining" src="../_images/image50.png" /></a>
+<p class="caption"><span class="caption-text">Baselining</span></p>
+</div>
+<div class="section" id="customize-your-view">
+<h2>8.1. Customize Your View<a class="headerlink" href="#customize-your-view" title="Permalink to this headline">¶</a></h2>
+<p>By default, the Analysis Cockpit <code class="docutils literal notranslate"><span class="pre">Baselining</span></code> views ship with four bar
+charts and a table with five columns in order to help you find
+meaningful groups of logs. You can add four additional bar charts by
+clicking on the triangle which is located under the bar charts. You can also
+modify which bar charts are shown by clicking gear symbol next to the
+category name and choosing the category you want to see. To get to know
+to number of unique hostnames, files etc., you can click on the right arrow symbol
+next to the category name.</p>
+<p>Click the <code class="docutils literal notranslate"><span class="pre">Columns</span></code> button to manage which columns are shown.</p>
+<div class="figure" id="id2">
+<a class="reference external image-reference" href="../_images/image55.png"><img alt="Configure your personal view - select bar charts" src="../_images/image55.png" /></a>
+<p class="caption"><span class="caption-text">Configure your personal view – select bar charts</span></p>
+</div>
+<div class="figure" id="id3">
+<a class="reference external image-reference" href="../_images/image56.png"><img alt="Configure your personal view - select columns" src="../_images/image56.png" /></a>
+<p class="caption"><span class="caption-text">Configure your personal view – select columns</span></p>
+</div>
+</div>
+<div class="section" id="manual-case-creation">
+<h2>8.2. Manual Case Creation<a class="headerlink" href="#manual-case-creation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="select-log-messages-for-a-case">
+<h3>8.2.1. Select Log Messages for a Case<a class="headerlink" href="#select-log-messages-for-a-case" title="Permalink to this headline">¶</a></h3>
+<p>In order to create a meaningful case, you typically start with selecting
+logs or groups of logs that you want to be contained in the case. This
+can be done in various ways:</p>
+<ul class="simple">
+<li>by adding a custom filter in the search bar</li>
+<li>by clicking on one of the bars in the bar chart</li>
+<li>by clicking on magnififer symbol in a field in a logline</li>
+<li>by using Lucene within the search bar</li>
+</ul>
+<p>You can generate a filter bubble using an expression in the search
+field, choosing a category, deciding whether the expression should be
+contained, equal etc. and clicking the magnifier button. Clicking on one
+of the bars the bars in the bar chart or on magnifier symbol in a field in a
+logline will generate a filter bubble, too.</p>
+<div class="line-block">
+<div class="line">Example:</div>
+<div class="line">The following search made use of the built-in custom filters and
+displays all logs that are not contained in any case AND where
+auto_case_id is equal to “S8AcnjjoWe-U”.</div>
+</div>
+<div class="figure" id="id4">
+<a class="reference external image-reference" href="../_images/image59.png"><img alt="Custom Filter" src="../_images/image59.png" /></a>
+<p class="caption"><span class="caption-text">Custom Filter</span></p>
+</div>
+<p>Please note, that, filters can be negated by clicking on the two arrows symbol or delete it by clicking on the cross symbol.</p>
+<p>Using the buit-in custom filters is the most common and easiest way to
+select groups of logs.</p>
+<p>For those who prefer Lucene, an additional Lucene search bar can be
+activated and can even be combined with the built-in custom search.</p>
+<p>In order to activate the Lucene Query search just click the <code class="docutils literal notranslate"><span class="pre">contains</span></code> button and
+choose <code class="docutils literal notranslate"><span class="pre">Lucene</span> <span class="pre">Query</span></code>.</p>
+<div class="figure" id="id5">
+<a class="reference external image-reference" href="../_images/image63.png"><img alt="Lucene Query" src="../_images/image63.png" /></a>
+<p class="caption"><span class="caption-text">Lucene Query</span></p>
+</div>
+</div>
+<div class="section" id="case-creation-from-search-results">
+<h3>8.2.2. Case Creation from Search Results<a class="headerlink" href="#case-creation-from-search-results" title="Permalink to this headline">¶</a></h3>
+<p>This is the most relevant way to create a case. Create the filters, so
+that you only see the logs you want to be contained in your case. Then
+click the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Case</span></code> button,
+select <code class="docutils literal notranslate"><span class="pre">Search</span> <span class="pre">results</span></code> and add a name,
+that makes sense to you.</p>
+<p>If you want future incoming logs with the same auto_case_id like
+loglines in this particular case to be automatically assigned to this
+case, you have to tick the checkbox <code class="docutils literal notranslate"><span class="pre">Assign</span> <span class="pre">newly</span> <span class="pre">incoming</span> <span class="pre">events</span> <span class="pre">based</span> <span class="pre">on</span> <span class="pre">Auto</span> <span class="pre">Case</span> <span class="pre">ID</span></code>.</p>
+<div class="figure">
+<a class="reference external image-reference" href="../_images/image64.png"><img alt="Auto Case IDs" src="../_images/image64.png" /></a>
+</div>
+<p>You may add a summary or let the system suggest one for you (click on the magic wand symbol).
+The suggestion is calculated out of the first loglines within the
+selected logs.</p>
+<div class="figure" id="id6">
+<a class="reference external image-reference" href="../_images/image66.png"><img alt="Baselining - Create Case" src="../_images/image66.png" /></a>
+<p class="caption"><span class="caption-text">Baselining – Create Case</span></p>
+</div>
+<p>You may or may not add assessment, case type, recommendations or a
+comment. After closing you will find the log section empty, as it is
+still using your filter, but the matching loglines have been removed
+from this section and added to the case.</p>
+<div class="figure" id="id7">
+<a class="reference external image-reference" href="../_images/image67.png"><img alt="Log Section empty" src="../_images/image67.png" /></a>
+<p class="caption"><span class="caption-text">Log Section empty</span></p>
+</div>
+<p>Simply remove the filter and the remaining loglines will show up.</p>
+<div class="figure" id="id8">
+<a class="reference external image-reference" href="../_images/image68.png"><img alt="Remove the Filter" src="../_images/image68.png" /></a>
+<p class="caption"><span class="caption-text">Remove the Filter</span></p>
+</div>
+</div>
+<div class="section" id="case-creation-from-selection">
+<h3>8.2.3. Case Creation from Selection<a class="headerlink" href="#case-creation-from-selection" title="Permalink to this headline">¶</a></h3>
+<p>In order to create a case from a specific selection of logs simply use
+the checkboxes at the very left side of the table and click the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Case</span></code> button
+select <code class="docutils literal notranslate"><span class="pre">Selected</span> <span class="pre">events</span></code> and add a name, that makes sense
+to you.</p>
+<div class="figure" id="id9">
+<a class="reference external image-reference" href="../_images/image69.png"><img alt="Creating Cases from Selection" src="../_images/image69.png" /></a>
+<p class="caption"><span class="caption-text">Creating Cases from Selection</span></p>
+</div>
+<p>After closing you will find the selected logs have been removed from the
+logs section.</p>
+</div>
+<div class="section" id="case-creation-using-a-custom-condition">
+<h3>8.2.4. Case Creation Using a Custom Condition<a class="headerlink" href="#case-creation-using-a-custom-condition" title="Permalink to this headline">¶</a></h3>
+<p>To create a case with a condition, click the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Case</span></code> button and
+select <code class="docutils literal notranslate"><span class="pre">Condition</span></code>. Now you can build a condition by entering keywords
+in the field.</p>
+<p>Keywords in the same field are combined by <strong>OR</strong>, you can negate them by
+clicking the <code class="docutils literal notranslate"><span class="pre">NOT</span></code> button or combine them with <strong>AND</strong> by clicking the
+<code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">AND</span> <span class="pre">Condition</span></code> button. The filter bubbles you have generated before
+will be used as default. You are free to use, modify or delete them.
+Conditions only match on the <code class="docutils literal notranslate"><span class="pre">raw</span></code> field.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Condition</span> <span class="pre">/</span> <span class="pre">Regular</span> <span class="pre">Expression</span></code> button will calculate the
+numbers of hits and return some matching and some non-matching events as
+an example.</p>
+<div class="figure" id="id10">
+<a class="reference external image-reference" href="../_images/image70.png"><img alt="Creating Cases through Condition" src="../_images/image70.png" /></a>
+<p class="caption"><span class="caption-text">Creating Cases through Condition</span></p>
+</div>
+<p>Again, you may or may not add auto assignment for future incoming
+loglines, summary, assessment, case type, recommendations or a comment.
+After closing you will find the selected logs have been removed from the
+logs section.</p>
+</div>
+<div class="section" id="case-creation-using-a-regular-expressions">
+<h3>8.2.5. Case Creation Using a Regular Expressions<a class="headerlink" href="#case-creation-using-a-regular-expressions" title="Permalink to this headline">¶</a></h3>
+<p>In order to create a case from a regular expression just click the
+<code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Case</span></code> button and select
+<code class="docutils literal notranslate"><span class="pre">Regular</span> <span class="pre">Expression</span></code>. This lets you
+write and test your regular expression.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Condition</span> <span class="pre">/</span> <span class="pre">Regular</span> <span class="pre">Expression</span></code> button will calculate the
+numbers of hits and return some matching and some non-matching events as
+an example.</p>
+<div class="figure" id="id11">
+<a class="reference external image-reference" href="../_images/image71.png"><img alt="Creating Cases through Regular Expressions" src="../_images/image71.png" /></a>
+<p class="caption"><span class="caption-text">Creating Cases through Regular Expressions</span></p>
+</div>
+<p>Again, you may or may not add auto assignment for future incoming
+loglines, summary, assessment, case type, recommendations or a comment.
+After clicking the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Case</span></code> button, the matching lines will get
+removed from the log management view.</p>
+<p>Important: It is recommended to use regular expressions only rarely
+and with caution. This feature can severely impact the performance of
+the system.</p>
+</div>
+</div>
+<div class="section" id="create-cases-automatically">
+<h2>8.3. Create Cases Automatically<a class="headerlink" href="#create-cases-automatically" title="Permalink to this headline">¶</a></h2>
+<p>With Auto Baselining, the Cockpit will automatically generate cases for
+groups of logs that are similar, or in other words: Have the same
+auto_case_id.</p>
+<p>After clicking the button <code class="docutils literal notranslate"><span class="pre">Automatically</span> <span class="pre">generate</span> <span class="pre">Cases</span></code> button in the
+<code class="docutils literal notranslate"><span class="pre">Auto</span> <span class="pre">Baselining</span></code> tab you will be prompted for a threshold. This means:
+Do only create a case when you find at least that many similar logs. In
+our example below the Cockpit will now generate cases for all groups of
+at least 2000 similar events.</p>
+<div class="figure" id="id12">
+<a class="reference external image-reference" href="../_images/image72.png"><img alt="Automatically create cases" src="../_images/image72.png" /></a>
+<p class="caption"><span class="caption-text">Automatically create cases</span></p>
+</div>
+<p>After pressing the <code class="docutils literal notranslate"><span class="pre">Start</span></code> button, the Cockpit will start calculating
+and create cases. Depending on the data volume this may take a while and
+you will be presented a page that shows that Auto Cases is still running
+along with the current number of cases.</p>
+<div class="figure" id="id13">
+<a class="reference external image-reference" href="../_images/image73.png"><img alt="Auto Cases running" src="../_images/image73.png" /></a>
+<p class="caption"><span class="caption-text">Auto Cases running</span></p>
+</div>
+<p>It is safe to leave this page, once the status in <code class="docutils literal notranslate"><span class="pre">Running</span></code>. It will
+continue in the background.</p>
+<div class="figure" id="id14">
+<a class="reference external image-reference" href="../_images/image74.png"><img alt="Auto Cases finished" src="../_images/image74.png" /></a>
+<p class="caption"><span class="caption-text">Auto Cases finished</span></p>
+</div>
+<p>In our example, the Cockpit created two cases with at least 2000
+loglines in each case.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The Analysis Cockpit generates auto_case_ids only for Alerts and
+Warnings. Don’t use the Autocase feature for Notice and Info level
+events.</p>
+</div>
+</div>
+<div class="section" id="add-to-case">
+<h2>8.4. Add to Case<a class="headerlink" href="#add-to-case" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you may want to add loglines to an already existing case
+because they represent the same security context. To do this you can
+just click the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">to</span> <span class="pre">Case</span></code> button and select the suitable case. It is
+also possible to add an additional comment to this case for the
+addition.</p>
+<div class="figure" id="id15">
+<a class="reference external image-reference" href="../_images/image75.png"><img alt="Add to Case" src="../_images/image75.png" /></a>
+<p class="caption"><span class="caption-text">Add to Case</span></p>
+</div>
+</div>
+<div class="section" id="customizing-the-detailed-view-of-log-lines">
+<h2>8.5. Customizing the Detailed View of Log Lines<a class="headerlink" href="#customizing-the-detailed-view-of-log-lines" title="Permalink to this headline">¶</a></h2>
+<p>The detailed view for loglines opens by clicking on a logline. Within
+this view you can select some fields as favourite fields by clicking on
+the star symbol. They will always be shown at the top of this view. <code class="docutils literal notranslate"><span class="pre">MESSAGE</span></code>,
+<code class="docutils literal notranslate"><span class="pre">MODULE</span></code>
+and <code class="docutils literal notranslate"><span class="pre">hostname</span></code> are selected by default.</p>
+<p>To search for all loglines with the same entry as this logline in a
+particular field, you can click on the magnifier symbol behind the entry. If you
+are looking for more information about this entry in this field, just
+click on the eye symbol.</p>
+<div class="figure" id="id16">
+<a class="reference external image-reference" href="../_images/image78.png"><img alt="customizing the detailed view for loglines" src="../_images/image78.png" /></a>
+<p class="caption"><span class="caption-text">Customizing the detailed view for loglines</span></p>
+</div>
+<p>Additionally, you can find a <code class="docutils literal notranslate"><span class="pre">VIRUSTOTAL</span></code> button in every hash field and a
+<code class="docutils literal notranslate"><span class="pre">VALHALLA</span></code> button in every reason field.
+By clicking <code class="docutils literal notranslate"><span class="pre">VIRUSTOTAL</span></code> the hash
+will be searched on Virustotal. By clicking <code class="docutils literal notranslate"><span class="pre">VALHALLA</span></code> you will get more
+information about the matching rule from valhalla.nextron-systems.com.</p>
+</div>
+<div class="section" id="more-information-on-assets-and-cases">
+<h2>8.6. More Information on Assets and Cases<a class="headerlink" href="#more-information-on-assets-and-cases" title="Permalink to this headline">¶</a></h2>
+<p>To get more information about matching assets and the matching cases you
+can click the <code class="docutils literal notranslate"><span class="pre">More</span> <span class="pre">Info</span></code> button and select what you want to see. You
+can also choose to get the unique count of a category.</p>
+<div class="figure" id="id17">
+<a class="reference external image-reference" href="../_images/image81.png"><img alt="More Info - Matching Assets" src="../_images/image81.png" /></a>
+<p class="caption"><span class="caption-text">More Info – Matching Assets</span></p>
+</div>
+<div class="figure" id="id18">
+<a class="reference external image-reference" href="../_images/image82.png"><img alt="More Info - Matching Cases" src="../_images/image82.png" /></a>
+<p class="caption"><span class="caption-text">More Info – Matching Cases</span></p>
+</div>
+<div class="figure" id="id19">
+<a class="reference external image-reference" href="../_images/image83.png"><img alt="More Info - Calculate count of unique values" src="../_images/image83.png" /></a>
+<p class="caption"><span class="caption-text">More Info – Calculate count of unique values</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="case-management-best-practices.html" class="btn btn-neutral float-right" title="9. Case Management Best Practices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="setup.html" class="btn btn-neutral float-left" title="7. Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Nextron Systems GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
