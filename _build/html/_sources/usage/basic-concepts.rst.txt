@@ -1,6 +1,3 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
-
 Basic Concepts
 ==============
 
@@ -118,8 +115,8 @@ COCKPIT’s Notification Section.
 
 The following picture shows the recommended log processing.
 
-.. figure:: ../images/image30.tif
-   :target: ../_images/image30.tif
+.. figure:: ../images/image30.png
+   :target: ../_images/image30.png
    :alt: Log Processing 
 
    Log Processing
