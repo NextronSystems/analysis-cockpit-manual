@@ -1,7 +1,7 @@
 Baselining Best Practices
 =========================
 
-This section assumes, that you have read the section 6 “Basic Concepts”.
+This section assumes, that you have read the :doc:`chapter 6. Basic Concepts <./basic-concepts>`.
 
 All incoming logs, that do not match an existing case, will show up in
 the ``Baselining`` section.

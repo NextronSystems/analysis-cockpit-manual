@@ -161,21 +161,17 @@ classified as "False Positive".
 
 Examples for Legitimate Anomalies”:
 
-* Word documents with Macros that write to the filesystem and include a
-   “AutoOpen” event trigger
+* Word documents with Macros that write to the filesystem and include a “AutoOpen” event trigger
 * Procdump.exe findings
 * Suspicious RUN Key entries that use customer software
-* Custom software that uses suspicious folders, e.g. C:\\Users\\Public,
-   %AppData%
-* Process memory match with a “ReflectiveLoader” YARA rule on a third
-   party EDR agent process
+* Custom software that uses suspicious folders, e.g. C:\\Users\\Public, %AppData%
+* Process memory match with a “ReflectiveLoader” YARA rule on a third party EDR agent process
 
 Examples for “False Positives”:
 
 * YARA rule match on Bloomberg or SAP software
 * Filename IOC match “w64.exe” on a Perl for Windows build tool
-* YARA rule match with “Putty\_Anomaly” on a legitimate and signed
-   putty.exe
+* YARA rule match with “Putty\_Anomaly” on a legitimate and signed putty.exe
 
 Another good example is one of the many anomaly signatures that triggers
 on an XORed MS-DOS Stub. A match with such a signature only qualifies as

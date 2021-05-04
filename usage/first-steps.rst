@@ -107,4 +107,4 @@ ASGARD Management Center Version 1:
 .. note::
    Scan.log rotates every month. Be sure to import older logs as needed.
 
-To import old log data, see chapter 7.9 “Log File Import”.
+To import old log data, see :ref:`chapter 7.9 Log File Import <usage/setup:Log File Import>`.

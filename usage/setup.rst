@@ -2,7 +2,7 @@
 Setup
 =====
 
-This chapter assumes, that you have read the section “Basic Concepts”.
+This chapter assumes, that you have read the :doc:`chapter 6. Basic Concepts <./basic-concepts>`.
 
 In order to configure the Analysis Cockpit for the first use, the
 following steps need to be done:
@@ -45,7 +45,7 @@ also check for new updates by clicking the ``Check for Updates`` Button.
 Set Users and User Rights
 -------------------------
 
-Chapter “6.3 Understanding Users, Roles, Rights and Case Status” already
+:ref:`Chapter 6.3 Understanding Users, Roles, Rights and Case Status <usage/basic-concepts:Understanding Users, Roles, Rights and Case Status>` already
 described how to set up a 2-level analyst model for working with cases.
 The roles defined in that section are non-administrative roles, meaning
 they are only allowed to access cases based on the respective status of
@@ -137,7 +137,7 @@ The figures below illustrate options of a possible LDAP configuration.
 Configure Notifications
 -----------------------
 
-As described in chapter “6.2 Log Processing and Cases” the cockpit is
+As described in :ref:`chapter 6.2 Log Processing and Cases <usage/basic-concepts:Log Processing and Cases>` the cockpit is
 able to forward logs to a SIEM system in case this particular logline
 was added automatically to a case with the type “Incident”.
 
