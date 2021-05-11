@@ -2,7 +2,7 @@
 Setup
 =====
 
-This chapter assumes, that you have read the :doc:`chapter 6. Basic Concepts <./basic-concepts>`.
+This chapter assumes, that you have read chapter :doc:`Basic Concepts <./basic-concepts>`.
 
 In order to configure the Analysis Cockpit for the first use, the
 following steps need to be done:

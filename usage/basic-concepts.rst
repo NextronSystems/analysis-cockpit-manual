@@ -75,7 +75,7 @@ The following types can be set:
 * Legitimate Anomaly
 * False Positive
 
-See :doc:`chapter 13 Glossary <./glossary>` for a detailed description of these
+See chapter :doc:`Glossary <./glossary>` for a detailed description of these
 terms.
 
 Within a case, it is possible to add various information, write a

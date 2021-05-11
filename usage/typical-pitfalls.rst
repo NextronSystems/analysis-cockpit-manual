@@ -17,7 +17,7 @@ installation process.
    Certificate verification failed: The certificate is NOT trusted. The certificate issuer is unknown. Could not handshake: Error in the certificate verification. [IP: 192.168.3.21 8080]
 
 Since we do not support setups in which the connections to our update
-servers are intercepted (see :doc:`chapter 2 Requirements <./requirements>`), the
+servers are intercepted (see chapter :doc:`Requirements <./requirements>`), the
 only way to resolve this problem is to deactivate SSL/TLS interception
 for our update servers.
 
