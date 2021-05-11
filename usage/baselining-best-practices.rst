@@ -52,13 +52,14 @@ Case Creation Basics
 
 Create a new case following these steps: 
 
-#. Set a case **title** - use keywords that make it easy for other analysts to find it based on a few terms (e.g. if a false positive was caused by matches in **savedsearch.conf**, use this filename in the title of your case)
 #. Select if and how new incoming events should be assigned to this case
+#. Set a case **name**, which serves as title - use keywords that make it easy for other analysts to find it based on a few terms (e.g. if a false positive was caused by matches in **savedsearch.conf**, use this filename in the title of your case)
 #. Select a sample event for the **summary** field 
-#. Add your assessment
-#. Choose one or more recommendations
-#. Select a case type (see the :ref:`Glossary <usage/glossary:Case Types>` for a detailed description of every case type)
-#. Select a case status (usually used to mark it as 'work in progress' or to forward it to the next team)
+#. Add your **assessment**
+#. Choose one or more **recommendations**
+#. Select a **case type** (see the :ref:`Glossary <usage/glossary:Case Types>` for a detailed description of every case type)
+#. Select a **case status** (usually used to mark it as 'work in progress' or to forward it to the next team)
+#. Submit case by clicking the **Create** button
 
 .. figure:: ../images/analysis-cockpit-create-case.png
    :target: ../_images/analysis-cockpit-create-case.png
