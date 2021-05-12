@@ -51,7 +51,7 @@ On the command line type:
 
 .. code:: bash
    
-   sudo ac2toac3 export -o export.ac2
+   sudo /etc/analysis-cockpit/ac2toac3 export -o export.ac2
 
 This will create the output file export.ac2 that will contain the entire
 Cockpit V2.x configuration including, users, rights, cases and case
@@ -63,7 +63,7 @@ On the command line type:
 
 .. code:: bash
    
-   sudo ac2toac3 import -f export.ac2
+   sudo /etc/analysis-cockpit/ac2toac3 import -f export.ac2
 
 This will import the entire Cockpit 2.x configuration into your Cockpit
 V3.x.
