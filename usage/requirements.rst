@@ -27,8 +27,8 @@ specifications are recommended:
 * Hard disk: 2 TB SSD
 * CPU cores: 4
 
-Network Requirments
--------------------
+Network Requirements
+--------------------
 
 The Analysis Cockpit requires the following open ports (incoming).
 
@@ -47,7 +47,7 @@ From ASGARD Management Center to Analysis Cockpit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Syslog forwarder: 514/tcp, 514/udp
-* Asset synchronization: 443/tcp
+* Asset synchronization: 7443/tcp
 
 From Analysis Cockpit to SIEM (if needed)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
