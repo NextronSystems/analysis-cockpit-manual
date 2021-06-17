@@ -72,7 +72,7 @@ assign new events to a case in the Tab ``Grouping Criteria`` of each case.
    :target: ../_images/image96.png
    :alt: Create Case
 
-They are also used in “Auto Casing” and “Optimization”. (see Glossary >
+They are also used in "Auto Casing" and "Optimization". (see Glossary >
 Baselining)
 
 Dynamic Auto Case ID
@@ -89,7 +89,7 @@ They are usually created of all fields of an event except the ones that
 are highly specific, like the HOSTNAME field.
 
 If your case uses many Dynamic Auto Case IDs, distinguishable by the
-leading uppercase “D”, then automatic event assignment is nearly
+leading uppercase "D", then automatic event assignment is nearly
 impossible. In these cases, you should rather use a string conditions to
 group events into that case and assign new incoming events
 automatically.
@@ -107,14 +107,14 @@ that newly incoming events go to that prioritized case and not the one
 with the default priority.
 
 You could also create fallback cases, e.g., for all events of the level
-“Notice” and intentionally reduce the priority of this case so that
+"Notice" and intentionally reduce the priority of this case so that
 other cases that select events of that level always come first.
 
 The full prioritization process looks like:
 
 -  Case with higher priority takes the event
 
--  If both cases have the same priority, the case with the higher “Type”
+-  If both cases have the same priority, the case with the higher "Type"
    takes the event (Incident > Noteworthy)
 
 -  If both cases have the same priority and the same type, the case with
@@ -136,51 +136,11 @@ of it as the values that you as an analyst want to highlight for other
 analysts that review that specific case. It’s often a special file name
 and location or a process name and YARA rule match on that process.
 
-You can use the “Auto Summary” feature to get an auto-recommended
+You can use the "Auto Summary" feature to get an auto-recommended
 content for this field.
 
 The field ``Assessment`` is the one that requires the most effort. It
 contains the findings of the analyst’s review.
-
-Difference between False Positive and Legitimate Anomaly
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-We use "False Positive" and "Legitmate Anomaly" to distinguish between
-situations in which the scanner (THOR) made an error and situations in
-which a customer environment contains suspicious or malicious elements
-that are known.
-
-E.g., a Winrar used by admins as “r.exe” in “C:\\users\\public” for
-software rollout purposes is not considered a “False Positive” but a
-"Legitmate Anomaly". It is a finding which doesn’t have to be fixed in
-THOR’s signature set but is simply a specific situation in the analyzed
-environment.
-
-Matches that are clearly an error in THOR signatures should be
-classified as "False Positive".
-
-Examples for Legitimate Anomalies”:
-
-* Word documents with Macros that write to the filesystem and include a “AutoOpen” event trigger
-* Procdump.exe findings
-* Suspicious RUN Key entries that use customer software
-* Custom software that uses suspicious folders, e.g. C:\\Users\\Public, %AppData%
-* Process memory match with a “ReflectiveLoader” YARA rule on a third party EDR agent process
-
-Examples for “False Positives”:
-
-* YARA rule match on Bloomberg or SAP software
-* Filename IOC match “w64.exe” on a Perl for Windows build tool
-* YARA rule match with “Putty\_Anomaly” on a legitimate and signed putty.exe
-
-Another good example is one of the many anomaly signatures that triggers
-on an XORed MS-DOS Stub. A match with such a signature only qualifies as
-false positives when there is no XORed MS-DOS stub in that file and not
-when it turns out to be a legitimate file. The signature detects what it
-is designed to detect.
-
-A signature with a rule named MAL\_Xrat\_Mar21\_1 that triggers on a
-legitimate and signed executable, however, is a false positive.
 
 Case Types
 ^^^^^^^^^^
@@ -193,9 +153,9 @@ Cockpit.
    
    * - Incident
      - | Incident cases report a clear threat, indicated by a hard match and verified by 
-       | research. Analysts create incident cases to indicate the highest possible 
+       | research of an analyst. Analysts create incident cases to indicate the highest possible 
        | certainty and risk. Incident cases are also characterized by the fact that they 
-       | do not need to be verified by someone else. The either indicate malware, threat 
+       | do not need to be verified by someone else. They either indicate malware, a threat 
        | group or penetration testing activity and should trigger immediate response.
    * - Suspicious
      - | Suspicious cases are based on significant indicators that require a review by 
@@ -210,29 +170,65 @@ Cockpit.
        | whenever there is time to do that.
    * - Vulnerability
      - | Vulnerability cases contain detected software or configuration weaknesses that 
-       | system integrity. The reported vulnerabilities often include easy to exploit 
-       | weaknesses that are frequently used by threat groups to executed code remotely, 
+       | compromise system integrity. The reported vulnerabilities often include easy to exploit 
+       | weaknesses that are frequently used by threat groups to execute code remotely, 
        | gain access or escalate privileges on affected systems. Cases classified as 
        | Vulnerability are typically integrated into a vulnerability management process 
-       | as additional input channel.   
+       | as an additional input channel.   
    * - | Legitimate 
        | Anomaly
-     - | Legitimate Anomaly cases contain events that related to legitimate elements 
-       | that are suspicious but in the context of the analyzed organization an ordinary 
-       | finding. The reason for an anomaly is not a malfunction of the scanner but a 
+     - | Legitimate Anomaly cases contain events that are related to legitimate elements 
+       | that are suspicious, but an ordinary finding in the context of the analyzed organization.
+       | The reason for an anomaly is not a malfunction of the scanner but a 
        | peculiarity within the analyzed environment. Legitimate Anomalies don’t trigger 
        | any further activity.
    * - False Positive
-     - | False Positive cases contain events that indicate suspicious or malicious activity, 
-       | but the review revealed that is actually legitimate software or other elements. 
-       | The only reason for a false positive is a scanner malfunction or signatures that 
-       | falsely report a threat (see the section 13.2.6 “Difference between False Positive 
-       | and Legitimate Anomaly” for more details). A false positive usually triggers a 
-       | review by Nextron Systems and a signature adjustment.
+     - | False Positive cases contain events that indicate suspicious or malicious activity,
+       | but the review revealed that it is actually legitimate software or other elements.
+       | The only reason for a false positive is a scanner malfunction or signatures that
+       | falsely report a threat (see :ref:`section 13.2.7. for more details<usage/glossary:Difference between False Positive and Legitimate Anomaly>`). A false positive
+       | usually triggers a review by Nextron Systems and a signature adjustment.
    * - Unknown
      - The default state of newly created cases.
 
+Difference between False Positive and Legitimate Anomaly
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+We use "False Positive" and "Legitimate Anomaly" to distinguish between
+situations in which the scanner (THOR) made an error and situations in
+which a customer environment contains suspicious or malicious elements
+that are known.
+
+E.g., a Winrar used by admins as "r.exe" in "C:\\users\\public" for
+software rollout purposes is not considered a "False Positive" but a
+"Legitimate Anomaly". It is a finding which doesn’t have to be fixed in
+THOR’s signature set but is simply a specific situation in the analyzed
+environment.
+
+Matches that are clearly an error in THOR signatures should be
+classified as "False Positive".
+
+Examples for "Legitimate Anomalies":
+
+* Procdump.exe findings
+* Suspicious RUN Key entries that use customer software
+* Custom software that uses suspicious folders, e.g. C:\\Users\\Public, %AppData%
+* Process memory match with a "ReflectiveLoader" YARA rule on a third party EDR agent process
+
+Examples for "False Positives":
+
+* YARA rule match on Bloomberg or SAP software
+* Filename IOC match "w64.exe" on a Perl for Windows build tool
+* YARA rule match with "Putty\_Anomaly" on a legitimate and signed putty.exe
+
+Another good example is one of the many anomaly signatures that triggers
+on an XORed MS-DOS Stub. A match with such a signature only qualifies as
+false positives when there is no XORed MS-DOS stub in that file and not
+when it turns out to be a legitimate file. The signature detects what it
+is designed to detect.
+
+A signature with a rule named MAL\_Xrat\_Mar21\_1 that triggers on a
+legitimate and signed executable, however, is a false positive.
 
 Invisible (Backend)
 -------------------
@@ -244,11 +240,11 @@ The Analysis Cockpit uses so-called filter templates that describe which
 fields in which event types are specific enough to be used in a filter
 that can be used to automatically group events.
 
-These groups can be identified by a common so-called “Auto Case ID”
+These groups can be identified by a common so-called "Auto Case ID"
 (formerly Group ID). See the respective entry in this Glossary.
 
 The filter templates are static and predefined.
 
 E.g., a typical filter template states that for events in the Module
-“Filescan”, the fields FILE and SHA1 are sufficiently specific to group
+"Filescan", the fields FILE and SHA1 are sufficiently specific to group
 events based on equal values in these two fields.
