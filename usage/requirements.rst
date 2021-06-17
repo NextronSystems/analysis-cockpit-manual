@@ -49,8 +49,8 @@ From ASGARD Management Center to Analysis Cockpit
 * Syslog forwarder: 514/tcp, 514/udp
 * Asset synchronization: 7443/tcp
 
-From Analysis Cockpit to SIEM (if needed)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+From Analysis Cockpit to SIEM (optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Syslog forwarder: 514/tcp, 514/udp
 
@@ -112,3 +112,10 @@ don’t support SSL/TLS interception.
 Since our products are usually used in possibly compromised
 environments, the integrity of our software and update packages has
 highest priority.
+
+Other Optional Requirements
+---------------------------
+
+Usage of a Reverse Proxy
+^^^^^^^^^^^^^^^^^^^^^^^^
+If you are planing to make the Analysis Cockpit available through a reverse proxy, see :ref:`section 12.3. I am using a Reverse Proxy to access the Analysis Cockpit. What do I have to take care of?<usage/faqs:I am using a Reverse Proxy to access the Analysis Cockpit. What do I have to take care of?>`.
