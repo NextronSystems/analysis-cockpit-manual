@@ -172,6 +172,6 @@ Broken after the Analysis Cockpit Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If your infrastructure has changed and you have to change the proxy
-server somewhen later edit the proxy settings in the Web GUI.
+server sometime later, edit the proxy settings in the Web GUI.
 
 ``Settings`` > ``System`` > ``Proxy``
