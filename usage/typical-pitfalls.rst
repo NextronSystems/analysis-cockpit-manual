@@ -33,6 +33,68 @@ script:
 
 https://github.com/NextronSystems/nextron-helper-scripts/blob/master/asgard-analysis-cockpit/thor-timestamp-coverter.py
 
+Recover from a Full Disk
+------------------------
+
+If your disk is full or near full, ASGARD Analysis Cockpit will
+not work properly. In order to resume its operation you need to
+make free space on the disk.
+
+We suggest to save the files to another system beforehand, if you
+want to keep the information for future usage. ASGARD will not need
+the following files to function and they can be removed safely:
+    
+    - ``/var/lib/nextron/analysiscockpit3/log/*.gz``
+    - ``/var/lib/nextron/analysiscockpit3/events/*.ok``
+
+Especially the assignment log can grow big in production environments.
+If deleting the logs is not enough, deleting the already read-in events (ending on ``.ok``)
+is the next best location to regain disk space. If there are too many files for a 
+simple ``rm *.ok``, you can use find to delete them:
+
+.. code:: bash
+
+    find /var/lib/nextron/analysiscockpit3/events -name "*.ok" -print0 | xargs -0 -I'{}' rm '{}'
+
+
+If Elasticsearch does not automatically work again after cleaning up some disk space, restart
+it under ``Settings`` > ``System`` > ``Services`` or with ``sudo systemctl restart elasticsearch.service``.
+If this is not working either, you may need to disable Elasticsearch's read-only mode. See 
+:ref:`section "ElasticSearch Index Locked Due to Low Free Disk Space" <usage/typical-pitfalls:ElasticSearch Index Locked Due to Low Free Disk Space>` for a how-to.
+
+Deleting the files given above is enough to resume operation. If the disk on your
+ASGARD Analysis Cockpit is full because of growing data, the disk should be
+increased. If that is not an option you can delete old scans as described in the
+:ref:`next section<usage/typical-pitfalls:Regain Disk Space by Deleting Old Scans>`.
+
+Regain Disk Space by Deleting Old Scans
+---------------------------------------
+
+This method is only advised as a last resort if increasing your disk is not an option.
+
+.. warning::
+    
+    Deleting old scans deletes information ASGARD Analysis Cockpit uses.
+
+    As an example: If you delete a scan with which an asset was marked
+    in an incident case, this connection is no longer made, the asset
+    will be shown with 0 incident cases.
+
+Therefore only delete scans you no longer need. This can be done under
+``Scans`` > ``Scans`` by selecting the scans with check marks and 
+pressing ``Delete Events``.
+
+You can filter events for deletion by the time range picker in the
+completed column and e.g. selecting only scans with 0 incident and 
+0 suspicious cases. (Add columns using the ``Columns`` button). 
+
+.. figure:: ../images/delete-old-scans.png
+   :target: ../_images/delete-old-scans.png
+   :alt: Delete Old Scans
+
+   Possible Filter for Selecting Scans for Deletion
+
+
 ElasticSearch Index Locked Due to Low Free Disk Space
 -----------------------------------------------------
 
