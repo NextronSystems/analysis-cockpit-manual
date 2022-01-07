@@ -186,8 +186,9 @@ Cockpit.
      - | False Positive cases contain events that indicate suspicious or malicious activity,
        | but the review revealed that it is actually legitimate software or other elements.
        | The only reason for a false positive is a scanner malfunction or signatures that
-       | falsely report a threat (see :ref:`section 13.2.7. for more details<usage/glossary:Difference between False Positive and Legitimate Anomaly>`). A false positive
-       | usually triggers a review by Nextron Systems and a signature adjustment.
+       | falsely report a threat (see section :ref:`Difference between False Positive and<usage/glossary:Difference between False Positive and Legitimate Anomaly>`
+       | :ref:`Legitimate Anomaly<usage/glossary:Difference between False Positive and Legitimate Anomaly>` for details). A false positive usually triggers a review
+       | by Nextron Systems and a signature adjustment.
    * - Unknown
      - The default state of newly created cases.
 
