@@ -18,6 +18,7 @@ Welcome to ASGARD Analysis Cockpit Manual's documentation!
    usage/first-steps
    usage/basic-concepts
    usage/setup
+   usage/maintenance
    usage/baselining-best-practices
    usage/case-management-best-practices
    usage/api

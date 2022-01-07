@@ -43,6 +43,15 @@ by antivirus or executed by an unknowing user, we zip all files in the attachmen
 encrypt the ZIP file with a default password. The default password ``infected`` can be 
 used to extract the file.
 
+My disk is getting full soon. What options do I have?
+------------------------------------------------------
+
+If your disk is already at or close to 100% and AC no longer works properly, see section
+:ref:`Recover from a Full Disk<usage/typical-pitfalls:Recover from a Full Disk>`.
+
+In other cases check section :ref:`Regain Disk Space<usage/maintenance:Regain Disk Space>`.
+
+
 I am using a Reverse Proxy to access the Analysis Cockpit. What do I have to take care of?
 ------------------------------------------------------------------------------------------
 

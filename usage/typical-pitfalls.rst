@@ -62,38 +62,10 @@ it under ``Settings`` > ``System`` > ``Services`` or with ``sudo systemctl resta
 If this is not working either, you may need to disable Elasticsearch's read-only mode. See 
 :ref:`section "ElasticSearch Index Locked Due to Low Free Disk Space" <usage/typical-pitfalls:ElasticSearch Index Locked Due to Low Free Disk Space>` for a how-to.
 
-Deleting the files given above is enough to resume operation. If the disk on your
-ASGARD Analysis Cockpit is full because of growing data, the disk should be
-increased. If that is not an option you can delete old scans as described in the
-:ref:`next section<usage/typical-pitfalls:Regain Disk Space by Deleting Old Scans>`.
-
-Regain Disk Space by Deleting Old Scans
----------------------------------------
-
-This method is only advised as a last resort if increasing your disk is not an option.
-
-.. warning::
-    
-    Deleting old scans deletes information ASGARD Analysis Cockpit uses.
-
-    As an example: If you delete a scan with which an asset was marked
-    in an incident case, this connection is no longer made, the asset
-    will be shown with 0 incident cases.
-
-Therefore only delete scans you no longer need. This can be done under
-``Scans`` > ``Scans`` by selecting the scans with check marks and 
-pressing ``Delete Events``.
-
-You can filter events for deletion by the time range picker in the
-completed column and e.g. selecting only scans with 0 incident and 
-0 suspicious cases. (Add columns using the ``Columns`` button). 
-
-.. figure:: ../images/delete-old-scans.png
-   :target: ../_images/delete-old-scans.png
-   :alt: Delete Old Scans
-
-   Possible Filter for Selecting Scans for Deletion
-
+Deleting the files given above should be enough to resume operation. If the disk on your
+ASGARD Analysis Cockpit is full because of growing data over time, the disk space should be
+increased. If that is not an option you can delete old scans as described in section
+:ref:`Potentially Unneeded / Dated Files<usage/maintenance:Potentially Unneeded / Dated Files>`.
 
 ElasticSearch Index Locked Due to Low Free Disk Space
 -----------------------------------------------------
