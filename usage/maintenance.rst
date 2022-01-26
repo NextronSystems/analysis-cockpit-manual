@@ -7,7 +7,7 @@ Regain Disk Space
 If your disk is already at or close to 100% and AC no longer works properly, see section
 :ref:`Recover from a Full Disk<usage/typical-pitfalls:Recover from a Full Disk>`.
 
-If your disk usage is growing too fast and free disk space is running out you have several options:
+If your disk usage is growing too fast and free disk space is running out, you have several options:
 
     1. Increase the size of your disk
     2. Delete files that are not needed for operation
@@ -25,7 +25,7 @@ to operate.
 They are only kept on the system if needed for further processing.
 E.g. saving/sending the log files to another system or keeping the
 THOR scans (found in ``events``) for backup reasons. If you do
-not need or plan to use those, they can deleted. If you are unsure
+not need or plan to use those, they can be deleted. If you are unsure
 make a copy to another system before deleting them.
 
 More details can be found in section
