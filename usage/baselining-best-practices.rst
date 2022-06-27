@@ -80,7 +80,7 @@ can be done in various ways:
 You can generate a filter bubble using an expression in the search
 field, choosing a category, deciding whether the expression should be
 contained, equal etc. and clicking the magnifier button. Clicking on one
-of the bars the bars in the bar chart or on magnifier symbol in a field in a
+of the bars in the bar chart or on magnifier symbol in a field in a
 logline will generate a filter bubble, too.
 
 | Example:
