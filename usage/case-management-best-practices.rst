@@ -110,7 +110,7 @@ it will be one highly specific filter per logline.
 More Information about Cases
 ----------------------------
 
-The ``Assets`` tab of a case shows assets that have contributes at least
+The ``Assets`` tab of a case shows assets that have contributed at least
 one log line to this case. In this example 1.169 assets are affected.
 All of them have the same operating system “Debian GNU/Linux 9
 (stretch)”.
@@ -142,7 +142,7 @@ members of the analysis team (e.g. memory dump for further analysis).
 
 The ``Changes`` tab shows information about changes to this case.
 
-In other words: This your case audit log.
+In other words: This is your case audit log.
 
 .. figure:: ../images/image91.png
    :target: ../_images/image91.png
