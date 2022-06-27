@@ -74,7 +74,7 @@ can be done in various ways:
 
 * by adding a custom filter in the search bar
 * by clicking on one of the bars in the bar chart
-* by clicking on magnififer symbol in a field in a logline
+* by clicking on magnifier symbol in a field in a logline
 * by using Lucene within the search bar
 
 You can generate a filter bubble using an expression in the search
