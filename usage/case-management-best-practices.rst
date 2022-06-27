@@ -46,7 +46,7 @@ Case Dispatching
 ----------------
 
 Let’s assume, our Level 1 Analyst concludes, that this is a "Legitmate Anomaly". 
-He will now set the status to "Level 1 Finished" and update
+They will now set the status to "Level 1 Finished" and update
 the case. After setting the case to "Level 1 Finished" the case becomes
 visible to the Level 2 Analyst.
 
