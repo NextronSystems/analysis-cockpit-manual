@@ -74,13 +74,13 @@ can be done in various ways:
 
 * by adding a custom filter in the search bar
 * by clicking on one of the bars in the bar chart
-* by clicking on magnififer symbol in a field in a logline
+* by clicking on magnifier symbol in a field in a logline
 * by using Lucene within the search bar
 
 You can generate a filter bubble using an expression in the search
 field, choosing a category, deciding whether the expression should be
 contained, equal etc. and clicking the magnifier button. Clicking on one
-of the bars the bars in the bar chart or on magnifier symbol in a field in a
+of the bars in the bar chart or on magnifier symbol in a field in a
 logline will generate a filter bubble, too.
 
 | Example:
