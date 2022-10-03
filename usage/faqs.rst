@@ -36,6 +36,23 @@ Also check the grouping criteria of that case:
 
 What are the conditions defined to assign new events to that case?
 
+Where are Scan Logs on the system located?
+----------------------------------------------------
+
+You can find the Scan Logs  in ``/var/lib/nextron/analysiscockpit3/events``. In this folder you will find three different naming schemes:
+
+* **.txt.gz** - Logs which are not imported yet
+
+* **.txt.gz.ok** - Logs which were imported successfully
+
+* **.txt.gz.problem** - Logs which could not be imported correctly due to an error
+
+If you need to manually investigate logs which failed during the import (.gz.problem), you can do so by copying the files to a different location (*/tmp* for example) and remov the suffix .problem. After that you can use ``gunzip`` to extract the log and inspect it. Most likely you will find that the file did not transfer correctly over to the Analysis Cockpit. This can be seen if you open the file and scroll to the very end. In this case the file will just end in the middle of a log line.
+
+To import the problematic scan result, you can copy the original file from the scanned system and upload it directly to the Analysis Cockpit (Scans -> Upload Scan(s)). You should find the timestamp and the hostname of the scanned system in the very top of the problematic log file.
+
+After you are done with the manual upload, make sure to delete the .gz.problem file to free some space.
+
 What is the password used to protect file downloads?
 -----------------------------------------------------------------------------------------
 Artefacts uploaded to a case might be malware. To ensure the file is not automatically deleted
