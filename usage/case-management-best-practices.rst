@@ -1,7 +1,7 @@
 Case Management Best Practices
 ==============================
 
-This section assumes, that a 2-Level model as described in in :ref:`chapter
+This section assumes, that a 2-Level model as described in :ref:`chapter
 6.3. Understanding Users, Roles, Rights and Case Status <usage/basic-concepts:Understanding Users, Roles, Rights and Case Status>` is used.
 
 The following actions will be explained:
@@ -46,7 +46,7 @@ Case Dispatching
 ----------------
 
 Let’s assume, our Level 1 Analyst concludes, that this is a "Legitmate Anomaly". 
-He will now set the status to "Level 1 Finished" and update
+They will now set the status to "Level 1 Finished" and update
 the case. After setting the case to "Level 1 Finished" the case becomes
 visible to the Level 2 Analyst.
 
@@ -110,7 +110,7 @@ it will be one highly specific filter per logline.
 More Information about Cases
 ----------------------------
 
-The ``Assets`` tab of a case shows assets that have contributes at least
+The ``Assets`` tab of a case shows assets that have contributed at least
 one log line to this case. In this example 1.169 assets are affected.
 All of them have the same operating system “Debian GNU/Linux 9
 (stretch)”.
@@ -142,7 +142,7 @@ members of the analysis team (e.g. memory dump for further analysis).
 
 The ``Changes`` tab shows information about changes to this case.
 
-In other words: This your case audit log.
+In other words: This is your case audit log.
 
 .. figure:: ../images/image91.png
    :target: ../_images/image91.png
