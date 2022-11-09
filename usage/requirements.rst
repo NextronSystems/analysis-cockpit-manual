@@ -92,8 +92,12 @@ guide.
 DNS
 ^^^
 
-Analysis Cockpit needs to be able to resolve internal and external IP
-addresses.
+Analysis Cockpit needs to be able to resolve internal and external IP addresses.
+
+. warning:: 
+  Please make sure that you install your Analysis Cockpit with a **domain name** (see `the following image <../_images/image19.png>`_). If you do not set the domain name and install the ASGARD package, you will have problems connecting your ASGARD(s) to the Analysis Cockpit.
+
+  All components you install should have a proper domain name configured to avoid issues further during the configuration.
 
 Internet Access during Installation
 -----------------------------------
