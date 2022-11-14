@@ -112,7 +112,7 @@ choose ``Lucene Query``.
    Lucene Query
 
 .. note:: 
-   You can Alt/Shift click items in the fields to add them as a ``NOT`` filtert to your search. 
+   You can Alt/Shift click items in the top field view to add them as a ``NOT`` filtert to your search. 
 
 Case Creation from Search Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
