@@ -79,7 +79,7 @@ A size of 100k should be sufficient. Also the HTTP2 protocol has to be disabled.
 
 A minimal example configuration for nginx looks as follows:
 
-.. code::
+.. code-block:: nginx
 
     server {
        listen 443 ssl; # !! no http2 !!
@@ -105,9 +105,17 @@ I forgot my admin password and lost access to the WebUI. How do I reset the admi
 
 If you've lost the password of the local ``admin`` user (Web GUI) but still have access the system via SSH, you can reset it via command line using the following command.
 
-.. code-block:: bash
+.. code-block:: console
 
-   sudo mysql analysiscockpit3 -e "UPDATE users SET password = '7951GYqdAjLAoO1NaQu1ManJDIk' WHERE name = 'admin';"
+   nextron@cockpt:~$ sudo mysql analysiscockpit3 -e "UPDATE users SET password = '7951GYqdAjLAoO1NaQu1ManJDIk' WHERE name = 'admin';"
 
 This resets the password to ``admin``. You should then change that password immediately.
 
+How do I reset Multi Factor Authentication for a specific user
+--------------------------------------------------------------
+
+If you or another user lost their second factor (MFA) to log into the ASGARD Web UI, you can reset the users MFA Settings with the following command (in this example we assume that the user is called ``john``):
+
+.. code-block:: console
+
+   nextron@cockpt:~$ sudo mysql analysiscockpit3 --execute "UPDATE users SET tfa_valid = 0 WHERE name = 'john';"
