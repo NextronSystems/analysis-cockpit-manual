@@ -6,6 +6,10 @@
     color: #2cc0ee;
 }
 
+.wy-table-responsive table td, .wy-table-responsive table th {
+    white-space: normal;
+}
+
 .rst-versions a {
     color: #2cc0ee;
 }
