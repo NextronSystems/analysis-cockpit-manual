@@ -8,10 +8,10 @@ Certificate Validation Failed
 If you receive the following error, SSL/TLS interception interrupted the
 installation process.
 
-.. code:: bash
+.. code-block:: console
    
-   nextron@analysis3:~$ sudo nextronInstaller -cockpit 
-   [sudo] Passwort für nextron:
+   nextron@cockpit:~$ sudo nextronInstaller -cockpit 
+   [sudo] password for nextron:
    Ign:1 https://update3.nextron-systems.com analysis InRelease
    Err:2 https://update3.nextron-systems.com analysis Release
    Certificate verification failed: The certificate is NOT trusted. The certificate issuer is unknown. Could not handshake: Error in the certificate verification. [IP: 192.168.3.21 8080]
@@ -52,9 +52,11 @@ If deleting the logs is not enough, deleting the already read-in events (ending 
 is the next best location to regain disk space. If there are too many files for a 
 simple ``rm *.ok``, you can use find to delete them:
 
-.. code:: bash
+.. code-block:: console
 
-    find /var/lib/nextron/analysiscockpit3/events -name "*.ok" -print0 | xargs -0 -I'{}' rm '{}'
+   nextron@cockpit:~$ sudo su -
+   [sudo] password for nextron:
+   root@cockpit:~# find /var/lib/nextron/analysiscockpit3/events -name "*.ok" -print0 | xargs -0 -I'{}' rm '{}'
 
 
 If Elasticsearch does not automatically work again after cleaning up some disk space, restart
@@ -70,7 +72,7 @@ increased. If that is not an option you can delete old scans as described in sec
 ElasticSearch Index Locked Due to Low Free Disk Space
 -----------------------------------------------------
 
-.. code:: bash
+.. code-block:: none
    
    Mar 26 09:48:09 analysis-cockpit[22732]: [ERROR] could not update log: could not update logs: could not update documents: http status 403 ({"took":48,"timed\_out":false,"total":136,"updated":0,"deleted":0,"batches":1,"version\_conflicts":0,"noops":0,"retries":{"bulk":0,"search":0},"throttled\_millis":0,"requests\_per\_second":-1.0,"throttled\_until\_millis":0,"failures":[{"index":"logs-2019-03-21","type":"doc","id":"L11527716281914854515","cause":{"type":"cluster\_block\_exception","reason":"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"},"status":403},{"index":"logs-2019-03-21","type":"doc","id":"L12526619521231613944","cause":{"type":"cluster\_block\_exception","reason":"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"},"status":403},{"index":"logs-2019-03-21","type":"doc","id":"L10726191995274581682","cause":{"type":"cluster\_block\_exception","reason":"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"},"status":403},{"index":"logs-2019-03-21","type":"doc","id":"L17340155165061572392","cause":{"type":"cluster\_block\_exception","reason":"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"},"status":403},{"index":"logs-2019-03-21","type":"doc","id":"L10064611600393832220","cause":{"type":"cluster\_block\_exception","reason":"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"},"status":403}   
 
@@ -88,9 +90,9 @@ read-only mode.
 You can fix that issue with the following command using the command line
 on ASGARD:
 
-.. code:: bash
+.. code-block:: console
    
-   curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
+   nextron@asgard:~$ curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
 
 
 Debug Failed File Imports
@@ -98,9 +100,11 @@ Debug Failed File Imports
 
 Check for reported problems using this command:
 
-.. code:: bash
+.. code-block:: console
    
-   find /var/lib/nextron/analysiscockpit3/events -name "\*.problem"
+   nextron@cockpit:~$ sudo su -
+   [sudo] password for root:
+   nextron@cockpit:~$ find /var/lib/nextron/analysiscockpit3/events -name "\*.problem"
 
 Make sure that you’re able to see the imported log data and review the
 selected time range in the time range picker in whatever view you’re
@@ -133,9 +137,9 @@ Fix the proxy string in the file **/etc/apt/apt.conf.d/00proxy**
 
 E.g.
 
-.. code:: bash
+.. code:: console
    
-   sudo edit /etc/apt/apt.conf.d/00proxy
+   nextron@cockpit:~$ sudoedit /etc/apt/apt.conf.d/00proxy
 
 
 Then rerun the installer.

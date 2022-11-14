@@ -72,8 +72,7 @@ assign new events to a case in the Tab ``Grouping Criteria`` of each case.
    :target: ../_images/image96.png
    :alt: Create Case
 
-They are also used in "Auto Casing" and "Optimization". (see Glossary >
-Baselining)
+They are also used in "Auto Casing" and "Optimization". (see :ref:`usage/glossary:Baselining`)
 
 Dynamic Auto Case ID
 ^^^^^^^^^^^^^^^^^^^^
@@ -150,45 +149,21 @@ Cockpit.
 
 .. list-table:: 
    :header-rows: 0
+   :widths: 15, 85
    
    * - Incident
-     - | Incident cases report a clear threat, indicated by a hard match and verified by 
-       | research of an analyst. Analysts create incident cases to indicate the highest possible 
-       | certainty and risk. Incident cases are also characterized by the fact that they 
-       | do not need to be verified by someone else. They either indicate malware, a threat 
-       | group or penetration testing activity and should trigger immediate response.
+     - Incident cases report a clear threat, indicated by a hard match and verified by research of an analyst. Analysts create incident cases to indicate the highest possible certainty and risk. Incident cases are also characterized by the fact that they do not need to be verified by someone else. They either indicate malware, a threat group or penetration testing activity and should trigger immediate response.
    * - Suspicious
-     - | Suspicious cases are based on significant indicators that require a review by 
-       | someone within the organization or more evidence to come to a final conclusion. 
-       | Often, file samples or process memory dumps are required to verify/falsify a 
-       | verdict. Cases of this type usually trigger evidence collection or review actions.
+     - Suspicious cases are based on significant indicators that require a review by someone within the organization or more evidence to come to a final conclusion. Often, file samples or process memory dumps are required to verify/falsify a verdict. Cases of this type usually trigger evidence collection or review actions.
    * - Noteworthy
-     - | Noteworthy cases are based on soft indicators or elements that should be 
-       | reviewed whenever there is time to do that. They include all kinds of events that 
-       | cannot be dismissed as false positives or anomalies but are likely uncritical. 
-       | Noteworthy cases don’t trigger an immediate response but should be reviewed 
-       | whenever there is time to do that.
+     - Noteworthy cases are based on soft indicators or elements that should be reviewed whenever there is time to do that. They include all kinds of events that cannot be dismissed as false positives or anomalies but are likely uncritical. Noteworthy cases don’t trigger an immediate response but should be reviewed whenever there is time to do that.
    * - Vulnerability
-     - | Vulnerability cases contain detected software or configuration weaknesses that 
-       | compromise system integrity. The reported vulnerabilities often include easy to exploit 
-       | weaknesses that are frequently used by threat groups to execute code remotely, 
-       | gain access or escalate privileges on affected systems. Cases classified as 
-       | Vulnerability are typically integrated into a vulnerability management process 
-       | as an additional input channel.   
-   * - | Legitimate 
-       | Anomaly
-     - | Legitimate Anomaly cases contain events that are related to legitimate elements 
-       | that are suspicious, but an ordinary finding in the context of the analyzed organization.
-       | The reason for an anomaly is not a malfunction of the scanner but a 
-       | peculiarity within the analyzed environment. Legitimate Anomalies don’t trigger 
-       | any further activity.
+     - Vulnerability cases contain detected software or configuration weaknesses that compromise system integrity. The reported vulnerabilities often include easy to exploit weaknesses that are frequently used by threat groups to execute code remotely, gain access or escalate privileges on affected systems. Cases classified as Vulnerability are typically integrated into a vulnerability management process as an additional input channel.   
+   * - Legitimate 
+       Anomaly
+     - Legitimate Anomaly cases contain events that are related to legitimate elements that are suspicious, but an ordinary finding in the context of the analyzed organization.The reason for an anomaly is not a malfunction of the scanner but a peculiarity within the analyzed environment. Legitimate Anomalies don’t trigger any further activity.
    * - False Positive
-     - | False Positive cases contain events that indicate suspicious or malicious activity,
-       | but the review revealed that it is actually legitimate software or other elements.
-       | The only reason for a false positive is a scanner malfunction or signatures that
-       | falsely report a threat (see section :ref:`Difference between False Positive and<usage/glossary:Difference between False Positive and Legitimate Anomaly>`
-       | :ref:`Legitimate Anomaly<usage/glossary:Difference between False Positive and Legitimate Anomaly>` for details). A false positive usually triggers a review
-       | by Nextron Systems and a signature adjustment.
+     - False Positive cases contain events that indicate suspicious or malicious activity, but the review revealed that it is actually legitimate software or other elements. The only reason for a false positive is a scanner malfunction or signatures that falsely report a threat (see section :ref:`usage/glossary:Difference between False Positive and Legitimate Anomaly` for details). A false positive usually triggers a review by Nextron Systems and a signature adjustment.
    * - Unknown
      - The default state of newly created cases.
 
@@ -200,7 +175,7 @@ situations in which the scanner (THOR) made an error and situations in
 which a customer environment contains suspicious or malicious elements
 that are known.
 
-E.g., a Winrar used by admins as "r.exe" in "C:\\users\\public" for
+E.g., a Winrar used by admins as ``r.exe`` in ``C:\users\public`` for
 software rollout purposes is not considered a "False Positive" but a
 "Legitimate Anomaly". It is a finding which doesn’t have to be fixed in
 THOR’s signature set but is simply a specific situation in the analyzed
@@ -213,14 +188,14 @@ Examples for "Legitimate Anomalies":
 
 * Procdump.exe findings
 * Suspicious RUN Key entries that use customer software
-* Custom software that uses suspicious folders, e.g. C:\\Users\\Public, %AppData%
+* Custom software that uses suspicious folders, e.g. ``C:\Users\Public``, ``%AppData%``
 * Process memory match with a "ReflectiveLoader" YARA rule on a third party EDR agent process
 
 Examples for "False Positives":
 
 * YARA rule match on Bloomberg or SAP software
-* Filename IOC match "w64.exe" on a Perl for Windows build tool
-* YARA rule match with "Putty\_Anomaly" on a legitimate and signed putty.exe
+* Filename IOC match ``w64.exe`` on a Perl for Windows build tool
+* YARA rule match with "Putty\_Anomaly" on a legitimate and signed ``putty.exe``
 
 Another good example is one of the many anomaly signatures that triggers
 on an XORed MS-DOS Stub. A match with such a signature only qualifies as
