@@ -39,6 +39,41 @@ have not yet been looked at.
 
 Details on using the ``Baselining`` section can be found below.
 
+Baselining Views
+----------------
+In the ``Baselining`` section there are two views, the ``Compromise Assessment Mode`` and the ``Deep Inspection Mode``.
+
+By default, the Analysis Cockpit Baselining Mode is set to ``Compromise Assessement Mode``.
+
+.. figure:: ../images/baseline_mode.png
+   :target: ../_images/baseline_mode.png
+   :alt: Select your view - "Compromise Assessment Mode" or "Deep Inspection Mode"
+
+   Select your view - "Compromise Assessment Mode" or "Deep Inspection Mode"
+
+Compromise Assessement Mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The "Compromise Assessment Mode" is a new filter/representation of events created and reviewed by security experts. 
+
+It includes our most succesfull detections.
+In this context “success” means, that the detection uncovered malicious activity in the wild and at the same time had a low anomaly and false positive rate.
+Additionally we also consider a detection to be successful that caused little or no false positives or anomalies. 
+
+The new view will combine and apply different techniques and filters to all the unclassified events in the ``Baselining`` section, providing a reduced set of logs which proved to be relevant from an analyst perspective.
+
+This new “Compromise Assessment Mode” dramatically reduces your baselining effort.
+In our tests we noticed a decrease of events in the Baselining section of more than 90%. We believe that especially entities that follow our “Continuous Compromise Assessment”
+approach should switch into this new mode. We’ve also challenged the new mode with the post exploitation tools and techniques found in the context of HAFNIUM / Exchange exploitations
+in March 2021 and covered almost every aspect of the attacks in the new view.
+
+.. note:: 
+   In case of an Incident Response, the Deep Inspection Mode is always recommended, since nothing is filtered here. 
+
+Deep Inspection Mode
+^^^^^^^^^^^^^^^^^^^^
+This view is basically how it used to be (the old default view).
+It shows all Alerts and Warnings unless they are already part of an existing case.
+
 Log Processing and Cases
 ------------------------
 
