@@ -18,4 +18,4 @@ Change your LDAP GroupFilter to the following:
 AAC#001: Status
 ~~~~~~~~~~~~~~~
 
-Fixed in next ASGARD version.
+Fixed in next Analysis Cockpit version.
