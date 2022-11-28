@@ -24,6 +24,7 @@ Welcome to ASGARD Analysis Cockpit Manual's documentation!
    usage/api
    usage/typical-pitfalls
    usage/faqs
+   usage/known-issues
    usage/glossary
 
 
