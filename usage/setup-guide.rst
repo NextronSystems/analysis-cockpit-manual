@@ -1,5 +1,5 @@
-Quick Setup Guide
-=================
+Setup Guide
+===========
 
 Setup a New ESX VM and Mount the ISO
 ------------------------------------
@@ -131,6 +131,15 @@ dialogue.
    install the ASGARD agents. If you’ve configured a FQDN (hostname +
    domain) that cannot be resolved on the clients, no agent will be able
    to find and reconnect to the ASGARD server.
+
+Choosing a password
+-------------------
+
+.. figure:: ../images/setup_password.png
+   :target: ../_images/setup_password.png
+   :alt: Choosing a password
+
+   Choosing a password for the nextron user
 
 Partitioning of the Hard Disk
 -----------------------------

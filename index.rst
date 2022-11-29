@@ -14,7 +14,7 @@ Welcome to ASGARD Analysis Cockpit Manual's documentation!
    usage/introduction
    usage/requirements
    usage/architecture
-   usage/quick-setup-guide
+   usage/setup-guide
    usage/first-steps
    usage/basic-concepts
    usage/setup
