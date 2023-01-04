@@ -1,69 +1,28 @@
-First Steps
-===========
-
-Change User Password for the Console Logon
-------------------------------------------
-
-The User password can be changed by opening a command line on the
-Analysis Cockpit.
-
-The default user is **nextron**, the default password is **nextron**.
-
-Simply type the following command to set a new password for the nextron
-user.
-
-.. code:: bash
-   
-   passwd
-
-Make sure to write that new password down or better save it into a
-password safe.
-
-Change User Password for the Web Frontend
------------------------------------------
-
-Log into the web-based frontend with user **admin** and password
-**admin** and change the initial password.
-
-The Analysis Cockpit Web interface password can be changed by opening
-the Analysis Cockpit frontend with your browser and clicking on ``User Settings``.
-
-``User Settings`` > ``Password``
-
-.. figure:: ../images/image24.png
-   :target: ../_images/image24.png
-   :alt: User Settings 
-
-   User Settings
-
 Migrate from Cockpit v2.8.x to Cockpit v3.x
 -------------------------------------------
 
 In order to migrate an old Cockpit Version 2.x to a newly installed
-Cockpit 3.x proceed as follows:
-
-On Analysis Cockpit Version 2.x
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cockpit 3.x proceed as follows
 
 Make sure you have installed the latest updates.
 
-On the command line type:
+On the command line of your Analysis Cockpit v2.x type:
 
-.. code:: bash
+.. code:: console
    
-   sudo /etc/analysis-cockpit/ac2toac3 export -o export.ac2
+   nextron@cockpitv2:~$ sudo /etc/analysis-cockpit/ac2toac3 export -o export.ac2
 
 This will create the output file export.ac2 that will contain the entire
 Cockpit V2.x configuration including, users, rights, cases and case
 content but it WILL NOT contain any logs.
 
-Copy the file export.ac2 to your newly installed Cockpit V3.x.
+Copy the file ``export.ac2`` to your newly installed Cockpit v3.x.
 
-On the command line type:
+On the command line type of your Analysis Cockpit v3.x type:
 
-.. code:: bash
+.. code:: console
    
-   sudo /etc/analysis-cockpit/ac2toac3 import -f export.ac2
+   nextron@cockpitv3:~$ sudo /etc/analysis-cockpit/ac2toac3 import -f export.ac2
 
 This will import the entire Cockpit 2.x configuration into your Cockpit
 V3.x.
@@ -107,4 +66,4 @@ ASGARD Management Center Version 1:
 .. note::
    Scan.log rotates every month. Be sure to import older logs as needed.
 
-To import old log data, see :ref:`chapter 7.9 Log File Import <usage/setup:Log File Import>`.
+To import old log data, see :ref:`usage/administration:Log File Import`.

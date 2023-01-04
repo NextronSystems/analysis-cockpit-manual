@@ -1,8 +1,8 @@
 Requirements
 ============
 
-Hardware Requirement
---------------------
+Hardware Requirements
+---------------------
 
 There are a few things to consider, before you start with the
 installation.
@@ -191,4 +191,17 @@ Other Optional Requirements
 
 Usage of a Reverse Proxy
 ^^^^^^^^^^^^^^^^^^^^^^^^
-If you are planing to make the Analysis Cockpit available through a reverse proxy, see :ref:`section 12.3. I am using a Reverse Proxy to access the Analysis Cockpit. What do I have to take care of?<usage/faqs:I am using a Reverse Proxy to access the Analysis Cockpit. What do I have to take care of?>`.
+If you are planing to make the Analysis Cockpit available through a
+reverse proxy, see :ref:`usage/faqs:I am using a Reverse Proxy to access the Analysis Cockpit. What do I have to take care of?`.
+
+Architecture
+------------
+
+The following image shows an architecture overview with all products and
+their communication relationships.
+
+.. figure:: ../images/image3.png
+   :target: ../_images/image3.png
+   :alt: Full Architecture
+	
+   Full Architecture

@@ -32,7 +32,7 @@ the same to your newly created VM.
 
 Please make sure to select a suitable v-switch or physical interface
 that reflects the IP address scheme you are planning to use for the new
-ASGARD.
+Analysis Cockpit. Only use one Hard Disk for the installation.
 
 Analysis Cockpit Installation
 -----------------------------
@@ -144,6 +144,14 @@ Choosing a password
 Partitioning of the Hard Disk
 -----------------------------
 
+.. warning:: 
+   The Analysis Cockpit is intended to be installed with
+   only one disk. Do not configure your server with
+   multiple disks. The system won't configure additional
+   disks. Make sure that your disk has the recommended
+   size. See :ref:`usage/requirements:hardware requirements`
+   for more information.
+
 Finally, confirm the settings, select “Yes” and click “Continue”.
 
 .. figure:: ../images/image20.png
@@ -210,6 +218,51 @@ system is ready to be used.
 Note that the FQDN shown after “https://” has to be resolvable by the
 connected ASGARD Management Centers and users that try to access the
 Analysis Cockpit.
+
+Changing Passwords
+------------------
+
+Console
+^^^^^^^
+
+The password for the linux system can be changed by
+opening a command line on the Analysis Cockpit. Log into
+the Analysis Cockpit via SSH with the user ``nextron``.
+
+Simply type the following command after logging into the
+system, to set a new password for the ``nextron`` user.
+
+.. code:: console
+   
+   nextron@cockpit:~$ passwd
+   Changing password for nextron.
+   Current password:
+   New password:
+   Retype new password:
+   passwd: password updates successfully
+
+Make sure to write that new password down or better save it into a
+password safe.
+
+.. note::
+   On older installations default password is ``nextron``.
+
+Web UI
+^^^^^^
+
+Log into the web-based frontend with user ``admin`` and password
+``admin`` and change the initial password.
+
+The Analysis Cockpit Web interface password can be changed by opening
+the Analysis Cockpit frontend with your browser and clicking on
+``User Settings`` > ``Password``.
+
+.. figure:: ../images/image24.png
+   :target: ../_images/image24.png
+   :alt: User Settings 
+
+   User Settings
+
 
 Changing the IP-Address
 -----------------------

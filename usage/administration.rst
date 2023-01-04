@@ -1,8 +1,7 @@
+Administration
+==============
 
-Setup
-=====
-
-This chapter assumes, that you have read chapter :doc:`Basic Concepts <./basic-concepts>`.
+This chapter assumes, that you have read chapter :ref:`usage/basic-concepts:basic concepts`.
 
 In order to configure the Analysis Cockpit for the first use, the
 following steps need to be done:
@@ -45,8 +44,8 @@ also check for new updates by clicking the ``Check for Updates`` Button.
 Set Users and User Rights
 -------------------------
 
-:ref:`Chapter 6.3 Understanding Users, Roles, Rights and Case Status <usage/basic-concepts:Understanding Users, Roles, Rights and Case Status>` already
-described how to set up a 2-level analyst model for working with cases.
+The chapter :ref:`usage/basic-concepts:Understanding Users, Roles, Rights and Case Status`
+already described how to set up a 2-level analyst model for working with cases.
 The roles defined in that section are non-administrative roles, meaning
 they are only allowed to access cases based on the respective status of
 a ticket.
@@ -137,9 +136,9 @@ The figures below illustrate options of a possible LDAP configuration.
 Configure Notifications
 -----------------------
 
-As described in :ref:`chapter 6.2 Log Processing and Cases <usage/basic-concepts:Log Processing and Cases>` the cockpit is
-able to forward logs to a SIEM system in case this particular logline
-was added automatically to a case with the type “Incident”.
+As described in :ref:`usage/basic-concepts:Log Processing and Cases` the
+Analysis Cockpit is able to forward logs to a SIEM system in case
+this particular logline was added automatically to a case with the type “Incident”.
 
 The ``Notifications`` tab allows you to define custom notifications for
 event assignments (Event Assignment Notifications). It is recommended to
@@ -315,7 +314,7 @@ When the file is moved to that folder with the wrong permissions,
 Analysis Cockpit tries to handle these situations in appropriate ways.
 If Analysis cockpit had read access but no rights to
 write/delete/rotate/rename the file, the file gets blacklisted in memory
-and will not be imported as long as the service doesn’t get restarted. A
+and will not be imported as long as the service doesn't get restarted. A
 restart of the service would cause the service to reindex the log data
 placed in that folder.
 
@@ -362,7 +361,7 @@ By using the “Asset View” you can e.g., easily answer questions like:
 
 -  Which systems appear most often in “Incident” cases?
 
--  Which systems haven’t reported a single event for more than a month?
+-  Which systems haven't reported a single event for more than a month?
 
 -  Which Domain Controllers have not been scanned yet?
 
@@ -387,12 +386,14 @@ You can configure your Analysis Cockpit to upload files to a local sandbox.
 Currently you can use `CAPEv2 <https://github.com/kevoreilly/CAPEv2>`_ (recommended) or `Cuckoo <https://cuckoosandbox.org/>`_.
 
 .. note:: 
-   This section only focus on the integration of your Analysis Cockpit with an existing sandbox. We will not cover how to set up the sandbox.
+   This section only focus on the integration of your Analysis Cockpit
+   with an existing sandbox. We will not cover how to set up the sandbox.
 
 Analysis Cockpit Sandbox Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the web view of your Analysis Cockpit, navigate to ``Sandbox``. Click ``Add Sandbox`` in the top right corner. Keep the ``Name`` short and add a proper ``Description``.
+In the web view of your Analysis Cockpit, navigate to ``Sandbox``. Click
+``Add Sandbox`` in the top right corner. Keep the ``Name`` short and add a proper ``Description``.
 
 Once you click ``Add`` the page will display an API token. Copy this token, we will need it later.
 
@@ -417,7 +418,8 @@ We change into the configuration directory of the sandbox:
    root@cockpit:~# cd /etc/nextron/analysiscockpit3/sandbox/connector
    root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector#
 
-Here you can find two folders, one each for the type of sandbox. In this example, we will configure the CAPv2 sandbox with our Analysis Cockpit.
+Here you can find two folders, one each for the type of sandbox. In
+this example, we will configure the CAPv2 sandbox with our Analysis Cockpit.
 
 .. code:: console
    
@@ -463,10 +465,15 @@ Change the ``capev2.ini`` with a text editor. The important lines are marked:
    apikey = <your API Key here>
    verify = no
 
-For lines 6-10, please fill the information accordingly. ``host`` is the IP/FQDN of your sandbox. ``port`` is the listening port of the web interface of your sandbox.
-``token`` is the API token generated in the user management of your sandbox. ``verify`` is for verification of the TLS certificate (of you don't use TLS or don't want to verify the certificate, set this option to no).
+For lines 6-10, please fill the information accordingly. ``host`` is
+the IP/FQDN of your sandbox. ``port`` is the listening port of the web interface of your sandbox.
+``token`` is the API token generated in the user management of your
+sandbox. ``verify`` is for verification of the TLS certificate
+(if you don't use TLS or don't want to verify the certificate, set this option to no).
 
-For lines 16-17 you have to set the ``apikey`` of your Analysis Cockpit (see "Add Sandbox" step in the beginning of this section) and ``verify``, which can be set to no. This will again verify the TLS certificate.
+For lines 16-17 you have to set the ``apikey`` of your Analysis
+Cockpit (see "Add Sandbox" step in the beginning of this section)
+and ``verify``, which can be set to no. This will again verify the TLS certificate.
 
 Save your files after you made your changes.
 
@@ -476,7 +483,8 @@ Open the ``capev2.py`` file with a text editor:
 
    root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2# nano capev2.py
 
-You will see the instructions to create a service in the comment block on the top. Copy the following content from the comment block: 
+You will see the instructions to create a service in the comment
+block on the top. Copy the following content from the comment block: 
 
 .. code-block:: ini
    :linenos:
@@ -557,7 +565,9 @@ Once your sandbox is set up and running, you can see the status of it in the san
    :target: ../_images/cockpit_sandbox_view.png
    :alt: Sandbox View in the Analysis Cockpit
 
-If you wish to enable automatic scanning for uploaded files, you can do so by pressing the play button to the right hand side.
+If you wish to enable automatic scanning for uploaded files
+(`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/usage/administration.html#bifrost-quarantine>`_),
+you can do so by pressing the play button to the right hand side.
 
 In the ``Files`` view you can see previously analysed files or upload files for analysis by yourself:
 
@@ -566,18 +576,42 @@ In the ``Files`` view you can see previously analysed files or upload files for 
    :alt: File View in the Analysis Cockpit
 
 .. note:: 
-   If you did not enable ``auto mode`` of your configured sandbox, you have to manually add the file for scanning in here. You can do this by pressing the ``Scan file with sandbox`` button to the right of your file.
+   If you did not enable ``auto mode`` of your configured sandbox, you have
+   to manually add the file for scanning in here. You can do this by pressing
+   the ``Scan file with sandbox`` button to the right of your file.
 
-After your file has been uploaded, you have to wait until your sandbox is finished with analysing the file. Change to the ``Reports`` view to see the status of the files.
+After your file has been uploaded, you have to wait until your sandbox
+is finished with analysing the file. Change to the ``Reports`` view
+to see the status of the files.
 
 .. figure:: ../images/cockpit_sandbox_reports_view1.png
    :target: ../_images/cockpit_sandbox_reports_view1.png
    :alt: Reports View in the Analysis Cockpit
 
-Once the file was analysed and the reports are ready, you will see that the status of the file changed to ``SUCCESS`` and the buttons ``REPORT``, ``JSON`` and ``HTML`` can be clicked.
+Once the file was analysed and the reports are ready, you will see that
+the status of the file changed to ``SUCCESS`` and the buttons ``REPORT``,
+``JSON`` and ``HTML`` can be clicked.
 
 .. figure:: ../images/cockpit_sandbox_reports_view2.png
    :target: ../_images/cockpit_sandbox_reports_view2.png
    :alt: Reports View in the Analysis Cockpit
 
 You can now download the report.
+
+API
+---
+
+The API documentation has been integrated into the web interface.
+
+.. figure:: ../images/image93.png
+   :target: ../_images/image93.png
+   :alt: API Documentation in Menu
+
+   API Documentation in Menu
+
+.. figure:: ../images/image94.png
+   :target: ../_images/image94.png
+   :alt: API Documentation
+
+   API Documentation
+
