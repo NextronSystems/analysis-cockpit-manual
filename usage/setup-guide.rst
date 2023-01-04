@@ -179,32 +179,27 @@ next step – the installation of the ASGARD Analysis Cockpit service.
 
    Proxy Configuration
 
-The proxy configuration supports unauthorized access and HTTP Auth.
-
-e.g.
-
-http://our-proxy.local:8080
-
-http://username:password@our-proxy.local:8000
+The proxy configuration supports unauthorized access and HTTP Auth, for
+example :samp:`http://our-proxy.local:8080` and :samp:`http://username:password@our-proxy.local:8000`
 
 Install the Analysis Cockpit Services
 -------------------------------------
 
-The base installation is now complete. In the next step we’ll install
+The base installation is now complete. In the next step we'll install
 the Analysis Cockpit service.
 
 Important: Internet connectivity is required for this step.
 
 Use the VMWare console or SSH to the appliance using the user
-**nextron** and default password **nextron**.
+``nextron``.
 
 To start the Analysis Cockpit installation run the following command:
 
-.. code:: bash
+.. code:: console
    
-   sudo nextronInstaller -cockpit
+   nextron@asgard-ac:~$ sudo nextronInstaller -cockpit
 
-Important: use an upper case “i” in the word installer
+Important: use an upper case "i" in the word installer
 
 After the installer has completed its operations successfully, the
 system is ready to be used.
@@ -215,7 +210,7 @@ system is ready to be used.
 
    Message upon successful completion
 
-Note that the FQDN shown after “https://” has to be resolvable by the
+Note that the FQDN shown after ``https://`` has to be resolvable by the
 connected ASGARD Management Centers and users that try to access the
 Analysis Cockpit.
 
@@ -234,12 +229,12 @@ system, to set a new password for the ``nextron`` user.
 
 .. code:: console
    
-   nextron@cockpit:~$ passwd
+   nextron@asgard-ac:~$ passwd
    Changing password for nextron.
    Current password:
    New password:
    Retype new password:
-   passwd: password updates successfully
+   passwd: password updated successfully
 
 Make sure to write that new password down or better save it into a
 password safe.
@@ -263,7 +258,6 @@ the Analysis Cockpit frontend with your browser and clicking on
 
    User Settings
 
-
 Changing the IP-Address
 -----------------------
 
@@ -277,9 +271,9 @@ The Analysis Cockpit's IP-Address can be changed in **/etc/network/interfaces**.
 
    auto ens32
    iface ens32 inet static
-   address 192.0.2.7
-   netmask 255.255.255.0
-   gateway 192.0.2.254
+      address 192.0.2.7
+      netmask 255.255.255.0
+      gateway 192.0.2.254
 
 Important: There might be a case where the name of the network adaptor (in this example: ``ens32``) can vary.
 

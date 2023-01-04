@@ -133,9 +133,7 @@ If you’ve set a wrong proxy before the package installation using the
 fetch the required packages from our update servers, perform the
 following steps.
 
-Fix the proxy string in the file **/etc/apt/apt.conf.d/00proxy**
-
-E.g.
+Fix the proxy string in the file ``/etc/apt/apt.conf.d/00proxy``
 
 .. code:: console
    
