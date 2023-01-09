@@ -1,8 +1,8 @@
 Case Management Best Practices
 ==============================
 
-This section assumes, that a 2-Level model as described in :ref:`chapter
-6.3. Understanding Users, Roles, Rights and Case Status <usage/basic-concepts:Understanding Users, Roles, Rights and Case Status>` is used.
+This section assumes, that a 2-Level model as described in
+:ref:`usage/basic-concepts:Understanding Users, Roles, Rights and Case Status` is used.
 
 The following actions will be explained:
 
@@ -45,7 +45,7 @@ comments can be added.
 Case Dispatching
 ----------------
 
-Let’s assume, our Level 1 Analyst concludes, that this is a "Legitmate Anomaly". 
+Let's assume, our Level 1 Analyst concludes, that this is a "Legitimate Anomaly". 
 They will now set the status to "Level 1 Finished" and update
 the case. After setting the case to "Level 1 Finished" the case becomes
 visible to the Level 2 Analyst.
@@ -53,12 +53,12 @@ visible to the Level 2 Analyst.
 Closing a Case
 --------------
 
-Let’s assume, that a Level 2 Analyst now picks one of the cases in
+Let's assume, that a Level 2 Analyst now picks one of the cases in
 status "Level 1 Finished" and starts working on this case.
 
 In this respect we assume, that something suspicious has been found,
 that needs further analysis by the system administration team. In most
-organizations this will be controlled through the organization’s action
+organizations this will be controlled through the organization's action
 request or ticketing system. So, we assume, that we will close the case
 in the Analysis Cockpit as it is progressed in another system. Thus, the
 status is changed to closed and the case gets updated.
@@ -86,7 +86,7 @@ of the case.
    Reviewing Grouping Criteria
 
 In our example, three auto\_case\_ids were added that match all 1,000
-loglines. In the future all incoming logs, that match one of the three
+log lines. In the future all incoming logs, that match one of the three
 “Detailed Reasons” will be added to this case directly and will not show
 up in the Log Management section.
 
@@ -96,8 +96,8 @@ Limitations
 There are limitations to the visibility of grouping criteria. Grouping
 Criteria are only calculated for Alerts and Warnings. For all other
 types of logs (Notices, Info, Error) auto\_case\_ids are not calculated,
-so every logline gets its own highly specific filter that matches future
-occurrences of exactly the same logline but will not do any kind of
+so every log line gets its own highly specific filter that matches future
+occurrences of exactly the same log line but will not do any kind of
 generic matching. These highly specific filters are not displayed in the
 case for simplicities sake.
 
@@ -105,7 +105,7 @@ In rare cases the Analysis Cockpit will find it difficult to calculate
 auto\_case\_ids even for Alerts and Warnings. These logs will get tagged
 with ``optimized\_template=false``. In this case, the behavior is like for
 Notices, Info and Error messages. Grouping Criteria will not show up as
-it will be one highly specific filter per logline.
+it will be one highly specific filter per log line.
 
 More Information about Cases
 ----------------------------

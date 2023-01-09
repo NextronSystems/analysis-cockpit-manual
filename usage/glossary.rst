@@ -45,7 +45,7 @@ automatically assign newly incoming events to this case.
 
 Often, characteristics of existing older events also align with the
 criteria described in the filters of the new case. However, they do not
-get assigned to that case, because they’re already in the database and
+get assigned to that case, because they're already in the database and
 the case assignment only happens when new events arrive.
 
 Optimization is used to assign unassigned events to existing cases.
@@ -77,7 +77,7 @@ They are also used in "Auto Casing" and "Optimization". (see :ref:`usage/glossar
 Dynamic Auto Case ID
 ^^^^^^^^^^^^^^^^^^^^
 
-The Dynamic Auto Case IDs are generated for events that don’t have a
+The Dynamic Auto Case IDs are generated for events that don't have a
 corresponding filter template defined. This is often the case for very
 rare event types or events of a low level (Info, Notice).
 
@@ -132,14 +132,14 @@ Difference between Summary and Assessment
 The field ``Summary`` is meant to include the elements (fields) of events
 that are used as characteristics to perform an assessment. You can think
 of it as the values that you as an analyst want to highlight for other
-analysts that review that specific case. It’s often a special file name
+analysts that review that specific case. It's often a special file name
 and location or a process name and YARA rule match on that process.
 
 You can use the "Auto Summary" feature to get an auto-recommended
 content for this field.
 
 The field ``Assessment`` is the one that requires the most effort. It
-contains the findings of the analyst’s review.
+contains the findings of the analyst's review.
 
 Case Types
 ^^^^^^^^^^
@@ -148,22 +148,49 @@ The following table describes the cases types taxonomy used in Analysis
 Cockpit.
 
 .. list-table:: 
-   :header-rows: 0
+   :header-rows: 1
    :widths: 15, 85
    
+   * - Type
+     - Description
    * - Incident
-     - Incident cases report a clear threat, indicated by a hard match and verified by research of an analyst. Analysts create incident cases to indicate the highest possible certainty and risk. Incident cases are also characterized by the fact that they do not need to be verified by someone else. They either indicate malware, a threat group or penetration testing activity and should trigger immediate response.
+     - Incident cases report a clear threat, indicated by a hard match and verified
+       by research of an analyst. Analysts create incident cases to indicate the
+       highest possible certainty and risk. Incident cases are also characterized
+       by the fact that they do not need to be verified by someone else. They either
+       indicate malware, a threat group or penetration testing activity and should
+       trigger immediate response.
    * - Suspicious
-     - Suspicious cases are based on significant indicators that require a review by someone within the organization or more evidence to come to a final conclusion. Often, file samples or process memory dumps are required to verify/falsify a verdict. Cases of this type usually trigger evidence collection or review actions.
+     - Suspicious cases are based on significant indicators that require a review
+       by someone within the organization or more evidence to come to a final conclusion.
+       Often, file samples or process memory dumps are required to verify/falsify
+       a verdict. Cases of this type usually trigger evidence collection or review actions.
    * - Noteworthy
-     - Noteworthy cases are based on soft indicators or elements that should be reviewed whenever there is time to do that. They include all kinds of events that cannot be dismissed as false positives or anomalies but are likely uncritical. Noteworthy cases don’t trigger an immediate response but should be reviewed whenever there is time to do that.
+     - Noteworthy cases are based on soft indicators or elements that should be reviewed
+       whenever there is time to do that. They include all kinds of events that cannot
+       be dismissed as false positives or anomalies but are likely uncritical. Noteworthy
+       cases don't trigger an immediate response but should be reviewed whenever there
+       is time to do that.
    * - Vulnerability
-     - Vulnerability cases contain detected software or configuration weaknesses that compromise system integrity. The reported vulnerabilities often include easy to exploit weaknesses that are frequently used by threat groups to execute code remotely, gain access or escalate privileges on affected systems. Cases classified as Vulnerability are typically integrated into a vulnerability management process as an additional input channel.   
-   * - Legitimate 
-       Anomaly
-     - Legitimate Anomaly cases contain events that are related to legitimate elements that are suspicious, but an ordinary finding in the context of the analyzed organization.The reason for an anomaly is not a malfunction of the scanner but a peculiarity within the analyzed environment. Legitimate Anomalies don’t trigger any further activity.
+     - Vulnerability cases contain detected software or configuration weaknesses that
+       compromise system integrity. The reported vulnerabilities often include easy
+       to exploit weaknesses that are frequently used by threat groups to execute
+       code remotely, gain access or escalate privileges on affected systems. Cases
+       classified as Vulnerability are typically integrated into a vulnerability
+       management process as an additional input channel.   
+   * - Legitimate Anomaly
+     - Legitimate Anomaly cases contain events that are related to legitimate
+       elements that are suspicious, but an ordinary finding in the context
+       of the analyzed organization.The reason for an anomaly is not a malfunction
+       of the scanner but a peculiarity within the analyzed environment. Legitimate
+       Anomalies don't trigger any further activity.
    * - False Positive
-     - False Positive cases contain events that indicate suspicious or malicious activity, but the review revealed that it is actually legitimate software or other elements. The only reason for a false positive is a scanner malfunction or signatures that falsely report a threat (see section :ref:`usage/glossary:Difference between False Positive and Legitimate Anomaly` for details). A false positive usually triggers a review by Nextron Systems and a signature adjustment.
+     - False Positive cases contain events that indicate suspicious or malicious
+       activity, but the review revealed that it is actually legitimate software
+       or other elements. The only reason for a false positive is a scanner malfunction
+       or signatures that falsely report a threat (see section :ref:`usage/glossary:Difference between False Positive and Legitimate Anomaly`
+       for details). A false positive usually triggers a review by Nextron Systems
+       and a signature adjustment.
    * - Unknown
      - The default state of newly created cases.
 
@@ -177,8 +204,8 @@ that are known.
 
 E.g., a Winrar used by admins as ``r.exe`` in ``C:\users\public`` for
 software rollout purposes is not considered a "False Positive" but a
-"Legitimate Anomaly". It is a finding which doesn’t have to be fixed in
-THOR’s signature set but is simply a specific situation in the analyzed
+"Legitimate Anomaly". It is a finding which doesn't have to be fixed in
+THOR's signature set but is simply a specific situation in the analyzed
 environment.
 
 Matches that are clearly an error in THOR signatures should be
@@ -203,7 +230,7 @@ false positives when there is no XORed MS-DOS stub in that file and not
 when it turns out to be a legitimate file. The signature detects what it
 is designed to detect.
 
-A signature with a rule named MAL\_Xrat\_Mar21\_1 that triggers on a
+A signature with a rule named ``MAL_Xrat_Mar21_1`` that triggers on a
 legitimate and signed executable, however, is a false positive.
 
 Invisible (Backend)
@@ -222,5 +249,5 @@ These groups can be identified by a common so-called "Auto Case ID"
 The filter templates are static and predefined.
 
 E.g., a typical filter template states that for events in the Module
-"Filescan", the fields FILE and SHA1 are sufficiently specific to group
+``Filescan``, the fields **FILE** and **SHA1** are sufficiently specific to group
 events based on equal values in these two fields.

@@ -138,7 +138,7 @@ Configure Notifications
 
 As described in :ref:`usage/basic-concepts:Log Processing and Cases` the
 Analysis Cockpit is able to forward logs to a SIEM system in case
-this particular logline was added automatically to a case with the type “Incident”.
+this particular log line was added automatically to a case with the type “Incident”.
 
 The ``Notifications`` tab allows you to define custom notifications for
 event assignments (Event Assignment Notifications). It is recommended to
@@ -248,7 +248,7 @@ Syslog Input
 
 Another way to import log data is by using SYSLOG messages.
 
-The ANALYSYS COCKPIT listens on port 514/udp and 514/tcp for incoming
+The ANALYSIS COCKPIT listens on port 514/udp and 514/tcp for incoming
 log data and all logs will show up in the Baselining and/or the Events
 section.
 
@@ -259,7 +259,7 @@ File Import Through Web-Based GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Alternatively, logs can be uploaded through the web-based interface by
-selecting the particular logfile (must be the .txt format, html import
+selecting the particular log file (must be the .txt format, html import
 is not supported) and clicking the ``Upload Scans`` button within the
 Scans section.
 
@@ -274,12 +274,12 @@ Scans section.
 After a successful upload, the scans should appear in the list below.
 
 Important: if you can see events in the ``Events`` or ``Baselining`` views,
-please make sure that you’ve selected the correct time frame to see the
+please make sure that you've selected the correct time frame to see the
 events. Often manually uploaded scans happened days or weeks before the
 upload. The log data gets indexed with the time stamp of their creation
 and not the import and can therefore be hidden in the default view
 
-After the upload, you’re able to link the recently uploaded scans with
+After the upload, you're able to link the recently uploaded scans with
 an existing or new group scan.
 
 .. figure:: ../images/image47.png
@@ -315,7 +315,7 @@ Analysis Cockpit tries to handle these situations in appropriate ways.
 If Analysis cockpit had read access but no rights to
 write/delete/rotate/rename the file, the file gets blacklisted in memory
 and will not be imported as long as the service doesn't get restarted. A
-restart of the service would cause the service to reindex the log data
+restart of the service would cause the service to re-index the log data
 placed in that folder.
 
 Important: We highly recommend not to directly copy (scp, rsync) files
@@ -353,7 +353,7 @@ dealing with alerts and warnings.
 However, in some cases it makes sense to change perspective and rather
 go for a host centric approach. The Analysis Cockpit will calculate
 numbers of lines in different case types (Incident, Suspicious, Anomaly,
-etc.) on a per host basis for a given timeframe. Along with information
+etc.) on a per host basis for a given time frame. Along with information
 from ASGARD on last scan dates, labels, host availability etc. this
 gives an entirely different perspective.
 
@@ -569,7 +569,7 @@ If you wish to enable automatic scanning for uploaded files
 (`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/usage/administration.html#bifrost-quarantine>`_),
 you can do so by pressing the play button to the right hand side.
 
-In the ``Files`` view you can see previously analysed files or upload files for analysis by yourself:
+In the ``Files`` view you can see previously analyzed files or upload files for analysis by yourself:
 
 .. figure:: ../images/cockpit_sandbox_file_upload.png
    :target: ../_images/cockpit_sandbox_file_upload.png
@@ -581,14 +581,14 @@ In the ``Files`` view you can see previously analysed files or upload files for 
    the ``Scan file with sandbox`` button to the right of your file.
 
 After your file has been uploaded, you have to wait until your sandbox
-is finished with analysing the file. Change to the ``Reports`` view
+is finished with analyzing the file. Change to the ``Reports`` view
 to see the status of the files.
 
 .. figure:: ../images/cockpit_sandbox_reports_view1.png
    :target: ../_images/cockpit_sandbox_reports_view1.png
    :alt: Reports View in the Analysis Cockpit
 
-Once the file was analysed and the reports are ready, you will see that
+Once the file was analyzed and the reports are ready, you will see that
 the status of the file changed to ``SUCCESS`` and the buttons ``REPORT``,
 ``JSON`` and ``HTML`` can be clicked.
 

@@ -1,7 +1,7 @@
 Baselining Best Practices
 =========================
 
-This section assumes, that you have read the :doc:`chapter 6. Basic Concepts <./basic-concepts>`.
+This section assumes, that you have read the :ref:`usage/basic-concepts:basic concepts`.
 
 All incoming logs, that do not match an existing case, will show up in
 the ``Baselining`` section.
@@ -74,14 +74,14 @@ can be done in various ways:
 
 * by adding a custom filter in the search bar
 * by clicking on one of the bars in the bar chart
-* by clicking on magnifier symbol in a field in a logline
+* by clicking on magnifier symbol in a field in a log line
 * by using Lucene within the search bar
 
 You can generate a filter bubble using an expression in the search
 field, choosing a category, deciding whether the expression should be
 contained, equal etc. and clicking the magnifier button. Clicking on one
 of the bars in the bar chart or on magnifier symbol in a field in a
-logline will generate a filter bubble, too.
+log line will generate a filter bubble, too.
 
 | Example:
 | The following search made use of the built-in custom filters and
@@ -96,7 +96,7 @@ logline will generate a filter bubble, too.
 
 Please note, that, filters can be negated by clicking on the two arrows symbol or delete it by clicking on the cross symbol.
 
-Using the buit-in custom filters is the most common and easiest way to
+Using the built-in custom filters is the most common and easiest way to
 select groups of logs.
 
 For those who prefer Lucene, an additional Lucene search bar can be
@@ -124,7 +124,7 @@ select ``Search results`` and add a name,
 that makes sense to you.
 
 If you want future incoming logs with the same auto\_case\_id like
-loglines in this particular case to be automatically assigned to this
+log lines in this particular case to be automatically assigned to this
 case, you have to tick the checkbox ``Assign newly incoming events based on Auto Case ID``.
 
 .. figure:: ../images/image64.png
@@ -132,7 +132,7 @@ case, you have to tick the checkbox ``Assign newly incoming events based on Auto
    :alt: Auto Case IDs
 
 You may add a summary or let the system suggest one for you (click on the magic wand symbol).
-The suggestion is calculated out of the first loglines within the
+The suggestion is calculated out of the first log lines within the
 selected logs.
 
 .. figure:: ../images/image66.png
@@ -143,7 +143,7 @@ selected logs.
 
 You may or may not add assessment, case type, recommendations or a
 comment. After closing you will find the log section empty, as it is
-still using your filter, but the matching loglines have been removed
+still using your filter, but the matching log lines have been removed
 from this section and added to the case.
 
 .. figure:: ../images/image67.png
@@ -152,7 +152,7 @@ from this section and added to the case.
 
    Log Section empty
 
-Simply remove the filter and the remaining loglines will show up.
+Simply remove the filter and the remaining log lines will show up.
 
 .. figure:: ../images/image68.png
    :target: ../_images/image68.png
@@ -201,7 +201,7 @@ an example.
    Creating Cases through Condition
 
 Again, you may or may not add auto assignment for future incoming
-loglines, summary, assessment, case type, recommendations or a comment.
+log lines, summary, assessment, case type, recommendations or a comment.
 After closing you will find the selected logs have been removed from the
 logs section.
 
@@ -224,7 +224,7 @@ an example.
    Creating Cases through Regular Expressions
 
 Again, you may or may not add auto assignment for future incoming
-loglines, summary, assessment, case type, recommendations or a comment.
+log lines, summary, assessment, case type, recommendations or a comment.
 After clicking the ``Create Case`` button, the matching lines will get
 removed from the log management view.
 
@@ -272,17 +272,17 @@ continue in the background.
    Auto Cases finished
 
 In our example, the Cockpit created two cases with at least 2000
-loglines in each case.
+log lines in each case.
 
 .. important::
   The Analysis Cockpit generates auto\_case\_ids only for Alerts and
-  Warnings. Don’t use the Autocase feature for Notice and Info level
+  Warnings. Don't use the Autocase feature for Notice and Info level
   events.
 
 Add to Case
 -----------
 
-Sometimes you may want to add loglines to an already existing case
+Sometimes you may want to add log lines to an already existing case
 because they represent the same security context. To do this you can
 just click the ``Add to Case`` button and select the suitable case. It is
 also possible to add an additional comment to this case for the
@@ -297,22 +297,22 @@ addition.
 Customizing the Detailed View of Log Lines
 ------------------------------------------
 
-The detailed view for loglines opens by clicking on a logline. Within
-this view you can select some fields as favourite fields by clicking on
+The detailed view for log lines opens by clicking on a log line. Within
+this view you can select some fields as favorite fields by clicking on
 the star symbol. They will always be shown at the top of this view. ``MESSAGE``,
 ``MODULE``
 and ``hostname`` are selected by default.
 
-To search for all loglines with the same entry as this logline in a
+To search for all log lines with the same entry as this log line in a
 particular field, you can click on the magnifier symbol behind the entry. If you
 are looking for more information about this entry in this field, just
 click on the eye symbol.
 
 .. figure:: ../images/image78.png
    :target: ../_images/image78.png
-   :alt: customizing the detailed view for loglines
+   :alt: customizing the detailed view for log lines
 
-   Customizing the detailed view for loglines
+   Customizing the detailed view for log lines
 
 Additionally, you can find a ``VIRUSTOTAL`` button in every hash field and a
 ``VALHALLA`` button in every reason field. 

@@ -5,7 +5,7 @@ Regain Disk Space
 -----------------
 
 If your disk is already at or close to 100% and AC no longer works properly, see section
-:ref:`Recover from a Full Disk<usage/typical-pitfalls:Recover from a Full Disk>`.
+:ref:`usage/typical-pitfalls:Recover from a Full Disk`.
 
 If your disk usage is growing too fast and free disk space is running out, you have several options:
 
@@ -29,7 +29,7 @@ not need or plan to use those, they can be deleted. If you are unsure
 make a copy to another system before deleting them.
 
 More details can be found in section
-:ref:`Recover from a Full Disk<usage/typical-pitfalls:Recover from a Full Disk>`.
+:ref:`usage/typical-pitfalls:Recover from a Full Disk`.
 
 Potentially Unneeded / Dated Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

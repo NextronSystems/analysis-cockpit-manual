@@ -91,8 +91,8 @@ prompt for a static IP-Configuration.
    :alt: Network Configuration II
 
 Enter the IP address that Analysis Cockpit should use and optimally
-directly add a netmask in CIDR notation. (see below) If you don’t append
-the netmask, you’ll be asked for a network mask in the following
+directly add a netmask in CIDR notation. (see below) If you don't append
+the netmask, you'll be asked for a network mask in the following
 dialogue.
 
 .. figure:: ../images/image15.png
@@ -127,8 +127,8 @@ dialogue.
 
 .. important::
    Make sure that the combination of hostname and domain creates an FQDN 
-   that can be resolved from the endsystems on which you intend to
-   install the ASGARD agents. If you’ve configured a FQDN (hostname +
+   that can be resolved from the endpoints on which you intend to
+   install the ASGARD agents. If you've configured a FQDN (hostname +
    domain) that cannot be resolved on the clients, no agent will be able
    to find and reconnect to the ASGARD server.
 

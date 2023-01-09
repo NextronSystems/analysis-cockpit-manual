@@ -31,7 +31,7 @@ differences between the first and second scans are shown.
 Analysis Cockpit comes with an integrated and highly configurable
 ticketing system that helps organizing your analysis workflow and – if
 required – interfaces to your existing ticketing system through a
-configurable connector. If ASGARD’s Bifrost\_2 Service is used to
+configurable connector. If ASGARD's Bifrost\_2 Service is used to
 collect suspicious samples, the Analysis Cockpit can submit the samples
 to various Sandbox systems and include the report in the graphical
 frontend.

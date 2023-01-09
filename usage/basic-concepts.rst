@@ -43,7 +43,7 @@ Baselining Views
 ----------------
 In the ``Baselining`` section there are two views, the ``Compromise Assessment Mode`` and the ``Deep Inspection Mode``.
 
-By default, the Analysis Cockpit Baselining Mode is set to ``Compromise Assessement Mode``.
+By default, the Analysis Cockpit Baselining Mode is set to ``Compromise Assessment Mode``.
 
 .. figure:: ../images/baseline_mode.png
    :target: ../_images/baseline_mode.png
@@ -51,23 +51,31 @@ By default, the Analysis Cockpit Baselining Mode is set to ``Compromise Assessem
 
    Select your view - "Compromise Assessment Mode" or "Deep Inspection Mode"
 
-Compromise Assessement Mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The "Compromise Assessment Mode" is a new filter/representation of events created and reviewed by security experts. 
+Compromise Assessment Mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It includes our most succesfull detections.
-In this context “success” means, that the detection uncovered malicious activity in the wild and at the same time had a low anomaly and false positive rate.
-Additionally we also consider a detection to be successful that caused little or no false positives or anomalies. 
+The "Compromise Assessment Mode" is a new filter/representation of events
+created and reviewed by security experts. 
 
-The new view will combine and apply different techniques and filters to all the unclassified events in the ``Baselining`` section, providing a reduced set of logs which proved to be relevant from an analyst perspective.
+It includes our most successful detections. In this context "success" means,
+that the detection uncovered malicious activity in the wild and at the same
+time had a low anomaly and false positive rate. Additionally we also consider
+a detection to be successful that caused little or no false positives or anomalies. 
 
-This new “Compromise Assessment Mode” dramatically reduces your baselining effort.
-In our tests we noticed a decrease of events in the Baselining section of more than 90%. We believe that especially entities that follow our “Continuous Compromise Assessment”
-approach should switch into this new mode. We’ve also challenged the new mode with the post exploitation tools and techniques found in the context of HAFNIUM / Exchange exploitations
+The new view will combine and apply different techniques and filters to all
+the unclassified events in the ``Baselining`` section, providing a reduced
+set of logs which proved to be relevant from an analyst perspective.
+
+This new "Compromise Assessment Mode" dramatically reduces your baselining effort.
+In our tests we noticed a decrease of events in the Baselining section of more
+than 90%. We believe that especially entities that follow our "Continuous Compromise Assessment"
+approach should switch into this new mode. We've also challenged the new mode
+with the post exploitation tools and techniques found in the context of HAFNIUM / Exchange exploitations
 in March 2021 and covered almost every aspect of the attacks in the new view.
 
 .. note:: 
-   In case of an Incident Response, the Deep Inspection Mode is always recommended, since nothing is filtered here. 
+   In case of an Incident Response, the ``Deep Inspection Mode`` is always
+   recommended, since nothing is filtered here. 
 
 Deep Inspection Mode
 ^^^^^^^^^^^^^^^^^^^^
@@ -122,7 +130,7 @@ summary, provide canned recommendations or add assessment information.
 
    Case
 
-The loglines contained in the case can of course be analyzed in detail
+The log lines contained in the case can of course be analyzed in detail
 and changes to the case are tracked automatically.
 
 The cockpit will automatically calculate rules (auto\_case\_id), that
@@ -130,19 +138,19 @@ make sure, future incoming logs that are similar to the log lines in
 this particular case are automatically assigned to this case and WILL
 NOT SHOW UP in the ``Baselining`` section if this is chosen for this case.
 
-In order to understand this better, let’s assume you have decided, a
+In order to understand this better, let's assume you have decided, a
 group of logs are legitimate anomalies. Then all future logs that are
 similar to these anomalies will automatically be added to this case and
 not show up in the Baselining section.
 
-In case you have decided a group of loglines represent a security
-incident the same things will happen. Future loglines that represent a
+In case you have decided a group of log lines represent a security
+incident the same things will happen. Future log lines that represent a
 security incident will show up only in the case and not in the
 Baselining section.
 
 Most organizations obviously want to be alerted in case of a security
 incident. So, the Cockpit can be configured to forward all logs that are
-automatically assigned to an incident case to the organizations’ SIEM
+automatically assigned to an incident case to the organizations' SIEM
 System via syslog. Organizations that prefer to handle THOR Events
 entirely within the Analysis Cockpit and not forward anything to a SIEM
 system may choose to configure a notification that shows up in the
@@ -156,7 +164,7 @@ The following picture shows the recommended log processing.
 
    Log Processing
 
-As one can see, an incoming logline only shows up in the ``Baselining``
+As one can see, an incoming log line only shows up in the ``Baselining``
 section when it matches no existing case.
 
 This behavior is highly configurable and can be changed in the
@@ -191,9 +199,9 @@ In order to setup your rights management you must first decide about the
 states you want your cases to have, then assign rights for a particular
 state to a role and after that you add users to that particular role.
 
-In order to understand this better, let’s look at an example.
+In order to understand this better, let's look at an example.
 
-Let’s assume we have an organization where a Level 1 analyst group
+Let's assume we have an organization where a Level 1 analyst group
 located in Frankfurt is responsible for creating cases and providing an
 initial assessment for cases, while a Level 2 analyst group located in
 Hamburg is responsible for reviewing, final decision and closing of
@@ -289,8 +297,7 @@ Of course, this is only an example. You may of course decide to give
 Level 2 full access to all cases, and it may also be a good means of
 training to grant Level 1 Analysts the right to see the "Level 2 Working"
 and "Closed" cases. You may also want Level 2 Analysts to reopen 
-"Closed"
-cases or may restrict this right to an additional role. This just
+"Closed" cases or may restrict this right to an additional role. This just
 illustrates, that the system is highly configurable with an almost
 infinite number of statuses, roles and rights.
 

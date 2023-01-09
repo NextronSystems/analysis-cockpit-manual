@@ -95,7 +95,10 @@ DNS
 Analysis Cockpit needs to be able to resolve internal and external IP addresses.
 
 .. warning:: 
-  Please make sure that you install your Analysis Cockpit with a **domain name** (see `the following image <../_images/image19.png>`_). If you do not set the domain name and install the ASGARD package, you will have problems connecting your ASGARD(s) to the Analysis Cockpit.
+  Please make sure that you install your Analysis Cockpit with a
+  ``domain name`` (see :ref:`usage/setup-guide:network configuration`).
+  If you do not set the domain name and install the ASGARD package,
+  you will have problems connecting your ASGARD(s) to the Analysis Cockpit.
 
   All components you install should have a proper domain name configured to avoid issues further during the configuration.
 
@@ -111,7 +114,7 @@ SSL/TLS Interception
 
 The installation and update processes do not accept an unknown but valid
 SSL/TLS certificate presented by an intercepting entity and therefore
-don’t support SSL/TLS interception.
+don't support SSL/TLS interception.
 
 Since our products are usually used in possibly compromised
 environments, the integrity of our software and update packages has
@@ -123,7 +126,8 @@ Verify the Downloaded ISO (Optional)
 You can do a quick hash check to verify that the download was not corrupted.
 We recommend to verify the downloaded ISO's signature as this is the cryptographically sound method.
 
-The hash and signature file are both part of the ZIP archive you download from our `portal server <https://portal.nextron-systems.com>`__.
+The hash and signature file are both part of the ZIP archive you download
+from our `portal server <https://portal.nextron-systems.com>`__.
 
 Via Hash
 ^^^^^^^^
@@ -149,7 +153,7 @@ or in Windows command prompt
     efccb4df0a95aa8e562d42707cb5409b866bd5ae8071c4f05eec6a10778f354b
     CertUtil: -hashfile command completed successfully.
 
-or in powerhsell
+or in Powershell
 
 .. code-block:: powershell
 
@@ -164,7 +168,8 @@ or in powerhsell
 Via Signature (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Extract the ZIP, `download the public signature <https://www.nextron-systems.com/certificates-and-keys>`__ and verify the signed ISO:
+Extract the ZIP, `download the public signature <https://www.nextron-systems.com/certificates-and-keys>`__
+and verify the signed ISO:
 
 On Linux
 
@@ -174,7 +179,7 @@ On Linux
     $ openssl dgst -sha256 -verify codesign.pem -signature nextron-universal-installer.iso.sig nextron-universal-installer.iso
     Verified OK
 
-or in powershell
+or in Powershell
 
 .. code-block:: powershell
 

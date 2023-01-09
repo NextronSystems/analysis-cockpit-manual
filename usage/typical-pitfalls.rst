@@ -128,7 +128,7 @@ on a Linux system for all the different services and command line tools.
 Broken before Analysis Cockpit Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you’ve set a wrong proxy before the package installation using the
+If you have set a wrong proxy before the package installation using the
 **sudo nextronInstaller -cockpit** command and the installer failed to
 fetch the required packages from our update servers, perform the
 following steps.
