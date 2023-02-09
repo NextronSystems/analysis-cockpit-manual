@@ -39,10 +39,6 @@ release = ''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    #'recommonmark',
-    #'sphinx.ext.intersphinx',
-    #'sphinx.ext.mathjax',
-    #'sphinx.ext.githubpages',
     'sphinx.ext.autosectionlabel'
 ]
 
@@ -80,6 +76,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+
+html_logo = "images/html/cockpit-logo.png"
+html_favicon = "images/html/favicon.ico"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
