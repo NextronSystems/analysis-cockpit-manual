@@ -30,29 +30,64 @@ specifications are recommended:
 Network Requirements
 --------------------
 
+The Analysis Cockpit and other systems which will have to communicate
+with each other, need the following ports opened within the network.
+For a detailed and up to date list of external connections to our update
+and licensing servers, please visit https://www.nextron-systems.com/hosts/.
+
 The Analysis Cockpit requires the following open ports (incoming).
 
 From Management Workstation to Analysis Cockpit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Administrative web interface: 443/tcp
-* Command line administration: 22/tcp
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 50
+
+   * - Description
+     - Ports
+   * - Administrative Web Interface
+     - 443/tcp
+   * - Command Line Access
+     - 22/tcp
 
 From Analyst Workstation to Analysis Cockpit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Administrative web interface: 443/tcp
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 50
+
+   * - Description
+     - Ports
+   * - Administrative Web Interface
+     - 443/tcp
 
 From ASGARD Management Center to Analysis Cockpit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Syslog forwarder: 514/tcp, 514/udp
-* Asset synchronization: 7443/tcp
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 50
+
+   * - Description
+     - Ports
+   * - Syslog Forwarding
+     - 514/tcp, 514/udp
+   * - Asset Synchronization
+     - 7443/tcp
 
 From Analysis Cockpit to SIEM (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  Syslog forwarder: 514/tcp, 514/udp
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 50
+
+   * - Description
+     - Ports
+   * - Syslog Forwarding
+     - 514/tcp, 514/udp
 
 From Analysis Cockpit to the Internet
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -74,7 +109,14 @@ From Analysis Cockpit to Sandbox Systems (optional)
 
 Depending on the Sandbox system and your individual configuration.
 
-Typically, 8080/tcp and 443/tcp are used.
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 50
+
+   * - Description
+     - Ports
+   * - Sandbox (typically)
+     - 443/tcp, 8080/tcp
 
 Time Synchronization
 ^^^^^^^^^^^^^^^^^^^^
@@ -82,12 +124,20 @@ Time Synchronization
 Analysis Cockpit tries to reach the public Debian time servers by
 default.
 
-* 123/udp to 0.debian.pool.ntp.org
-* 123/udp to 1.debian.pool.ntp.org
-* 123/udp to 2.debian.pool.ntp.org
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 50
 
-The NTP server configuration can be changed after logging in to the Web
-guide.
+   * - Server
+     - Port
+   * - 0.debian.pool.ntp.org
+     - 123/udp
+   * - 1.debian.pool.ntp.org
+     - 123/udp
+   * - 2.debian.pool.ntp.org
+     - 123/udp
+
+The NTP server configuration can be changed in the settings.
 
 DNS
 ^^^
