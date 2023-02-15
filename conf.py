@@ -77,6 +77,11 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 html_theme = 'sphinx_rtd_theme'
 
+html_theme_options = {
+    'prev_next_buttons_location': 'both',
+    'style_external_links': True
+}
+
 html_logo = "images/html/cockpit-logo.png"
 html_favicon = "images/html/favicon.ico"
 
@@ -194,4 +199,4 @@ smartquotes = False
 
 # Use :ref: for subsections
 autosectionlabel_prefix_document = True
-autosectionlabel_maxdepth = 3
+autosectionlabel_maxdepth = 4
