@@ -106,17 +106,31 @@ restrictions.
 
    Add Rsyslog Forwarding II
 
-Install a Certificate
----------------------
+TLS Certificate Installation
+----------------------------
 
-The TLS tab provides an easy-to-use interface for downloading a CSR and
-uploading the TLS certificate.
+Instead of using the pre-installed self-signed TLS Certificate,
+users can upload their own TLS Certificate for ASGARD. 
 
-.. figure:: ../images/image41.png
-   :target: ../_images/image41.png
-   :alt: Download CSR and install TLS Certificate 
+In order to achieve the best possible compatibility with the
+most common browsers, we recommend using the system's FQDN
+in both fields ``Common Name`` AND ``Hostnames``.
 
-   Download CSR and install TLS Certificate
+.. figure:: ../images/generate_csr.png
+   :alt: Generate a Certificate Signing Request (CSR)
+
+   Generate a Certificate Signing Request (CSR)
+
+.. hint::
+   Please note that generating a CSR on the command line is not supported.   
+
+The generated CSR can be used to generate a TLS Certificate.
+Subsequently, this TLS Certificate can be uploaded in the ``Settings`` > ``TLS`` section.
+
+.. figure:: ../images/upload_certificate.png
+   :alt: Upload a TLS Certificate
+
+   Upload a TLS Certificate
 
 Configure LDAP
 --------------
