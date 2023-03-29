@@ -1,9 +1,50 @@
 FAQs
 ====
 
-It seems that events are not visible or have been lost.
-What can I do to verify that they're still in the database?
--------------------------------------------------------------------------------------------------------------------
+This section has frequently asked questions and answers to them.
+You will find that the format of this section is split into a
+question as the introduction of each chapter and the explanation
+right after.
+
+Disabling Assignment Logs
+-------------------------
+
+**Q: My assignment Logs on the server are growing quickly, how can
+I turn them off**
+
+The assignment logs located at ``/var/lib/nextron/analysiscockpit3/log/assignment.log``
+write warnings and errors for the ``Optimize`` function of the Cockpit.
+
+If you have the feeling that the log is filling up too quickly, you can
+turn off those logs completely. It is advised to try and see what the problem
+is before turning off the log completely, as this might indicate an underlying
+issue.
+
+Run the following command on your Analysis
+Cockpit (warning: this will restart your Analysis Cockpit. If you do not
+want to restart the Analysis Cockpit, you can run the second command at a
+later time):
+
+.. code-block:: console
+
+   nextron@cockpit:~$ echo "REPLACE INTO config VALUES ('write-assignment-log','false')" | sudo mysql analysiscockpit3
+   nextron@cockpit:~$ sudo systemctl restart analysiscockpit3.service
+
+To turn back on the ``assignment.log``, run the following command:
+
+.. code-block:: console
+
+   nextron@cockpit:~$ echo "REPLACE INTO config VALUES ('write-assignment-log','true')" | sudo mysql analysiscockpit3
+   nextron@cockpit:~$ sudo systemctl restart analysiscockpit3.service
+
+No Events visible
+-----------------
+
+**Q: It seems that events are not visible or have been lost. What can I
+do to verify that they're still in the database?**
+
+If you think that some events are not visible or have been lost, you can
+do the following to verify that they still exist in the database.
 
 First, check your date range picker.
 
@@ -13,9 +54,11 @@ events accidentally disappear from the view.
 Secondly, make sure you're using the search in the ``Events`` section and
 not the ``Baselining`` section.
 
-I have created a case but it seems that no new incoming
-events are assigned to that existing case. How can I check what's wrong?
---------------------------------------------------------------------------------------------------------------------------------
+No new Events in Case
+---------------------
+
+**Q: I have created a case but it seems that no new incoming
+events are assigned to that existing case. How can I check what's wrong?**
 
 The first thing that you should check are the ``auto_case_ids`` of the
 events in that case (``Cases`` > ``Open Case`` > ``Events`` > ``auto_case_id`` Panel).
@@ -38,8 +81,10 @@ Also check the grouping criteria of that case:
 
 What are the conditions defined to assign new events to that case?
 
-Where are Scan Logs on the system located?
-----------------------------------------------------
+Location of Scan Logs
+---------------------
+
+**Q: Where are Scan Logs on the system located?**
 
 You can find the Scan Logs  in ``/var/lib/nextron/analysiscockpit3/events``.
 In this folder you will find three different naming schemes:
@@ -62,24 +107,30 @@ had a problem with the log transfer and click ``Request Events``. This will tran
 the Events from the corresponding ASGARD. You can also use the Fields **Log Requested**,
 **Log Received** and **Log Received Error** to filter and look for other failed log transmissions.
 
-What is the password used to protect file downloads?
------------------------------------------------------------------------------------------
+Default password for file downloads
+-----------------------------------
+
+**Q: What is the password used to protect file downloads?**
+
 Artifacts uploaded to a case might be malware. To ensure the file is not automatically deleted
 by antivirus or executed by an unknowing user, we zip all files in the attachments and
 encrypt the ZIP file with a default password. The default password ``infected`` can be 
 used to extract the file.
 
-My disk is getting full soon. What options do I have?
-------------------------------------------------------
+Disk Space filling up quickly
+-----------------------------
+
+**Q: My disk is getting full soon. What options do I have?**
 
 If your disk is already at or close to 100% and AC no longer works properly, see section
 :ref:`usage/typical-pitfalls:Recover from a Full Disk`.
 
 In other cases check section :ref:`usage/maintenance:Regain Disk Space`.
 
+Reverse Proxy to access the Analysis Cockpit
+--------------------------------------------
 
-I am using a Reverse Proxy to access the Analysis Cockpit. What do I have to take care of?
-------------------------------------------------------------------------------------------
+**Q: I am using a Reverse Proxy to access the Analysis Cockpit. What do I have to take care of?**
 
 The Analysis Cockpit partially uses large URLs to communicate with its backend.
 Proxy server usually do not allow arbitrary large URLs.
@@ -106,15 +157,19 @@ A minimal example configuration for nginx looks as follows:
     }
 
 
-I am using Internet Explorer and the Analyst Cockpit seems to run into a timeout. What can I do?
-------------------------------------------------------------------------------------------------
+Internet Explorer
+-----------------
+
+**Q: I am using Internet Explorer and the Analyst Cockpit seems to run into a timeout. What can I do?**
 
 Modern browsers (e.g. Firefox, Chrome, Edge, Safari) support large URLs. Internet
 Explorer does not. If you want to access the Analyst Cockpit and all its features,
 you need to switch your browser.
 
-I forgot my admin password and lost access to the WebUI. How do I reset the admin user password?
-------------------------------------------------------------------------------------------------
+Admin Password reset
+--------------------
+
+**Q: I forgot my admin password and lost access to the WebUI. How do I reset the admin user password?**
 
 If you've lost the password of the local ``admin`` user (Web GUI) but still have access
 the system via SSH, you can reset it via command line using the following command.
@@ -125,8 +180,10 @@ the system via SSH, you can reset it via command line using the following comman
 
 This resets the password to ``admin``. You should then change that password immediately.
 
-How do I reset Multi Factor Authentication for a specific user
---------------------------------------------------------------
+Multi Factor Authentication reset
+---------------------------------
+
+**Q: How do I reset Multi Factor Authentication for a specific user**
 
 If you or another user lost their second factor (MFA) to log into the
 ASGARD Web UI, you can reset the users MFA Settings with the following
