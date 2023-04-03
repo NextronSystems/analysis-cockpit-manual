@@ -1,58 +1,99 @@
 Basic Concepts
 ==============
 
-Section Events and Baselining
------------------------------
+Events
+------
 
-All events that have been stored by Analysis Cockpit – regardless
-whether they have been assigned a particular case or not – are displayed
-in the section ``Events``. This section can be regarded to be your hunting
-pool. The section provides powerful filtering options.
+All events that have been stored in your Analysis Cockpit – regardless
+if they are assigned to a particular case or not – are displayed
+in the section ``Events``. This section can be seen as your threat hunting
+pool. The section provides powerful filtering options. The Events
+Section is split into the different sources of your Events:
 
-.. figure:: ../images/image26.png
+- THOR Events
+- Aurora Events
+- Log Watcher Events (deprecated)
+
+.. figure:: ../images/cockpit_events_overview.png
    :alt: Events Section 
 
    Events Section
 
-All events that have NOT been assigned a particular case are displayed
-in the ``Baselining`` section of Analysis Cockpit.
+Baselining
+----------
+
+All events that have **not** been assigned to a particular case are
+displayed in the ``Baselining`` section of the Analysis Cockpit.
+
+Again, the Baselining Section is split into the different sources
+of our events. Additionally, you can see the ``Suggested Cases``, which
+will suggest cases based on predefined :ref:`usage/basic-concepts:case templates`.
+
+- THOR Events
+- Aurora Events
+- Log Watcher Events (deprecated)
+- Suggested Cases
+
+.. figure:: ../images/cockpit_baselining_overview.png
+   :alt: Baselining Section
+
+   Baselining Section
 
 Logs that represent the same type of anomaly or incident can be grouped
 together using the various filters and then be stored in a Case for
-further analysis. Grouping can be done manually by filtering and click
-``Create Case`` or automatically simply by clicking 
-``Automatically generate Cases`` in the Auto Baselining section. With 
-``Automatically generate Cases``, the Cockpit automatically calculates groups of
-"similar" log lines. Once stored in a case, these logs will disappear
-from the Baselining section.
+further analysis. Grouping can be done manually by filtering and clicking
+``Create Case``, selecting individual Events and clicking ``Create Case``,
+or automatically by simply clicking the ``Advanced Tools`` button and
+``Auto Baselining``. With ``Auto Baselining``, the Cockpit automatically calculates groups of
+"similar" log lines.
+
+Once stored in a case, the logs will disappear from the Baselining section.
+
+.. figure:: ../images/cockpit_auto_baselining.png
+   :alt: Auto Baselining
+
+   Auto Baselining
+
+.. To-DO add Info regarding Guided Baselining
+
+The Analysis Cockpit can automatically check for events that can be added to
+existing cases. By clicking the ``Optimize`` button, the Analysis Cockpit will
+iterate through all unassigned events and check if there is a matching case.
+
+.. figure:: ../images/cockpit_optimize.png
+   :alt: Optimize Function
+
+   Optimize Function
+
+.. note::
+   The optimization will iterate through all unassigned events and assign them
+   to cases if a match were found. This may take a while.
 
 In an ideal organization, the Baselining section should always be empty
 at the end of a day, as these logs represent suspicious elements that
 have not yet been looked at.
 
-.. figure:: ../images/image27.png
-   :alt: Baselining Section
-
-   Baselining Section
-
-Details on using the ``Baselining`` section can be found below.
-
 Baselining Views
-----------------
-In the ``Baselining`` section there are two views, the ``Compromise Assessment Mode`` and the ``Deep Inspection Mode``.
+~~~~~~~~~~~~~~~~
 
-By default, the Analysis Cockpit Baselining Mode is set to ``Compromise Assessment Mode``.
+In the ``Baselining`` section there are two main views, the ``Compromise Assessment Mode``
+and the ``Deep Inspection Mode``. Additionally, you can find the ``Custom Signatures
+Only Mode``, which will show events found by custom signatures. This can
+be helpful if you scanned your environment with customer signatures, for example
+during or after and incident.
 
-.. figure:: ../images/baseline_mode.png
-   :alt: Select your view - "Compromise Assessment Mode" or "Deep Inspection Mode"
+By default, the Analysis Cockpit Baselining Mode is set to ``Compromise Assessment``.
 
-   Select your view - "Compromise Assessment Mode" or "Deep Inspection Mode"
+.. figure:: ../images/cockpit_baseline_view_mode.png
+   :alt: Select your view
+
+   Select your view
 
 Compromise Assessment Mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The "Compromise Assessment Mode" is a new filter/representation of events
-created and reviewed by security experts. 
+The ``Compromise Assessment Mode`` is a new filter/representation of events
+created and reviewed by our security experts. 
 
 It includes our most successful detections. In this context "success" means,
 that the detection uncovered malicious activity in the wild and at the same
@@ -72,21 +113,46 @@ in March 2021 and covered almost every aspect of the attacks in the new view.
 
 .. note:: 
    In case of an Incident Response, the ``Deep Inspection Mode`` is always
-   recommended, since nothing is filtered here. 
+   recommended, since nothing is filtered here.
 
 Deep Inspection Mode
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~
+
 This view is basically how it used to be (the old default view).
 It shows all Alerts and Warnings unless they are already part of an existing case.
 
-Log Processing and Cases
+Custom Signatures Only Mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``Custom Signatures Only`` view will only show you events, which:
+
+- Are not part of a case
+- Where found by a custom signature
+
+This view can be helpful if you only want to see events found by one of your custom
+signatures during a THOR scan. This can be helpful if you want to see only those events
+and nothing else.
+
+Cases and Log Processing
 ------------------------
 
 The Cases section gives a good overview regarding the existing cases and
 also provides various filtering options. Column visibility can be
 configured by clicking on the Columns button of this section.
 
-.. figure:: ../images/image28.png
+The Cases Section is split into the different sources of your Cases:
+
+- THOR Cases
+- Aurora Cases
+- Log Watcher Cases (deprecated)
+
+Additionally, you can find more information regarding:
+
+- Grouping Criteria
+- Case Changes
+- Security Center
+
+.. figure:: ../images/cockpit_cases_overview.png
    :alt: Cases Section
 
    Cases Section
@@ -114,46 +180,51 @@ The following types can be set:
 * Legitimate Anomaly
 * False Positive
 
-See chapter :doc:`Glossary <./glossary>` for a detailed description of these
+See chapter :ref:`usage/glossary:glossary` for a detailed description of these
 terms.
 
 Within a case, it is possible to add various information, write a
 summary, provide canned recommendations or add assessment information.
 
-.. figure:: ../images/image29.png
-   :alt: Case 
+.. figure:: ../images/cockpit_case_details.png
+   :alt: Case Details
 
-   Case
+   Case Details
 
 The log lines contained in the case can of course be analyzed in detail
 and changes to the case are tracked automatically.
 
 The cockpit will automatically calculate rules (auto\_case\_id), that
 make sure, future incoming logs that are similar to the log lines in
-this particular case are automatically assigned to this case and WILL
-NOT SHOW UP in the ``Baselining`` section if this is chosen for this case.
+this particular case are automatically assigned to this case and **will
+not show up** in the ``Baselining`` section.
 
-In order to understand this better, let's assume you have decided, a
+.. important::
+   ``Automatically assign newly incoming events to this case`` needs to
+   be selected during case creation to automatically assign new events
+   to an existing case.
+
+In order to understand this better, let's assume you have decided a
 group of logs are legitimate anomalies. Then all future logs that are
 similar to these anomalies will automatically be added to this case and
 not show up in the Baselining section.
 
 In case you have decided a group of log lines represent a security
-incident the same things will happen. Future log lines that represent a
+incident, the same thing will happen. Future log lines that represent a
 security incident will show up only in the case and not in the
 Baselining section.
 
-Most organizations obviously want to be alerted in case of a security
-incident. So, the Cockpit can be configured to forward all logs that are
+Most organizations want to be alerted in case of a security
+incident. The Cockpit can be configured to forward all logs that are
 automatically assigned to an incident case to the organizations' SIEM
 System via syslog. Organizations that prefer to handle THOR Events
 entirely within the Analysis Cockpit and not forward anything to a SIEM
 system may choose to configure a notification that shows up in the
-COCKPIT’s Notification Section.
+Cockpit's Notification Section.
 
 The following picture shows the recommended log processing.
 
-.. figure:: ../images/image30.png
+.. figure:: ../images/cockpit_log_processing.png
    :alt: Log Processing 
 
    Log Processing
@@ -176,6 +247,59 @@ be similar to the ones in the first scan and therefore be assigned to
 the respective cases and not show up in the ``Baselining`` section.
 
 Working with cases is explained in detail in the sections below.
+
+Case Templates
+~~~~~~~~~~~~~~
+
+Case Templates can be used to suggest new cases in the ``Suggested Cases``
+section. If there are no Suggested Cases in the view, no events match
+the Case Templates in your Analysis Cockpit.
+
+.. figure:: ../images/cockpit_case_templates.png
+   :alt: Case Templates Overview
+
+   Case Templates Overview
+
+To import new Case Templates, you need to create a ``.yaml`` file with
+the conditions first. This can be done by navigating to the ``Cases``
+view and exporting your search results as Case Templates. You will
+be able to download a ``.yaml`` file from here, which can be used to
+import as a Case Template.
+
+.. figure:: ../images/cockpit_export_case_template.png
+   :alt: Export Case Template
+
+   Exporting Search Results as Case Templates
+
+.. code-block:: yaml
+   :linenos:
+   :caption: Exported Case Template
+
+   uuid: 94565b82-45fc-47f8-82eb-e9c5352c37c2
+   name: Thor started on a system with the wrong processor architecture
+   summary: ""
+   type: 5
+   scanner: THOR
+   creator: admin
+   condition: "\"MODULE: Startup\" AND \"MESSAGE: 32 bit THOR was executed on 64 bit
+     system. For improved results, use the 64 bit version of THOR.\"\r\n"
+
+After you downloaded the Case Templates, you can import them in the ``Case
+Templates`` view.
+
+.. figure:: ../images/cockpit_import_case_templates.png
+   :alt: Import Case Template
+
+   Import Case Template
+
+You can now inspect the Case Template. You can find it by either looking
+for the name or filter by who created it. You can see that the conditions
+match the contents of your exported Case Template (``.yaml`` file).
+
+.. figure:: ../images/cockpit_inspect_imported_case_template.png
+   :alt: Inspect Imported Case Template
+
+   Inspect Imported Case Template
 
 Understanding Users, Roles, Rights and Case Status
 --------------------------------------------------
@@ -210,7 +334,7 @@ need the following states for your cases:
 
 A workflow could look like this:
 
-.. figure:: ../images/image31.png
+.. figure:: ../images/cockpit_workflow_open_cases.png
    :alt: Workflow open Cases 
 
    Workflow open Cases
@@ -227,7 +351,7 @@ roles and statuses pre-configured.
 In order to set up our pre-configured example, we navigate to the
 ``Settings`` section and create the following roles:
 
-.. figure:: ../images/image32.png
+.. figure:: ../images/cockpit_roles.png
    :alt: Settings - adding additional roles
 
    Settings – adding additional roles
@@ -238,14 +362,16 @@ without rights at all.
 
 After that we define the following statuses:
 
-.. figure:: ../images/image33.png
+.. figure:: ../images/cockpit_case_status.png
    :alt: Settings - Case Status
 
    Settings – Case Status
 
+.. TO-DO change screenshots
+
 In the lower table you can manage the access rights for every role and
 every Case Status. We can give the suitable rights to our generated
-roles by clicking the ``Add Role Case Status`` button on the right.
+roles by clicking the ``New Rights for Case Status`` button on the right.
 
 .. figure:: ../images/image34.png
    :alt: Edit Rights - Read, Write, Set

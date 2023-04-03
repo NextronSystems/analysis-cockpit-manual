@@ -48,7 +48,7 @@ In Cockpit v3 navigate to ``Scans``.
 * Select the Scans you want to import into Cockpit
 * Click ``Request Events``
 
-.. figure:: ../images/image25.png
+.. figure:: ../images/cockpit_scan_request_events.png
    :alt: Request Events from ASGARD Management Center 2.x
 
    Request Events from ASGARD Management Center 2.x
