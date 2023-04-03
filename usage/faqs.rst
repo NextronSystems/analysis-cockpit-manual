@@ -66,7 +66,7 @@ events in that case (``Cases`` > ``Open Case`` > ``Events`` > ``auto_case_id`` P
 If they are distributed as in the following screenshot, it seems that
 auto-casing doesn't work on this case.
 
-.. figure:: ../images/image95.png
+.. figure:: ../images/cockpit_broken_auto_case_id.png
    :alt: Auto Case ID
 
 This case doesn't have groupable contents and uses only so-called

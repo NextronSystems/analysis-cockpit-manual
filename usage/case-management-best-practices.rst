@@ -19,18 +19,21 @@ Open a Case for Editing
 -----------------------
 
 The picture below shows the Case Management view with cases that have
-been created with the ``Auto Case`` feature.
+been created with the ``Auto Case`` feature. You can see those cases
+by filtering the ``Name`` column to only contain the ``Auto Case``
+value and the ``Status`` column to only contain the ``Open`` value.
 
-.. figure:: ../images/image84.png
+.. figure:: ../images/cockpit_overview_auto_cases.png
    :alt: Opening a Case for editing
 
    Opening a Case for editing
 
 In our example a Level 1 Analyst would now pick one of these open cases
-and set the Status to "Level 1 Working" by opening the case (clicking on
-the magnifier button), modifying the status and then clicking ``Update``.
+and set the Status to "Level 1 Working". To do this, they would open
+the case by clicking on the magnifier button and modify the status
+to ``Level 1 Working`` and then click ``Update``.
 
-.. figure:: ../images/image85.png
+.. figure:: ../images/cockpit_update_case_status_l1.png
    :alt: Change Status
 
    Change Status
@@ -61,7 +64,7 @@ request or ticketing system. So, we assume, that we will close the case
 in the Analysis Cockpit as it is progressed in another system. Thus, the
 status is changed to closed and the case gets updated.
 
-.. figure:: ../images/image86.png
+.. figure:: ../images/cockpit_closed_auto_case.png
    :alt: Closing a Case
 
    Closing a Case
@@ -76,7 +79,7 @@ Generate and Review auto\_case\_ids
 These auto\_case\_ids can be reviewed in the ``Grouping Criteria`` section
 of the case.
 
-.. figure:: ../images/image87.png
+.. figure:: ../images/cockpit_auto_case_grouping_criteria.png
    :alt: Reviewing Grouping Criteria
 
    Reviewing Grouping Criteria
@@ -106,38 +109,29 @@ it will be one highly specific filter per log line.
 More Information about Cases
 ----------------------------
 
-The ``Assets`` tab of a case shows assets that have contributed at least
-one log line to this case. In this example 1.169 assets are affected.
-All of them have the same operating system “Debian GNU/Linux 9
-(stretch)”.
+The ``Affected Assets`` tab of a case shows assets that have contributed at least
+one log line to this case. In this example 5 assets are affected.
+All of them have the same operating system "windows".
 
-.. figure:: ../images/image88.png
+.. figure:: ../images/cockpit_case_affected_assets.png
    :alt: Case - Assets Tab
 
    Case – Assets Tab
 
-The ``Scans`` tab shows information about the scans (scan ID, group scan
-ID) the events have been found in.
-
-.. figure:: ../images/image89.png
-   :alt: Case - Scans tab
-
-   Case – Scans tab
-
-In the ``Comments / Attachments`` tab you can add comments and attachments
+In the ``Comments`` tab you can add comments and attachments
 to this case. Attachments can be used to pass additional information to
 members of the analysis team (e.g. memory dump for further analysis).
 
-.. figure:: ../images/image90.png
-   :alt: Case - Comments / Attachments tab
+.. figure:: ../images/cockpit_case_add_comment.png
+   :alt: Case - Comments
 
-   Case – Comments / Attachments tab
+   Case – Comments
 
 The ``Changes`` tab shows information about changes to this case.
 
 In other words: This is your case audit log.
 
-.. figure:: ../images/image91.png
+.. figure:: ../images/cockpit_case_change_history.png
    :alt: Case - Changes tab
 
    Case – Changes tab
@@ -147,21 +141,10 @@ Bulk Edit / Bulk Delete
 
 The Analysis Cockpit features a convenient way to make certain changes
 to groups of cases. Just select the case in the left column and click
-the ``Bulk Edit / Bulk Delete`` button. Now you can select what you want
-to change and click the ``Edit Selected Cases`` button to edit. If you
-want to delete all of those selected cases, just click the 
-``Delete Selected Cases`` button.
+the ``Edit Cases`` or ``Delete Cases`` button.
 
-.. figure:: ../images/image92.png
-   :alt: Bulk Edit / Bulk Delete
+.. figure:: ../images/cockpit_bulk_edit_cases.png
+   :alt: Bulk Edit
 
-   Bulk Edit / Bulk Delete
-
-In this example clicking the ``Edit Selected Cases`` Button would set the
-type to "Noteworthy" and the status to 
-"Level 1 Finished" for cases with
-ID 392 and 393. No comments would have been added. Clicking the ``Delete Selected Cases``
-button would delete those cases. As a consequence of
-deleting the cases all logs within the deleted cases would show up in
-the baselining section.
+   Bulk Edit
 
