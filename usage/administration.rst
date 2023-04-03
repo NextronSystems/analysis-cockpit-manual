@@ -144,7 +144,7 @@ The figures below illustrate options of a possible LDAP configuration.
 Configure Notifications
 -----------------------
 
-As described in :ref:`usage/basic-concepts:Log Processing and Cases`, the
+As described in :ref:`usage/basic-concepts:cases and log processing`, the
 Analysis Cockpit is able to forward logs to a SIEM system in case
 this particular log line was added automatically to a case with the type "Incident".
 

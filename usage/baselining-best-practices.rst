@@ -8,38 +8,52 @@ the ``Baselining`` section.
 
 While importing the logs, the cockpit will already try to find logs are
 that similar and represent the same type of alert or warning. It will
-group these logs and assign an auto\_case\_id. In the example below we
-can see that the biggest group with the auto\_case\_id: "S8AcnJjoWe-U"
-contains more than 10,000 events.
+group these logs and assign an ``auto_case_id``.
 
-.. figure:: ../images/image50.png
-   :alt: Baselining
+.. figure:: ../images/cockpit_baselining_overview.png
+   :alt: Baselining Overview
 
-   Baselining
+   Baselining Overview
 
 Customize Your View
 -------------------
 
-By default, the Analysis Cockpit ``Baselining`` views ship with four bar
-charts and a table with five columns in order to help you find
-meaningful groups of logs. You can add four additional bar charts by
-clicking on the triangle which is located under the bar charts. You can also
-modify which bar charts are shown by clicking gear symbol next to the
-category name and choosing the category you want to see. To get to know
-to number of unique hostnames, files etc., you can click on the right arrow symbol
-next to the category name.
+By default, the Analysis Cockpit ``Baselining`` view ships with multiple bar
+charts and a table with the most relevant columns in order to help you find
+meaningful groups of logs. You can add additional bar charts by clicking on
+the ``Advanced Tools`` button and selecting ``Chart Preferences``.
+
+.. figure:: ../images/cockpit_chart_preferences.png
+   :alt: Chart Preferences
+
+.. figure:: ../images/cockpit_chart_preferences2.png
+   :alt: Chart Preferences
+
+   Chart Preferences
+
+You can also modify which bar charts are shown by the name/field-name of the chart
+and choose the category you want to see. To get more details about a bar chart, you
+can click on square symbol in the heading of the bar chart.
+
+.. figure:: ../images/cockpit_bar_chart_selector.png
+   :alt: Bar Chart Selector
+
+   Bar Chart Selector
+
+.. figure:: ../images/cockpit_bar_chart_details.png
+   :alt: Bar Chart Details
+
+   Bar Chart Details
 
 Click the ``Columns`` button to manage which columns are shown.
 
-.. figure:: ../images/image55.png
-   :alt: Configure your personal view - select bar charts
+.. figure:: ../images/cockpit_column_preferences.png
+   :alt: Column Preferences
 
-   Configure your personal view – select bar charts
+   Column Preferences
 
-.. figure:: ../images/image56.png
-   :alt: Configure your personal view - select columns
-
-   Configure your personal view – select columns
+.. hint:: 
+   All views are personalized and changes will only affect your user.
 
 Manual Case Creation
 --------------------
@@ -49,17 +63,26 @@ Case Creation Basics
 
 Create a new case following these steps: 
 
-#. Select if and how new incoming events should be assigned to this case
-#. Set a case **name**, which serves as title - use keywords that make it easy for other analysts to find it based on a few terms (e.g. if a false positive was caused by matches in **savedsearch.conf**, use this filename in the title of your case)
-#. Select a sample event for the **summary** field 
-#. Add your **assessment**
-#. Choose one or more **recommendations**
-#. Select a **case type** (see the :ref:`Glossary <usage/glossary:Case Types>` for a detailed description of every case type)
-#. Select a **case status** (usually used to mark it as 'work in progress' or to forward it to the next team)
-#. Submit case by clicking the **Create** button
+1. Select on which conditions the case should be built
 
-.. figure:: ../images/analysis-cockpit-create-case.png
-   :alt: Create Case Dialogue
+.. figure:: ../images/cockpit_case_creation1.png
+
+2. Inspect the Case Assignment and Conditions. Set Auto Assign if needed.
+
+.. figure:: ../images/cockpit_case_creation2.png
+
+3. Set a case **name**, which serves as title - use keywords that make it
+   easy for other analysts to find it based on a few terms (e.g. if a false
+   positive was caused by matches in **savedsearch.conf**, use this filename
+   in the title of your case)
+4. Select a sample event for the **summary** field 
+5. Add your **assessment**
+6. Choose one or more **recommendations**
+7. Select a **case type** (see the :ref:`Glossary <usage/glossary:Case Types>` for a detailed description of every case type)
+8. Select a **case status** (usually used to mark it as 'work in progress' or to forward it to the next team)
+9. Submit case by clicking the **Create Case** button
+
+.. figure:: ../images/cockpit_case_creation3.png
 
 Select Log Messages for a Case
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -70,26 +93,22 @@ can be done in various ways:
 
 * by adding a custom filter in the search bar
 * by clicking on one of the bars in the bar chart
-* by clicking on magnifier symbol in a field in a log line
-* by using Lucene within the search bar
+* by clicking on the filter symbol in a field in a log line
+* by using the Lucene Search Query
 
-You can generate a filter bubble using an expression in the search
+You can generate a filter condition using an expression in the search
 field, choosing a category, deciding whether the expression should be
-contained, equal etc. and clicking the magnifier button. Clicking on one
-of the bars in the bar chart or on magnifier symbol in a field in a
-log line will generate a filter bubble, too.
+contained, equal etc. and clicking the search button. Clicking on one
+of the bars in the bar chart or on the filter symbol in a field in a
+log line will generate a filter condition, too.
 
-| Example:
-| The following search made use of the built-in custom filters and
-  displays all logs that are not contained in any case AND where
-  auto\_case\_id is equal to “S8AcnjjoWe-U”.
+.. figure:: ../images/cockpit_active_filters.png
+   :alt: Active Filters
 
-.. figure:: ../images/image59.png
-   :alt: Custom Filter
+   Active Filters
 
-   Custom Filter
-
-Please note, that, filters can be negated by clicking on the two arrows symbol or delete it by clicking on the cross symbol.
+.. hint::
+   Filters can be negated by clicking on the two arrows symbol or delete it by clicking on the cross symbol.
 
 Using the built-in custom filters is the most common and easiest way to
 select groups of logs.
@@ -100,7 +119,7 @@ activated and can even be combined with the built-in custom search.
 In order to activate the Lucene Query search just click the ``contains`` button and
 choose ``Lucene Query``.
 
-.. figure:: ../images/image63.png
+.. figure:: ../images/cockpit_lucene_filter.png
    :alt: Lucene Query
 
    Lucene Query
@@ -113,22 +132,18 @@ Case Creation from Search Results
 
 This is the most relevant way to create a case. Create the filters, so
 that you only see the logs you want to be contained in your case. Then
-click the ``Create Case`` button, 
-select ``Search results`` and add a name,
+click the ``Create Case`` button, select ``Search results`` and add a name,
 that makes sense to you.
 
-If you want future incoming logs with the same auto\_case\_id like
-log lines in this particular case to be automatically assigned to this
-case, you have to tick the checkbox ``Assign newly incoming events based on Auto Case ID``.
+If you want future incoming logs with the same log lines automatically assigned to this
+case, you have to tick the checkbox ``Automatically assign newly incoming events to this case.``.
 
-.. figure:: ../images/image64.png
-   :alt: Auto Case IDs
+.. figure:: ../images/cockpit_assign_new_events_to_case.png
+   :alt: Assign New Events to Cases
 
-You may add a summary or let the system suggest one for you (click on the magic wand symbol).
-The suggestion is calculated out of the first log lines within the
-selected logs.
+You may add a summary to your case.
 
-.. figure:: ../images/image66.png
+.. figure:: ../images/cockpit_create_baseline_case.png
    :alt: Baselining - Create Case
 
    Baselining – Create Case
@@ -138,17 +153,12 @@ comment. After closing you will find the log section empty, as it is
 still using your filter, but the matching log lines have been removed
 from this section and added to the case.
 
-.. figure:: ../images/image67.png
+.. figure:: ../images/cockpit_create_baseline_case_empty_search.png
    :alt: Log Section empty
 
    Log Section empty
 
 Simply remove the filter and the remaining log lines will show up.
-
-.. figure:: ../images/image68.png
-   :alt: Remove the Filter
-
-   Remove the Filter
 
 Case Creation from Selection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -158,7 +168,7 @@ the checkboxes at the very left side of the table and click the ``Create Case`` 
 select ``Selected events`` and add a name, that makes sense
 to you.
 
-.. figure:: ../images/image69.png
+.. figure:: ../images/cockpit_case_creation_selection1.png
    :alt: Creating Cases from Selection
 
    Creating Cases from Selection
@@ -183,7 +193,7 @@ The ``Test Condition / Regular Expression`` button will calculate the
 numbers of hits and return some matching and some non-matching events as
 an example.
 
-.. figure:: ../images/image70.png
+.. figure:: ../images/cockpit_case_creation_condition.png
    :alt: Creating Cases through Condition
 
    Creating Cases through Condition
@@ -205,7 +215,7 @@ The ``Test Condition / Regular Expression`` button will calculate the
 numbers of hits and return some matching and some non-matching events as
 an example.
 
-.. figure:: ../images/image71.png
+.. figure:: ../images/cockpit_case_creation_regex.png
    :alt: Creating Cases through Regular Expressions
 
    Creating Cases through Regular Expressions
@@ -215,9 +225,9 @@ log lines, summary, assessment, case type, recommendations or a comment.
 After clicking the ``Create Case`` button, the matching lines will get
 removed from the log management view.
 
-Important: It is recommended to use regular expressions only rarely
-and with caution. This feature can severely impact the performance of
-the system.
+.. warning:: 
+   It is recommended to use regular expressions only rarely and with
+   caution. This feature can severely impact the performance of the system.
 
 Create Cases Automatically
 --------------------------
@@ -232,7 +242,7 @@ Do only create a case when you find at least that many similar logs. In
 our example below the Cockpit will now generate cases for all groups of
 at least 2000 similar events.
 
-.. figure:: ../images/image72.png
+.. figure:: ../images/cockpit_auto_baselining_threshold.png
    :alt: Automatically create cases
 
    Automatically create cases
@@ -242,21 +252,13 @@ and create cases. Depending on the data volume this may take a while and
 you will be presented a page that shows that Auto Cases is still running
 along with the current number of cases.
 
-.. figure:: ../images/image73.png
-   :alt: Auto Cases running
+.. figure:: ../images/cockpit_auto_baselining_status.png
+   :alt: Auto Cases Status
 
-   Auto Cases running
+   Auto Cases Status
 
 It is safe to leave this page, once the status in ``Running``. It will
 continue in the background.
-
-.. figure:: ../images/image74.png
-   :alt: Auto Cases finished
-
-   Auto Cases finished
-
-In our example, the Cockpit created two cases with at least 2000
-log lines in each case.
 
 .. important::
   The Analysis Cockpit generates auto\_case\_ids only for Alerts and
@@ -272,7 +274,7 @@ just click the ``Add to Case`` button and select the suitable case. It is
 also possible to add an additional comment to this case for the
 addition.
 
-.. figure:: ../images/image75.png
+.. figure:: ../images/cockpit_add_to_case.png
    :alt: Add to Case
 
    Add to Case
@@ -283,44 +285,32 @@ Customizing the Detailed View of Log Lines
 The detailed view for log lines opens by clicking on a log line. Within
 this view you can select some fields as favorite fields by clicking on
 the star symbol. They will always be shown at the top of this view. ``MESSAGE``,
-``MODULE``
-and ``hostname`` are selected by default.
+``MODULE`` and ``hostname`` are selected by default.
 
 To search for all log lines with the same entry as this log line in a
-particular field, you can click on the magnifier symbol behind the entry. If you
-are looking for more information about this entry in this field, just
-click on the eye symbol.
+particular field, you can click the dropdown on the left hand side of 
+the field.
 
-.. figure:: ../images/image78.png
+.. figure:: ../images/cockpit_log_lines_details.png
    :alt: customizing the detailed view for log lines
 
    Customizing the detailed view for log lines
 
 Additionally, you can find a ``VIRUSTOTAL`` button in every hash field and a
-``VALHALLA`` button in every reason field. 
-By clicking ``VIRUSTOTAL`` the hash
+``VALHALLA`` button in every reason field. By clicking ``VIRUSTOTAL`` the hash
 will be searched on Virustotal. By clicking ``VALHALLA`` you will get more
 information about the matching rule from valhalla.nextron-systems.com.
 
-More Information on Assets and Cases
-------------------------------------
+Usage of the Context Menu
+-------------------------
 
-To get more information about matching assets and the matching cases you
-can click the ``More Info`` button and select what you want to see. You
-can also choose to get the unique count of a category.
+You can use the context menu on any **value** in your logs to get an action menu.
+Within this menu, you can do different actions:
 
-.. figure:: ../images/image81.png
-   :alt: More Info - Matching Assets
+.. figure:: ../images/cockpit_event_context_menu.png
+   :alt: Context Menu
 
-   More Info – Matching Assets
+   Context Menu
 
-.. figure:: ../images/image82.png
-   :alt: More Info - Matching Cases
-
-   More Info – Matching Cases
-
-.. figure:: ../images/image83.png
-   :alt: More Info - Calculate count of unique values
-
-   More Info – Calculate count of unique values
-
+You can filter, search for similar events, or even create cases based on the
+value you right-clicked.
