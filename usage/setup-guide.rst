@@ -168,7 +168,9 @@ Install the Analysis Cockpit Services
 The base installation is now complete. In the next step we'll install
 the Analysis Cockpit service.
 
-Important: Internet connectivity is required for this step.
+.. important::
+   - Internet connectivity is required for this step.
+   - Use an upper case ``i`` in the word ``nextronInstaller``.
 
 Use the VMWare console or SSH to the appliance using the user
 ``nextron``.
@@ -178,8 +180,6 @@ To start the Analysis Cockpit installation run the following command:
 .. code:: console
    
    nextron@asgard-ac:~$ sudo nextronInstaller -cockpit
-
-Important: use an upper case "i" in the word installer
 
 After the installer has completed its operations successfully, the
 system is ready to be used.
@@ -239,7 +239,8 @@ the Analysis Cockpit frontend with your browser and clicking on
 Changing the IP-Address
 -----------------------
 
-The Analysis Cockpit's IP-Address can be changed in **/etc/network/interfaces**. The IP is configured with the ``address`` variable.
+The Analysis Cockpit's IP-Address can be changed in **/etc/network/interfaces**.
+The IP is configured with the ``address`` variable.
 
 .. code-block:: console
 
@@ -249,11 +250,22 @@ The Analysis Cockpit's IP-Address can be changed in **/etc/network/interfaces**.
 
    auto ens32
    iface ens32 inet static
-      address 192.0.2.7
-      netmask 255.255.255.0
-      gateway 192.0.2.254
+      address 172.16.2.7/24
+      gateway 172.16.2.254
+      dns-nameservers 172.16.20.20
 
-Important: There might be a case where the name of the network adaptor (in this example: ``ens32``) can vary.
+You can now restart ``networking.service`` to apply the changes.
+
+.. code-block:: console
+
+   nextron@asgard-ac:~$ sudo systemctl restart networking.service
+
+.. important::
+   - The network interface might have a different name, so pay attention
+     to the name (in this example ``ens32``).
+
+   - If restarting the ``networking.service`` is throwing an error, you
+     you can restart the server
 
 The new IP can be applied with the command **sudo systemctl restart networking**
 
