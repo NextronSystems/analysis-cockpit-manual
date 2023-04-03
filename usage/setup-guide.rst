@@ -227,12 +227,12 @@ Web UI
 Log into the web-based frontend with user ``admin`` and password
 ``admin`` and change the initial password.
 
-The Analysis Cockpit Web interface password can be changed by opening
-the Analysis Cockpit frontend with your browser and clicking on
-``User Settings`` > ``Password``.
+The Analysis Cockpit Web interface password can be changed by clicking
+your username in the top right corner and selecting ``User Settings``.
+From here you can change your password.
 
-.. figure:: ../images/image24.png
-   :alt: User Settings 
+.. figure:: ../images/cockpit_change_password.png
+   :alt: User Settings
 
    User Settings
 
