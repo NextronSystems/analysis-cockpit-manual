@@ -13,19 +13,15 @@ the Nextron Universal Installer ISO to an accessible datastore and mount
 the same to your newly created VM.
 
 .. figure:: ../images/image4.png
-   :target: ../_images/image4.png
    :alt: Create a new virtual Machine I
 
 .. figure:: ../images/image5.png
-   :target: ../_images/image5.png
    :alt: Create a new virtual Machine II
 
 .. figure:: ../images/image6.png
-   :target: ../_images/image6.png
    :alt: Create a new virtual Machine III
 
 .. figure:: ../images/image7.png
-   :target: ../_images/image7.png
    :alt: Create a new virtual Machine IV 
 
    Create a new virtual Machine
@@ -44,25 +40,20 @@ The installer then loads the additional components from the ISO image
 and lets you select a location and language.
 
 .. figure:: ../images/image8.png
-   :target: ../_images/image8.png
    :alt: Starting the installation
 
    Starting the installation
 
 .. figure:: ../images/image9.png
-   :target: ../_images/image9.png
    :alt: Choosing language, location and locales I
 
 .. figure:: ../images/image10.png
-   :target: ../_images/image10.png
    :alt: Choosing language, location and locales II
 
 .. figure:: ../images/image11.png
-   :target: ../_images/image11.png
    :alt: Choosing language, location and locales III
 
 .. figure:: ../images/image12.png
-   :target: ../_images/image12.png
    :alt: Choosing language, location and locales IV
 
    Choosing language, location and locales
@@ -83,11 +74,9 @@ configurations from a DHCP-Server. If there is none to be found, it will
 prompt for a static IP-Configuration.
 
 .. figure:: ../images/image13.png
-   :target: ../_images/image13.png
    :alt: Network Configuration I
 
 .. figure:: ../images/image14.png
-   :target: ../_images/image14.png
    :alt: Network Configuration II
 
 Enter the IP address that Analysis Cockpit should use and optimally
@@ -96,31 +85,26 @@ the netmask, you'll be asked for a network mask in the following
 dialogue.
 
 .. figure:: ../images/image15.png
-   :target: ../_images/image15.png
    :alt: Network Configuration - IP addresses
 
    Network Configuration - IP addresses
 
 .. figure:: ../images/image16.png
-   :target: ../_images/image16.png
    :alt: Network Configuration - Enter the DNS server addresses 
 
    Network Configuration – Enter the DNS server addresses
 
 .. figure:: ../images/image17.png
-   :target: ../_images/image17.png
    :alt: Network Configuration - Enter the Gateway
 
    Network Configuration - Enter the Gateway
 
 .. figure:: ../images/image18.png
-   :target: ../_images/image18.png
    :alt: Network Configuration - Enter the Hostname 
 
    Network Configuration - Enter the Hostname
 
 .. figure:: ../images/image19.png
-   :target: ../_images/image19.png
    :alt: Network Configuration - Enter the Domain name
 
    Network Configuration - Enter the Domain name
@@ -136,7 +120,6 @@ Choosing a password
 -------------------
 
 .. figure:: ../images/setup_password.png
-   :target: ../_images/setup_password.png
    :alt: Choosing a password
 
    Choosing a password for the nextron user
@@ -155,13 +138,11 @@ Partitioning of the Hard Disk
 Finally, confirm the settings, select “Yes” and click “Continue”.
 
 .. figure:: ../images/image20.png
-   :target: ../_images/image20.png
    :alt: Partition Disks - Write changes to disks 
 
    Partition Disks – Write changes to disks
 
 .. figure:: ../images/image21.png
-   :target: ../_images/image21.png
    :alt: Partition disks - Select disk to partition
 
    Partition disks – Select disk to partition
@@ -174,7 +155,6 @@ in the next step. Please note, Internet connectivity is required for the
 next step – the installation of the ASGARD Analysis Cockpit service.
 
 .. figure:: ../images/image22.png
-   :target: ../_images/image22.png
    :alt: Proxy Configuration 
 
    Proxy Configuration
@@ -205,7 +185,6 @@ After the installer has completed its operations successfully, the
 system is ready to be used.
 
 .. figure:: ../images/image23.png
-   :target: ../_images/image23.png
    :alt: Message upon successful completion
 
    Message upon successful completion
@@ -253,7 +232,6 @@ the Analysis Cockpit frontend with your browser and clicking on
 ``User Settings`` > ``Password``.
 
 .. figure:: ../images/image24.png
-   :target: ../_images/image24.png
    :alt: User Settings 
 
    User Settings

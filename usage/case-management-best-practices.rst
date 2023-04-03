@@ -22,7 +22,6 @@ The picture below shows the Case Management view with cases that have
 been created with the ``Auto Case`` feature.
 
 .. figure:: ../images/image84.png
-   :target: ../_images/image84.png
    :alt: Opening a Case for editing
 
    Opening a Case for editing
@@ -32,7 +31,6 @@ and set the Status to "Level 1 Working" by opening the case (clicking on
 the magnifier button), modifying the status and then clicking ``Update``.
 
 .. figure:: ../images/image85.png
-   :target: ../_images/image85.png
    :alt: Change Status
 
    Change Status
@@ -64,7 +62,6 @@ in the Analysis Cockpit as it is progressed in another system. Thus, the
 status is changed to closed and the case gets updated.
 
 .. figure:: ../images/image86.png
-   :target: ../_images/image86.png
    :alt: Closing a Case
 
    Closing a Case
@@ -80,7 +77,6 @@ These auto\_case\_ids can be reviewed in the ``Grouping Criteria`` section
 of the case.
 
 .. figure:: ../images/image87.png
-   :target: ../_images/image87.png
    :alt: Reviewing Grouping Criteria
 
    Reviewing Grouping Criteria
@@ -116,7 +112,6 @@ All of them have the same operating system “Debian GNU/Linux 9
 (stretch)”.
 
 .. figure:: ../images/image88.png
-   :target: ../_images/image88.png
    :alt: Case - Assets Tab
 
    Case – Assets Tab
@@ -125,7 +120,6 @@ The ``Scans`` tab shows information about the scans (scan ID, group scan
 ID) the events have been found in.
 
 .. figure:: ../images/image89.png
-   :target: ../_images/image89.png
    :alt: Case - Scans tab
 
    Case – Scans tab
@@ -135,7 +129,6 @@ to this case. Attachments can be used to pass additional information to
 members of the analysis team (e.g. memory dump for further analysis).
 
 .. figure:: ../images/image90.png
-   :target: ../_images/image90.png
    :alt: Case - Comments / Attachments tab
 
    Case – Comments / Attachments tab
@@ -145,7 +138,6 @@ The ``Changes`` tab shows information about changes to this case.
 In other words: This is your case audit log.
 
 .. figure:: ../images/image91.png
-   :target: ../_images/image91.png
    :alt: Case - Changes tab
 
    Case – Changes tab
@@ -161,7 +153,6 @@ want to delete all of those selected cases, just click the
 ``Delete Selected Cases`` button.
 
 .. figure:: ../images/image92.png
-   :target: ../_images/image92.png
    :alt: Bulk Edit / Bulk Delete
 
    Bulk Edit / Bulk Delete

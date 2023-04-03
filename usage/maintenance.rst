@@ -62,7 +62,6 @@ completed column and e.g. selecting only scans with 0 incident and
 0 suspicious cases. (Add columns using the ``Columns`` button). 
 
 .. figure:: ../images/delete-old-scans.png
-   :target: ../_images/delete-old-scans.png
    :alt: Delete Old Scans
 
    Possible Filter for Selecting Scans for Deletion

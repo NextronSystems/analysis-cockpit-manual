@@ -13,7 +13,6 @@ can see that the biggest group with the auto\_case\_id: "S8AcnJjoWe-U"
 contains more than 10,000 events.
 
 .. figure:: ../images/image50.png
-   :target: ../_images/image50.png
    :alt: Baselining
 
    Baselining
@@ -33,13 +32,11 @@ next to the category name.
 Click the ``Columns`` button to manage which columns are shown.
 
 .. figure:: ../images/image55.png
-   :target: ../_images/image55.png
    :alt: Configure your personal view - select bar charts
 
    Configure your personal view – select bar charts
 
 .. figure:: ../images/image56.png
-   :target: ../_images/image56.png
    :alt: Configure your personal view - select columns
 
    Configure your personal view – select columns
@@ -62,7 +59,6 @@ Create a new case following these steps:
 #. Submit case by clicking the **Create** button
 
 .. figure:: ../images/analysis-cockpit-create-case.png
-   :target: ../_images/analysis-cockpit-create-case.png
    :alt: Create Case Dialogue
 
 Select Log Messages for a Case
@@ -89,7 +85,6 @@ log line will generate a filter bubble, too.
   auto\_case\_id is equal to “S8AcnjjoWe-U”.
 
 .. figure:: ../images/image59.png
-   :target: ../_images/image59.png
    :alt: Custom Filter
 
    Custom Filter
@@ -106,7 +101,6 @@ In order to activate the Lucene Query search just click the ``contains`` button 
 choose ``Lucene Query``.
 
 .. figure:: ../images/image63.png
-   :target: ../_images/image63.png
    :alt: Lucene Query
 
    Lucene Query
@@ -128,7 +122,6 @@ log lines in this particular case to be automatically assigned to this
 case, you have to tick the checkbox ``Assign newly incoming events based on Auto Case ID``.
 
 .. figure:: ../images/image64.png
-   :target: ../_images/image64.png
    :alt: Auto Case IDs
 
 You may add a summary or let the system suggest one for you (click on the magic wand symbol).
@@ -136,7 +129,6 @@ The suggestion is calculated out of the first log lines within the
 selected logs.
 
 .. figure:: ../images/image66.png
-   :target: ../_images/image66.png
    :alt: Baselining - Create Case
 
    Baselining – Create Case
@@ -147,7 +139,6 @@ still using your filter, but the matching log lines have been removed
 from this section and added to the case.
 
 .. figure:: ../images/image67.png
-   :target: ../_images/image67.png
    :alt: Log Section empty
 
    Log Section empty
@@ -155,7 +146,6 @@ from this section and added to the case.
 Simply remove the filter and the remaining log lines will show up.
 
 .. figure:: ../images/image68.png
-   :target: ../_images/image68.png
    :alt: Remove the Filter
 
    Remove the Filter
@@ -169,7 +159,6 @@ select ``Selected events`` and add a name, that makes sense
 to you.
 
 .. figure:: ../images/image69.png
-   :target: ../_images/image69.png
    :alt: Creating Cases from Selection
 
    Creating Cases from Selection
@@ -195,7 +184,6 @@ numbers of hits and return some matching and some non-matching events as
 an example.
 
 .. figure:: ../images/image70.png
-   :target: ../_images/image70.png
    :alt: Creating Cases through Condition
 
    Creating Cases through Condition
@@ -218,7 +206,6 @@ numbers of hits and return some matching and some non-matching events as
 an example.
 
 .. figure:: ../images/image71.png
-   :target: ../_images/image71.png
    :alt: Creating Cases through Regular Expressions
 
    Creating Cases through Regular Expressions
@@ -246,7 +233,6 @@ our example below the Cockpit will now generate cases for all groups of
 at least 2000 similar events.
 
 .. figure:: ../images/image72.png
-   :target: ../_images/image72.png
    :alt: Automatically create cases
 
    Automatically create cases
@@ -257,7 +243,6 @@ you will be presented a page that shows that Auto Cases is still running
 along with the current number of cases.
 
 .. figure:: ../images/image73.png
-   :target: ../_images/image73.png
    :alt: Auto Cases running
 
    Auto Cases running
@@ -266,7 +251,6 @@ It is safe to leave this page, once the status in ``Running``. It will
 continue in the background.
 
 .. figure:: ../images/image74.png
-   :target: ../_images/image74.png
    :alt: Auto Cases finished
 
    Auto Cases finished
@@ -289,7 +273,6 @@ also possible to add an additional comment to this case for the
 addition.
 
 .. figure:: ../images/image75.png
-   :target: ../_images/image75.png
    :alt: Add to Case
 
    Add to Case
@@ -309,7 +292,6 @@ are looking for more information about this entry in this field, just
 click on the eye symbol.
 
 .. figure:: ../images/image78.png
-   :target: ../_images/image78.png
    :alt: customizing the detailed view for log lines
 
    Customizing the detailed view for log lines
@@ -328,19 +310,16 @@ can click the ``More Info`` button and select what you want to see. You
 can also choose to get the unique count of a category.
 
 .. figure:: ../images/image81.png
-   :target: ../_images/image81.png
    :alt: More Info - Matching Assets
 
    More Info – Matching Assets
 
 .. figure:: ../images/image82.png
-   :target: ../_images/image82.png
    :alt: More Info - Matching Cases
 
    More Info – Matching Cases
 
 .. figure:: ../images/image83.png
-   :target: ../_images/image83.png
    :alt: More Info - Calculate count of unique values
 
    More Info – Calculate count of unique values

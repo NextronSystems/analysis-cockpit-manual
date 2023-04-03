@@ -67,7 +67,6 @@ If they are distributed as in the following screenshot, it seems that
 auto-casing doesn't work on this case.
 
 .. figure:: ../images/image95.png
-   :target: ../_images/image95.png
    :alt: Auto Case ID
 
 This case doesn't have groupable contents and uses only so-called

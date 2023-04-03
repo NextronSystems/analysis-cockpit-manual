@@ -10,7 +10,6 @@ in the section ``Events``. This section can be regarded to be your hunting
 pool. The section provides powerful filtering options.
 
 .. figure:: ../images/image26.png
-   :target: ../_images/image26.png
    :alt: Events Section 
 
    Events Section
@@ -32,7 +31,6 @@ at the end of a day, as these logs represent suspicious elements that
 have not yet been looked at.
 
 .. figure:: ../images/image27.png
-   :target: ../_images/image27.png
    :alt: Baselining Section
 
    Baselining Section
@@ -46,7 +44,6 @@ In the ``Baselining`` section there are two views, the ``Compromise Assessment M
 By default, the Analysis Cockpit Baselining Mode is set to ``Compromise Assessment Mode``.
 
 .. figure:: ../images/baseline_mode.png
-   :target: ../_images/baseline_mode.png
    :alt: Select your view - "Compromise Assessment Mode" or "Deep Inspection Mode"
 
    Select your view - "Compromise Assessment Mode" or "Deep Inspection Mode"
@@ -90,7 +87,6 @@ also provides various filtering options. Column visibility can be
 configured by clicking on the Columns button of this section.
 
 .. figure:: ../images/image28.png
-   :target: ../_images/image28.png
    :alt: Cases Section
 
    Cases Section
@@ -125,7 +121,6 @@ Within a case, it is possible to add various information, write a
 summary, provide canned recommendations or add assessment information.
 
 .. figure:: ../images/image29.png
-   :target: ../_images/image29.png
    :alt: Case 
 
    Case
@@ -159,7 +154,6 @@ COCKPIT’s Notification Section.
 The following picture shows the recommended log processing.
 
 .. figure:: ../images/image30.png
-   :target: ../_images/image30.png
    :alt: Log Processing 
 
    Log Processing
@@ -217,7 +211,6 @@ need the following states for your cases:
 A workflow could look like this:
 
 .. figure:: ../images/image31.png
-   :target: ../_images/image31.png
    :alt: Workflow open Cases 
 
    Workflow open Cases
@@ -235,7 +228,6 @@ In order to set up our pre-configured example, we navigate to the
 ``Settings`` section and create the following roles:
 
 .. figure:: ../images/image32.png
-   :target: ../_images/image32.png
    :alt: Settings - adding additional roles
 
    Settings – adding additional roles
@@ -247,7 +239,6 @@ without rights at all.
 After that we define the following statuses:
 
 .. figure:: ../images/image33.png
-   :target: ../_images/image33.png
    :alt: Settings - Case Status
 
    Settings – Case Status
@@ -257,7 +248,6 @@ every Case Status. We can give the suitable rights to our generated
 roles by clicking the ``Add Role Case Status`` button on the right.
 
 .. figure:: ../images/image34.png
-   :target: ../_images/image34.png
    :alt: Edit Rights - Read, Write, Set
 
    Edit Rights – Read, Write, Set
@@ -288,7 +278,6 @@ to "Open".
 After that, the ``Access rights for Case Status`` section looks like this:
 
 .. figure:: ../images/image35.png
-   :target: ../_images/image35.png
    :alt: Settings - Access rights for Case Status
 
    Settings – Access rights for Case Status

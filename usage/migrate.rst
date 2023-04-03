@@ -49,7 +49,6 @@ In Cockpit v3 navigate to ``Scans``.
 * Click ``Request Events``
 
 .. figure:: ../images/image25.png
-   :target: ../_images/image25.png
    :alt: Request Events from ASGARD Management Center 2.x
 
    Request Events from ASGARD Management Center 2.x

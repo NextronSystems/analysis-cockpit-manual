@@ -69,7 +69,6 @@ assign new events to a case. You can review the Auto Case IDs used to
 assign new events to a case in the Tab ``Grouping Criteria`` of each case.
 
 .. figure:: ../images/image96.png
-   :target: ../_images/image96.png
    :alt: Create Case
 
 They are also used in "Auto Casing" and "Optimization". (see :ref:`usage/glossary:Baselining`)
