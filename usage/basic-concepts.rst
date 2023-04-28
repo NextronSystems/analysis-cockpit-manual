@@ -78,13 +78,13 @@ Baselining Views
 
 In the ``Baselining`` section there are two main views, the ``Compromise Assessment Mode``
 and the ``Deep Inspection Mode``. Additionally, you can find the ``Custom Signatures
-Only Mode``, which will show events found by custom signatures. This can
+Only Mode``, which will only show events found by custom signatures. This can
 be helpful if you scanned your environment with customer signatures, for example
-during or after and incident.
+during or after an incident.
 
 By default, the Analysis Cockpit Baselining Mode is set to ``Compromise Assessment``.
 
-.. figure:: ../images/cockpit_baseline_view_mode.png
+.. figure:: ../images/cockpit_baselining_view.png
    :alt: Select your view
 
    Select your view
