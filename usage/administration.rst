@@ -406,12 +406,15 @@ Sandbox Integration
 -------------------
 
 You can configure your Analysis Cockpit to upload files to a local sandbox.
-
 Currently you can use `CAPEv2 <https://github.com/kevoreilly/CAPEv2>`_
 (recommended) or `Cuckoo <https://cuckoosandbox.org/>`_.
 
+Additionally, you can look at the following ``python`` file and write
+your own connector, for a different sandbox, if you need to:
+``/etc/nextron/analysiscockpit3/sandbox/connector/capev2.py``
+
 .. note:: 
-   This section only focus on the integration of your Analysis Cockpit
+   This section only focuses on the integration of your Analysis Cockpit
    with an existing sandbox. We will not cover how to set up the sandbox.
 
 Analysis Cockpit Sandbox Configuration
@@ -475,7 +478,8 @@ Here we have two files which are of relevance for us:
       
   - This has the systemd configuration to create the actual service on the system (we don't change anything in here)
 
-Change the ``capev2.ini`` with a text editor. The important lines are marked:
+Change the ``capev2.ini`` with a text editor. The important lines, which need to
+be changed accordingly to your environment, are marked:
 
 .. code-block:: console
    
@@ -487,7 +491,7 @@ Change the ``capev2.ini`` with a text editor. The important lines are marked:
 
    [DEFAULT]
    debug = yes
-   tmp_directory = /var/lib/nextron/analysiscockpit3/sandbox/connector/capev2
+   tmp_directory = /var/lib/nextron/analysiscockpit3/sandbox/capev2
 
    [capev2]
    protocol = http
@@ -519,17 +523,11 @@ Now you have to create a new directory and give the ``analysiscockpit3`` user pe
 
 .. code:: console
    
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# mkdir capev2
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# chown analysiscockpit3: capev2
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# mkdir -p /var/lib/nextron/analysiscockpit3/sandbox/capev2
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# chown -R analysiscockpit3: /var/lib/nextron/analysiscockpit3
 
-Open the ``capev2.py`` file with a text editor:
-
-.. code-block:: console
-
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# nano capev2.py
-
-You will see the instructions to create a service in the comment
-block on the top. Copy the following content from the comment block: 
+We need to create a systemd service file in order to run the CAPEv2 connector on your
+Analysis Cockpit. Below you can find a predefined service file which we will use: 
 
 .. code-block:: ini
    :linenos:
@@ -587,7 +585,7 @@ The connection to your sandbox should work now. You can see the ``capev2.log`` f
 
 .. code-block:: console
 
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2# tail capev2.log
+   root@cockpit:~# tail /var/lib/nextron/analysiscockpit3/sandbox/capev2/capev2.log
    22-11-15 12:07:46 DEBUG: Starting new HTTPS connection (1): localhost:443
    22-11-15 12:07:46 DEBUG: https://localhost:443 "GET /api/sandboxes/a/reports/pending?limit=10&offset=0 HTTP/1.1" 200 13
    22-11-15 12:07:46 DEBUG: no pending references found
@@ -598,7 +596,7 @@ The connection to your sandbox should work now. You can see the ``capev2.log`` f
    22-11-15 12:08:46 DEBUG: Starting new HTTPS connection (1): localhost:443
    22-11-15 12:08:46 DEBUG: https://localhost:443 "GET /api/sandboxes/a/reports/pending?limit=10&offset=0 HTTP/1.1" 200 13
    22-11-15 12:08:46 DEBUG: no pending references found
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# 
+   root@cockpit:~# 
 
 
 Analysis Cockpit Sandbox Usage
