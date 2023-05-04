@@ -450,19 +450,22 @@ We change into the configuration directory of the sandbox:
    root@cockpit:~# cd /etc/nextron/analysiscockpit3/sandbox/connector
    root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector#
 
-Here you can find two folders, one each for the type of sandbox. In
+Here you can find multiple files and folders. The ``.py`` and ``.ini``
+files represent each the type of sandbox you want to integrate. In
 this example, we will configure the CAPv2 sandbox with our Analysis Cockpit.
 
 .. code:: console
    
    root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# ls -lA
-   total 8
-   drwxr-xr-x 4 analysiscockpit3 analysiscockpit3 4096 Aug 22 11:32 capev2
-   drwxr-xr-x 4 analysiscockpit3 analysiscockpit3 4096 Aug 16 12:03 cuckoo
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# cd capev2/
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2#
+   total 36
+   drwxr-xr-x 2 analysiscockpit3 analysiscockpit3 4096 Apr 21 15:27 analysiscockpit
+   -rw-r--r-- 1 analysiscockpit3 analysiscockpit3  253 Mär  3 11:20 capev2.ini
+   -rw-r--r-- 1 analysiscockpit3 analysiscockpit3 4934 Mär  3 11:20 capev2.py
+   -rw-r--r-- 1 analysiscockpit3 analysiscockpit3  278 Mär 28  2021 cuckoo.ini
+   -rw-r--r-- 1 analysiscockpit3 analysiscockpit3 9867 Nov 17  2020 cuckoo.py
+   drwxr-xr-x 2 analysiscockpit3 analysiscockpit3 4096 Apr 14 15:29 sandboxapi
 
-Here we have two files which are of relevance for us: 
+Here we have two files which are of relevance for us:
 
 - capev2.ini
 
@@ -476,7 +479,7 @@ Change the ``capev2.ini`` with a text editor. The important lines are marked:
 
 .. code-block:: console
    
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2# nano capev2.ini
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# nano capev2.ini
 
 .. code-block:: ini
    :linenos:
@@ -484,7 +487,7 @@ Change the ``capev2.ini`` with a text editor. The important lines are marked:
 
    [DEFAULT]
    debug = yes
-   tmp_directory = /var/lib/nextron/analysiscockpit3/sandbox/connector/capev2/tmp
+   tmp_directory = /var/lib/nextron/analysiscockpit3/sandbox/connector/capev2
 
    [capev2]
    protocol = http
@@ -512,11 +515,18 @@ Sandbox" step in the beginning of this section) and ``verify``, which can be set
 
 Save your files after you made your changes.
 
+Now you have to create a new directory and give the ``analysiscockpit3`` user permission:
+
+.. code:: console
+   
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# mkdir capev2
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# chown analysiscockpit3: capev2
+
 Open the ``capev2.py`` file with a text editor:
 
 .. code-block:: console
 
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2# nano capev2.py
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# nano capev2.py
 
 You will see the instructions to create a service in the comment
 block on the top. Copy the following content from the comment block: 
@@ -529,7 +539,7 @@ block on the top. Copy the following content from the comment block:
    After=network.target
    
    [Service]
-   ExecStart=/usr/bin/python3 /etc/nextron/analysiscockpit3/sandbox/connector/capev2/capev2.py
+   ExecStart=/usr/bin/python3 /etc/nextron/analysiscockpit3/sandbox/connector/capev2.py
    Restart=on-failure
    User=analysiscockpit3
    Group=analysiscockpit3
@@ -542,19 +552,19 @@ Now we run the following command and paste the content from the output earlier i
 
 .. code-block:: console
 
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2# nano /lib/systemd/system/capev2-connector.service
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# nano /lib/systemd/system/capev2-connector.service
 
 The file should now look like this:
 
 .. code-block:: console
 
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2# cat /lib/systemd/system/capev2-connector.service
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# cat /lib/systemd/system/capev2-connector.service
    [Unit]
    Description=CAPEv2 Sandbox Connector
    After=network.target
 
    [Service]
-   ExecStart=/usr/bin/python3 /etc/nextron/analysiscockpit3/sandbox/connector/capev2/capev2.py
+   ExecStart=/usr/bin/python3 /etc/nextron/analysiscockpit3/sandbox/connector/capev2.py
    Restart=on-failure
    User=analysiscockpit3
    Group=analysiscockpit3
@@ -563,15 +573,15 @@ The file should now look like this:
    [Install]
    WantedBy=multi-user.target
 
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2#
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector#
 
 Now that the systemd service file is created, we need to activate it. Run the following command:
 
 .. code-block:: console
 
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2# systemctl daemon-reload && systemctl enable capev2-connector && systemctl start capev2-connector
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# systemctl daemon-reload && systemctl enable capev2-connector && systemctl start capev2-connector
    Created symlink /etc/systemd/system/multi-user.target.wants/capev2-connector.service → /lib/systemd/system/capev2-connector.service.
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2# 
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# 
 
 The connection to your sandbox should work now. You can see the ``capev2.log`` for debug output and troubleshooting:
 
@@ -588,7 +598,7 @@ The connection to your sandbox should work now. You can see the ``capev2.log`` f
    22-11-15 12:08:46 DEBUG: Starting new HTTPS connection (1): localhost:443
    22-11-15 12:08:46 DEBUG: https://localhost:443 "GET /api/sandboxes/a/reports/pending?limit=10&offset=0 HTTP/1.1" 200 13
    22-11-15 12:08:46 DEBUG: no pending references found
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector/capev2# 
+   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# 
 
 
 Analysis Cockpit Sandbox Usage
