@@ -44,8 +44,8 @@ We suggest to save the files to another system beforehand, if you
 want to keep the information for future usage. ASGARD will not need
 the following files to function and they can be removed safely:
     
-    - ``/var/lib/nextron/analysiscockpit3/log/*.gz``
-    - ``/var/lib/nextron/analysiscockpit3/events/*.ok``
+- ``/var/lib/nextron/analysiscockpit3/log/*.gz``
+- ``/var/lib/nextron/analysiscockpit3/events/*.ok``
 
 Especially the assignment log can grow big in production environments.
 If deleting the logs is not enough, deleting the already read-in events (ending on ``.ok``)
@@ -58,11 +58,10 @@ simple ``rm *.ok``, you can use find to delete them:
    [sudo] password for nextron:
    root@cockpit:~# find /var/lib/nextron/analysiscockpit3/events -name "*.ok" -print0 | xargs -0 -I'{}' rm '{}'
 
-
 If Elasticsearch does not automatically work again after cleaning up some disk space, restart
 it under ``Settings`` > ``System`` > ``Services`` or with ``sudo systemctl restart elasticsearch.service``.
 If this is not working either, you may need to disable Elasticsearch's read-only mode. See 
-:ref:`section "ElasticSearch Index Locked Due to Low Free Disk Space" <usage/typical-pitfalls:ElasticSearch Index Locked Due to Low Free Disk Space>` for a how-to.
+:ref:`usage/typical-pitfalls:ElasticSearch Index Locked Due to Low Free Disk Space` for a how-to.
 
 Deleting the files given above should be enough to resume operation. If the disk on your
 ASGARD Analysis Cockpit is full because of growing data over time, the disk space should be
@@ -74,7 +73,13 @@ ElasticSearch Index Locked Due to Low Free Disk Space
 
 .. code-block:: none
    
-   Mar 26 09:48:09 analysis-cockpit[22732]: [ERROR] could not update log: could not update logs: could not update documents: http status 403 ({"took":48,"timed\_out":false,"total":136,"updated":0,"deleted":0,"batches":1,"version\_conflicts":0,"noops":0,"retries":{"bulk":0,"search":0},"throttled\_millis":0,"requests\_per\_second":-1.0,"throttled\_until\_millis":0,"failures":[{"index":"logs-2019-03-21","type":"doc","id":"L11527716281914854515","cause":{"type":"cluster\_block\_exception","reason":"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"},"status":403},{"index":"logs-2019-03-21","type":"doc","id":"L12526619521231613944","cause":{"type":"cluster\_block\_exception","reason":"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"},"status":403},{"index":"logs-2019-03-21","type":"doc","id":"L10726191995274581682","cause":{"type":"cluster\_block\_exception","reason":"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"},"status":403},{"index":"logs-2019-03-21","type":"doc","id":"L17340155165061572392","cause":{"type":"cluster\_block\_exception","reason":"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"},"status":403},{"index":"logs-2019-03-21","type":"doc","id":"L10064611600393832220","cause":{"type":"cluster\_block\_exception","reason":"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"},"status":403}   
+   Mar 26 09:48:09 analysis-cockpit[22732]: [ERROR] could not update log:
+      could not update logs: could not update documents: http status 403
+
+.. literalinclude:: ../examples/elastic_error.json
+   :language: json
+
+   
 
 This happens when Elasticsearch thinks the disk is running low on space
 so it puts itself into read-only mode.
@@ -106,14 +111,14 @@ Check for reported problems using this command:
    [sudo] password for root:
    nextron@cockpit:~$ find /var/lib/nextron/analysiscockpit3/events -name "\*.problem"
 
-Make sure that you’re able to see the imported log data and review the
-selected time range in the time range picker in whatever view you’re
+Make sure that you're able to see the imported log data and review the
+selected time range in the time range picker in whatever view you're
 reviewing the data. Be aware that the log data gets indexed with the
 creation timestamp of the log lines not the time of their import.
 
-This means that if you’re importing log data that is old, the default
+This means that if you're importing log data that is old, the default
 date range set in the date range picker may be too narrowly defined so
-that you’re just unable to see the imported data.
+that you're just unable to see the imported data.
 
 Fixing a Broken Proxy Configuration
 -----------------------------------
