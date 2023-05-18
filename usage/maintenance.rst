@@ -42,9 +42,9 @@ If your disk is already at or close to 100% and AC no longer works properly, see
 
 If your disk usage is growing too fast and free disk space is running out, you have several options:
 
-    1. Increase the size of your disk
-    2. Delete files that are not needed for operation
-    3. Delete files that are used by AC but are unneeded / dated
+1. Increase the size of your disk
+2. Delete files that are not needed for operation
+3. Delete files that are used by AC but are unneeded / dated
 
 Safe-to-Delete Files
 ^^^^^^^^^^^^^^^^^^^^
@@ -52,8 +52,8 @@ Safe-to-Delete Files
 The following files are safe to delete. They are not needed for AC
 to operate.
 
-    - ``/var/lib/nextron/analysiscockpit3/log/*.gz``
-    - ``/var/lib/nextron/analysiscockpit3/events/*.ok``
+- ``/var/lib/nextron/analysiscockpit3/log/*.gz``
+- ``/var/lib/nextron/analysiscockpit3/events/*.ok``
 
 They are only kept on the system if needed for further processing.
 E.g. saving/sending the log files to another system or keeping the
@@ -72,8 +72,8 @@ This method is only advised as a last resort if increasing your disk space is no
 If your AC is running for a long time, there might be data ingested that you
 no longer need and therefore can be deleted to regain disk space. This includes:
 
-    - Scans
-    - Reports
+- Scans
+- Reports
 
 Deleting Unneeded Scans
 ~~~~~~~~~~~~~~~~~~~~~~~
