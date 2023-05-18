@@ -79,8 +79,6 @@ ElasticSearch Index Locked Due to Low Free Disk Space
 .. literalinclude:: ../examples/elastic_error.json
    :language: json
 
-   
-
 This happens when Elasticsearch thinks the disk is running low on space
 so it puts itself into read-only mode.
 
