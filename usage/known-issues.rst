@@ -1,6 +1,33 @@
 Known Issues
 ============
 
+AAC#003: Multiple Sandbox Issues
+--------------------------------
+
+.. list-table::
+    :header-rows: 1
+    :widths: 50, 50
+
+    * - Introduced Version
+      - Fixed Version
+    * - 3.7.8
+      - Next Release
+
+There are three issues currently with the sandbox integration:
+
+1. Wrong python script ``capev2.py``
+2. Reports can't be downloaded
+3. Files coming from the Bifrost Quarantine have no Name ``(missing)``
+
+Those issues will be fixed with the next release.
+
+AAC#003: Workarounds
+~~~~~~~~~~~~~~~~~~~~
+
+1. To fix the ``capev2.py`` file, contact support. We can provide you with the correct file
+2. No workaround
+3. No workaround
+
 AAC#002: Context Deadline Exceeded
 ----------------------------------
 
