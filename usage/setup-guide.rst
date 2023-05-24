@@ -111,10 +111,10 @@ dialogue.
 
 .. important::
    **Important:** Make sure that the combination of hostname and domain
-   creates an FQDN that can be resolved from the endpoints on which you
-   intend to install the ASGARD agents. If you've configured a FQDN (hostname +
-   domain) that cannot be resolved on the clients, no agent will be able
-   to find and reconnect to the ASGARD server.
+   creates an FQDN that can be resolved from the ASGARD Management Center(s)
+   you want to connect with your Analysis Cockpit. If you've configured a
+   FQDN (hostname + domain) that cannot be resolved, your ASGARDs will
+   encounter an error during connection.
 
    This is especially important since your Analysis Cockpit will create
    some certificates during the installation, which will not contain an
