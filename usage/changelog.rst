@@ -1,7 +1,7 @@
 Changelog
 =========
 
-This chapter contains all new changes to the ASGARD
+This chapter contains all the changes of the ASGARD
 Analysis Cockpit.
 
 Analysis Cockpit 3.7
