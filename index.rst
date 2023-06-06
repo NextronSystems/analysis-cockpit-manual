@@ -24,7 +24,7 @@ Welcome to ASGARD Analysis Cockpit Manual's documentation!
    usage/known-issues
    usage/migrate
    usage/glossary
-
+   usage/changelog
 
 Indices and tables
 ==================
