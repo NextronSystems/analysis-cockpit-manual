@@ -10,10 +10,10 @@ AAC#004: Multiple Sandbox Issues
 
     * - Introduced Version
       - Fixed Version
-    * - 3.7.8
+    * - <= 3.7.8
       - 3.8.2
 
-There are three issues currently with the sandbox integration:
+There are currently three issues with the sandbox integration:
 
 1. Wrong python script ``capev2.py``
 2. Reports can't be downloaded
