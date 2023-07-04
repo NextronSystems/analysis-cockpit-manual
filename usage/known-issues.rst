@@ -1,7 +1,7 @@
 Known Issues
 ============
 
-AAC#003: Multiple Sandbox Issues
+AAC#004: Multiple Sandbox Issues
 --------------------------------
 
 .. list-table::
@@ -11,7 +11,7 @@ AAC#003: Multiple Sandbox Issues
     * - Introduced Version
       - Fixed Version
     * - 3.7.8
-      - Next Release
+      - 3.8.2
 
 There are three issues currently with the sandbox integration:
 
@@ -21,12 +21,37 @@ There are three issues currently with the sandbox integration:
 
 Those issues will be fixed with the next release.
 
-AAC#003: Workarounds
+AAC#004: Workarounds
 ~~~~~~~~~~~~~~~~~~~~
 
 1. To fix the ``capev2.py`` file, contact support. We can provide you with the correct file
-2. No workaround
-3. No workaround
+2. No workaround - upgrade needed
+3. No workaround - upgrade needed
+
+AAC#003: Case Management - onDelete is not defined
+--------------------------------------------------
+
+.. list-table::
+    :header-rows: 1
+    :widths: 50, 50
+
+    * - Introduced Version
+      - Fixed Version
+    * - 3.7.4
+      - 3.7.8
+
+Version 3.7.4 of the Analysis Cockpit introduced a bug, which occurs when
+trying to edit ``Access rights for Case Status`` in the **Case Management**
+settings. The following error appears along with a visual bug on the right
+side of your browser window which says "**Retry**":
+
+.. error::
+   Error: Something went wrong
+
+   onDelete is not defined
+
+There is currently no workaround for this bug, you need to upgrade to
+version **3.7.8 or higher** to fix this.
 
 AAC#002: Context Deadline Exceeded
 ----------------------------------
