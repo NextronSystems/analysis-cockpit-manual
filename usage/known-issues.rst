@@ -38,7 +38,7 @@ AAC#003: Case Management - onDelete is not defined
     * - Introduced Version
       - Fixed Version
     * - 3.7.4
-      - 3.7.8
+      - 3.8.2
 
 Version 3.7.4 of the Analysis Cockpit introduced a bug, which occurs when
 trying to edit ``Access rights for Case Status`` in the **Case Management**
@@ -51,7 +51,7 @@ side of your browser window which says "**Retry**":
    onDelete is not defined
 
 There is currently no workaround for this bug, you need to upgrade to
-version **3.7.8 or higher** to fix this.
+version **3.8.2 or higher** to fix this.
 
 AAC#002: Context Deadline Exceeded
 ----------------------------------
