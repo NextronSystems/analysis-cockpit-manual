@@ -94,7 +94,7 @@ You can filter events for deletion with the time range picker in the
 completed column and e.g. selecting only scans with 0 incident and 
 0 suspicious cases. (Add columns using the ``Columns`` button). 
 
-.. figure:: ../images/cockpit_empty_cases_cleanup.png
+.. figure:: ../images/cockpit_delete_old_scans.png
    :alt: Delete Old Scans
 
    Possible Filter for Selecting Scans for Deletion
