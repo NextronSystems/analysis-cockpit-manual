@@ -54,17 +54,14 @@ Analysis Cockpit 3.7.7
 Analysis Cockpit 3.7.4
 ~~~~~~~~~~~~~~~~~~~~~~
 
+.. important:: 
+   This release completely refactored the UI. The old API endpoints will still be supported.
+
 .. list-table:: 
     :header-rows: 1
 
     * - Release Date
     * - Fri, 17 Mar 2023 16:18:00 +0100
-
-.. list-table::
-    :header-rows: 1
-
-    * - IMPORTANT
-    * - This release completely refactored the UI. The old API endpoints will still be supported.
 
 .. list-table::
     :header-rows: 1
@@ -235,17 +232,14 @@ Analysis Cockpit 3.3.7
 Analysis Cockpit 3.3.6
 ~~~~~~~~~~~~~~~~~~~~~~
 
+.. important::
+   The previous update routine interrupted some case assignments. Use of Optimize function after the update is recommended.
+
 .. list-table:: 
     :header-rows: 1
 
     * - Release Date
     * - Fri, 11 Feb 2022 09:30:00 +0200
-
-.. list-table::
-    :header-rows: 1
-
-    * - IMPORTANT
-    * - The previous update routine interrupted some case assignments. Use of Optimize function after the update is recommended.
 
 .. list-table::
     :header-rows: 1
