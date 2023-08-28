@@ -4,6 +4,57 @@ Changelog
 This chapter contains all the changes of the ASGARD
 Analysis Cockpit.
 
+Analysis Cockpit 3.8
+####################
+
+Analysis Cockpit 3.8.4
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table:: 
+    :header-rows: 1
+
+    * - Release Date
+    * - Thu, 17 Aug 2023 09:49:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Feature
+      - Synchronize Aurora Agent cases and events with Security Center
+    * - Feature
+      - Synchronize deleted assets with Management Center, hide deleted assets per default
+    * - Feature
+      - Reconnect Management Center
+    * - Feature
+      - Added uuids for scans, cases and more
+    * - Security
+      - OS Security Fix
+    * - Bugfix
+      - Removed auto_case_id template for Eventlog/EVTX that caused event assignments solely by Event ID causing unwanted assignments. The template was removed. New events of the affected type will be shown in the baselining section once they are identified again.
+    * - Bugfix
+      - Fixed issues with syslog receiver
+    * - Bugfix
+      - Fixed smtp login issues with some smtp servers
+    * - Bugfix
+      - Fixed issues with create case / add to case for LogWatcher events
+    * - Bugfix
+      - Fixed download issues with sandbox reports
+    * - Bugfix
+      - Fixed corrupt CapeV2 sandbox connector script
+    * - Bugfix
+      - Fixed asset label deletion via Management Center
+    * - Bugfix
+      - Fixed some missing meta columns in event table
+    * - Bugfix
+      - Fixed missing VirusTotal link for some SHA256/SHA1
+    * - Bugfix
+      - Fixed "no results" in some tables when applying filters during pagination
+    * - Bugfix
+      - Fixed missing 'Show matching assets' and 'Show matching cases' in events table
+
 Analysis Cockpit 3.7
 ####################
 
