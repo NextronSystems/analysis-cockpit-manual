@@ -1,6 +1,4 @@
-
-Typical Pitfalls
-================
+.. Index:: Pitfalls
 
 Certificate Validation Failed
 -----------------------------
@@ -17,7 +15,7 @@ installation process.
    Certificate verification failed: The certificate is NOT trusted. The certificate issuer is unknown. Could not handshake: Error in the certificate verification. [IP: 192.168.3.21 8080]
 
 Since we do not support setups in which the connections to our update
-servers are intercepted (see chapter :doc:`Requirements <./requirements>`), the
+servers are intercepted (see chapter :ref:`requirements/network:ssl/tls interception`), the
 only way to resolve this problem is to deactivate SSL/TLS interception
 for our update servers.
 
@@ -61,12 +59,12 @@ simple ``rm *.ok``, you can use find to delete them:
 If Elasticsearch does not automatically work again after cleaning up some disk space, restart
 it under ``Settings`` > ``System`` > ``Services`` or with ``sudo systemctl restart elasticsearch.service``.
 If this is not working either, you may need to disable Elasticsearch's read-only mode. See 
-:ref:`usage/typical-pitfalls:ElasticSearch Index Locked Due to Low Free Disk Space` for a how-to.
+:ref:`pitfalls/pitfalls:elasticsearch index locked due to low free disk space` for a how-to.
 
 Deleting the files given above should be enough to resume operation. If the disk on your
 ASGARD Analysis Cockpit is full because of growing data over time, the disk space should be
 increased. If that is not an option you can delete old scans as described in section
-:ref:`Potentially Unneeded / Dated Files<usage/maintenance:Potentially Unneeded / Dated Files>`.
+:ref:`maintenance/disk-space:regain disk space`.
 
 ElasticSearch Index Locked Due to Low Free Disk Space
 -----------------------------------------------------
@@ -95,7 +93,7 @@ on ASGARD:
 
 .. code-block:: console
    
-   nextron@asgard:~$ curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
+   nextron@asgard:~$ curl -X PUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
 
 
 Debug Failed File Imports

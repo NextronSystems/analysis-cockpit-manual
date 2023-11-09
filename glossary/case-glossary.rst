@@ -1,54 +1,4 @@
-Glossary
-========
-
-Baselining
-----------
-
-The ``Baselining`` section is meant to assign all unassigned events to
-cases, so that newly incoming events are immediately assigns to existing
-cases and only differences to the last scan have to be reviewed. (new
-malware, new signatures)
-
-Auto Baselining
-^^^^^^^^^^^^^^^
-
-The Auto Baselining feature can be used to assign events to new and
-automatically generated cases. Auto Casing makes use of the so-called
-Auto Case ID, which is the same for all events of a certain type (see
-Glossary > Cases > Auto Case ID for details).
-
-Auto Baselining is typically used to quickly reduce the remaining events
-in the Baselining section. It reduced the burden to manually group
-together events of a similar type.
-
-Automatically cased events can then be reviewed in the ``Cases`` section.
-
-Auto Baselining uses a threshold that defines the minimum number of
-events required in each of these automatically generated cases. A
-threshold of 10 instructs the process to create only cases for groups of
-at least 10 similar events. Obviously, we do not recommend using
-threshold of 1, but everything higher than 1 can be reasonable.
-
-The best practice is to start the Auto Baselining process with a
-relatively high threshold (e.g., 10) and then subsequently perform
-iterations with lower thresholds.
-
-Optimization
-^^^^^^^^^^^^
-
-The Optimization is used to assign unassigned events to cases based on
-their filters.
-
-Usually, an analyst selects events and creates a case with these events.
-During the case creation a set of filters gets generated to
-automatically assign newly incoming events to this case.
-
-Often, characteristics of existing older events also align with the
-criteria described in the filters of the new case. However, they do not
-get assigned to that case, because they're already in the database and
-the case assignment only happens when new events arrive.
-
-Optimization is used to assign unassigned events to existing cases.
+.. Index:: Cases Glossary
 
 Cases
 -----
@@ -68,7 +18,7 @@ The Auto Case IDs are used in case creation as the default method to
 assign new events to a case. You can review the Auto Case IDs used to
 assign new events to a case in the Tab ``Grouping Criteria`` of each case.
 
-They are also used in "Auto Casing" and "Optimization". (see :ref:`usage/glossary:Baselining`)
+They are also used in "Auto Casing" and "Optimization". (see :ref:`glossary/baselining-glossary:baselining`)
 
 Dynamic Auto Case ID
 ^^^^^^^^^^^^^^^^^^^^
@@ -184,7 +134,7 @@ Cockpit.
      - False Positive cases contain events that indicate suspicious or malicious
        activity, but the review revealed that it is actually legitimate software
        or other elements. The only reason for a false positive is a scanner malfunction
-       or signatures that falsely report a threat (see section :ref:`usage/glossary:Difference between False Positive and Legitimate Anomaly`
+       or signatures that falsely report a threat (see section :ref:`glossary/case-glossary:difference between false positive and legitimate anomaly`
        for details). A false positive usually triggers a review by Nextron Systems
        and a signature adjustment.
    * - Unknown
@@ -228,22 +178,3 @@ is designed to detect.
 
 A signature with a rule named ``MAL_Xrat_Mar21_1`` that triggers on a
 legitimate and signed executable, however, is a false positive.
-
-Invisible (Backend)
--------------------
-
-Filter Templates
-^^^^^^^^^^^^^^^^
-
-The Analysis Cockpit uses so-called filter templates that describe which
-fields in which event types are specific enough to be used in a filter
-that can be used to automatically group events.
-
-These groups can be identified by a common so-called "Auto Case ID"
-(formerly Group ID). See the respective entry in this Glossary.
-
-The filter templates are static and predefined.
-
-E.g., a typical filter template states that for events in the Module
-``Filescan``, the fields **FILE** and **SHA1** are sufficiently specific to group
-events based on equal values in these two fields.

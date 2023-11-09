@@ -1,59 +1,4 @@
-Baselining Best Practices
-=========================
-
-This section assumes, that you have read the :ref:`usage/basic-concepts:basic concepts`.
-
-All incoming logs, that do not match an existing case, will show up in
-the ``Baselining`` section.
-
-While importing the logs, the cockpit will already try to find logs are
-that similar and represent the same type of alert or warning. It will
-group these logs and assign an ``auto_case_id``.
-
-.. figure:: ../images/cockpit_baselining_overview.png
-   :alt: Baselining Overview
-
-   Baselining Overview
-
-Customize Your View
--------------------
-
-By default, the Analysis Cockpit ``Baselining`` view ships with multiple bar
-charts and a table with the most relevant columns in order to help you find
-meaningful groups of logs. You can add additional bar charts by clicking on
-the ``Advanced Tools`` button and selecting ``Chart Preferences``.
-
-.. figure:: ../images/cockpit_chart_preferences.png
-   :alt: Chart Preferences
-
-.. figure:: ../images/cockpit_chart_preferences2.png
-   :alt: Chart Preferences
-
-   Chart Preferences
-
-You can also modify which bar charts are shown by the name/field-name of the chart
-and choose the category you want to see. To get more details about a bar chart, you
-can click on square symbol in the heading of the bar chart.
-
-.. figure:: ../images/cockpit_bar_chart_selector.png
-   :alt: Bar Chart Selector
-
-   Bar Chart Selector
-
-.. figure:: ../images/cockpit_bar_chart_details.png
-   :alt: Bar Chart Details
-
-   Bar Chart Details
-
-Click the ``Columns`` button to manage which columns are shown.
-
-.. figure:: ../images/cockpit_column_preferences.png
-   :alt: Column Preferences
-
-   Column Preferences
-
-.. hint:: 
-   All views are personalized and changes will only affect your user.
+.. Index:: Case Creation Part 1
 
 Manual Case Creation
 --------------------
@@ -78,7 +23,7 @@ Create a new case following these steps:
 4. Select a sample event for the **summary** field 
 5. Add your **assessment**
 6. Choose one or more **recommendations**
-7. Select a **case type** (see the :ref:`Glossary <usage/glossary:Case Types>` for a detailed description of every case type)
+7. Select a **case type** (see the :ref:`glossary/case-glossary:case types` for a detailed description of every case type)
 8. Select a **case status** (usually used to mark it as 'work in progress' or to forward it to the next team)
 9. Submit case by clicking the **Create Case** button
 
@@ -228,89 +173,3 @@ removed from the log management view.
 .. warning:: 
    It is recommended to use regular expressions only rarely and with
    caution. This feature can severely impact the performance of the system.
-
-Create Cases Automatically
---------------------------
-
-With Auto Baselining, the Cockpit will automatically generate cases for
-groups of logs that are similar, or in other words: Have the same
-auto\_case\_id.
-
-After clicking the button ``Automatically generate Cases`` button in the
-``Auto Baselining`` tab you will be prompted for a threshold. This means:
-Do only create a case when you find at least that many similar logs. In
-our example below the Cockpit will now generate cases for all groups of
-at least 2000 similar events.
-
-.. figure:: ../images/cockpit_auto_baselining_threshold.png
-   :alt: Automatically create cases
-
-   Automatically create cases
-
-After pressing the ``Start`` button, the Cockpit will start calculating
-and create cases. Depending on the data volume this may take a while and
-you will be presented a page that shows that Auto Cases is still running
-along with the current number of cases.
-
-.. figure:: ../images/cockpit_auto_baselining_status.png
-   :alt: Auto Cases Status
-
-   Auto Cases Status
-
-It is safe to leave this page, once the status in ``Running``. It will
-continue in the background.
-
-.. important::
-  The Analysis Cockpit generates auto\_case\_ids only for Alerts and
-  Warnings. Don't use the Autocase feature for Notice and Info level
-  events.
-
-Add to Case
------------
-
-Sometimes you may want to add log lines to an already existing case
-because they represent the same security context. To do this you can
-just click the ``Add to Case`` button and select the suitable case. It is
-also possible to add an additional comment to this case for the
-addition.
-
-.. figure:: ../images/cockpit_add_to_case.png
-   :alt: Add to Case
-
-   Add to Case
-
-Customizing the Detailed View of Log Lines
-------------------------------------------
-
-The detailed view for log lines opens by clicking on a log line. Within
-this view you can select some fields as favorite fields by clicking on
-the star symbol. They will always be shown at the top of this view. ``MESSAGE``,
-``MODULE`` and ``hostname`` are selected by default.
-
-To search for all log lines with the same entry as this log line in a
-particular field, you can click the dropdown on the left hand side of 
-the field.
-
-.. figure:: ../images/cockpit_log_lines_details.png
-   :alt: customizing the detailed view for log lines
-
-   Customizing the detailed view for log lines
-
-Additionally, you can find a ``VIRUSTOTAL`` button in every hash field and a
-``VALHALLA`` button in every reason field. By clicking ``VIRUSTOTAL`` the hash
-will be searched on Virustotal. By clicking ``VALHALLA`` you will get more
-information about the matching rule from valhalla.nextron-systems.com.
-
-Usage of the Context Menu
--------------------------
-
-You can use the context menu on any **value** in your logs to get an action menu.
-Within this menu, you can do different actions:
-
-.. figure:: ../images/cockpit_event_context_menu.png
-   :alt: Context Menu
-
-   Context Menu
-
-You can filter, search for similar events, or even create cases based on the
-value you right-clicked.

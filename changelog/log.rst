@@ -1,5 +1,7 @@
-Changelog
-=========
+.. Index:: AC4 Changes
+
+Analysis Cockpit v4
+-------------------
 
 This chapter contains all the changes of the ASGARD
 Analysis Cockpit.

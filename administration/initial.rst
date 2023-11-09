@@ -30,7 +30,7 @@ also check for new updates by clicking the ``Check for Updates`` Button.
 Set Users and User Rights
 -------------------------
 
-The chapter :ref:`usage/basic-concepts:Understanding Users, Roles, Rights and Case Status`
+The chapter :ref:`basic-concepts/permissions:understanding users, roles, rights and case status`
 already described how to set up a 2-level analyst model for working with cases.
 The roles defined in that section are non-administrative roles, meaning
 they are only allowed to access cases based on the respective status of

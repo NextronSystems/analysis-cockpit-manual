@@ -4,7 +4,7 @@ Administration
 ==============
 
 This chapter assumes, that you have read the chapter
-:ref:`usage/basic-concepts:basic concepts`.
+:ref:`basic-concepts/index:basic concepts`.
 
 In order to configure the Analysis Cockpit for the first use, the
 following steps need to be done:

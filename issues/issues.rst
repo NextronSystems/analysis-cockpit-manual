@@ -1,5 +1,4 @@
-Known Issues
-============
+.. Index:: List of Known Issues
 
 AAC#005: Could not get table data: Data too large
 -------------------------------------------------

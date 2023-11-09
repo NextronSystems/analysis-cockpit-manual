@@ -47,8 +47,8 @@ The following types can be set:
 * Legitimate Anomaly
 * False Positive
 
-See chapter :ref:`usage/glossary:glossary` for a detailed description of these
-terms.
+See chapter :ref:`glossary/index:glossary` for a detailed description
+of these terms.
 
 Within a case, it is possible to add various information, write a
 summary, provide canned recommendations or add assessment information.
