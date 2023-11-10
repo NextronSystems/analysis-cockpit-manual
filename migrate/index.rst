@@ -13,6 +13,10 @@ If you are running a standalone installation, you can
 skip the Cluster chapter and jump straight ahead to
 :ref:`migrate/standalone:standalone migration`.
 
+We developed an update program which helps you through
+the upgrade by automating as much as possible. Unfortunately,
+you still have to upgrade your Elasticsearch cluster manually.
+
 .. toctree::
     :caption: Contents
 
