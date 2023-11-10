@@ -102,8 +102,6 @@ Connect to your Analysis Cockpit via SSH. Run the following command:
 If you are unsure what your cluster nodes are, you can run the
 following command. Please note, the cluster marked as ``dim``
 is your master node, or in our case the Analysis Cockpit.
-Do not update your Analysis Cockpit manually, we will do
-that in the end.
 
 .. code-block:: console
     :emphasize-lines: 4
