@@ -48,7 +48,7 @@ In combination with the ``ASGARD Query`` and ``Labels``, which are identical
 to your ASGARD, you can even narrow down the events by system group
 (e.g., Domain Controllers, or certain locations).
 
-.. figure:: ../images/cockpit_assset_query.png
+.. figure:: ../images/cockpit_asset_query.png
    :alt: Filtering within the Assets View 
 
    Filtering within the Assets view

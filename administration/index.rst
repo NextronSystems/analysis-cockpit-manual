@@ -22,7 +22,7 @@ These steps are described in detail in the following sections.
     :caption: Contents
 
     initial
-    canned-rec
+    case-recommendations
     syslog
     system-settings
     log-file

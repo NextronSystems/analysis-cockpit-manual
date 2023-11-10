@@ -1,9 +1,6 @@
 project = 'ASGARD Analysis Cockpit v4 Manual'
 copyright = '2023, Nextron Systems GmbH'
 author = 'Nextron Systems'
-
-version = '4.0'
-release = ''
 extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx_rtd_theme'

@@ -27,6 +27,10 @@ proper ``Description``.
 
    Adding a new Sandbox
 
+If you wish to enable automatic scanning for uploaded files
+(`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/usage/administration.html#bifrost-quarantine>`_),
+you can do so by checking the ``Automatic Mode``.
+
 Once you click ``Add`` the page will display an API token. Copy this token, we will need it later.
 
 .. figure:: ../images/cockpit_sandbox_token.png
@@ -205,10 +209,6 @@ Once your sandbox is set up and running, you can see the status of it in the san
 .. figure:: ../images/cockpit_sandbox_view.png
    :alt: Sandbox View in the Analysis Cockpit
 
-If you wish to enable automatic scanning for uploaded files
-(`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/usage/administration.html#bifrost-quarantine>`_),
-you can do so by pressing the play button to the right hand side.
-
 In the ``Files`` view you can see previously analyzed files or upload files for analysis by yourself:
 
 .. figure:: ../images/cockpit_sandbox_file_upload.png
@@ -223,14 +223,9 @@ After your file has been uploaded, you have to wait until your sandbox
 is finished with analyzing the file. Change to the ``Reports`` view
 to see the status of the files.
 
-.. figure:: ../images/cockpit_sandbox_reports_view1.png
+.. figure:: ../images/cockpit_sandbox_reports.png
    :alt: Reports View in the Analysis Cockpit
 
 Once the file was analyzed and the reports are ready, you will see that
 the status of the file changed to ``SUCCESS`` and the buttons ``REPORT``,
-``JSON`` and ``HTML`` can be clicked.
-
-.. figure:: ../images/cockpit_sandbox_reports_view2.png
-   :alt: Reports View in the Analysis Cockpit
-
-You can now download the report.
+``JSON`` and ``HTML`` can be clicked. You can now download the report.

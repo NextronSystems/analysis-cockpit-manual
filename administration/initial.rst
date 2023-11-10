@@ -7,8 +7,9 @@ License Installation
 --------------------
 
 Before you can use the cockpit, you must install a license. Navigate to
-the Licensing section, click the ``Upload License`` Button, select your
-license file and click the ``Upload`` Button.
+``Licensing`` section in the ``Settings`` menu, click the ``Upload License``
+button, select your license file and click ``Upload``. After verifying
+if your license is valid, you will be able to use your Analysis Cockpit.
 
 .. figure:: ../images/cockpit_license.png
    :alt: Licensing 
@@ -18,9 +19,9 @@ license file and click the ``Upload`` Button.
 System Update
 -------------
 
-All updates can be done from the Web GUI. Simply navigate to the Updates
-section, review the release notes and click the update button. You can
-also check for new updates by clicking the ``Check for Updates`` Button.
+All updates are applied from the Web GUI. Simply navigate to the ``Updates``
+section in the ``Settings`` menu, review the release notes and click the update
+button. You can also check for new updates by clicking the ``Check for Updates``.
 
 .. figure:: ../images/cockpit_update.png
    :alt: Updating the System
@@ -31,10 +32,10 @@ Set Users and User Rights
 -------------------------
 
 The chapter :ref:`basic-concepts/permissions:understanding users, roles, rights and case status`
-already described how to set up a 2-level analyst model for working with cases.
+already describes how to set up a 2-level analyst model for working with cases.
 The roles defined in that section are non-administrative roles, meaning
 they are only allowed to access cases based on the respective status of
-a ticket.
+a ticket. The following permissions are related to the Analysis Cockpit as a whole.
 
 Additionally, roles can have the following rights:
 

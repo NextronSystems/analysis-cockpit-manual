@@ -68,7 +68,7 @@ From Analysis Cockpit to the Internet
 The Analysis Cockpit is configured to retrieve updates from the
 following URLs:
 
-* https://update301.nextron-systems.com
+* https://update-301.nextron-systems.com
 
 A proxy system should be configured to allow access to these URLs
 without TLS/SSL interception (Analysis Cockpit uses client-side SSL

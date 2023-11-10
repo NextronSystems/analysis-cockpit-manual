@@ -40,7 +40,7 @@ Cockpit, follow the instructions in the chapter
 :ref:`administration/amc:connect to asgard management center`.
 
 You can retrieve old scans performed by ASGARD Management Center before
-connecting it to Analysis Cockpit using the ``Request Events`` button in
+you connected it to Analysis Cockpit using the ``Request Events`` button in
 the ``Scans`` section.
 
 .. figure:: ../images/cockpit_scan_request_events.png
@@ -106,7 +106,7 @@ log data into that import directory.
 Log files can be imported by placing the files in the following
 directory:
 
-``/var/lib/nextron/analysiscockpit3/events``
+``/var/lib/asgard-analysis-cockpit/events``
 
 Make sure that user and group of these files is set to ``cockpit``.
 
