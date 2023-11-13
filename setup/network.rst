@@ -9,10 +9,10 @@ After this Information is submitted, the Installer tries to get network
 configurations from a DHCP-Server. If there is none to be found, it will
 prompt for a static IP-Configuration.
 
-.. figure:: ../images/image13.png
+.. figure:: ../images/asgard_iso_installer_network.png
    :alt: Network Configuration I
 
-.. figure:: ../images/image14.png
+.. figure:: ../images/asgard_iso_installer_network2.png
    :alt: Network Configuration II
 
 Enter the IP address that Analysis Cockpit should use and optimally
@@ -20,27 +20,27 @@ directly add a netmask in CIDR notation. (see below) If you don't append
 the netmask, you'll be asked for a network mask in the following
 dialogue.
 
-.. figure:: ../images/image15.png
+.. figure:: ../images/asgard_iso_installer_network3.png
    :alt: Network Configuration - IP addresses
 
    Network Configuration - IP addresses
 
-.. figure:: ../images/image16.png
+.. figure:: ../images/asgard_iso_installer_network4.png
    :alt: Network Configuration - Enter the DNS server addresses 
 
    Network Configuration – Enter the DNS server addresses
 
-.. figure:: ../images/image17.png
+.. figure:: ../images/asgard_iso_installer_network5.png
    :alt: Network Configuration - Enter the Gateway
 
    Network Configuration - Enter the Gateway
 
-.. figure:: ../images/image18.png
+.. figure:: ../images/asgard_iso_installer_hostname.png
    :alt: Network Configuration - Enter the Hostname 
 
    Network Configuration - Enter the Hostname
 
-.. figure:: ../images/image19.png
+.. figure:: ../images/asgard_iso_installer_domain.png
    :alt: Network Configuration - Enter the Domain name
 
    Network Configuration - Enter the Domain name

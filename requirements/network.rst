@@ -149,7 +149,7 @@ Architecture Overview
 The following image shows an architecture overview with all products and
 their communication relationships.
 
-.. figure:: ../images/image3.png
+.. figure:: ../images/asgard_architecture.png
    :alt: Full Architecture
 	
    Full Architecture

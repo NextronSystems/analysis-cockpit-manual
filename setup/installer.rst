@@ -9,21 +9,21 @@ loader screen.
 The installer then loads the additional components from the ISO image
 and lets you select a location and language.
 
-.. figure:: ../images/image8.png
+.. figure:: ../images/asgard_iso_installer.png
    :alt: Starting the installation
 
    Starting the installation
 
-.. figure:: ../images/image9.png
+.. figure:: ../images/asgard_iso_installer_language.png
    :alt: Choosing language, location and locales I
 
-.. figure:: ../images/image10.png
+.. figure:: ../images/asgard_iso_installer_location.png
    :alt: Choosing language, location and locales II
 
-.. figure:: ../images/image11.png
+.. figure:: ../images/asgard_iso_installer_locales.png
    :alt: Choosing language, location and locales III
 
-.. figure:: ../images/image12.png
+.. figure:: ../images/asgard_iso_installer_locales2.png
    :alt: Choosing language, location and locales IV
 
    Choosing language, location and locales

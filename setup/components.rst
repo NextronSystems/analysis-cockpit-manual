@@ -22,7 +22,7 @@ To start the Analysis Cockpit installation run the following command:
 After the installer has completed its operations successfully, the
 system is ready to be used.
 
-.. figure:: ../images/image23.png
+.. figure:: ../images/nextron_installer_cockpit.png
    :alt: Message upon successful completion
 
    Message upon successful completion

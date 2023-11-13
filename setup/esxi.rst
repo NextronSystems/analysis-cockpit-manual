@@ -11,16 +11,16 @@ GNU/Linux 10 (64 bits) as target version. It is recommended to upload
 the Nextron Universal Installer ISO to an accessible datastore and mount
 the same to your newly created VM.
 
-.. figure:: ../images/image4.png
+.. figure:: ../images/esxi_new_vm.png
    :alt: Create a new virtual Machine I
 
-.. figure:: ../images/image5.png
+.. figure:: ../images/esxi_new_vm_name.png
    :alt: Create a new virtual Machine II
 
-.. figure:: ../images/image6.png
+.. figure:: ../images/esxi_new_vm_guest_os.png
    :alt: Create a new virtual Machine III
 
-.. figure:: ../images/image7.png
+.. figure:: ../images/esxi_new_vm_hardware.png
    :alt: Create a new virtual Machine IV 
 
    Create a new virtual Machine
