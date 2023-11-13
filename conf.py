@@ -1,4 +1,5 @@
 project = 'ASGARD Analysis Cockpit v4 Manual'
+version="4.0"
 copyright = '2023, Nextron Systems GmbH'
 author = 'Nextron Systems'
 extensions = [
@@ -25,3 +26,5 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 smartquotes = False
 autosectionlabel_prefix_document = True
 autosectionlabel_maxdepth = 4
+# disable epub mimetype warnings
+suppress_warnings = ["epub.unknown_project_files"]
