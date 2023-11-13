@@ -37,5 +37,9 @@ Click the ``Columns`` button to manage which columns are shown.
 
    Column Preferences
 
+Since the column preferences have an overvelming amount of
+fields you can choose from, we made looking for specific
+columns easier by integrating a search into the top right corner.
+
 .. hint:: 
    All views are personalized and changes will only affect your user.

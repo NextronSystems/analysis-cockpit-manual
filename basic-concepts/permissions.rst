@@ -72,7 +72,7 @@ In the lower table you can manage the access rights for every role and
 every Case Status. We can give the suitable rights to our generated
 roles by clicking the ``New Rights for Case Status`` button on the right.
 
-.. figure:: ../images/image34.png
+.. figure:: ../images/cockpit_new_rights_case_status.png
    :alt: Edit Rights - Read, Write, Set
 
    Edit Rights – Read, Write, Set
@@ -102,7 +102,7 @@ to "Open".
 
 After that, the ``Access rights for Case Status`` section looks like this:
 
-.. figure:: ../images/image35.png
+.. figure:: ../images/cockpit_access_rights_case_status.png
    :alt: Settings - Access rights for Case Status
 
    Settings – Access rights for Case Status

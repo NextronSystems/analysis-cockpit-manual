@@ -1,6 +1,6 @@
 .. Index:: List of Known Issues
 
-AAC#005: Could not get table data: Data too large
+AAC#001: Could not get table data: Data too large
 -------------------------------------------------
 
 This issue is related to ElasticSearch, which stores
@@ -14,7 +14,7 @@ ElasticSearch to actually use more RAM.
 
 
 
-AAC#005: Fix
+AAC#001: Fix
 ~~~~~~~~~~~~
 
 To actually fix the problem, you have to allocate more RAM

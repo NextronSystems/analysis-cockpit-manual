@@ -3,16 +3,26 @@
 Manual Case Creation
 --------------------
 
+This section walks you through the manual case creation.
+This method gives you more flexibility in terms of conditions
+and details regarding the cases, but is more time consuming.
+
+The results of the cases depending on specific settings you
+are setting during the case creation.
+
 Case Creation Basics
 ^^^^^^^^^^^^^^^^^^^^
 
 Create a new case following these steps: 
 
-1. Select on which conditions the case should be built
+1. Select on which conditions the case should be built. ``Search Result``
+
+   will take your filters from the baselining view into consideration, and 
+   build a case with the condition of your search.
 
 .. figure:: ../images/cockpit_case_creation1.png
 
-2. Inspect the Case Assignment and Conditions. Set Auto Assign if needed.
+1. Inspect the Case Assignment and Conditions. Set Auto Assign if needed.
 
 .. figure:: ../images/cockpit_case_creation2.png
 

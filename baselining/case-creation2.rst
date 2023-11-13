@@ -13,6 +13,11 @@ Do only create a case when you find at least that many similar logs. In
 our example below the Cockpit will now generate cases for all groups of
 at least 2000 similar events.
 
+.. figure:: ../images/cockpit_auto_baselining_button.png
+   :alt: Automatically create cases
+
+   Automatically create cases
+
 .. figure:: ../images/cockpit_auto_baselining_threshold.png
    :alt: Automatically create cases
 

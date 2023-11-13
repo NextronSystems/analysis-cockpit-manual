@@ -46,8 +46,8 @@ In this respect we assume, that something suspicious has been found,
 that needs further analysis by the system administration team. In most
 organizations this will be controlled through the organization's action
 request or ticketing system. So, we assume, that we will close the case
-in the Analysis Cockpit as it is progressed in another system. Thus, the
-status is changed to closed and the case gets updated.
+in the Analysis Cockpit as it is progressed in another system. The
+status is changed to ``closed`` and the case gets updated.
 
 .. figure:: ../images/cockpit_closed_auto_case.png
    :alt: Closing a Case
