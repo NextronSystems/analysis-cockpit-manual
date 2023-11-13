@@ -14,7 +14,7 @@ Preparation
 ^^^^^^^^^^^
 
 To prepare for your upgrade, we compiled a list of tasks you
-should follow. You can find the list below:
+should follow:
 
 .. list-table:: 
     :header-rows: 1
@@ -26,7 +26,7 @@ should follow. You can find the list below:
     * - Analysis Cockpit running version 3.8.10
       - Prerequisite for the Major Upgrade
     * - Connection to our update servers
-      - We need to fetch updates
+      - New update server infrastructure
 
 For details regarding some of the above tasks, see the next section
 in this manual.
@@ -49,7 +49,7 @@ that all your components can reach the following servers:
       - New update Server
 
 The old update server is needed to fetch the updater and
-other updates. The new update server is needed to upgrade
+other prerequisites. The new update server is needed to upgrade
 your servers to Debian 12 and also to install any new packages,
 which are needed for your Analysis Cockpit v4.
 
@@ -78,7 +78,7 @@ Analysis Cockpit Upgrade
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 To start your upgrade, connect to your Analysis Cockpit via
-SSH. We will run utilize ``asgard-updater`` to perform the
+SSH. We will utilize ``asgard-updater`` to perform the
 upgrade. First we need to check if a newer version of the
 ``asgard-updater`` is available. If you get the highlighted
 output, you have already the newest version installed (the

@@ -10,11 +10,17 @@ It is important to follow the steps carefully. We advise you
 to create a snapshot of all your Elasticsearch cluster nodes
 and the Analysis Cockpit itself before starting your upgrade.
 
+
+.. danger::
+   Please do not update your Analysis Cockpit before you update
+   your Elasticsearch Cluster Nodes. This can potentially break
+   your enviornment.
+
 Preparation
 ^^^^^^^^^^^
 
 To prepare for your upgrade, we compiled a list of tasks you
-should follow. You can find the list below:
+should follow:
 
 .. list-table:: 
     :header-rows: 1
@@ -28,11 +34,11 @@ should follow. You can find the list below:
     * - Analysis Cockpit running version 3.8.10
       - Prerequisite for the Major Upgrade
     * - Newest ``asgard-updater`` is installed
-      - This performs the update and should be in the newest version 
+      - This performs the update and has to be in the newest version 
     * - Cluster status is "green"
       - We don't want to upgrade a non functional cluster
     * - Connection to our update servers
-      - We need to fetch updates
+      - New update server infrastructure
 
 For details regarding some of the above tasks, see the next section
 in this manual.
@@ -55,7 +61,7 @@ that all your components can reach the following servers:
       - New update Server
 
 The old update server is needed to fetch the updater and
-other updates. The new update server is needed to upgrade
+other prerequisites. The new update server is needed to upgrade
 your servers to Debian 12 and also to install any new packages,
 which are needed for your Analysis Cockpit v4.
 
@@ -106,7 +112,18 @@ You can now run the ``asgard-updater`` with the following command:
 Cluster status is "green"
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Connect to your Analysis Cockpit via SSH. Run the following command:
+You can see the status of your Elasticsearch Cluster with one
+of the following two methods:
+
+Via the Web UI of your Analysis Cockpit:
+
+.. figure:: ../images/cockpit_cluster_status.png
+   :alt: Elasticsearch Cluster Status
+
+   Elasticsearch Cluster Status
+
+Or via SSH. To do this, connect to your Analysis Cockpit via SSH
+and run the following command:
 
 .. code-block:: console
     :emphasize-lines: 4
@@ -171,19 +188,23 @@ Performing the upgrade
 ^^^^^^^^^^^^^^^^^^^^^^
 
 In this section we will perform the actual upgrade
-of the Analysis Cockpit and your cluster nodes.
+of the Analysis Cockpit and your cluster nodes. Please
+following the instructions carefully, and follow the
+sequence of updates according to this manual. Please
+do not continue if you don't have a backup/snapshot
+ready to restore your cluster in case of a disaster.
 
 Cluster Node Upgrade
 ~~~~~~~~~~~~~~~~~~~~
 
 .. hint:: 
-    It is recommended that you update one node at a time,
-    in particular when a reboot is required. It is not
-    necessary to remove the node from the cluster for the update.
+    It is recommended that you update all your nodes at the
+    same time. Do not update your Analysis Cockpit until
+    all your notes are finished with the update.
 
-If all the above tasks are completed, you can start to upgrade
-your cluster nodes. Connect to your cluster nodes via SSH and
-run the following commands:
+If all the above tasks from the checklist are completed, you
+can start to upgrade your cluster nodes. Connect to your
+cluster nodes via SSH and run the following commands:
 
 .. code-block:: console
 
@@ -191,11 +212,12 @@ run the following commands:
     nextron@node-01:~$ sudo apt install asgard-updater
     nextron@node-01:~$ start-asgard-update
 
-This will install the asgard-updater, which will do all of
-the work, and start the actual update process. Your system
-will restart many times during the update. If you have the
-feeling the upgrade is stuck at one point, you can run the
-following command and see the latest logs:
+This will install the asgard-updater, which will take care of
+the update task. The tool will upgrade your Elasticsearch version
+to the latest minor version available. After this, it will upgrade
+the OS from Debian 10 to Debian 12. Your system will restart many
+times during the update. If you have the feeling the upgrade is stuck
+at one point, you can run the following command and see the latest logs:
 
 .. code-block:: console
 
@@ -210,15 +232,15 @@ The update is finished if you are seeing the following lines:
     2023-11-10T09:29:04.835194+01:00 elastic-test-01 asgard-updater[536]: Upgrade finished. Deactivating service...
     2023-11-10T09:29:04.844839+01:00 elastic-test-01 asgard-updater[536]: Removed "/etc/systemd/system/multi-user.target.wants/asgard-updater.service".
 
-After all your cluster nodes are upgraded, you will see that
-the cluster status changed to "red". This is normal and to be
-expected, since your nodes are now running a newer version of
-Elasticsearch and are not connected to your Analysis Cockpit.
-
 Please continue with the next step to finish the upgrade.
 
 Analysis Cockpit Upgrade
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+You Elasticsearch Cluster will now be in a "red" state, since
+your Analysis Cockpit is still running on an older version of
+Elasticsearch. You need to continue with the upgrade, and should
+see the cluster changing to a "green" state throughout.
 
 To finish your upgrade, connect to your Analysis Cockpit via
 SSH. We will run the following command on the command line
@@ -226,6 +248,8 @@ to initiate the upgrade:
 
 .. code-block:: console
 
+    nextron@node-01:~$ sudo apt update
+    nextron@node-01:~$ sudo apt install asgard-updater
     nextron@node-01:~$ start-asgard-update
 
 The server running your Analysis Cockpit will now restart
@@ -248,6 +272,15 @@ The update is finished if you are seeing the following lines:
     2023-11-10T09:29:04.835115+01:00 elastic-test-01 asgard-updater[536]: Elasticsearch service status: active
     2023-11-10T09:29:04.835194+01:00 elastic-test-01 asgard-updater[536]: Upgrade finished. Deactivating service...
     2023-11-10T09:29:04.844839+01:00 elastic-test-01 asgard-updater[536]: Removed "/etc/systemd/system/multi-user.target.wants/asgard-updater.service".
+
+Your cluster status should change back to a "green" status once
+all the updates of your Analysis Cockpit are installed. You
+can see the status in your Analysis Cockpit in the top right corner:
+
+.. figure:: ../images/cockpit_cluster_status.png
+   :alt: Elasticsearch Cluster Status
+
+   Elasticsearch Cluster Status
 
 Your upgrade is now finished, and you can use your Analysis Cockpit
 with the newest version.
