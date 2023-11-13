@@ -1,7 +1,7 @@
-.. Index:: Cluster Migration
+.. Index:: Cluster Upgrade
 
-Cluster Migration
------------------
+Cluster Upgrade
+---------------
 
 This chapter guides you through the upgrade process of
 your Analysis Cockpit version 3.8.10 to version 4.x.
@@ -27,6 +27,8 @@ should follow. You can find the list below:
       - For disaster recovery
     * - Analysis Cockpit running version 3.8.10
       - Prerequisite for the Major Upgrade
+    * - Newest ``asgard-updater`` is installed
+      - This performs the update and should be in the newest version 
     * - Cluster status is "green"
       - We don't want to upgrade a non functional cluster
     * - Connection to our update servers
@@ -71,6 +73,35 @@ looks like this:
    :alt: Update Section
 
    Update Section
+
+Newest ``asgard-updater`` is installed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This step should be performed on your Analysis Cockpit and all
+your cluster nodes.
+
+To check if a newer version of the ``asgard-updater`` is
+available, we have to run the following commands. If you
+get the highlighted output, you have already the newest
+version installed (the version might differ from the output
+here):
+
+.. code-block:: console
+    :emphasize-lines: 6
+
+    nextron@analysis:~$ sudo apt update
+    nextron@analysis:~$ sudo apt install asgard-updater
+    Reading package lists... Done
+    Building dependency tree       
+    Reading state information... Done
+    asgard-updater is already the newest version (1.0.16).
+    0 upgraded, 0 newly installed, 0 to remove and 18 not upgraded.
+
+You can now run the ``asgard-updater`` with the following command:
+
+.. code-block:: console
+
+    nextron@analysis:~$ start-asgard-update
 
 Cluster status is "green"
 ~~~~~~~~~~~~~~~~~~~~~~~~~

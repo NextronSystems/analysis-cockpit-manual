@@ -1,7 +1,7 @@
-.. Index:: Standalone Migration
+.. Index:: Standalone Upgrade
 
-Standalone Migration
---------------------
+Standalone Upgrade
+------------------
 
 This chapter guides you through the upgrade process of
 your Analysis Cockpit version 3.8.10 to version 4.x.
@@ -78,8 +78,24 @@ Analysis Cockpit Upgrade
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 To start your upgrade, connect to your Analysis Cockpit via
-SSH. We will run the following command on the command line
-to initiate the upgrade:
+SSH. We will run utilize ``asgard-updater`` to perform the
+upgrade. First we need to check if a newer version of the
+``asgard-updater`` is available. If you get the highlighted
+output, you have already the newest version installed (the
+version might differ from the output here):
+
+.. code-block:: console
+    :emphasize-lines: 6
+
+    nextron@analysis:~$ sudo apt update
+    nextron@analysis:~$ sudo apt install asgard-updater
+    Reading package lists... Done
+    Building dependency tree       
+    Reading state information... Done
+    asgard-updater is already the newest version (1.0.16).
+    0 upgraded, 0 newly installed, 0 to remove and 18 not upgraded.
+
+You can now run the ``asgard-updater`` with the following command:
 
 .. code-block:: console
 
@@ -87,7 +103,7 @@ to initiate the upgrade:
 
 The server running your Analysis Cockpit will now restart
 multiple times. It is important to not interrupt the upgrade
-process and let the server do all the tasks. You can however
+process and let the server do all the tasks. You can, however, 
 see if any errors occurred during the upgrade or just observe
 at what stage the upgrade is.
 

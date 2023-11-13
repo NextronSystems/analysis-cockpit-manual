@@ -35,7 +35,7 @@ can also be found.
    pitfalls/index
    faqs/index
    issues/index
-   migrate/index
+   upgrade/index
    glossary/index
    changelog/index
 
