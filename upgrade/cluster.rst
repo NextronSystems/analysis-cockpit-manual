@@ -24,6 +24,7 @@ should follow:
 
 .. list-table:: 
     :header-rows: 1
+    :widths: 50 50
 
     * - Task
       - Description
@@ -39,6 +40,8 @@ should follow:
       - We don't want to upgrade a non functional cluster
     * - Connection to our new update servers
       - New update server infrastructure
+    * - Stop your Analysis Cockpit - ``optional``
+      - To ensure no scans are being synchronized from your Management Center
 
 For details regarding some of the above tasks, see the next section
 in this manual.
@@ -89,8 +92,8 @@ your cluster nodes.
 To check if a newer version of the ``asgard-updater`` is
 available, we have to run the following commands. If you
 get the highlighted output, you have already the newest
-version installed (the version might differ from the output
-here):
+version installed (the version from the output might be
+newer in your case):
 
 .. code-block:: console
     :emphasize-lines: 6
@@ -100,7 +103,7 @@ here):
     Reading package lists... Done
     Building dependency tree       
     Reading state information... Done
-    asgard-updater is already the newest version (1.0.16).
+    asgard-updater is already the newest version (1.0.17).
     0 upgraded, 0 newly installed, 0 to remove and 18 not upgraded.
 
 You can now run the ``asgard-updater`` with the following command:
@@ -183,6 +186,25 @@ For more information, run the following command:
         "name": "elastic-test-01"
       }
     ]
+
+Stop your Analysis Cockpit - ``optional``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can optionally stop your Analysis Cockpit service
+to ensure no new scan logs are being synchronized from
+your Management Center. This will reduce the risk of
+losing new scan logs during the upgrade process.
+
+To stop and disable the Analysis Cockpit service on
+your server, connect via SSH and run the following
+commands. Please keep in mind that stopping the service
+might take a while.
+
+.. code-block:: console
+
+  nextron@analysis:~$ sudo systemctl stop analysiscockpit3.service
+  nextron@analysis:~$ sudo systemctl disable analysiscockpit3.service
+  Removed /etc/systemd/system/multi-user.target.wants/analysiscockpit3.service.
 
 Performing the upgrade
 ^^^^^^^^^^^^^^^^^^^^^^
