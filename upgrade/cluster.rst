@@ -202,9 +202,9 @@ might take a while.
 
 .. code-block:: console
 
-  nextron@analysis:~$ sudo systemctl stop analysiscockpit3.service
   nextron@analysis:~$ sudo systemctl disable analysiscockpit3.service
   Removed /etc/systemd/system/multi-user.target.wants/analysiscockpit3.service.
+  nextron@analysis:~$ sudo systemctl stop analysiscockpit3.service
 
 Performing the upgrade
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -259,15 +259,15 @@ Please continue with the next step to finish the upgrade.
 Analysis Cockpit Upgrade
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-You Elasticsearch Cluster will now be in a "red" state, since
-your Analysis Cockpit is still running on an older version of
-Elasticsearch. This is expected as long as you did not finish
+You Elasticsearch Cluster will now be in a degraded ("red") state,
+since your Analysis Cockpit is still running on an older version
+of Elasticsearch. This is expected as long as you did not finish
 your Analysis Cockpit upgrade. You should see the cluster changing
-to a "green" state throughout the upgrade of your Analysis Cockpit.
+to a normal ("green") state throughout the upgrade of your Analysis
+Cockpit.
 
-To finish your upgrade, connect to your Analysis Cockpit via
-SSH. We will run the following command on the command line
-to initiate the upgrade:
+To finish your upgrade, connect to your Analysis Cockpit via SSH.
+We will run the following command on the command line to initiate the upgrade:
 
 .. code-block:: console
 
