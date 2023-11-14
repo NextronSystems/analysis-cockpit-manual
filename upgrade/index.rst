@@ -5,7 +5,7 @@ Upgrade from Cockpit v3.8.10 to Cockpit v4.x
 
 This Chapter contains instructions on how to upgrade
 your running Analysis Cockpit version 3.8.10 to the
-newest version 4.x
+newest version 4.
 
 There are two chapters, one for a **standalone installation**
 and one for an installation with an **Elasticsearch Cluster**.
