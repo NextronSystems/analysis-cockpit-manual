@@ -9,9 +9,10 @@ newest version 4.
 
 There are two chapters, one for a **standalone installation**
 and one for an installation with an **Elasticsearch Cluster**.
-If you are running a **standalone installation**, you can
-ignore the Cluster chapter and jump straight ahead to
-:ref:`upgrade/standalone:standalone upgrade`.
+Depending on your environment, please follow **only one** section:
+
+- Standalone Installation - :ref:`upgrade/standalone:standalone upgrade`
+- Cluster Installation  - :ref:`upgrade/cluster:cluster upgrade`
 
 We developed an update program which helps you through
 the upgrade by automating as much as possible. You still
