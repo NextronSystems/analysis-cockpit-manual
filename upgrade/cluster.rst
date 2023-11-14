@@ -287,14 +287,33 @@ Run the following command to see the status of your upgrade:
 
     nextron@analysis:~$ sudo tail -f /var/log/asgard-updater/update.log
 
+There is a chance that you see the following log lines repeatedly
+in the output:
+
+.. code-block:: console
+
+    nextron@analysis:~$ sudo tail -f /var/log/asgard-updater/update.log
+    Nov 14 12:30:17 analysis asgard-updater[2403]: 2023-11-14T12:30:17+01:00 STARTING /usr/share/asgard-updater/bin/step05.sh
+    Nov 14 12:30:17 analysis asgard-updater[2403]: Checking for Elasticsearch Cluster Nodes...
+    Nov 14 12:30:17 analysis asgard-updater[2403]: Elasticsearch service status: active
+    Nov 14 12:30:17 analysis asgard-updater[2403]: Elasticsearch cluster is not healthy (status: red).
+    Nov 14 12:30:17 analysis asgard-updater[2403]: Elasticsearch cluster setup is enabled but no nodes are connected.
+    Nov 14 12:30:17 analysis asgard-updater[2403]: 2023-11-14T12:30:17+01:00 FINISHED /usr/share/asgard-updater/bin/step05.sh RC=54
+
+If this is the case, your cluster nodes might not be fully online
+yet. The updater tries this check every minute to make sure
+the cluster is fully online and healthy, before continuing with
+the next steps. Even if it looks like the updater is stuck, you
+have to give it some time and wait for it to continue by itself.
+
 The update is finished if you are seeing the following lines:
 
 .. code-block:: console
 
     nextron@node-01:~$ sudo tail -f /var/log/asgard-updater/update.log
-    2023-11-10T09:29:04.835115+01:00 elastic-test-01 asgard-updater[536]: Elasticsearch service status: active
-    2023-11-10T09:29:04.835194+01:00 elastic-test-01 asgard-updater[536]: Upgrade finished. Deactivating service...
-    2023-11-10T09:29:04.844839+01:00 elastic-test-01 asgard-updater[536]: Removed "/etc/systemd/system/multi-user.target.wants/asgard-updater.service".
+    2023-11-10T09:29:04.835115+01:00 analysis asgard-updater[536]: Elasticsearch service status: active
+    2023-11-10T09:29:04.835194+01:00 analysis asgard-updater[536]: Upgrade finished. Deactivating service...
+    2023-11-10T09:29:04.844839+01:00 analysis asgard-updater[536]: Removed "/etc/systemd/system/multi-user.target.wants/asgard-updater.service".
 
 Your cluster status should change back to a "green" status once
 all the updates of your Analysis Cockpit are installed. You
