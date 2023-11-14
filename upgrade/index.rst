@@ -7,9 +7,9 @@ This Chapter contains instructions on how to upgrade
 your running Analysis Cockpit version 3.8.10 to the
 newest version 4.x
 
-There are two chapters, one for a standalone installation
-and one for an installation with an Elasticsearch Cluster.
-If you are running a standalone installation, you can
+There are two chapters, one for a **standalone installation**
+and one for an installation with an **Elasticsearch Cluster**.
+If you are running a **standalone installation**, you can
 ignore the Cluster chapter and jump straight ahead to
 :ref:`upgrade/standalone:standalone upgrade`.
 
