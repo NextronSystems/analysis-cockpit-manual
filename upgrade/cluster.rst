@@ -37,7 +37,7 @@ should follow:
       - This performs the update and has to be in the newest version 
     * - Cluster status is "green"
       - We don't want to upgrade a non functional cluster
-    * - Connection to our update servers
+    * - Connection to our new update servers
       - New update server infrastructure
 
 For details regarding some of the above tasks, see the next section
@@ -239,8 +239,9 @@ Analysis Cockpit Upgrade
 
 You Elasticsearch Cluster will now be in a "red" state, since
 your Analysis Cockpit is still running on an older version of
-Elasticsearch. You need to continue with the upgrade, and should
-see the cluster changing to a "green" state throughout.
+Elasticsearch. This is expected as long as you did not finish
+your Analysis Cockpit upgrade. You should see the cluster changing
+to a "green" state throughout the upgrade of your Analysis Cockpit.
 
 To finish your upgrade, connect to your Analysis Cockpit via
 SSH. We will run the following command on the command line

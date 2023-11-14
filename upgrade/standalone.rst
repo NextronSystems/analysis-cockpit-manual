@@ -25,7 +25,7 @@ should follow:
       - For disaster recovery
     * - Analysis Cockpit running version 3.8.10
       - Prerequisite for the Major Upgrade
-    * - Connection to our update servers
+    * - Connection to our new update servers
       - New update server infrastructure
 
 For details regarding some of the above tasks, see the next section
