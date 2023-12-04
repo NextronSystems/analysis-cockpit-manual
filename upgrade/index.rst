@@ -1,10 +1,10 @@
 .. Index:: Upgrade
 
-Upgrade from Cockpit v3.8.10 to Cockpit v4.x
+Upgrade from Cockpit v3.10.1 to Cockpit v4.x
 ============================================
 
 This Chapter contains instructions on how to upgrade
-your running Analysis Cockpit version 3.8.10 to the
+your running Analysis Cockpit version 3.10.1 to the
 newest version 4.
 
 There are two chapters, one for a **standalone installation**
