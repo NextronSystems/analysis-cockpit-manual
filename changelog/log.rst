@@ -9,7 +9,7 @@ Analysis Cockpit.
 Analysis Cockpit 4.0
 ####################
 
-Analysis Cockpit 4.0.2
+Analysis Cockpit 4.0.4
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table:: 
