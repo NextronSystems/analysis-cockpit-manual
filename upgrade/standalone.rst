@@ -117,7 +117,7 @@ The update is finished if you are seeing the following lines:
 
 .. code-block:: console
 
-    nextron@node-01:~$ sudo tail -f /var/log/asgard-updater/update.log
+    nextron@analysis:~$ sudo tail -f /var/log/asgard-updater/update.log
     2023-11-10T09:29:04.835115+01:00 analysis asgard-updater[536]: Elasticsearch service status: active
     2023-11-10T09:29:04.835194+01:00 analysis asgard-updater[536]: Upgrade finished. Deactivating service...
     2023-11-10T09:29:04.844839+01:00 analysis asgard-updater[536]: Removed "/etc/systemd/system/multi-user.target.wants/asgard-updater.service".
