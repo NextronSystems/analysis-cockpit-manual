@@ -1,8 +1,5 @@
 .. Index:: Hardware Requirements
 
-Requirements
-============
-
 Hardware Requirements
 ---------------------
 
