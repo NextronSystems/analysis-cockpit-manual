@@ -6,17 +6,14 @@ Analysis Cockpit v4
 This chapter contains all the changes of the ASGARD
 Analysis Cockpit.
 
-Analysis Cockpit 4.0
-####################
-
-Analysis Cockpit 4.0.4
-~~~~~~~~~~~~~~~~~~~~~~
+Analysis Cockpit 4.0.9
+######################
 
 .. list-table:: 
     :header-rows: 1
 
     * - Release Date
-    * - Thu,  9 Nov 2023 08:55:00 +0100
+    * - Mon,  8 Jan 2024 10:59:00 +0100
 
 .. list-table::
     :header-rows: 1
@@ -30,5 +27,5 @@ Analysis Cockpit 4.0.4
       - Cluster configuration
     * - Change
       - Using timesyncd instead of ntpd. We recommend to check your NTP settings in the UI after upgrade
-    * -
-      - Support for ASGARD Installer
+    * - Change
+      - Improved sync performance between Management Center and Analysis Cockpit
