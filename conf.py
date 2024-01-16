@@ -10,7 +10,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 master_doc = 'index'
 language = "en"
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv/*']
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'prev_next_buttons_location': 'both',
