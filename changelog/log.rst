@@ -6,14 +6,14 @@ Analysis Cockpit v4
 This chapter contains all the changes of the ASGARD
 Analysis Cockpit.
 
-Analysis Cockpit 4.0.9
-######################
+Analysis Cockpit 4.0.10
+#######################
 
 .. list-table:: 
     :header-rows: 1
 
     * - Release Date
-    * - Mon,  8 Jan 2024 10:59:00 +0100
+    * - Tue, 16 Jan 2024 10:26:00 +0100
 
 .. list-table::
     :header-rows: 1

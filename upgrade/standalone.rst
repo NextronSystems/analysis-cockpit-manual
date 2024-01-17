@@ -92,7 +92,7 @@ version might differ from the output here):
     Reading package lists... Done
     Building dependency tree       
     Reading state information... Done
-    asgard-updater is already the newest version (1.0.16).
+    asgard-updater is already the newest version (1.0.17).
     0 upgraded, 0 newly installed, 0 to remove and 18 not upgraded.
 
 You can now run the ``asgard-updater`` with the following command:
