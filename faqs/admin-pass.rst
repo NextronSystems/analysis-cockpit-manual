@@ -10,6 +10,6 @@ the system via SSH, you can reset it via command line using the following comman
 
 .. code-block:: console
 
-   nextron@cockpit:~$ sudo mysql analysiscockpit3 -e "UPDATE users SET password = '7951GYqdAjLAoO1NaQu1ManJDIk' WHERE name = 'admin';"
+   nextron@cockpit:~$ sudo mysql analysiscockpit -e "UPDATE users SET password = '7951GYqdAjLAoO1NaQu1ManJDIk' WHERE name = 'admin';"
 
 This resets the password to ``admin``. You should then change that password immediately.

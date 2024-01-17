@@ -202,9 +202,9 @@ might take a while.
 
 .. code-block:: console
 
-  nextron@analysis:~$ sudo systemctl disable analysiscockpit3.service
-  Removed /etc/systemd/system/multi-user.target.wants/analysiscockpit3.service.
-  nextron@analysis:~$ sudo systemctl stop analysiscockpit3.service
+  nextron@analysis:~$ sudo systemctl disable asgard-analysis-cockpit.service
+  Removed /etc/systemd/system/multi-user.target.wants/asgard-analysis-cockpit.service.
+  nextron@analysis:~$ sudo systemctl stop asgard-analysis-cockpit.service
 
 Performing the upgrade
 ^^^^^^^^^^^^^^^^^^^^^^

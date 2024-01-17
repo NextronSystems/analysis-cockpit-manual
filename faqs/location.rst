@@ -5,7 +5,7 @@ Location of Scan Logs
 
 **Q: Where are Scan Logs on the system located?**
 
-You can find the Scan Logs  in ``/var/lib/nextron/analysiscockpit3/events``.
+You can find the Scan Logs  in ``/var/lib/asgard-analysis-cockpit/events``.
 In this folder you will find three different naming schemes:
 
 * **.txt.gz** - Logs which are not imported yet

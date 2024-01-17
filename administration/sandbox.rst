@@ -9,7 +9,7 @@ Currently you can use `CAPEv2 <https://github.com/kevoreilly/CAPEv2>`_
 
 Additionally, you can look at the following ``python`` file and write
 your own connector, for a different sandbox, if you need to:
-``/etc/nextron/analysiscockpit3/sandbox/connector/capev2.py``
+``/etc/asgard-analysis-cockpit/sandbox/connector/capev2.py``
 
 .. note:: 
    This section only focuses on the integration of your Analysis Cockpit
@@ -52,8 +52,8 @@ We change into the configuration directory of the sandbox:
 
 .. code:: console
    
-   root@cockpit:~# cd /etc/nextron/analysiscockpit3/sandbox/connector
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector#
+   root@cockpit:~# cd /etc/asgard-analysis-cockpit/sandbox/connector
+   root@cockpit:/etc/asgard-analysis-cockpit/sandbox/connector#
 
 Here you can find multiple files and folders. The ``.py`` and ``.ini``
 files represent each the type of sandbox you want to integrate. In
@@ -61,14 +61,14 @@ this example, we will configure the CAPv2 sandbox with our Analysis Cockpit.
 
 .. code:: console
    
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# ls -lA
+   root@cockpit:/etc/asgard-analysis-cockpit/sandbox/connector# ls -lA
    total 36
-   drwxr-xr-x 2 analysiscockpit3 analysiscockpit3 4096 Apr 21 15:27 analysiscockpit
-   -rw-r--r-- 1 analysiscockpit3 analysiscockpit3  253 Mär  3 11:20 capev2.ini
-   -rw-r--r-- 1 analysiscockpit3 analysiscockpit3 4934 Mär  3 11:20 capev2.py
-   -rw-r--r-- 1 analysiscockpit3 analysiscockpit3  278 Mär 28  2021 cuckoo.ini
-   -rw-r--r-- 1 analysiscockpit3 analysiscockpit3 9867 Nov 17  2020 cuckoo.py
-   drwxr-xr-x 2 analysiscockpit3 analysiscockpit3 4096 Apr 14 15:29 sandboxapi
+   drwxr-xr-x 2 analysiscockpit analysiscockpit 4096 Apr 21 15:27 analysiscockpit
+   -rw-r--r-- 1 analysiscockpit analysiscockpit  253 Mär  3 11:20 capev2.ini
+   -rw-r--r-- 1 analysiscockpit analysiscockpit 4934 Mär  3 11:20 capev2.py
+   -rw-r--r-- 1 analysiscockpit analysiscockpit  278 Mär 28  2021 cuckoo.ini
+   -rw-r--r-- 1 analysiscockpit analysiscockpit 9867 Nov 17  2020 cuckoo.py
+   drwxr-xr-x 2 analysiscockpit analysiscockpit 4096 Apr 14 15:29 sandboxapi
 
 Here we have two files which are of relevance for us:
 
@@ -85,7 +85,7 @@ be changed accordingly to your environment, are marked:
 
 .. code-block:: console
    
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# nano capev2.ini
+   root@cockpit:/etc/asgard-analysis-cockpit/sandbox/connector# nano capev2.ini
 
 .. code-block:: ini
    :linenos:
@@ -93,7 +93,7 @@ be changed accordingly to your environment, are marked:
 
    [DEFAULT]
    debug = yes
-   tmp_directory = /var/lib/nextron/analysiscockpit3/sandbox/capev2
+   tmp_directory = /var/lib/asgard-analysis-cockpit/sandbox/capev2
 
    [capev2]
    protocol = http
@@ -121,12 +121,12 @@ Sandbox" step in the beginning of this section) and ``verify``, which can be set
 
 Save your files after you made your changes.
 
-Now you have to create a new directory and give the ``analysiscockpit3`` user permission:
+Now you have to create a new directory and give the ``analysiscockpit`` user permission:
 
 .. code:: console
    
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# mkdir -p /var/lib/nextron/analysiscockpit3/sandbox/capev2
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# chown -R analysiscockpit3: /var/lib/nextron/analysiscockpit3
+   root@cockpit:/etc/asgard-analysis-cockpit/sandbox/connector# mkdir -p /var/lib/asgard-analysis-cockpit/sandbox/capev2
+   root@cockpit:/etc/asgard-analysis-cockpit/sandbox/connector# chown -R analysiscockpit: /var/lib/asgard-analysis-cockpit
 
 We need to create a systemd service file in order to run the CAPEv2 connector on your
 Analysis Cockpit. Below you can find a predefined service file which we will use: 
@@ -139,10 +139,10 @@ Analysis Cockpit. Below you can find a predefined service file which we will use
    After=network.target
    
    [Service]
-   ExecStart=/usr/bin/python3 /etc/nextron/analysiscockpit3/sandbox/connector/capev2.py
+   ExecStart=/usr/bin/python3 /etc/asgard-analysis-cockpit/sandbox/connector/capev2.py
    Restart=on-failure
-   User=analysiscockpit3
-   Group=analysiscockpit3
+   User=analysiscockpit
+   Group=analysiscockpit
    SyslogIdentifier=capev2_connector
    
    [Install]
@@ -152,42 +152,42 @@ Now we run the following command and paste the content from the output earlier i
 
 .. code-block:: console
 
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# nano /lib/systemd/system/capev2-connector.service
+   root@cockpit:/etc/asgard-analysis-cockpit/sandbox/connector# nano /lib/systemd/system/capev2-connector.service
 
 The file should now look like this:
 
 .. code-block:: console
 
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# cat /lib/systemd/system/capev2-connector.service
+   root@cockpit:/etc/asgard-analysis-cockpit/sandbox/connector# cat /lib/systemd/system/capev2-connector.service
    [Unit]
    Description=CAPEv2 Sandbox Connector
    After=network.target
 
    [Service]
-   ExecStart=/usr/bin/python3 /etc/nextron/analysiscockpit3/sandbox/connector/capev2.py
+   ExecStart=/usr/bin/python3 /etc/asgard-analysis-cockpit/sandbox/connector/capev2.py
    Restart=on-failure
-   User=analysiscockpit3
-   Group=analysiscockpit3
+   User=analysiscockpit
+   Group=analysiscockpit
    SyslogIdentifier=capev2_connector
 
    [Install]
    WantedBy=multi-user.target
 
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector#
+   root@cockpit:/etc/asgard-analysis-cockpit/sandbox/connector#
 
 Now that the systemd service file is created, we need to activate it. Run the following command:
 
 .. code-block:: console
 
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# systemctl daemon-reload && systemctl enable capev2-connector && systemctl start capev2-connector
+   root@cockpit:/etc/asgard-analysis-cockpit/sandbox/connector# systemctl daemon-reload && systemctl enable capev2-connector && systemctl start capev2-connector
    Created symlink /etc/systemd/system/multi-user.target.wants/capev2-connector.service → /lib/systemd/system/capev2-connector.service.
-   root@cockpit:/etc/nextron/analysiscockpit3/sandbox/connector# 
+   root@cockpit:/etc/asgard-analysis-cockpit/sandbox/connector# 
 
 The connection to your sandbox should work now. You can see the ``capev2.log`` for debug output and troubleshooting:
 
 .. code-block:: console
 
-   root@cockpit:~# tail /var/lib/nextron/analysiscockpit3/sandbox/capev2/capev2.log
+   root@cockpit:~# tail /var/lib/asgard-analysis-cockpit/sandbox/capev2/capev2.log
    22-11-15 12:07:46 DEBUG: Starting new HTTPS connection (1): localhost:443
    22-11-15 12:07:46 DEBUG: https://localhost:443 "GET /api/sandboxes/a/reports/pending?limit=10&offset=0 HTTP/1.1" 200 13
    22-11-15 12:07:46 DEBUG: no pending references found
