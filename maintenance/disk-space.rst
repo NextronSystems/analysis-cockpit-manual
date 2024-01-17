@@ -18,8 +18,8 @@ Safe-to-Delete Files
 The following files are safe to delete. They are not needed for AC
 to operate.
 
-- ``/var/lib/nextron/analysiscockpit3/log/*.gz``
-- ``/var/lib/nextron/analysiscockpit3/events/*.ok``
+- ``/var/lib/asgard-analysis-cockpit/log/*.gz``
+- ``/var/lib/asgard-analysis-cockpit/events/*.ok``
 
 They are only kept on the system if needed for further processing.
 E.g. saving/sending the log files to another system or keeping the
@@ -73,7 +73,7 @@ Deleting Unneeded Reports
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Old unneeded reports can be deleted via command line and are
-found at ``/var/lib/nextron/analysiscockpit3/reports``.
+found at ``/var/lib/asgard-analysis-cockpit/reports``.
 
 .. note::
    The reports are still listed in the UI after removal,

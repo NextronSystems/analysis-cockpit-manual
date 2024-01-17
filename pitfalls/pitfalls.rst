@@ -42,8 +42,8 @@ We suggest to save the files to another system beforehand, if you
 want to keep the information for future usage. ASGARD will not need
 the following files to function and they can be removed safely:
     
-- ``/var/lib/nextron/analysiscockpit3/log/*.gz``
-- ``/var/lib/nextron/analysiscockpit3/events/*.ok``
+- ``/var/lib/asgard-analysis-cockpit/log/*.gz``
+- ``/var/lib/asgard-analysis-cockpit/events/*.ok``
 
 Especially the assignment log can grow big in production environments.
 If deleting the logs is not enough, deleting the already read-in events (ending on ``.ok``)
@@ -54,7 +54,7 @@ simple ``rm *.ok``, you can use find to delete them:
 
    nextron@cockpit:~$ sudo su -
    [sudo] password for nextron:
-   root@cockpit:~# find /var/lib/nextron/analysiscockpit3/events -name "*.ok" -print0 | xargs -0 -I'{}' rm '{}'
+   root@cockpit:~# find /var/lib/asgard-analysis-cockpit/events -name "*.ok" -print0 | xargs -0 -I'{}' rm '{}'
 
 If Elasticsearch does not automatically work again after cleaning up some disk space, restart
 it under ``Settings`` > ``System`` > ``Services`` or with ``sudo systemctl restart elasticsearch.service``.
@@ -105,7 +105,7 @@ Check for reported problems using this command:
    
    nextron@cockpit:~$ sudo su -
    [sudo] password for root:
-   nextron@cockpit:~$ find /var/lib/nextron/analysiscockpit3/events -name "\*.problem"
+   nextron@cockpit:~$ find /var/lib/asgard-analysis-cockpit/events -name "\*.problem"
 
 Make sure that you're able to see the imported log data and review the
 selected time range in the time range picker in whatever view you're

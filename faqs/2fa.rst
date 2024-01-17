@@ -11,4 +11,4 @@ command (in this example we assume that the user is called ``john``):
 
 .. code-block:: console
 
-   nextron@cockpit:~$ sudo mysql analysiscockpit3 --execute "UPDATE users SET tfa_valid = 0 WHERE name = 'john';"
+   nextron@cockpit:~$ sudo mysql analysiscockpit --execute "UPDATE users SET tfa_valid = 0 WHERE name = 'john';"
