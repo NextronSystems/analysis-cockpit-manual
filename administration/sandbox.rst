@@ -48,7 +48,7 @@ Change the user to the root user:
    [sudo] password for nextron:
    root@cockpit:~# 
 
-We change into the configuration directory of the sandbox:
+We change into the configuration directory of the Analysis Cockpit:
 
 .. code:: console
    
@@ -56,21 +56,21 @@ We change into the configuration directory of the sandbox:
    root@cockpit:/usr/share/asgard-analysis-cockpit/sandbox/connector#
 
 Here you can find multiple files and folders. The ``.py`` and ``.ini``
-files represent each the type of sandbox you want to integrate. In
-this example, we will configure the CAPv2 sandbox with our Analysis Cockpit.
+files each represent the type of sandbox you want to integrate with. In
+this example, we will configure the CAPEv2 sandbox with our Analysis Cockpit.
 
 .. code:: console
    
    root@cockpit:/usr/share/asgard-analysis-cockpit/sandbox/connector# ls -lA
-   total 36
-   drwxr-xr-x 2 analysiscockpit analysiscockpit 4096 Apr 21 15:27 analysiscockpit
-   -rw-r--r-- 1 analysiscockpit analysiscockpit  253 Mär  3 11:20 capev2.ini
-   -rw-r--r-- 1 analysiscockpit analysiscockpit 4934 Mär  3 11:20 capev2.py
-   -rw-r--r-- 1 analysiscockpit analysiscockpit  278 Mär 28  2021 cuckoo.ini
-   -rw-r--r-- 1 analysiscockpit analysiscockpit 9867 Nov 17  2020 cuckoo.py
-   drwxr-xr-x 2 analysiscockpit analysiscockpit 4096 Apr 14 15:29 sandboxapi
+   total 40
+   drwxr-xr-x 2 root root 4096 16. Jan 11:20 analysiscockpit
+   -rw-r--r-- 1 root root  252 16. Jan 10:26 capev2.ini
+   -rwxr-xr-x 1 root root 9834 16. Jan 10:26 capev2.py
+   -rw-r--r-- 1 root root  277 16. Jan 10:26 cuckoo.ini
+   -rw-r--r-- 1 root root 9867 16. Jan 10:26 cuckoo.py
+   drwxr-xr-x 2 root root 4096 16. Jan 11:20 sandboxapi
 
-Here we have two files which are of relevance for us:
+Here we have two files which are of relevance to us:
 
 - capev2.ini
 
@@ -125,8 +125,8 @@ Now you have to create a new directory and give the ``analysiscockpit`` user per
 
 .. code:: console
    
-   root@cockpit:/usr/share/asgard-analysis-cockpit/sandbox/connector# mkdir -p /var/lib/asgard-analysis-cockpit/sandbox/capev2
-   root@cockpit:/usr/share/asgard-analysis-cockpit/sandbox/connector# chown -R analysiscockpit: /var/lib/asgard-analysis-cockpit
+   root@cockpit:/usr/share/asgard-analysis-cockpit/sandbox/connector# mkdir /usr/share/asgard-analysis-cockpit/sandbox/capev2
+   root@cockpit:/usr/share/asgard-analysis-cockpit/sandbox/connector# chown -R analysiscockpit: /usr/share/asgard-analysis-cockpit/sandbox/
 
 We need to create a systemd service file in order to run the CAPEv2 connector on your
 Analysis Cockpit. Below you can find a predefined service file which we will use: 
@@ -181,13 +181,12 @@ Now that the systemd service file is created, we need to activate it. Run the fo
 
    root@cockpit:/usr/share/asgard-analysis-cockpit/sandbox/connector# systemctl daemon-reload && systemctl enable capev2-connector && systemctl start capev2-connector
    Created symlink /etc/systemd/system/multi-user.target.wants/capev2-connector.service → /lib/systemd/system/capev2-connector.service.
-   root@cockpit:/usr/share/asgard-analysis-cockpit/sandbox/connector# 
 
 The connection to your sandbox should work now. You can see the ``capev2.log`` for debug output and troubleshooting:
 
 .. code-block:: console
 
-   root@cockpit:~# tail /var/lib/asgard-analysis-cockpit/sandbox/capev2/capev2.log
+   root@cockpit:~# tail /usr/share/asgard-analysis-cockpit/sandbox/capev2.log
    22-11-15 12:07:46 DEBUG: Starting new HTTPS connection (1): localhost:443
    22-11-15 12:07:46 DEBUG: https://localhost:443 "GET /api/sandboxes/a/reports/pending?limit=10&offset=0 HTTP/1.1" 200 13
    22-11-15 12:07:46 DEBUG: no pending references found
