@@ -1,6 +1,64 @@
 Known Issues
 ============
 
+AAC#006: Scan stuck at Status "Unknown"
+---------------------------------------
+
+.. list-table::
+    :header-rows: 1
+    :widths: 50, 50
+
+    * - Introduced Version
+      - Fixed Version
+    * - <= 3.10.1
+      - 3.10.3
+
+There is currently a bug in the Analysis Cockpit
+which prevents some Scans from being imported correctly.
+
+This is caused by very big events (a single event bigger
+than 64 Kb), which will cause the parser to error. The
+Analysis Cockpit can never finish importing this Scan.
+
+AAC#006: Check
+~~~~~~~~~~~~~~
+
+You can check if one of your scan logs is effected
+if the following conditions are met:
+
+You will see a scan which has the Status ``Unknown``
+
+.. figure:: ../images/aac06.png
+    :alt: Scan stuck at Status ``Unknown``
+
+When you connect to your Analysis Cockpit via SSH
+and enter a root session, you can execute the following
+command to see if the error occured on one or more
+log files:
+
+.. code-block:: console
+
+    root@analysis:# grep -R "ERROR: bufio.Scanner: token too long" /var/lib/nextron/analysiscockpit3/log
+    Jan 26 16:18:49 analysis analysiscockpit4[29459]: 2024-01-26T15:18:49Z [ERR] could not read events from file PATH: /var/lib/nextron/analysiscockpi3/events/upload_siduction_thor_2024-01-06.txt ERROR: bufio.Scanner: token too long
+
+You should see from the above output which log had
+problems, which should also be reflected in the filename:
+
+.. code-block:: console
+
+    root@analysis:# ls /var/lib/nextron/analysiscockpit3/events
+    /upload_siduction_thor_2024-01-06.txt.problem
+
+The file has the ``.problem`` suffix, which indicates
+a problem during the import.
+
+If you encounter this problem with one or more scan
+files, update your system and re-import the scans.
+
+You can either uplopad the manually, or rename them
+by removing the ``.problem`` suffix in the end. They
+should then get correctly imported.
+
 AAC#005: Could not get table data: Data too large
 -------------------------------------------------
 
@@ -12,8 +70,6 @@ The below error might occur on complex searches or aggregations
 (e.g. for the graphs in the baselining view). To fix this issue,
 you have to increase the RAM of your Analysis Cockpit and reconfigure
 ElasticSearch to actually use more RAM.
-
-
 
 AAC#005: Fix
 ~~~~~~~~~~~~
