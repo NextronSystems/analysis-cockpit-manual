@@ -47,7 +47,7 @@ problems, which should also be reflected in the filename:
 .. code-block:: console
 
     root@analysis:# ls /var/lib/nextron/analysiscockpit3/events
-    /upload_siduction_thor_2024-01-06.txt.problem
+    upload_siduction_thor_2024-01-06.txt.problem
 
 The file has the ``.problem`` suffix, which indicates
 a problem during the import.
