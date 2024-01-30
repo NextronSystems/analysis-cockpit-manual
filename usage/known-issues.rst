@@ -20,6 +20,17 @@ This is caused by very big events (a single event bigger
 than 64 Kb), which will cause the parser to error. The
 Analysis Cockpit can never finish importing this Scan.
 
+.. note::
+  If you are unable to see the Update button in the update
+  section (because of the major upgrade text), run the
+  following commands via ssh on your Analysis Cockpit to
+  install the update:
+
+  .. code-block:: console
+
+    nextron@analysis:~$ sudo apt update
+    nextron@analysis:~$ sudo apt upgrade
+
 AAC#006: Check
 ~~~~~~~~~~~~~~
 
