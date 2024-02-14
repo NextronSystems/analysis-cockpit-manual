@@ -1,6 +1,24 @@
 Maintenance
 ===========
 
+System Updates
+--------------
+
+Since the release of version 4 of the Analysis Cockpit, the
+update section only contains instructions on how to update
+to the newest major version. If you wish to keep using
+version 3 of the Analysis Cockpit, but still receive bugfix
+updates, you can run the following commands via SSH:
+
+.. code-block:: console
+
+  nextron@analysis:~$ sudo apt update
+  nextron@analysis:~$ sudo apt upgrade
+
+Please note that you have to do that for every bugfix which
+is released. So please make sure to run those commands sporadically
+on your Analysis Cockpit.
+
 Configuration Backup & Restore
 ------------------------------
 
