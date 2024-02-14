@@ -7,6 +7,16 @@ This Chapter contains instructions on how to upgrade
 your running Analysis Cockpit version 3.10.1 to the
 newest version 4.
 
+.. hint:: 
+  If you want to stay on version 3 of the Analysis Cockpit and
+  still install updates, you can run the following commands via
+  SSH:
+
+  .. code-block:: console
+
+    nextron@analysis:~$ sudo apt update
+    nextron@analysis:~$ sudo apt upgrade
+
 There are two chapters, one for a **standalone installation**
 and one for an installation with an **Elasticsearch Cluster**.
 Depending on your environment, please follow **only one** section:
