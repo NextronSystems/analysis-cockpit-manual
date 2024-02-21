@@ -4,8 +4,67 @@ Changelog
 This chapter contains all the changes of the ASGARD
 Analysis Cockpit.
 
+Analysis Cockpit 3.10
+#####################
+
+Analysis Cockpit 3.10.3
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table:: 
+    :header-rows: 1
+
+    * - Release Date
+    * - Fri, 26 Jan 2024 17:18:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed import of THOR logfiles with very long lines
+    * - Feature
+      - Configure max. line length for THOR logfiles
+
+Analysis Cockpit 3.10.1
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table:: 
+    :header-rows: 1
+
+    * - Release Date
+    * - Mon, 20 Nov 2023 08:37:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Major
+      - Prepare for Debian 12 Upgrade
+
 Analysis Cockpit 3.8
 ####################
+
+Analysis Cockpit 3.8.5
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table:: 
+    :header-rows: 1
+
+    * - Release Date
+    * - Thu, 28 Sep 2023 15:03:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed synchonization issues between Management Center and Analysis Cockpit caused by Bifrost file collection
 
 Analysis Cockpit 3.8.4
 ~~~~~~~~~~~~~~~~~~~~~~
