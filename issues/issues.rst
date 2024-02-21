@@ -10,7 +10,7 @@ AAC#003: [WAR] could not create case
     * - Introduced Version
       - Fixed Version
     * - 4.0.10
-      - 4.0.11
+      - 4.0.12
 
 There is currently a bug in the Analysis Cockpit when
 creating cases, if the following conditions are given:
