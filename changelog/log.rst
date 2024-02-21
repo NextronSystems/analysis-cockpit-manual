@@ -3,6 +3,28 @@
 Analysis Cockpit v4
 -------------------
 
+Analysis Cockpit 4.0.11
+#######################
+
+.. list-table:: 
+    :header-rows: 1
+
+    * - Release Date
+    * - Tue, 20 Feb 2024 16:20:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed import of THOR logfiles with very long lines
+    * - Bugfix
+      - Fixed error on creating new cases based on condition and time range
+    * - Bugfix
+      - Fixed non-working ntp service restart after ntp configuration changes
+
 This chapter contains all the changes of the ASGARD
 Analysis Cockpit.
 
