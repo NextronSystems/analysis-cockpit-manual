@@ -1,5 +1,38 @@
 .. Index:: List of Known Issues
 
+AAC#003: [WAR] could not create case
+------------------------------------
+
+.. list-table::
+    :header-rows: 1
+    :widths: 50, 50
+
+    * - Introduced Version
+      - Fixed Version
+    * - 4.0.10
+      - 4.0.11
+
+There is currently a bug in the Analysis Cockpit when
+creating cases, if the following conditions are given:
+
+- Baseline view with a limited time frame (e.g. 30 days)
+- Trying to create a ``Condition Case``
+
+When you try to create a case with the above criteria given,
+you will receive the following error:
+
+.. code-block:: none
+
+    [WAR] could not create case ERROR: can not create case with more than one source (query / condition / regex) set
+
+AAC#003: Workaround
+~~~~~~~~~~~~~~~~~~~
+
+While we are working on the fix, you can do the following
+to avoid the above error:
+
+- Change the time frame to ``All time`` in your baseline view
+
 AAC#002: Scan stuck at Status "Unknown"
 ---------------------------------------
 
@@ -10,7 +43,7 @@ AAC#002: Scan stuck at Status "Unknown"
     * - Introduced Version
       - Fixed Version
     * - 4.0.10
-      - in testing
+      - 4.0.11
 
 There is currently a bug in the Analysis Cockpit
 which prevents some Scans from being imported correctly.
