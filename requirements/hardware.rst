@@ -21,7 +21,7 @@ recommend a disk size of at least 500 GB.
 
 The Analysis Cockpit does not have any filters on which type of events
 will be imported into the database. This has to be controlled by chaning
-your scan parameters in your ASGARD Management Center. To raise the log
+your scan parameters in your ASGARD Management Center. To change the log
 level, you can use the ``--reduced`` parameter for all of your scans.
 
 .. hint::
