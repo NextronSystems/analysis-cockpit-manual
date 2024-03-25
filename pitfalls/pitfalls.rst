@@ -31,6 +31,58 @@ script:
 
 https://github.com/NextronSystems/nextron-helper-scripts/blob/master/asgard-analysis-cockpit/thor-timestamp-coverter.py
 
+Disk Watermark
+--------------
+
+Elasticsearch has a disk watermark that it uses to determine if it
+should go into read-only mode. If the disk is too full, Elasticsearch
+will stop accepting new data. This watermark is set to 95% by default
+and will prevent data loss by stopping the system from writing to the
+disk.
+
+The disk watermark of the Analysis Cockpit however is set to 90%. This means
+on a 1TB drive you need at least 100GB of free space or the Analysis Cockpit
+will put itself into read-only mode. We set this value lower than the default
+of Elasticsearch to give you more time to react before Elasticsearch goes into
+read-only mode, in which case you would need to reset the read-only mode manually
+on Elasticsearch.
+
+The below message shows up in the Analysis Cockpit if the disk watermark is
+reached:
+
+.. figure:: ../images/ac_disk-watermark.png
+   :alt: Disk Watermark
+
+   Disk Watermark
+
+If you see this message, the Analysis Cockpit went into a read-only mode
+and you need to free up some disk space or increase the disk space by
+allocating more storage to the virtual machine.
+
+To free up some disk space, you can follow the instructions in the next
+chapter (:ref:`maintenance/disk-space:regain disk space`).
+
+If your disk usage somehow got above 95%, Elasticsearch will go into read-only mode
+nontheless. If this happened, you need to reset the Elasticsearch state after you
+freed up some disk space. You can achieve this by running the following command:
+
+.. code-block:: console
+
+   nextron@cockpit:~$ curl -X PUT -s -u elastic:$(cat /etc/asgard-analysis-cockpit/elastic.password) \
+   -H 'Content-Type: application/json' \
+   -d '{"index.blocks.read_only_allow_delete": null}' \
+   http://localhost:9200/_all/_settings
+
+You should get the following output if the command was successful:
+
+.. code-block:: none
+
+   {"acknowledged":true}
+
+.. note:: 
+   Please note that the password changes after the Analysis Cockpit was
+   restarted, this is why we cat the password directly from the file.
+
 Recover from a Full Disk
 ------------------------
 
@@ -59,42 +111,12 @@ simple ``rm *.ok``, you can use find to delete them:
 If Elasticsearch does not automatically work again after cleaning up some disk space, restart
 it under ``Settings`` > ``System`` > ``Services`` or with ``sudo systemctl restart elasticsearch.service``.
 If this is not working either, you may need to disable Elasticsearch's read-only mode. See 
-:ref:`pitfalls/pitfalls:elasticsearch index locked due to low free disk space` for a how-to.
+:ref:`pitfalls/pitfalls:disk watermark` for a how-to.
 
 Deleting the files given above should be enough to resume operation. If the disk on your
 ASGARD Analysis Cockpit is full because of growing data over time, the disk space should be
 increased. If that is not an option you can delete old scans as described in section
 :ref:`maintenance/disk-space:regain disk space`.
-
-ElasticSearch Index Locked Due to Low Free Disk Space
------------------------------------------------------
-
-.. code-block:: none
-   
-   Mar 26 09:48:09 analysis-cockpit[22732]: [ERROR] could not update log:
-      could not update logs: could not update documents: http status 403
-
-.. literalinclude:: ../examples/elastic_error.json
-   :language: json
-
-This happens when Elasticsearch thinks the disk is running low on space
-so it puts itself into read-only mode.
-
-By default, Elasticsearch's decision is based on the percentage of disk
-space that's free, so on big disks this can happen even if you have many
-gigabytes of free space.
-
-The flood stage watermark is 95% by default, so on a 1TB drive you need
-at least 50GB of free space or Elasticsearch will put itself into
-read-only mode.
-
-You can fix that issue with the following command using the command line
-on ASGARD:
-
-.. code-block:: console
-   
-   nextron@asgard:~$ curl -X PUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
-
 
 Debug Failed File Imports
 -------------------------
@@ -139,7 +161,6 @@ Fix the proxy string in the file ``/etc/apt/apt.conf.d/00proxy``
 .. code:: console
    
    nextron@cockpit:~$ sudoedit /etc/apt/apt.conf.d/00proxy
-
 
 Then rerun the installer.
 
