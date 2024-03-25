@@ -3,6 +3,24 @@
 Analysis Cockpit v4
 -------------------
 
+Analysis Cockpit 4.0.13
+#######################
+
+.. list-table:: 
+    :header-rows: 1
+
+    * - Release Date
+    * - Wed,  6 Mar 2024 07:32:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Added second level of 'disk watermark' to prevent ElasticSearch from not working properly when disk space is low
+
 Analysis Cockpit 4.0.12
 #######################
 
