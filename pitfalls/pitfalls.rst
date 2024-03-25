@@ -81,7 +81,7 @@ You should get the following output if the command was successful:
 
 .. note:: 
    Please note that the password changes after the Analysis Cockpit was
-   restarted, this is why we cat the password directly from the file.
+   restarted, this is why we ``cat`` the password directly from the file.
 
 Recover from a Full Disk
 ------------------------
