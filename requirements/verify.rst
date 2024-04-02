@@ -47,7 +47,7 @@ or in Powershell
 Via Signature (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Extract the ZIP, `download the public signature <https://www.nextron-systems.com/certificates-and-keys>`__
+Extract the ZIP, `download the public signature <https://www.nextron-systems.com/resources/keys/>`__
 and verify the signed ISO:
 
 On Linux
