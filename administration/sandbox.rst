@@ -5,7 +5,7 @@ Sandbox Integration
 
 You can configure your Analysis Cockpit to upload files to a local sandbox.
 Currently you can use `CAPEv2 <https://github.com/kevoreilly/CAPEv2>`_
-(recommended) or `Cuckoo <https://cuckoosandbox.org/>`_.
+(recommended) or `Cuckoo <https://github.com/cuckoosandbox/cuckoo>`_.
 
 Additionally, you can look at the following ``python`` file and write
 your own connector, for a different sandbox, if you need to:
