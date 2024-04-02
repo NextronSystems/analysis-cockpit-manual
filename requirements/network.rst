@@ -6,7 +6,7 @@ Network Requirements
 The Analysis Cockpit and other systems which will have to communicate
 with each other, need the following ports opened within the network.
 For a detailed and up to date list of our update and licensing
-servers, please visit https://www.nextron-systems.com/hosts/.
+servers, please visit https://www.nextron-systems.com/resources/hosts/.
 
 The Analysis Cockpit requires the following open ports (incoming).
 

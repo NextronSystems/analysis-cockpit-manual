@@ -5,7 +5,7 @@ Sandbox Integration
 
 You can configure your Analysis Cockpit to upload files to a local sandbox.
 Currently you can use `CAPEv2 <https://github.com/kevoreilly/CAPEv2>`_
-(recommended) or `Cuckoo <https://cuckoosandbox.org/>`_.
+(recommended) or `Cuckoo <https://github.com/cuckoosandbox/cuckoo>`_.
 
 Additionally, you can look at the following ``python`` file and write
 your own connector, for a different sandbox, if you need to:
@@ -28,7 +28,7 @@ proper ``Description``.
    Adding a new Sandbox
 
 If you wish to enable automatic scanning for uploaded files
-(`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/usage/administration.html#bifrost-quarantine>`_),
+(`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/administration/evidence.html>`_),
 you can do so by checking the ``Automatic Mode``.
 
 Once you click ``Add`` the page will display an API token. Copy this token, we will need it later.

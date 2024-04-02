@@ -54,7 +54,7 @@ your servers to Debian 12 and also to install any new packages,
 which are needed for your Analysis Cockpit v4.
 
 You can find the corresponding IP-Addresses to the above
-FQDNs here: https://www.nextron-systems.com/hosts/.
+FQDNs here: https://www.nextron-systems.com/resources/hosts/.
 
 Analysis Cockpit running version 3.10.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
