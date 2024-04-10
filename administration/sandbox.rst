@@ -14,6 +14,9 @@ your own connector, for a different sandbox, if you need to:
 .. note:: 
    This section only focuses on the integration of your Analysis Cockpit
    with an existing sandbox. We will not cover how to set up the sandbox.
+   Since the CPAEv2 Sandbox is an open source tool provided by the broader
+   community, we encourage you to read through the extensive documentation
+   to get an overview of the setup process.
 
 Analysis Cockpit Sandbox Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
