@@ -21,11 +21,10 @@ These steps are described in detail in the following sections.
 .. toctree::
     :caption: Contents
 
-    initial
+    amc
     case-recommendations
     syslog
     system-settings
     log-file
-    amc
     sandbox
     api

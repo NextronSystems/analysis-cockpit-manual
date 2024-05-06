@@ -13,3 +13,4 @@ which are not found in your Web UI.
     backup
     disk-space
     elasticsearch
+    cluster

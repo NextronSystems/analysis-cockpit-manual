@@ -10,6 +10,8 @@ the system via SSH, you can reset it via command line using the following comman
 
 .. code-block:: console
 
-   nextron@cockpit:~$ sudo mysql analysiscockpit -e "UPDATE users SET password = '7951GYqdAjLAoO1NaQu1ManJDIk' WHERE name = 'admin';"
-
-This resets the password to ``admin``. You should then change that password immediately.
+   nextron@cockpit:~$ sudo asgard-analysis-cockpit set-password
+   Please enter password for user `admin`: 
+   Please re-enter password for user `admin`: 
+   2024-04-10T08:26:29Z [INF] SET_PASSWORD: Database initialized..
+   2024-04-10T08:26:29Z [INF] SET_PASSWORD: password successfully updated
