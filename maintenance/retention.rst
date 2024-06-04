@@ -16,3 +16,7 @@ The Data Retention Policy is configured in ``Settings`` > ``Advanced`` >
    :alt: Data Retention
 
    Data Retention
+
+.. hint::
+   The default setting is to keep all events indefinitely. If you want to
+   delete old events, you need to configure a Data Retention Policy.

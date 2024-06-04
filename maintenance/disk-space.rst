@@ -11,6 +11,7 @@ If your disk usage is growing too fast and free disk space is running out, you h
 1. Increase the size of your disk
 2. Delete files that are not needed for operation
 3. Delete files that are used by AC but are unneeded / dated
+4. Set the :ref:`maintenance/retention:data retention` Policy to automatically delete old data
 
 Safe-to-Delete Files
 ^^^^^^^^^^^^^^^^^^^^
