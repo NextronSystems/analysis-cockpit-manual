@@ -12,6 +12,7 @@ which are not found in your Web UI.
 
     retention
     backup
+    extending-lvm
     disk-space
     elasticsearch
     cluster
