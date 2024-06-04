@@ -244,7 +244,7 @@ the partition and resizing the file system.
 
     .. code-block:: console
 
-        nextron@cockpit:~$ sudo fdusk -u /dev/sda
+        nextron@cockpit:~$ sudo fdisk -u /dev/sda
 
 6. press "p" to print the current partitions of the disk:
 
