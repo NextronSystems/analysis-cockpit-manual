@@ -68,7 +68,7 @@ From Analysis Cockpit to the Internet
 The Analysis Cockpit is configured to retrieve updates from the
 following URLs:
 
-* https://update-301.nextron-systems.com
+* :samp:`https://update-301.nextron-systems.com`
 
 A proxy system should be configured to allow access to these URLs
 without TLS/SSL interception (Analysis Cockpit uses client-side SSL
@@ -80,7 +80,7 @@ Authentication.
 If you are planning to use the **ChatGPT** integration, make sure that the
 Analysis Cockpit can reach the following URL:
 
-* https://api.openai.com
+* :samp:`https://api.openai.com`
 
 From Analysis Cockpit to Sandbox Systems (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
