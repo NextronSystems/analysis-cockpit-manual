@@ -13,7 +13,9 @@ Extending Disk Space
     Please make sure that you create a snapshot of your Analysis
     Cockpit before proceeding with the following steps. This will
     allow you to revert to the previous state in case something
-    goes wrong!
+    goes wrong! This is very important since you are actively
+    changing the disk space of your Analysis Cockpit. You could
+    lose data if something goes wrong!
 
 The Debian system running your Analysis Cockpit is configured
 with LVM (Logical Volume Manager), which allows you to extend
@@ -30,7 +32,8 @@ Scenario 1: Second Disk
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This section focuses on extending the disk space by attaching a
-second disk to the Analysis Cockpit.
+second disk to the Analysis Cockpit. We will add the second disk
+to our existing volume group and extend the logical volume.
 
 1. Log in to the Analysis Cockpit via SSH.
 2. Run the following command to check the current disk space:
@@ -179,7 +182,8 @@ Scenario 2: Increased Disk Size
     used if you are comfortable with the steps.
 
 This section focuses on extending the disk space in case you increased the disk
-size of your existing/attached disk.
+size of your existing/attached disk. We will extend the disk space by extending
+the partition and resizing the file system.
 
 1. Log in to the Analysis Cockpit via SSH.
 2. Run the following command to check the current disk space:
@@ -203,7 +207,6 @@ size of your existing/attached disk.
 
     .. code-block:: console
         :emphasize-lines: 3, 9
-        :linenos:
 
         nextron@cockpit:~$ lsblk
         NAME                  MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
@@ -275,7 +278,7 @@ size of your existing/attached disk.
 7. Create a new partition. Choose "extended" when asked for the partition type, the rest can stay default:
 
     .. code-block:: none
-        :emphasize-lines: 1, 4, 5, 6, 12, 23
+        :emphasize-lines: 1, 5-8, 12, 23
 
         Command (m for help): n
         Partition type
@@ -397,6 +400,8 @@ size of your existing/attached disk.
 13. Resize your phyiscal volumes:
 
     .. code-block:: console
+        :emphasize-lines: 1, 4, 7
+        :linenos:
 
         nextron@cockpit:~$ sudo pvresize /dev/sda5
           Physical volume "/dev/sda5" changed
@@ -404,11 +409,15 @@ size of your existing/attached disk.
         nextron@cockpit:~$ sudo pvs
           PV         VG        Fmt  Attr PSize   PFree 
           /dev/sda5  debian-vg lvm2 a--  <39.52g 15.00g
-        nextron@cockpit:~$ sudo vgs
-          VG        #PV #LV #SN Attr   VSize   VFree 
-          debian-vg   1   2   0 wz--n- <39.52g 15.00g
+        nextron@cockpit:~$ sudo lvs
+          LV     VG        Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+          root   debian-vg -wi-ao----  38.56g                                                    
+          swap_1 debian-vg -wi-ao---- 980.00m
 
-    We can see that the physical volume **/dev/sda5** has been resized (PFee).
+    We can see that the physical volume **/dev/sda5** has been resized (PFree).
+    The output will also show all the physical volumes (line 6) and logical
+    volumes (line 9). Please note the name of the volume group (VG) and logical
+    volume, in our case **debian-vg** and **root** respectively.
 
 14. Resize the logical volume:
 
@@ -427,7 +436,7 @@ size of your existing/attached disk.
 
     .. code-block:: console
 
-        sudo resize2fs /dev/debian-vg/root
+        nextron@cockpit:~$ sudo resize2fs /dev/debian-vg/root
         resize2fs 1.47.0 (5-Feb-2023)
         Filesystem at /dev/debian-vg/root is mounted on /; on-line resizing required
         old_desc_blocks = 3, new_desc_blocks = 5
@@ -436,8 +445,9 @@ size of your existing/attached disk.
 16. Run the following command to verify the disk size:
 
     .. code-block:: console
+        :emphasize-lines: 5
 
-        df -h
+        nextron@cockpit:~$ df -h
         Filesystem                   Size  Used Avail Use% Mounted on
         udev                         1.9G     0  1.9G   0% /dev
         tmpfs                        392M  500K  392M   1% /run
