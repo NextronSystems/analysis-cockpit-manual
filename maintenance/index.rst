@@ -10,6 +10,7 @@ which are not found in your Web UI.
 .. toctree::
     :caption: Contents
 
+    retention
     backup
     disk-space
     elasticsearch
