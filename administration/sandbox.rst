@@ -21,9 +21,9 @@ your own connector, for a different sandbox, if you need to:
 Analysis Cockpit Sandbox Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the web view of your Analysis Cockpit, navigate to ``Sandbox`` > ``Sandboxes``.
-Click ``Add Sandbox`` in the top right corner. Keep the ``Name`` short and add a
-proper ``Description``.
+In the web view of your Analysis Cockpit, navigate to ``Settings`` > ``Connected
+Systems`` > ``Sandboxes``. Click ``Add Sandbox`` in the top right corner. Keep the
+``Name`` short and add a proper ``Description``.
 
 .. figure:: ../images/cockpit_add_sandbox.png
    :alt: Adding a new Sandbox
@@ -206,23 +206,20 @@ The connection to your sandbox should work now. You can see the ``capev2.log`` f
 Analysis Cockpit Sandbox Usage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once your sandbox is set up and running, you can see the status of it in the sandbox view (Last Seen):
+Once your sandbox is set up and running, you can see the status of it in the
+sandbox view (Last Seen):
 
 .. figure:: ../images/cockpit_sandbox_view.png
    :alt: Sandbox View in the Analysis Cockpit
 
-In the ``Files`` view you can see previously analyzed files or upload files for analysis by yourself:
+In the ``Collected Evidences`` view you can see previously analyzed files or
+upload files for analysis by yourself:
 
-.. figure:: ../images/cockpit_sandbox_file_upload.png
+.. figure:: ../images/cockpit_evidence-file-upload.png
    :alt: File View in the Analysis Cockpit
 
-.. note:: 
-   If you did not enable ``auto mode`` of your configured sandbox, you have
-   to manually add the file for scanning in here. You can do this by pressing
-   the ``Scan file with sandbox`` button to the right of your file.
-
 After your file has been uploaded, you have to wait until your sandbox
-is finished with analyzing the file. Change to the ``Reports`` view
+is finished with analyzing the file. Change to the ``Sandbox Reports`` view
 to see the status of the files.
 
 .. figure:: ../images/cockpit_sandbox_reports.png
