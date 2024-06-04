@@ -11,7 +11,6 @@ Section is split into the different sources of your Events:
 
 - THOR Events
 - Aurora Events
-- Log Watcher Events (deprecated)
 
 .. figure:: ../images/cockpit_events_overview.png
    :alt: Events Section 

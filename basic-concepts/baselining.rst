@@ -10,7 +10,6 @@ will suggest cases based on predefined :ref:`basic-concepts/cases:case templates
 
 - THOR Events
 - Aurora Events
-- Log Watcher Events (deprecated)
 - Suggested Cases
 
 .. figure:: ../images/cockpit_baselining_overview.png

@@ -183,3 +183,68 @@ removed from the log management view.
 .. warning:: 
    It is recommended to use regular expressions only rarely and with
    caution. This feature can severely impact the performance of the system.
+
+ChatGPT Integration
+^^^^^^^^^^^^^^^^^^^
+
+You can use our ChatGPT integration to help with case creation. To do this
+you need to have a ChatGPT API key. Navigate to ``Settings`` > ``Advanced`` >
+``ChatGPT Integration``. Here you can enter your API key. You can test the
+ChatGPT integration in the prompt at the bottom, to make sure everything is
+working.
+
+.. figure:: ../images/cockpit_chatgpt-integration.png
+   :alt: ChatGPT Integration
+
+   ChatGPT Integration
+
+.. hint::
+   If you wish to interact with ChatGPT while safeguarding sensitive information,
+   consider using the :ref:`baselining/case-creation1:event anonymization` feature.
+
+After you configured the ChatGPT integration, you can use it in the case creation
+dialog. Click on the ChatGPT icon in the case creation dialog to gain more insights
+regarding the events you are working with.
+
+.. figure:: ../images/cockpit_chatgpt-case-creation.png
+   :alt: ChatGPT Case Creation
+
+   ChatGPT Case Creation
+
+Once you clicked the button, a new dialog will open. Here you can see which information
+will be send to ChatGPT. Once you are confident with the information, click on the
+``Approve`` button. The Analysis Cockpit will now send the information to ChatGPT and
+display the results after a short moment.
+
+.. figure:: ../images/cockpit_chatgpt-case-confirmation.png
+   :alt: ChatGPT Case Confirmation
+
+   ChatGPT Case Confirmation
+
+Once the analysis is done, you will see the results in the dialog. You can now use the
+information to create a case.
+
+.. figure:: ../images/cockpit_chatgpt-case-results.png
+   :alt: ChatGPT Case Results
+
+   ChatGPT Case Results
+
+.. hint::
+   Please note that ChatGPT will give you a summary and recommendations based on the
+   information you provided. It is always recommended to review the information and
+   adjust it if necessary.
+
+Event Anonymization
+~~~~~~~~~~~~~~~~~~~
+
+Event Anonymization Rules can be used to replace any text in your events when
+sending a request to ChatGPT. This is useful when you want to interact with
+ChatGPT while safeguarding sensitive information. You can create a new rule by
+clicking on the ``Create Rule`` button in ``Settings`` > ``Advanced`` > ``Event
+Anonymization``. You can add multiple rules and test them in the prompt at the
+bottom.
+
+.. figure:: ../images/cockpit_event-anon-rule.png
+   :alt: Event Anonymization Rule
+
+   Event Anonymization Rule

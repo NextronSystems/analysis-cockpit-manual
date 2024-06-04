@@ -77,6 +77,11 @@ server, username and password during the setup process of the Analysis
 Cockpit platform. It only supports BASIC authentication, not NTLM
 Authentication.
 
+If you are planning to use the **ChatGPT** integration, make sure that the
+Analysis Cockpit can reach the following URL:
+
+* https://api.openai.com
+
 From Analysis Cockpit to Sandbox Systems (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
