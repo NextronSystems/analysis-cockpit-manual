@@ -36,7 +36,16 @@ second disk to the Analysis Cockpit. We will add the second disk
 to our existing volume group and extend the logical volume.
 
 1. Log in to the Analysis Cockpit via SSH.
-2. Run the following command to check the current disk space:
+2. Stop the Analysis Cockpit Service temporarily:
+
+    .. code-block:: console
+
+        nextron@cockpit:~$ sudo systemctl stop asgard-analysis-cockpit.service
+
+    This will stop the Analysis Cockpit service. You can start
+    the service again after you have extended the disk space.
+
+3. Run the following command to check the current disk space:
 
     .. code-block:: console
         :emphasize-lines: 5
@@ -53,7 +62,7 @@ to our existing volume group and extend the logical volume.
    
    The output will show the current disk space usage.
 
-3. Run the following command to identify your attached disks:
+4. Run the following command to identify your attached disks:
 
     .. code-block:: console
         :emphasize-lines: 3, 9
@@ -73,7 +82,7 @@ to our existing volume group and extend the logical volume.
     The output will show the attached disks. In this example, the
     newly attached disk is **sdb**, whereas the existing disk is **sda**.
 
-4. Run the following command to check all the physical volumes:
+5. Run the following command to check all the physical volumes:
 
     .. code-block:: console
 
@@ -84,14 +93,14 @@ to our existing volume group and extend the logical volume.
     The output will show all the physical volumes. Please note the name
     of the volume group (VG), in our case **debian-vg**.
 
-5. Run the following command to create a new physical volume for the new disk:
+6. Run the following command to create a new physical volume for the new disk:
 
     .. code-block:: console
 
         nextron@cockpit:~$ sudo pvcreate /dev/sdb
           Physical volume "/dev/sdb" successfully created.
 
-6. Check your physical volumes again:
+7. Check your physical volumes again:
 
     .. code-block:: console
 
@@ -103,7 +112,7 @@ to our existing volume group and extend the logical volume.
     You can see that the new physical volume **/dev/sdb** has been created.
     It is not yet part of the volume group (VG).
 
-7. Run the following command to identify your volume groups:
+8. Run the following command to identify your volume groups:
 
     .. code-block:: console
 
@@ -114,14 +123,14 @@ to our existing volume group and extend the logical volume.
     The output will show all the volume groups. In this case, the only volume
     group is **debian-vg**.
 
-8. Extend the volume group with our new physical volume:
+9.  Extend the volume group with our new physical volume:
 
     .. code-block:: console
 
         nextron@cockpit:~$ sudo vgextend debian-vg /dev/sdb
           Volume group "debian-vg" successfully extended
 
-9.  Looking at the volume groups again, you will see that the volume group **debian-vg** has been extended:
+10. Looking at the volume groups again, you will see that the volume group **debian-vg** has been extended:
 
     .. code-block:: console
 
@@ -131,7 +140,7 @@ to our existing volume group and extend the logical volume.
 
     The volume group has more space (VSize) and free space (VFree).
 
-10. We now need to extend the logical volume (using the free space):
+11. We now need to extend the logical volume (using the free space):
 
     .. code-block:: console
 
@@ -144,7 +153,7 @@ to our existing volume group and extend the logical volume.
     available in the volume group. The device **/dev/debian-vg** is our volume group.
     The logical volume **root** is what we extended (output of "sudo lvs").
 
-11. Run the following command to resize the file system:
+12. Run the following command to resize the file system:
 
     .. code-block:: console
 
@@ -154,7 +163,7 @@ to our existing volume group and extend the logical volume.
         old_desc_blocks = 3, new_desc_blocks = 6
         The filesystem on /dev/debian-vg/root is now 11418624 (4k) blocks long.
 
-12. Run the following command to check the disk space again:
+13. Run the following command to check the disk space again:
 
     .. code-block:: console
         :emphasize-lines: 5
@@ -169,8 +178,8 @@ to our existing volume group and extend the logical volume.
         /dev/sda1                    455M   51M  380M  12% /boot
         tmpfs                        392M     0  392M   0% /run/user/1000
 
-13. You successfully extended your disk space. Feel free to reboot your
-    system to make sure everything is working as expected.
+14. You successfully extended your disk space. Reboot your Analysis Cockpit
+    to make sure everything is working as expected.
 
 Scenario 2: Increased Disk Size
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -186,7 +195,16 @@ size of your existing/attached disk. We will extend the disk space by extending
 the partition and resizing the file system.
 
 1. Log in to the Analysis Cockpit via SSH.
-2. Run the following command to check the current disk space:
+2. Stop the Analysis Cockpit Service temporarily:
+
+    .. code-block:: console
+
+        nextron@cockpit:~$ sudo systemctl stop asgard-analysis-cockpit.service
+
+    This will stop the Analysis Cockpit service. You can start
+    the service again after you have extended the disk space.
+
+3. Run the following command to check the current disk space:
 
     .. code-block:: console
         :emphasize-lines: 5
@@ -203,7 +221,7 @@ the partition and resizing the file system.
    
    The output will show the current disk space usage.
 
-3. Run the following command to identify your attached disks:
+4. Run the following command to identify your attached disks:
 
     .. code-block:: console
         :emphasize-lines: 3, 9
@@ -222,13 +240,13 @@ the partition and resizing the file system.
     The output will show the attached disks. In this example, our
     disk is **sda**.
 
-4. We now have to increase the partition size. Please follow the next steps carefully:
+5. We now have to increase the partition size. Please follow the next steps carefully:
 
     .. code-block:: console
 
         nextron@cockpit:~$ sudo fdusk -u /dev/sda
 
-5. press "p" to print the current partitions of the disk:
+6. press "p" to print the current partitions of the disk:
 
     .. code-block:: none
         :emphasize-lines: 1, 13
@@ -253,7 +271,7 @@ the partition and resizing the file system.
         partition will also be deleted. The partition number is the number
         in the Device (i.e. /dev/sda2 is partition number 2).
 
-6. Delete the partition:
+7. Delete the partition:
 
     .. code-block:: none
         :emphasize-lines: 1, 2, 6
@@ -275,7 +293,7 @@ the partition and resizing the file system.
         Device     Boot Start    End Sectors  Size Id Type
         /dev/sda1  *     2048 999423  997376  487M 83 Linux
 
-7. Create a new partition. Choose "extended" when asked for the partition type, the rest can stay default:
+8. Create a new partition. Choose "extended" when asked for the partition type, the rest can stay default:
 
     .. code-block:: none
         :emphasize-lines: 1, 5-8, 12, 23
@@ -304,7 +322,7 @@ the partition and resizing the file system.
         /dev/sda1  *      2048   999423   997376  487M 83 Linux
         /dev/sda2       999424 83886079 82886656 39.5G  5 Extended
 
-8. Now we need to create the logical partition. Use the default values for first and last sector. If asked to remove the LVM signature, type "n":
+9. Now we need to create the logical partition. Use the default values for first and last sector. If asked to remove the LVM signature, type "n":
 
     .. code-block:: none
         :emphasize-lines: 1, 10, 12, 25
@@ -335,7 +353,7 @@ the partition and resizing the file system.
         /dev/sda2        999424 83886079 82886656 39.5G  5 Extended
         /dev/sda5       1001472 83886079 82884608 39.5G 83 Linux
 
-9.  Adjust the beginning of the partition to the value it was before (see Step 5. - Start value of **/dev/sda5**):
+10. Adjust the beginning of the partition to the value it was before (see Step 5. - Start value of **/dev/sda5**):
 
     .. code-block:: none
 
@@ -347,7 +365,7 @@ the partition and resizing the file system.
 
         Expert command (m for help): r
 
-10. Now we need to change the partition type to LVM:
+11. Now we need to change the partition type to LVM:
 
     .. code-block:: none
         :emphasize-lines: 1, 2, 3, 7, 19
@@ -372,7 +390,7 @@ the partition and resizing the file system.
         /dev/sda2        999424 83886079 82886656 39.5G  5 Extended
         /dev/sda5       1001472 83886079 82884608 39.5G 8e Linux LVM
 
-11. We can save the new partition table. This will exit the tool:
+12. We can save the new partition table. This will exit the tool:
 
     .. code-block:: console
 
@@ -382,7 +400,7 @@ the partition and resizing the file system.
 
         nextron@cockpit:~$
 
-12. Running "lsblk" we can see that the disk space increased:
+13. Running "lsblk" we can see that the disk space increased:
 
     .. code-block:: console
         :emphasize-lines: 6
@@ -397,7 +415,7 @@ the partition and resizing the file system.
           └─debian--vg-swap_1 254:1    0  980M  0 lvm  [SWAP]
         sr0                    11:0    1 1024M  0 rom
 
-13. Resize your phyiscal volumes:
+14. Resize your phyiscal volumes:
 
     .. code-block:: console
         :emphasize-lines: 1, 4, 7
@@ -419,7 +437,7 @@ the partition and resizing the file system.
     volumes (line 9). Please note the name of the volume group (VG) and logical
     volume, in our case **debian-vg** and **root** respectively.
 
-14. Resize the logical volume:
+15. Resize the logical volume:
 
     .. code-block:: console
 
@@ -432,7 +450,7 @@ the partition and resizing the file system.
     available in the volume group. The device **/dev/debian-vg** is our volume group.
     The logical volume **root** is what we extended (output of "sudo lvs").
 
-15. Resize the file system:
+16. Resize the file system:
 
     .. code-block:: console
 
@@ -442,7 +460,7 @@ the partition and resizing the file system.
         old_desc_blocks = 3, new_desc_blocks = 5
         The filesystem on /dev/debian-vg/root is now 10108928 (4k) blocks long.
 
-16. Run the following command to verify the disk size:
+17. Run the following command to verify the disk size:
 
     .. code-block:: console
         :emphasize-lines: 5
@@ -457,4 +475,4 @@ the partition and resizing the file system.
         /dev/sda1                    455M   51M  380M  12% /boot
         tmpfs                        392M     0  392M   0% /run/user/1000
 
-17. If everything looks correct, you can reboot your system to make sure everything is working as expected.
+18. If everything looks correct, you can reboot your system to make sure everything is working as expected.
