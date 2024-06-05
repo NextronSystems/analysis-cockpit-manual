@@ -43,5 +43,5 @@ columns easier by integrating a search into the top right corner.
 
 .. hint:: 
    All views are personalized and changes will only affect your user.
-   Please see :ref:`basic-concepts/baselining:baselining dashboards`
+   Please see :ref:`basic-concepts/baselining:dashboards`
    if you want to share your Baselining view with other users.
