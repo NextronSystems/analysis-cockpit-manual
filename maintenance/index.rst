@@ -10,6 +10,7 @@ which are not found in your Web UI.
 .. toctree::
     :caption: Contents
 
+    diagnostics
     retention
     backup
     extending-lvm
