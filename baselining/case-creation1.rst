@@ -35,7 +35,8 @@ Create a new case following these steps:
 6. Choose one or more **recommendations**
 7. Select a **case type** (see the :ref:`glossary/case-glossary:case types` for a detailed description of every case type)
 8. Select a **case status** (usually used to mark it as 'work in progress' or to forward it to the next team)
-9. Submit case by clicking the **Create Case** button
+9. Select a **case priority** (usually used to mark the importance of the case)
+10. Submit case by clicking the **Create Case** button
 
 .. figure:: ../images/cockpit_case_creation3.png
 

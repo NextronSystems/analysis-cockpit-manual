@@ -44,6 +44,10 @@ By using the "Asset View" you can e.g., easily answer questions like:
 -  Which systems with IP addresses starting "192.168." appear in
    "Incident" cases?
 
+You can also set a time when an asset was compromised. This is useful
+for example when you want to see which systems were compromised in the
+last 30 days.
+
 In combination with the ``ASGARD Query`` and ``Labels``, which are identical
 to your ASGARD, you can even narrow down the events by system group
 (e.g., Domain Controllers, or certain locations).
