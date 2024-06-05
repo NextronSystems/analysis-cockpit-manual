@@ -57,10 +57,10 @@ There are multiple options within the Data Retention Policy:
   specified number of days. For example, if you set this to 30 days, all
   events older than 30 days will be deleted from your Analysis Cockpit.
   Raw data on disk will not be deleted. The default setting is to keep all
-  events indefinitely. We reccomend setting to setting this to a value to
-  a higher value than any of the other retention settings. The reason for this
-  is that this setting is taking presedence over the other settings. Please
-  use this option with caution.
+  events indefinitely. We recommend to only use this setting if necessary,
+  as it will delete all events older than the specified number of days.
+  The reason for this is that this setting is taking presedence over the
+  other settings. Please use this option with caution.
 
   .. figure:: ../images/cockpit_data-retention-general.png
       :alt: Data Retention - General
