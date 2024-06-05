@@ -73,13 +73,13 @@ Signatures Only** mode shows you only events that were found by your custom
 signatures. This mode is helpful if you want to see only those
 events and nothing else.
 
-Baselining Dashboards
-~~~~~~~~~~~~~~~~~~~~~
+Dashboards
+~~~~~~~~~~
 
-Depending on what you are currently looking for in the baselining view, you
-can modify the view by using the Baselining Dashboards. The default Baselining
-Dashboard is the dashboard of your user. This dashboard is your personal view
-in the Baselining section. You can create additional Baselining Dashboards
+Depending on what you are currently looking for in the Baselining (or Events)
+view, you can modify the view by using Dashboards. The default Dashboard is
+the Dashboard of your user. This Dashboard is your personal view in the
+Baselining and Events section. You can create additional Dashboards
 by clicking on the ``Select Dashboard`` button.
 
 .. figure:: ../images/cockpit_baselining-dashboard-button.png
@@ -88,6 +88,8 @@ by clicking on the ``Select Dashboard`` button.
    Select Dashboard
 
 You can create multiple Dashboards and also share them with other users.
+Dashboards are shared accross the ``Baselining`` view and the ``Events`` view,
+meaning you can use one Dashboard for both views.
 
 Compromise Assessment Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
