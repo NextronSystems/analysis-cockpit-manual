@@ -19,7 +19,7 @@ Safe-to-Delete Files
 The following files are safe to delete. They are not needed for AC
 to operate.
 
-- ``/var/lib/asgard-analysis-cockpit/log/*.gz``
+- ``/var/log/asgard-analysis-cockpit/*.gz``
 - ``/var/lib/asgard-analysis-cockpit/events/*.ok``
 
 They are only kept on the system if needed for further processing.
