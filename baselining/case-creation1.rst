@@ -16,7 +16,6 @@ Case Creation Basics
 Create a new case following these steps: 
 
 1. Select on which conditions the case should be built. ``Search Result``
-
    will take your filters from the baselining view into consideration, and 
    build a case with the condition of your search.
 
