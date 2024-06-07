@@ -16,7 +16,7 @@ Analysis Cockpit 4.1.2
 
 * **Breaking Changes**
   
-  - Changed the way events are indexed in Elasticsearch. The new index structure significantly improves performance but increases disk space usage by 30%-40%. After the upgrade, all events will be reindexed, which can take several hours depending on the number of events in your system. The system remains usable during this process, but we recommend performing the upgrade during off-peak hours. If the Analysis Cockpit reaches its disk space limit during reindexing, the process will pause until more disk space is available. The Analysis Cockpit will guide you on how to free up or increase disk space, and the reindexing process will automatically resume once enough disk space is available. Contact support@nextron-systems.com for assistance.
+  - Changed the way events are indexed in Elasticsearch. The new index structure significantly improves performance but increases disk space usage by 30%-40%. After the upgrade, all events will be reindexed, which can take several hours depending on the number of events in your system. The system remains usable during this process, but we recommend performing the upgrade during off-peak hours. If the Analysis Cockpit reaches its disk space limit during reindexing, the process will pause until more disk space is available. The Analysis Cockpit will guide you on how to free up or increase disk space, and the reindexing process will automatically resume once enough disk space is available. Contact our support for assistance.
   - Conditions in cases are now case-insensitive. Existing conditions will be converted automatically. We believe this change will not affect case quality.
 
 ----
