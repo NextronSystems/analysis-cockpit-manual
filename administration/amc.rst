@@ -1,12 +1,11 @@
-.. Index:: Management Center Integration
+.. Index:: Link Management Center
 
-Connect to ASGARD Management Center
------------------------------------
+Link ASGARD Management Center
+-----------------------------
 
-In order to receive log data from ASGARD Management Center systems, add
-them in the corresponding section in the system settings.
-
-``Settings`` > ``Link Products`` > ``Management Center``
+In order to receive log data from ASGARD Management Center(s), add
+them in the corresponding section in the system settings. You can find the
+settings in ``Settings`` > ``Connected Systems`` > ``Management Center``.
 
 .. figure:: ../images/cockpit_link_asgard_mc.png
    :alt: Link ASGARD Management Center
