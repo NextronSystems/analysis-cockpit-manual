@@ -12,3 +12,4 @@ in the Analysis Cockpit and our ASGARD products.
     baselining-glossary
     case-glossary
     backend
+    resources
