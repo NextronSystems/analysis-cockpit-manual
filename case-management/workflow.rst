@@ -57,3 +57,26 @@ status is changed to ``closed`` and the case gets updated.
 .. note::
   The Analysis Cockpit provides interfacing to action-request and
   external ticketing systems using the API.
+
+Grouping Criteria
+-----------------
+
+The Grouping Criteria of cases are the fields that are used to assign
+events to cases. There are three types of grouping criteria:
+
+- Auto Case IDs
+- Conditions
+- Regex
+
+One Case can have multiple grouping criteria. Auto Case IDs are the most
+performant way to group events into cases. Conditions are used to group
+events into cases based on the values of the fields in the event - Conditions
+are slower and should only be used if Auto Case IDs are too broad. Regex
+should be your last resort and used only if the other two options are not
+possible, as this is the most performance intensive way to group events into
+cases.
+
+.. figure:: ../images/cockpit_grouping-criteria.png
+   :alt: Grouping Criteria
+
+   Grouping Criteria
