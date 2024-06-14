@@ -202,6 +202,9 @@ working.
    If you wish to interact with ChatGPT while safeguarding sensitive information,
    consider using the :ref:`baselining/case-creation1:event anonymization` feature.
 
+ChatGPT Case Creation Insights
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 After you configured the ChatGPT integration, you can use it in the case creation
 dialog. Click on the ChatGPT icon in the case creation dialog to gain more insights
 regarding the events you are working with.
@@ -233,6 +236,37 @@ information to create a case.
    Please note that ChatGPT will give you a summary and recommendations based on the
    information you provided. It is always recommended to review the information and
    adjust it if necessary.
+
+ChatGPT Event Explanation
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can use ChatGPT in your Baselining or All Events view to get more insights
+regarding the events you are working with. To do this you can either:
+
+- Mark the selected information within your event (for example ``MATCHED_1``) and
+  right click on it. You will see an option in the context menu called ``Chat with ChatGPT``
+- Just right click an event and select ``Chat with ChatGPT (whole event)`` from the context
+  menu
+
+You will see a sidebar which has alreay the information you selected or the whole event
+filled in. You can now click on the ``Send`` button to send the information to ChatGPT.
+If you need further information you can interact with ChatGPT in the sidebar.
+
+.. figure:: ../images/cockpit_chat-with-chatgpt.png
+   :alt: Chat with ChatGPT
+
+   Chat with ChatGPT
+
+The results will look something like this:
+
+.. figure:: ../images/cockpit_chat-with-chatgpt-results.png
+   :alt: ChatGPT Event Explanation
+
+   ChatGPT Event Explanation
+
+Please make sure to either review the information before sending it to ChatGPT or
+use the :ref:`baselining/case-creation1:event anonymization` feature to safeguard
+sensitive information.
 
 Event Anonymization
 ~~~~~~~~~~~~~~~~~~~
