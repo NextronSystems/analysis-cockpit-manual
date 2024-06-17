@@ -18,7 +18,7 @@ This can lead to the Analysis Cockpit not being able to
 check for or install updates. The changelog might also
 not be displayed correctly.
 
-You will receive one if the following errors when trying
+You will receive one of the following errors when trying
 to check for updates (or the check will just hang):
 
 .. code-block:: none
