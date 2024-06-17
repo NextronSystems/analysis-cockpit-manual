@@ -1,5 +1,62 @@
 .. Index:: List of Known Issues
 
+AAC#004: Could not check for updates
+------------------------------------
+
+.. list-table::
+    :header-rows: 1
+    :widths: 50, 50
+
+    * - Introduced Version
+      - Fixed Version
+    * - 4.0.x
+      - 4.1.4
+
+There is currently a bug in the Analysis Cockpit where
+the update module does not use the proxy configuration.
+This can lead to the Analysis Cockpit not being able to
+check for or install updates. The changelog might also
+not be displayed correctly.
+
+You will receive one if the following errors when trying
+to check for updates (or the check will just hang):
+
+.. code-block:: none
+
+    [ERR] could not download Analysis Cockpit
+    ERROR: exit status 1 (Job for asgard-analysis-cockpit-download.service
+    failed because the control process exited with error code.\n
+    See "systemctl status asgard-analysis-cockpit-download.service" and
+    "journalctl -xeu asgard-analysis-cockpit-download.service" for details.\n)
+
+.. code-block:: none
+
+    [ERR] could not get ASGARD changelog ERROR: exit status 1
+
+AAC#004: Workaround
+~~~~~~~~~~~~~~~~~~~
+
+This issue is fixed in the newest version, which you will not
+be able to install since you cannot check for or download updates.
+To fix this issue, you have to connect to your Analysis Cockpit
+via SSH and create the following file:
+
+.. code-block:: console
+
+    nextron@cockpit:~$ sudo nano /etc/apt/apt.conf.d/90proxy
+    Acquire::http::Proxy "http://proxy:port";
+    Acquire::https::Proxy "http://proxy:port";
+
+Make sure to replace ``http://proxy:port`` with your actual
+proxy configuration. Once the file is created, you can try
+to check for updates again. Install the newest version of the
+Analysis Cockpit and remove the file afterwards (if the update
+was successful):
+
+.. code-block:: console
+
+    nextron@cockpit:~$ sudo rm /etc/apt/apt.conf.d/90proxy
+
 AAC#003: [WAR] could not create case
 ------------------------------------
 
