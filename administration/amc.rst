@@ -1,12 +1,11 @@
-.. Index:: Management Center Integration
+.. Index:: Link Management Center
 
-Connect to ASGARD Management Center
------------------------------------
+Link ASGARD Management Center
+-----------------------------
 
-In order to receive log data from ASGARD Management Center systems, add
-them in the corresponding section in the system settings.
-
-``Settings`` > ``Link Products`` > ``Management Center``
+In order to receive log data from ASGARD Management Center(s), add
+them in the corresponding section in the system settings. You can find the
+settings in ``Settings`` > ``Connected Systems`` > ``Management Center``.
 
 .. figure:: ../images/cockpit_link_asgard_mc.png
    :alt: Link ASGARD Management Center
@@ -43,6 +42,10 @@ By using the "Asset View" you can e.g., easily answer questions like:
 -  Which Domain Controllers have not been scanned yet?
 -  Which systems with IP addresses starting "192.168." appear in
    "Incident" cases?
+
+You can also set a time when an asset was compromised. This is useful
+for example when you want to see which systems were compromised in the
+last 30 days.
 
 In combination with the ``ASGARD Query`` and ``Labels``, which are identical
 to your ASGARD, you can even narrow down the events by system group

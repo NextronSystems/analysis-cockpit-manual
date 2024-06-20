@@ -3,6 +3,12 @@
 Customize Your View
 -------------------
 
+.. hint:: 
+   All views are personalized and changes will only affect your user.
+   Please see :ref:`basic-concepts/baselining:dashboards`
+   if you want to share your Baselining view with other users, or if you
+   want to have multiple views for different scenarios.
+
 By default, the Analysis Cockpit ``Baselining`` view ships with multiple bar
 charts and a table with the most relevant columns in order to help you find
 meaningful groups of logs. You can add additional bar charts by clicking on
@@ -40,6 +46,3 @@ Click the ``Columns`` button to manage which columns are shown.
 Since the column preferences have an overvelming amount of
 fields you can choose from, we made looking for specific
 columns easier by integrating a search into the top right corner.
-
-.. hint:: 
-   All views are personalized and changes will only affect your user.

@@ -10,7 +10,6 @@ will suggest cases based on predefined :ref:`basic-concepts/cases:case templates
 
 - THOR Events
 - Aurora Events
-- Log Watcher Events (deprecated)
 - Suggested Cases
 
 .. figure:: ../images/cockpit_baselining_overview.png
@@ -52,21 +51,45 @@ In an ideal organization, the Baselining section should always be empty
 at the end of a day, as these logs represent suspicious elements that
 have not yet been looked at.
 
-Baselining Views
+Baselining Modes
 ~~~~~~~~~~~~~~~~
 
-In the ``Baselining`` section there are two main views, the ``Compromise Assessment Mode``
-and the ``Deep Inspection Mode``. Additionally, you can find the ``Custom Signatures
-Only Mode``, which will only show events found by custom signatures. This can
-be helpful if you scanned your environment with customer signatures, for example
-during or after an incident.
-
-By default, the Analysis Cockpit Baselining Mode is set to ``Compromise Assessment``.
+The ``Baselining`` section contains three predefined modes, the ``Compromise Assessment``
+mode, the ``Deep Inspection`` mode, and the ``Custom Signatures Only`` mode. By default,
+the Analysis Cockpit Baselining Mode is set to ``Compromise Assessment``.
 
 .. figure:: ../images/cockpit_baselining_view.png
    :alt: Select your view
 
-   Select your view
+   Select your Baselining Mode
+
+The three modes are used for different scenarios, which depend on how
+you are using your Analysis Cockpit. The **Compromise Assessment** mode
+filters out "background noise" and only shows you the most relevant
+events - this is a good mode of operation for day to day tasks. The
+**Deep Inspection** mode shows you all events which might be relevant -
+this mode is often used in Incident Response scenarios. The **Custom
+Signatures Only** mode shows you only events that were found by your custom
+signatures. This mode is helpful if you want to see only those
+events and nothing else.
+
+Dashboards
+~~~~~~~~~~
+
+Depending on what you are currently looking for in the Baselining (or Events)
+view, you can modify the view by using Dashboards. The default Dashboard is
+the Dashboard of your user. This Dashboard is your personal view in the
+Baselining and Events section. You can create additional Dashboards
+by clicking on the ``Select Dashboard`` button.
+
+.. figure:: ../images/cockpit_baselining-dashboard-button.png
+   :alt: Baselining Dashboards
+
+   Select Dashboard
+
+You can create multiple Dashboards and also share them with other users.
+Dashboards are shared accross the ``Baselining`` view and the ``Events`` view,
+meaning you can use one Dashboard for both views.
 
 Compromise Assessment Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

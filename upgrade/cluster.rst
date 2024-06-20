@@ -4,7 +4,7 @@ Cluster Upgrade
 ---------------
 
 This chapter guides you through the upgrade process of
-your Analysis Cockpit version 3.10.1 to version 4.x.
+your Analysis Cockpit version 3.10.4 to version 4.x.
 
 It is important to follow the steps carefully. We advise you
 to create a snapshot of all your Elasticsearch cluster nodes
@@ -32,7 +32,7 @@ should follow:
       - For disaster recovery
     * - Snapshot of your Elasticsearch Cluster Nodes
       - For disaster recovery
-    * - Analysis Cockpit running version 3.10.1
+    * - Analysis Cockpit running version 3.10.4
       - Prerequisite for the Major Upgrade
     * - Newest ``asgard-updater`` is installed
       - This performs the update and has to be in the newest version 
@@ -71,7 +71,7 @@ which are needed for your Analysis Cockpit v4.
 You can find the corresponding IP-Addresses to the above
 FQDNs here: https://www.nextron-systems.com/resources/hosts/.
 
-Analysis Cockpit running version 3.10.1
+Analysis Cockpit running version 3.10.4
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To check if your Analysis Cockpit is running on the correct version.

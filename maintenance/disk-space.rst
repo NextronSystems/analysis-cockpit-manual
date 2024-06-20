@@ -11,6 +11,7 @@ If your disk usage is growing too fast and free disk space is running out, you h
 1. Increase the size of your disk
 2. Delete files that are not needed for operation
 3. Delete files that are used by AC but are unneeded / dated
+4. Set the :ref:`maintenance/retention:data retention` Policy to automatically delete old data
 
 Safe-to-Delete Files
 ^^^^^^^^^^^^^^^^^^^^
@@ -18,7 +19,7 @@ Safe-to-Delete Files
 The following files are safe to delete. They are not needed for AC
 to operate.
 
-- ``/var/lib/asgard-analysis-cockpit/log/*.gz``
+- ``/var/log/asgard-analysis-cockpit/*.gz``
 - ``/var/lib/asgard-analysis-cockpit/events/*.ok``
 
 They are only kept on the system if needed for further processing.
