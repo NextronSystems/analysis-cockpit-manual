@@ -10,7 +10,7 @@ AAC#004: Could not check for updates
     * - Introduced Version
       - Fixed Version
     * - 4.0.x
-      - 4.1.4
+      - 4.1.5
 
 There is currently a bug in the Analysis Cockpit where
 the update module does not use the proxy configuration.

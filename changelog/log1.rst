@@ -3,14 +3,14 @@
 Analysis Cockpit v4.1
 ---------------------
 
-Analysis Cockpit 4.1.2
+Analysis Cockpit 4.1.5
 ######################
 
 .. list-table:: 
     :header-rows: 1
 
     * - Release Date
-    * - Wed,  5 Jun 2024 10:03:00 +0100
+    * - Wed, 19 Jun 2024 09:41:00 +0200
 
 ----
 
@@ -121,6 +121,7 @@ Analysis Cockpit 4.1.2
   - Fixed the backup script. (AC-315)
   - Resolved cut-off elements in the UI. (AC-326, AC-327)
   - Corrected a typo in the version number in /etc/issue. (AC-217)
+  - Fixed issues with the http proxy configuration on fresh installations. (AC-545)
 
 ----
 
