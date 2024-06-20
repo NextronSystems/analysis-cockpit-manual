@@ -37,7 +37,7 @@ automatically show up.
 
 To see how to connect an ASGARD Management Center with your Analysis
 Cockpit, follow the instructions in the chapter
-:ref:`administration/amc:connect to asgard management center`.
+:ref:`administration/amc:link asgard management center`.
 
 You can retrieve old scans performed by ASGARD Management Center before
 you connected it to Analysis Cockpit using the ``Request Events`` button in

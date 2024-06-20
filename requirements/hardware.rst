@@ -11,7 +11,7 @@ machine are as follows:
 
 * System memory: 16 GB
 * Hard disk: 200 GB
-* CPU cores: 2
+* CPU cores: 4
 
 The disk size of 200 GB is fine in scenarios where you import only
 Alerts and Warnings into the Cockpit, scan less than 1.000 systems on a
@@ -33,4 +33,4 @@ specifications are recommended:
 
 * System memory: 32 GB
 * Hard disk: 2 TB SSD
-* CPU cores: 4
+* CPU cores: 8

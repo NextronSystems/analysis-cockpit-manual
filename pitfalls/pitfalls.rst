@@ -115,7 +115,8 @@ If this is not working either, you may need to disable Elasticsearch's read-only
 
 Deleting the files given above should be enough to resume operation. If the disk on your
 ASGARD Analysis Cockpit is full because of growing data over time, the disk space should be
-increased. If that is not an option you can delete old scans as described in section
+increased - see :ref:`maintenance/extending-lvm:extending disk space`. If that is not an option
+you can delete old scans or set a Retention Policy as described in section
 :ref:`maintenance/disk-space:regain disk space`.
 
 Debug Failed File Imports

@@ -11,7 +11,6 @@ The Cases Section is split into the different sources of your Cases:
 
 - THOR Cases
 - Aurora Cases
-- Log Watcher Cases (deprecated)
 
 Additionally, you can find more information regarding:
 
