@@ -4,7 +4,7 @@ Standalone Upgrade
 ------------------
 
 This chapter guides you through the upgrade process of
-your Analysis Cockpit version 3.10.1 to version 4.x.
+your Analysis Cockpit version 3.10.4 to version 4.x.
 
 It is important to follow the steps carefully. We advise you
 to create a snapshot of the Analysis Cockpit itself before
@@ -23,7 +23,7 @@ should follow:
       - Description
     * - Snapshot of your Analysis Cockpit
       - For disaster recovery
-    * - Analysis Cockpit running version 3.10.1
+    * - Analysis Cockpit running version 3.10.4
       - Prerequisite for the Major Upgrade
     * - Connection to our new update servers
       - New update server infrastructure
@@ -56,7 +56,7 @@ which are needed for your Analysis Cockpit v4.
 You can find the corresponding IP-Addresses to the above
 FQDNs here: https://www.nextron-systems.com/resources/hosts/.
 
-Analysis Cockpit running version 3.10.1
+Analysis Cockpit running version 3.10.4
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To check if your Analysis Cockpit is running on the correct version
