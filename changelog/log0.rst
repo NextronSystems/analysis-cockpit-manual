@@ -6,11 +6,7 @@ Analysis Cockpit v4.0
 Analysis Cockpit 4.0.13
 #######################
 
-.. list-table:: 
-    :header-rows: 1
-
-    * - Release Date
-    * - Wed,  6 Mar 2024 07:32:00 +0200
+Release Date: Wed,  6 Mar 2024 07:32:00 +0200
 
 .. list-table::
     :header-rows: 1
@@ -24,11 +20,7 @@ Analysis Cockpit 4.0.13
 Analysis Cockpit 4.0.12
 #######################
 
-.. list-table:: 
-    :header-rows: 1
-
-    * - Release Date
-    * - Tue, 20 Feb 2024 16:20:00 +0200
+Release Date: Tue, 20 Feb 2024 16:20:00 +0200
 
 .. list-table::
     :header-rows: 1
@@ -49,11 +41,7 @@ Analysis Cockpit.
 Analysis Cockpit 4.0.10
 #######################
 
-.. list-table:: 
-    :header-rows: 1
-
-    * - Release Date
-    * - Tue, 16 Jan 2024 10:26:00 +0100
+Release Date: Tue, 16 Jan 2024 10:26:00 +0100
 
 .. list-table::
     :header-rows: 1
