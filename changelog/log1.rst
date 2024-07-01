@@ -3,6 +3,32 @@
 Analysis Cockpit v4.1
 ---------------------
 
+Analysis Cockpit 4.1.6
+######################
+
+Release Date: Fri, 28 Jun 2024 15:46:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed missing grouping criteria when applying suggested cases (AC-556)
+    * - Bugfix
+      - Fixed too many events in LogWatcher's 'All Events' section (AC-561)
+    * - Bugfix
+      - Fixed an escape issue in conditions with double backslashes (AC-564)
+    * - Bugfix
+      - Fixed inaccurate estimated remaining time for reindexing (AC-566)
+    * - Bugfix
+      - Fixed an off-by-one date error in the incoming events graph (AC-567)
+    * - Bugfix
+      - Fixed non-working table search for some columns in the 'Manage Dashboards' section (AC-570)
+    * - Bugfix
+      - Fixed 'csrf error' popup when using the 'Session expired' login dialog (AC-571)
+
 Analysis Cockpit 4.1.5
 ######################
 
