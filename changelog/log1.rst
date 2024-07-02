@@ -3,10 +3,10 @@
 Analysis Cockpit v4.1
 ---------------------
 
-Analysis Cockpit 4.1.6
+Analysis Cockpit 4.1.7
 ######################
 
-Release Date: Fri, 28 Jun 2024 15:46:00 +0200
+Release Date: Tue,  2 Jul 2024 11:02:00 +0200
 
 .. list-table::
     :header-rows: 1
@@ -14,6 +14,8 @@ Release Date: Fri, 28 Jun 2024 15:46:00 +0200
 
     * - Type
       - Description
+    * - Security
+      - OS Security Fix (AC-577)
     * - Bugfix
       - Fixed missing grouping criteria when applying suggested cases (AC-556)
     * - Bugfix
