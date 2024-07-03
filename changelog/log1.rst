@@ -3,7 +3,7 @@
 Analysis Cockpit v4.1
 ---------------------
 
-Analysis Cockpit 4.1.7
+Analysis Cockpit 4.1.8
 ######################
 
 Release Date: Tue,  2 Jul 2024 11:02:00 +0200
@@ -30,6 +30,8 @@ Release Date: Tue,  2 Jul 2024 11:02:00 +0200
       - Fixed non-working table search for some columns in the 'Manage Dashboards' section (AC-570)
     * - Bugfix
       - Fixed 'csrf error' popup when using the 'Session expired' login dialog (AC-571)
+    * - Bugfix
+      - Fixed an startup error when using 'Matched Signatures' with wide date range (AC-585)
 
 Analysis Cockpit 4.1.5
 ######################
