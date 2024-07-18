@@ -9,7 +9,7 @@ Hardware Requirements
 
    * - Connected Endpoints
      - Minimum  Hardware Requirements
-   * - up to 1000
+   * - up to 1,000
      - System memory: 16 GB, Hard disk: 200 GB (500 GB), CPU Cores: 4
    * - up to 10,000
      - System memory: 16 GB, Hard disk: 1TB, CPU Cores: 6
