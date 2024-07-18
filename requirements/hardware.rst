@@ -3,15 +3,23 @@
 Hardware Requirements
 ---------------------
 
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 70
+
+   * - Connected Endpoints
+     - Minimum  Hardware Requirements
+   * - up to 1000
+     - System memory: 16 GB, Hard disk: 200 GB (500 GB), CPU Cores: 4
+   * - up to 10,000
+     - System memory: 16 GB, Hard disk: 1TB, CPU Cores: 6
+   * - up to 15,000
+     - System memory: 32 GB, Hard disk: 2TB SSD (min 100 MB/s), CPU Cores: 8
+   * - up to 20,000
+     - System memory: 32 GB, Hard disk: 2TB SSD (min 100 MB/s), CPU Cores: 12
+
 There are a few things to consider, before you start with the
 installation.
-
-If you install on VMWare, the minimum requirements for the virtual
-machine are as follows:
-
-* System memory: 16 GB
-* Hard disk: 200 GB
-* CPU cores: 4
 
 The disk size of 200 GB is fine in scenarios where you import only
 Alerts and Warnings into the Cockpit, scan less than 1.000 systems on a
@@ -27,10 +35,3 @@ level, you can use the ``--reduced`` parameter for all of your scans.
 .. hint::
     ``--reduced`` - Reduced output mode - only warnings, alerts and errors will
     be printed.
-
-For an Installation of up to 20.000 endpoints the following
-specifications are recommended:
-
-* System memory: 32 GB
-* Hard disk: 2 TB SSD
-* CPU cores: 8
