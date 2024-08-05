@@ -152,18 +152,12 @@ on a Linux system for all the different services and command line tools.
 Broken before Analysis Cockpit Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you have set a wrong proxy before the package installation using the
-**sudo nextronInstaller -cockpit** command and the installer failed to
-fetch the required packages from our update servers, perform the
-following steps.
+If you have set a wrong proxy while the Debian setup and the connectivity test fails, 
+edit the proxy settings in the Web GUI of the NEXTRON Universal Installer:
 
-Fix the proxy string in the file ``/etc/apt/apt.conf.d/00proxy``
+``Settings`` > ``Proxy``
 
-.. code:: console
-   
-   nextron@cockpit:~$ sudoedit /etc/apt/apt.conf.d/00proxy
-
-Then rerun the installer.
+Then rerun the connectivity test.
 
 Broken after the Analysis Cockpit Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
