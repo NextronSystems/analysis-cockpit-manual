@@ -11,6 +11,10 @@ reasonable level. Additionally, raw data on disk and sandbox files can
 also be deleted with the Data Retention Policy, which can help you to
 manage your disk space usage.
 
+
+.. hint::
+   Data Retention takes the import timestamp '@timestamp' into account to decide whether an event should be deleted or not.
+
 The Data Retention Policy is configured in ``Settings`` > ``Advanced`` >
 ``Data Retention``.
 
