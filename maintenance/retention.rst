@@ -13,7 +13,7 @@ manage your disk space usage.
 
 
 .. hint::
-   Date retention takes the import timestamp '@timestamp' into account to decide weather a event should be deleted.
+   Data Retention takes the import timestamp '@timestamp' into account to decide whether an event should be deleted or not.
 
 The Data Retention Policy is configured in ``Settings`` > ``Advanced`` >
 ``Data Retention``.
