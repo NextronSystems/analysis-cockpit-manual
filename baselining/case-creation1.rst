@@ -182,7 +182,10 @@ removed from the log management view.
 
 .. warning:: 
    It is recommended to use regular expressions only rarely and with
-   caution. This feature can severely impact the performance of the system.
+   caution. This feature can severely impact the performance of the system. Regex from cases will be applied to every single event on import.
+
+Elasticsearch uses Apache Lucene's regular expression engine to parse these queries. Please take a look at the Elasticsearch manual for further information about the regular expression syntax:  
+https://www.elastic.co/guide/en/elasticsearch/reference/current/regexp-syntax.html
 
 ChatGPT Integration
 ^^^^^^^^^^^^^^^^^^^
