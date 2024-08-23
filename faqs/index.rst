@@ -21,3 +21,4 @@ right after.
     iexplorer
     admin-pass
     2fa
+    certificates
