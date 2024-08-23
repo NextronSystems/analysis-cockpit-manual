@@ -7,7 +7,7 @@ Create a new VM with your virtualization software. In this case, we will
 use VMWare ESX managed through a VMWare VCenter.
 
 The new VM must be configured with a Linux base system and Debian
-GNU/Linux 10 (64 bits) as target version. It is recommended to upload
+GNU/Linux 12 (64 bits) as target version. It is recommended to upload
 the Nextron Universal Installer ISO to an accessible datastore and mount
 the same to your newly created VM.
 
