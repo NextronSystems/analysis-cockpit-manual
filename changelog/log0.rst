@@ -1,4 +1,4 @@
-.. Index:: AC4 Changes
+.. Index:: 4.0 Changes
 
 Analysis Cockpit v4.0
 ---------------------
