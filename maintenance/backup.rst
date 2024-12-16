@@ -11,7 +11,7 @@ following data:
 - Users, Roles, LDAP Roles, Role Rights
 - User Configurations
 
-To perform a backup, you can simply go to ``Settings`` > ``System`` > ``Backup``
+To perform a backup, you can simply go to ``Settings`` > ``System`` > ``Backup / Restore``
 and click ``Create Configuration Backup``. To restore from an old backup,
 it is important to understand the implications of the restore. From the
 Backup page of the Analysis Cockpit:
