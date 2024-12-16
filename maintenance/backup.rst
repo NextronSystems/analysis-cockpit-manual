@@ -11,7 +11,7 @@ following data:
 - Users, Roles, LDAP Roles, Role Rights
 - User Configurations
 
-To perform a backup, you can simply go to ``Settings`` > ``Backup``
+To perform a backup, you can simply go to ``Settings`` > ``System`` > ``Backup``
 and click ``Create Configuration Backup``. To restore from an old backup,
 it is important to understand the implications of the restore. From the
 Backup page of the Analysis Cockpit:
@@ -24,8 +24,7 @@ Backup page of the Analysis Cockpit:
 
     .. warning::
         Installing a configuration backup of an earlier Analysis Cockpit Release
-        Version is not supported and may fail. The currently installed version is
-        3.5.6. The version of the configuration backup can be found in the file name.
+        Version is not supported and may fail. The version of the configuration backup can be found in the file name.
         The backup's file name has the following pattern: ``analysis_cockpit_%VERSION%_backup_%DATE%.sql.gz``
 
 .. figure:: ../images/cockpit_backup-and-restore.png
