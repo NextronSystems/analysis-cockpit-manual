@@ -26,12 +26,3 @@ Alerts and Warnings into the Cockpit, scan less than 1.000 systems on a
 weekly basis and want to keep the logs for less than one year. If you
 also import Notices and Info messages for these 1.000 servers, we
 recommend a disk size of at least 500 GB.
-
-The Analysis Cockpit does not have any filters on which type of events
-will be imported into the database. This has to be controlled by chaning
-your scan parameters in your ASGARD Management Center. To change the log
-level, you can use the ``--reduced`` parameter for all of your scans.
-
-.. hint::
-    ``--reduced`` - Reduced output mode - only warnings, alerts and errors will
-    be printed.
