@@ -608,7 +608,7 @@ Once your sandbox is set up and running, you can see the status of it in the san
    :alt: Sandbox View in the Analysis Cockpit
 
 If you wish to enable automatic scanning for uploaded files
-(`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/usage/administration.html#bifrost-quarantine>`_),
+(`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/administration/evidence.html#bifrost-quarantine>`_),
 you can do so by pressing the play button to the right hand side.
 
 In the ``Files`` view you can see previously analyzed files or upload files for analysis by yourself:
