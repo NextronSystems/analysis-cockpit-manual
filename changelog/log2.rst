@@ -3,6 +3,28 @@
 Analysis Cockpit v4.2
 ---------------------
 
+Analysis Cockpit 4.2.1
+######################
+
+Release Date: Thu, 13 Feb 2025 10:56:00 +0100
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Removed 'Legitimate Anomaly' and 'False Positive' case types from Security Center synchronization configuration, as they are not supported by Security Center
+    * - Bugfix
+      - Fixed an issue where the Analysis Cockpit treated ElasticSearch responses as errors, even when the operation had actually succeeded, which, among other things, led to missing default cases in some freshly installed Analysis Cockpits
+    * - Bugfix
+      - Fixed an issue where event counts in the database were displayed as zero when at least one case contained more than 2 billion events
+    * - Bugfix
+      - Fixed an issue where case statuses were not sorted correctly on the overview page
+    * - Bugfix
+      - Fixed an issue where cases using both regex and condition would temporarily lose their conditions, and improved the condition tester in case details to match the behavior of the condition tester in the baselining section, resolving inconsistencies. Also added a regex tester in case details, similar to the one in the baselining section
+
 Analysis Cockpit 4.2.0
 ######################
 
