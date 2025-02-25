@@ -3,6 +3,20 @@
 Analysis Cockpit v4.2
 ---------------------
 
+Analysis Cockpit 4.2.2
+######################
+
+Release Date: Tue, 25 Feb 2025 09:59:00 +0100
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed an issue in the sandbox retention settings where 'Keep everything' was interpreted as 'Delete everything'
+
 Analysis Cockpit 4.2.1
 ######################
 
