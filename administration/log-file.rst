@@ -114,7 +114,7 @@ You can change the owner and group manually by using:
 
 .. code:: console
    
-   nextron@asgard-ac:~$ sudo chown cockpit:cockpit <file>
+   nextron@asgard-ac:~$ sudo chown analysiscockpit:analysiscockpit <file>
 
 Successfully imported files get a new extension named ``.ok``.
 
