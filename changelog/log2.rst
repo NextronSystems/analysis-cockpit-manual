@@ -3,6 +3,26 @@
 Analysis Cockpit v4.2
 ---------------------
 
+Analysis Cockpit 4.2.3
+######################
+
+Release Date: Fri, 28 Mar 2025 13:25:00 +0100
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Security
+      - Enhanced TLS configuration by refining cipher suites and adding curve preferences for improved security
+    * - Bugfix
+      - Enhanced the performance and stability of the 'Test Condition' feature in the case creation dialog
+    * - Bugfix
+      - Resolved an issue where deleting 1000 events from a case triggered a 'message too large' error
+    * - Bugfix
+      - Improved signature feedback by adding a cryptographic hash of the machine ID and collecting rule dates for false positive IOC signatures
+
 Analysis Cockpit 4.2.2
 ######################
 
