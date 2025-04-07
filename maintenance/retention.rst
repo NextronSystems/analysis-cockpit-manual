@@ -45,7 +45,7 @@ There are multiple options within the Data Retention Policy:
 - **Event Retention per Case** - this setting will allow you to set a
   different retention period rule for each case. This is useful if you have
   different retention requirements for different cases. This value takes
-  presedence over the **Event Retention per Case Type / Status**. You can
+  precedence over the **Event Retention per Case Type / Status**. You can
   choose from the following options:
 
   - **Default** - uses retention period from the General Event Retention setting.
@@ -63,7 +63,7 @@ There are multiple options within the Data Retention Policy:
   Raw data on disk will not be deleted. The default setting is to keep all
   events indefinitely. We recommend to only use this setting if necessary,
   as it will delete all events older than the specified number of days.
-  The reason for this is that this setting is taking presedence over the
+  The reason for this is that this setting is taking precedence over the
   other settings. Please use this option with caution.
 
   .. figure:: ../images/cockpit_data-retention-general.png
@@ -78,3 +78,20 @@ There are multiple options within the Data Retention Policy:
       :alt: Data Retention - Others
 
       Data Retention - Others
+
+- **Settings** – These settings specify when events should be deleted.
+  Change the ``Daily Schedule`` to avoid slowing down your system during
+  working hours of your analysts.
+  The ``Expunge Deleted Events`` value is used for the above **Data
+  Retention Policies**, as the actions taken here only soft-delete events,
+  meaning the affected events are not deleted immediately, but rather
+  marked for deletion. All your events are stored inside specific indices,
+  and rewriting those takes (CPU) time. This is why we reindex indices
+  only when an index contains a specific percentage of deleted events
+  (by default, 20%). If you need more free disk space, lower this threshold.
+  If you're experiencing high CPU load, you can raise it.
+
+  .. figure:: ../images/cockpit_data-retention-settings.png
+      :alt: Data Retention - Settings
+
+      Data Retention - Settings

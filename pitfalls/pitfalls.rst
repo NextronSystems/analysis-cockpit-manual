@@ -1,24 +1,5 @@
 .. Index:: Pitfalls
 
-Certificate Validation Failed
------------------------------
-
-If you receive the following error, SSL/TLS interception interrupted the
-installation process.
-
-.. code-block:: console
-   
-   nextron@cockpit:~$ sudo nextronInstaller -cockpit 
-   [sudo] password for nextron:
-   Ign:1 https://update3.nextron-systems.com analysis InRelease
-   Err:2 https://update3.nextron-systems.com analysis Release
-   Certificate verification failed: The certificate is NOT trusted. The certificate issuer is unknown. Could not handshake: Error in the certificate verification. [IP: 192.168.3.21 8080]
-
-Since we do not support setups in which the connections to our update
-servers are intercepted (see chapter :ref:`requirements/network:ssl/tls interception`), the
-only way to resolve this problem is to deactivate SSL/TLS interception
-for our update servers.
-
 Log File Import of Previous Years
 ---------------------------------
 
@@ -153,7 +134,7 @@ Broken before Analysis Cockpit Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have set a wrong proxy while the Debian setup and the connectivity test fails, 
-edit the proxy settings in the Web GUI of the NEXTRON Universal Installer:
+edit the proxy settings in the Web GUI of the Nextron Universal Installer:
 
 ``Settings`` > ``Proxy``
 
