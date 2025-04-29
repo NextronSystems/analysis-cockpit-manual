@@ -3,6 +3,26 @@
 Analysis Cockpit v4.2
 ---------------------
 
+Analysis Cockpit 4.2.4
+######################
+
+Release Date: Tue, 29 Apr 2025 15:40:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Resolved an issue where the Test Condition function in the Edit Case dialog failed to evaluate all relevant events
+    * - Bugfix
+      - Corrected behavior where case-specific retention settings were disregarded until a global retention policy was defined
+    * - Bugfix
+      - Fixed a defect that caused the case owner information to be lost when events were appended to an existing case
+    * - Bugfix
+      - Improved accuracy of the rule modified dates in the signature feedback
+
 Analysis Cockpit 4.2.3
 ######################
 
