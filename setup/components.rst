@@ -85,7 +85,7 @@ Connectivity Check
 The Nextron Universal Installer will try to connect to our
 update server in order to download all the necessary packages
 once the installation starts. Make sure you can reach the
-update servers (see :ref:`requirements/network:internet access during installation`).
+update server (see :ref:`requirements/network:internet`).
 
 Please configure your proxy settings if you are behind a
 proxy (see :ref:`setup/components:proxy and ntp settings`).
