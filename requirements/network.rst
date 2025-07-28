@@ -133,13 +133,6 @@ Analysis Cockpit needs to be able to resolve internal and external IP addresses.
 
   All components you install should have a proper domain name configured to avoid issues further during the configuration.
 
-Internet Access during Installation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Analysis Cockpit installer requires Internet access during the
-setup. The installation process will fail if required packages cannot be
-loaded from https://update3.nextron-systems.com
-
 SSL/TLS Interception
 ~~~~~~~~~~~~~~~~~~~~
 
