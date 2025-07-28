@@ -10,6 +10,6 @@ certain loss of information as THOR events might exceed syslog length
 restrictions.
 
 .. figure:: ../images/cockpit_rsyslog_forwarding.png
-   :alt: Add Rsyslog Forwarding II 
+   :alt: Add Rsyslog Forwarding
 
-   Add Rsyslog Forwarding II
+   Add Rsyslog Forwarding
