@@ -3,9 +3,10 @@
 Link ASGARD Management Center
 -----------------------------
 
-In order to receive log data from ASGARD Management Center(s), add
-them in the corresponding section in the system settings. You can find the
-settings in ``Settings`` > ``Connected Systems`` > ``Management Center``.
+``>Settings\Connected Systems\Management Center``
+
+In order to receive log data from your ASGARD Management Center(s), add
+them in the corresponding section in the system settings:
 
 .. figure:: ../images/cockpit_link_asgard_mc.png
    :alt: Link ASGARD Management Center
@@ -23,6 +24,8 @@ Cockpit.
 
 Asset View
 ----------
+
+``>Assets``
 
 In most cases working with the ``Baselining`` section and the ``Cases`` section
 can be seen as the best practice approach for setting baselines and

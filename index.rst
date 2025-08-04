@@ -24,6 +24,12 @@ works, how to install the system, and how to use it. Additional information
 regarding troubleshooting, known issues, or general administrative tasks
 can also be found.
 
+We marked each section (if applicable) with the corresponding path in
+the UI with the following format: ``>Section\Sub Section\Another Menu``
+
+This will allow you to find specific menus and buttons easier in your
+Analysis Cockpit.
+
 .. toctree::
    :maxdepth: 2
    :numbered:

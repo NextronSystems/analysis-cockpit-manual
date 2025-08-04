@@ -4,8 +4,7 @@ Sandbox Integration
 -------------------
 
 You can configure your Analysis Cockpit to upload files to a local sandbox.
-Currently you can use `CAPEv2 <https://github.com/kevoreilly/CAPEv2>`_
-(recommended) or `Cuckoo <https://github.com/cuckoosandbox/cuckoo>`_.
+Currently you can use `CAPEv2 <https://github.com/kevoreilly/CAPEv2>`_ only.
 
 Additionally, you can look at the following ``python`` file and write
 your own connector, for a different sandbox, if you need to:
@@ -21,8 +20,9 @@ your own connector, for a different sandbox, if you need to:
 Analysis Cockpit Sandbox Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the web view of your Analysis Cockpit, navigate to ``Settings`` > ``Connected
-Systems`` > ``Sandboxes``. Click ``Add Sandbox`` in the top right corner. Keep the
+``>Settings\Connected Systems\Sandboxes``
+
+Click ``Add Sandbox`` in the top right corner to add a new sandbox. Keep the 
 ``Name`` short and add a proper ``Description``.
 
 .. figure:: ../images/cockpit_add_sandbox.png
@@ -34,7 +34,7 @@ If you wish to enable automatic scanning for uploaded files
 (`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/administration/evidence.html>`_),
 you can do so by checking the ``Automatic Mode``.
 
-Once you click ``Add`` the page will display an API token. Copy this token, we will need it later.
+Once you click ``Add`` the page will display an API token. Copy this token, you will need it later.
 
 .. figure:: ../images/cockpit_sandbox_token.png
    :alt: Sandbox API Token
@@ -206,16 +206,13 @@ The connection to your sandbox should work now. You can see the ``capev2.log`` f
 Analysis Cockpit Sandbox Usage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once your sandbox is set up and running, you can see the status of it in the
-sandbox view (Last Seen):
-
-.. figure:: ../images/cockpit_sandbox_view.png
-   :alt: Sandbox View in the Analysis Cockpit
+| ``>Evidence Collection\Collected Evidences``
+| ``>Evidence Collection\Sandbox Reports``
 
 In the ``Collected Evidences`` view you can see previously analyzed files or
 upload files for analysis by yourself:
 
-.. figure:: ../images/cockpit_evidence-file-upload.png
+.. figure:: ../images/cockpit_evidence_file_upload.png
    :alt: File View in the Analysis Cockpit
 
 After your file has been uploaded, you have to wait until your sandbox

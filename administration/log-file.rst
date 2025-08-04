@@ -30,6 +30,8 @@ used instead.
 Direct Integration with ASGARD Management Center
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+``>Scans\Scans``
+
 If the Analysis Cockpit is linked to one or more ASGARD Management
 Centers, all THOR logs get integrated automatically and will show up in
 the Baselining and/or the Events section. Aurora Events will also
@@ -39,34 +41,24 @@ To see how to connect an ASGARD Management Center with your Analysis
 Cockpit, follow the instructions in the chapter
 :ref:`administration/amc:link asgard management center`.
 
-You can retrieve old scans performed by ASGARD Management Center before
-you connected it to Analysis Cockpit using the ``Request Events`` button in
-the ``Scans`` section.
-
-.. figure:: ../images/cockpit_scan_request_events.png
-   :alt: Request Events from Scan
-
-   Request Events from Scan
-
 Syslog Input
 ^^^^^^^^^^^^
 
 Another way to import log data is by using SYSLOG messages.
 
-The ANALYSIS COCKPIT listens on port 514/udp and 514/tcp for incoming
-log data and all logs will show up in the Baselining and/or the Events
-section.
-
-Incoming syslog messages get assigned to single scan using the "ScanID"
-value that's unique in each scan.
+The Analysis Cockpit listens on port 514/udp and 514/tcp for incoming
+log data. Incoming syslog messages get assigned to single scan using
+the "ScanID" value, which is unique per default.
 
 File Import Through Web-Based GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+``>Scans\Scans``
+
 Alternatively, logs can be uploaded through the web-based interface by
-selecting the particular log file (must be the .txt format, html import
-is not supported) and clicking the ``Upload Scans`` button within the
-Scans section.
+selecting the particular log file (**.txt**) or multiple log files compressed
+into a gzip archive (**.gz**). Clicking the ``Upload Scans`` button will open
+the upload dialog.
 
 .. note::
    You can upload one or more THOR scans in one or more text files.
@@ -95,42 +87,3 @@ an existing or new group scan. You can also unlink scans from a group scan.
    :alt: Link/Unlink scans with an existing or new group scan
 
    Link/Unlink scans with an existing or new group scan
-
-File Import Using the Command Line
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This option can be helpful in an environment where you scan without
-ASGARD Management Center but want to automate analysis by dropping the
-log data into that import directory.
-
-Log files can be imported by placing the files in the following
-directory:
-
-``/var/lib/asgard-analysis-cockpit/events``
-
-Make sure that user and group of these files is set to ``cockpit``.
-
-You can change the owner and group manually by using:
-
-.. code:: console
-   
-   nextron@asgard-ac:~$ sudo chown analysiscockpit:analysiscockpit <file>
-
-Successfully imported files get a new extension named ``.ok``.
-
-When the file is moved to that folder with the wrong permissions,
-Analysis Cockpit tries to handle these situations in the appropriate way.
-If the Analysis cockpit had read access but no rights to
-write/delete/rotate/rename the file, the file gets blacklisted in memory
-and will not be imported as long as the service doesn't get restarted. A
-restart of the service would cause the service to re-index the log data
-placed in that folder.
-
-.. important::
-   We highly recommend not to directly copy (scp, rsync) files
-   into that folder, but use a staging folder in which you set the right
-   permissions and then copy the files to the import folder.
-
-Copying files directly to that folder has many problematic side effects,
-e.g. files partly composed of binary zeros because the file transfer is
-still in progress.

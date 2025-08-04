@@ -1,7 +1,9 @@
 .. Index:: Case Recommendations
 
-Configure Case Recommendations
-------------------------------
+Case Recommendations
+--------------------
+
+``>Settings\Case Management\Recommendations``
 
 Case Recommendations are predefined actions that can be used within a
 case. The recommendations are fully configurable and are aimed to
@@ -16,4 +18,4 @@ Recommendations can also be added by any user from within a case.
 .. figure:: ../images/cockpit_case_recommendations.png
    :alt: Case Management - Recommendations
 
-   Case Management- Recommendations
+   Case Management - Recommendations
