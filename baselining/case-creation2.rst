@@ -46,9 +46,9 @@ Add to Case
 
 Sometimes you may want to add log lines to an already existing case
 because they represent the same security context. To do this you can
-just click the ``Add to Case`` button and select the suitable case. It is
-also possible to add an additional comment to this case for the
-addition.
+select any events you would like to add to a specific case and click
+the ``Add to Case`` button and select the suitable case. It is also
+possible to add an additional comment to this case for the addition.
 
 .. figure:: ../images/cockpit_add_to_case.png
    :alt: Add to Case

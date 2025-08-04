@@ -12,15 +12,13 @@ Customize Your View
 By default, the Analysis Cockpit ``Baselining`` view ships with multiple bar
 charts and a table with the most relevant columns in order to help you find
 meaningful groups of logs. You can add additional bar charts by clicking on
-the ``Advanced Tools`` button and selecting ``Chart Preferences``.
+the ``Table Preferences``. You can also set the visible columns in the table
+on the bottom in the same view.
 
 .. figure:: ../images/cockpit_chart_preferences.png
-   :alt: Chart Preferences
+   :alt: Table Preferences
 
-.. figure:: ../images/cockpit_chart_preferences2.png
-   :alt: Chart Preferences
-
-   Chart Preferences
+   Table Preferences
 
 You can also modify which bar charts are shown by the name/field-name of the chart
 and choose the category you want to see. To get more details about a bar chart, you
@@ -35,14 +33,3 @@ can click on square symbol in the heading of the bar chart.
    :alt: Bar Chart Details
 
    Bar Chart Details
-
-Click the ``Columns`` button to manage which columns are shown.
-
-.. figure:: ../images/cockpit_column_preferences.png
-   :alt: Column Preferences
-
-   Column Preferences
-
-Since the column preferences have an overvelming amount of
-fields you can choose from, we made looking for specific
-columns easier by integrating a search into the top right corner.

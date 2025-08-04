@@ -6,52 +6,77 @@ Case Intelligence
 | ``>Baselining\Case Intelligence``
 | ``>Settings\Case Management\Case Intelligence``
 
-Case Templates can be used to suggest new cases in the ``Suggested Cases``
-section. If there are no Suggested Cases in the view, no events match
-the Case Templates in your Analysis Cockpit.
+.. note::
+   The **Nextron Intelligence Feed** provides suggested cases based
+   on the latest threat intelligence. Enabling this feed allows you
+   to receive automatic updates and notifications about potential threats.
 
-.. figure:: ../images/cockpit_case_templates.png
-   :alt: Case Templates Overview
+You can integrate the ``Nextron Intelligence Feed`` into your Analysis
+Cockpit. To do so, click on the ``Case Intelligence`` button in the status
+bar. This will open up the ``Case Intelligence`` section. If you have not
+configured the ``Case Intelligence``, you can do so by clicking ``Go to settings``.
 
-   Case Templates Overview
+.. figure:: ../images/cockpit_case_intelligence_first_time.png
+   :alt: First Time View - Case Intelligence
 
-To import new Case Templates, you need to create a ``.yaml`` file with
-the conditions first. This can be done by navigating to the ``Cases``
-view and exporting your search results as Case Templates. You will
-be able to download a ``.yaml`` file from here, which can be used to
-import as a Case Template.
+   First Time View - Case Intelligence
 
-.. figure:: ../images/cockpit_export_case_template.png
-   :alt: Export Case Template
+In the ``Case Intelligence`` settings, you can enable the integration and
+change a few settings to your liking.
 
-   Exporting Search Results as Case Templates
+.. figure:: ../images/cockpit_case_intelligence_enable.png
+   :alt: Case Intelligence Settings
 
-.. code-block:: yaml
-   :linenos:
-   :caption: Exported Case Template
+   Case Intelligence Settings
 
-   uuid: 94565b82-45fc-47f8-82eb-e9c5352c37c2
-   name: Thor started on a system with the wrong processor architecture
-   summary: ""
-   type: 5
-   scanner: THOR
-   creator: admin
-   condition: "\"MODULE: Startup\" AND \"MESSAGE: 32 bit THOR was executed on 64 bit
-     system. For improved results, use the 64 bit version of THOR.\"\r\n"
+Once the **Case Intelligence** feature has been activated, you will see
+information about the integrated feed. You can see how many of our suggested
+cases match at least one event in your environment (1). You can also see how
+many cases have been created from our suggestions (2). A total number of suggested
+cases from our feed will also be displayed (3). Additionally you will see a few
+statistics in the graphs as well (4).
 
-After you downloaded the Case Templates, you can import them in the ``Case
-Templates`` view.
+.. figure:: ../images/cockpit_case_intelligence_overview1.png
+   :alt: Case Intelligence Overview
 
-.. figure:: ../images/cockpit_import_case_templates.png
-   :alt: Import Case Template
+   Case Intelligence Overview
 
-   Import Case Template
+If you scroll further down, you can see any ``Matched`` case suggestions.
+This means that at least one event in your Analysis Cockpit matches the
+displayed cases from the **Nextron Intelligence Feed**.
 
-You can now inspect the Case Template. You can find it by either looking
-for the name or filter by who created it. You can see that the conditions
-match the contents of your exported Case Template (``.yaml`` file).
+.. figure:: ../images/cockpit_case_intelligence_overview2.png
+   :alt: Case Intelligence Overview
 
-.. figure:: ../images/cockpit_inspect_imported_case_template.png
-   :alt: Inspect Imported Case Template
+   Case Intelligence Overview
 
-   Inspect Imported Case Template
+You will additionally see a visual indicator in the status bar if
+a case from the **Nextron Intelligence Feed** matches in your
+Analysis Cockpit. The color indicates the matched case with the
+highest severity. The colors are identical to the ``Case Type`` colors.
+
+- Red: Incident
+- Orange: Suspicious
+- Purple: Vulnerability
+- Yellow: Noteworthy
+- Grey: Unknown
+- Green: Legitimate Anomaly
+- Blue: False Positive
+
+.. figure:: ../images/cockpit_case_type_colors.png
+   :alt: Case Intelligence Overview
+
+   Case Intelligence Overview
+
+To create a case from the Case Intellignce, click on the name or the left
+arrow of a case. This will open the summary of the suggested case, including
+an example event. Verify the information and click ``Create Case``.
+
+.. figure:: ../images/cockpit_case_intelligence_create_case.png
+   :alt: Case Intelligence - Case Details
+
+   Case Intelligence - Case Details
+
+After clicking ``Create Case`` the usual case creation modal will open, with
+a few details already filled. Change any details accordingly and click ``Create
+Case``.
