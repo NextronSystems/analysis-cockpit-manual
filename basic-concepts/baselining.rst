@@ -1,16 +1,18 @@
+.. Index:: Baselining
+
 Baselining
 ----------
+
+| ``>Baselining\THOR Events``
+| ``>Baselining\Aurora Events``
+| ``>Baselining\Case Intelligence``
 
 All events that have **not** been assigned to a particular case are
 displayed in the ``Baselining`` section of the Analysis Cockpit.
 
-Again, the Baselining Section is split into the different sources
-of our events. Additionally, you can see the ``Suggested Cases``, which
-will suggest cases based on predefined :ref:`basic-concepts/cases:case templates`.
-
-- THOR Events
-- Aurora Events
-- Suggested Cases
+The Baselining Section is split into the different sources
+of our events. Additionally, you can see the :ref:`baselining/case-intelligence:case intelligence`
+menu, which will suggest cases (if enabled) based on Nextron's Intelligence Feed.
 
 .. figure:: ../images/cockpit_baselining_overview.png
    :alt: Baselining Section
@@ -18,21 +20,33 @@ will suggest cases based on predefined :ref:`basic-concepts/cases:case templates
    Baselining Section
 
 Logs that represent the same type of anomaly or incident can be grouped
-together using the various filters and then be stored in a Case for
+together using filters and then be stored in a Case for
 further analysis. Grouping can be done manually by filtering and clicking
 ``Create Case``, selecting individual Events and clicking ``Create Case``,
 or automatically by simply clicking the ``Advanced Tools`` button and
-``Auto Baselining``. With ``Auto Baselining``, the Cockpit automatically calculates groups of
-"similar" log lines.
+``Auto Baselining``.
 
 Once stored in a case, the logs will disappear from the Baselining section.
+
+Ideally you want to keep your baselining section as empty/organized as possible.
+The logs in your Baselining View represent potentially suspicious elements that
+have not yet been looked at. This is your best point to start triaging through
+all the THOR events.
+
+Auto Baselining
+~~~~~~~~~~~~~~~
+
+With ``Auto Baselining``, the Cockpit automatically calculates groups of
+"similar" log lines and creates cases for those logs. You have to specify
+an minimum amount of events per case before a case is being created.
 
 .. figure:: ../images/cockpit_auto_baselining.png
    :alt: Auto Baselining
 
    Auto Baselining
 
-.. To-DO add Info regarding Guided Baselining
+Optimize
+~~~~~~~~
 
 The Analysis Cockpit can automatically check for events that can be added to
 existing cases. By clicking the ``Optimize`` button, the Analysis Cockpit will
@@ -43,16 +57,24 @@ iterate through all unassigned events and check if there is a matching case.
 
    Optimize Function
 
-.. note::
-   The optimization will iterate through all unassigned events and assign them
-   to cases if a match were found. This may take a while.
+.. warning::
+   Once the optimize process started, it cannot be stopped
 
-In an ideal organization, the Baselining section should always be empty
-at the end of a day, as these logs represent suspicious elements that
-have not yet been looked at.
+To see the status of the optimize run, press the same button again:
+
+.. figure:: ../images/cockpit_optimize_progress.png
+   :alt: Optimize Progress
+
+   Optimize Progress
+
+You can also set :ref:`maintenance/optimize:auto optimize` to run
+the **Optimize** function automatically every day.
 
 Baselining Modes
 ~~~~~~~~~~~~~~~~
+
+| ``>Baselining\THOR Events``
+| ``>Settings\Advanced\Baselining``
 
 The ``Baselining`` section contains three predefined modes, the ``Compromise Assessment``
 mode, the ``Deep Inspection`` mode, and the ``Custom Signatures Only`` mode. By default,
@@ -82,7 +104,7 @@ the Dashboard of your user. This Dashboard is your personal view in the
 Baselining and Events section. You can create additional Dashboards
 by clicking on the ``Select Dashboard`` button.
 
-.. figure:: ../images/cockpit_baselining-dashboard-button.png
+.. figure:: ../images/cockpit_baselining_dashboard_button.png
    :alt: Baselining Dashboards
 
    Select Dashboard

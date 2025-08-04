@@ -17,3 +17,4 @@ something unknown/new.
     view
     case-creation1
     case-creation2
+    case-intelligence
