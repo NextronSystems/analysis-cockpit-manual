@@ -31,7 +31,7 @@ on Elasticsearch.
 The below message shows up in the Analysis Cockpit if the disk watermark is
 reached:
 
-.. figure:: ../images/ac_disk-watermark.png
+.. figure:: ../images/cockpit_disk_watermark.png
    :alt: Disk Watermark
 
    Disk Watermark
