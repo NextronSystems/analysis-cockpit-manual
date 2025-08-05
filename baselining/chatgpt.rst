@@ -6,10 +6,9 @@ ChatGPT Integration
 ``>Settings\Advanced\ChatGPT Integration``
 
 You can use our ChatGPT integration to help with case creation. To do this
-you need to have a ChatGPT API key. Navigate to ``Settings`` > ``Advanced`` >
-``ChatGPT Integration``. Here you can enter your API key. You can test the
-ChatGPT integration in the prompt at the bottom, to make sure everything is
-working.
+you need to have a ChatGPT API key, which will be used when configuring the
+ChatGPT integration in your Analysis Cockpit. You can test the integration
+in the prompt at the bottom to make sure everything is working.
 
 .. figure:: ../images/cockpit_chatgpt_integration.png
    :alt: ChatGPT Integration

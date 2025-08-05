@@ -4,7 +4,7 @@ THOR Cloud Integration
 ----------------------
 
 This chapter contains any relevant information to integrate
-your THOR Cloud Account - and subsequently your THOR
+your THOR Cloud Account - and subsequently your THOR Cloud
 scans - into your Analysis Cockpit.
 
 What is THOR Cloud?

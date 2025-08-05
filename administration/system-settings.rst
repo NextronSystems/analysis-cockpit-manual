@@ -5,14 +5,10 @@ TLS Certificate Installation
 
 ``>Settings\System\TLS``
 
-Instead of using the pre-installed self-signed TLS Certificate,
-users should upload their own TLS Certificate for ASGARD. This
-will avoid browser warnings when navigating to your Analysis
-Cockpit's web interface.
-
-In order to achieve the best possible compatibility with the
-most common browsers, we recommend using the system's FQDN
-in both fields ``Common Name`` AND ``Hostnames``.
+Instead of using the self-signed TLS certificate which comes pre-installed
+on your Analysis Cockpit, you should consider using your own TLS certificate.
+This will avoid browser warnings when navigating to your Analysis Cockpit's
+web interface.
 
 You can click ``Generate CSR`` to open the following modal which
 lets you specify the information needed for the CSR.
@@ -23,11 +19,12 @@ lets you specify the information needed for the CSR.
    Generate a Certificate Signing Request (CSR)
 
 .. hint::
-   Please note that generating a CSR on the command line is not supported.   
+   In order to achieve the best possible compatibility with most browsers, we
+   recommend using the system's FQDN in both fields ``Common Name`` AND ``Hostnames``. 
 
-The generated CSR can be used to generate a TLS Certificate.
-Subsequently, this TLS Certificate can be uploaded in the in
-the same section of your Analysis Cockpit.
+The generated CSR can be used to generate a TLS certificate via your
+Certificate Authority. The resulting TLS certificate can then be
+uploaded in the in the same section of your Analysis Cockpit.
 
 .. figure:: ../images/cockpit_upload_certificate.png
    :alt: Upload a TLS Certificate
@@ -39,8 +36,10 @@ Configure LDAP
 
 ``>Settings\Users and Roles\LDAP``
 
-This section lets you configure an LDAP server and define mappings between
-LDAP groups and roles within the Analysis Cockpit.
+This section lets you configure a remote LDAP server to integrate with your
+Analysis Cockpit. This lets you use existing LDAP/Windows Domain users to log
+into the Analysis Cockpit, as well as define mappings between LDAP groups and
+roles within the Analysis Cockpit.
 
 .. figure:: ../images/cockpit_ldap1.png
    :alt: Configure LDAP 

@@ -6,14 +6,16 @@ Automated Case Creation
 ``>Baselining\THOR Events``
 
 With Auto Baselining, the Cockpit will automatically generate cases for
-groups of logs that are similar, or in other words: Have the same
+groups of logs that are similar, or in other words: have the same
 auto\_case\_id.
 
-After clicking the button ``Automatically generate Cases`` button in the
-``Auto Baselining`` tab you will be prompted for a threshold. This means:
-Do only create a case when you find at least that many similar logs. In
-our example below the Cockpit will now generate cases for all groups of
-at least 2000 similar events.
+After clicking the button ``Automatically generate Cases`` in the
+``Auto Baselining`` tab, you will be prompted for a threshold. The
+threshold will dictate when a case should be created. In our example
+below the Cockpit will now generate cases for all groups of at least
+100 similar events - which might be a lot or not enough events, depending
+on your environment. You should have a good understanding of how many events
+your usual case contains before using the Auto Baselining feature.
 
 .. figure:: ../images/cockpit_auto_baselining_button.png
    :alt: Automatically create cases
@@ -26,17 +28,17 @@ at least 2000 similar events.
    Automatically create cases
 
 After pressing the ``Start`` button, the Cockpit will start calculating
-and create cases. Depending on the data volume this may take a while and
-you will be presented a page that shows that Auto Cases is still running
-along with the current number of cases.
+and create cases. Depending on the amount of events in your Analysis Cockpit,
+this may take a while and.
 
 .. figure:: ../images/cockpit_auto_baselining_status.png
    :alt: Auto Cases Status
 
    Auto Cases Status
 
-It is safe to leave this page, once the status in ``Running``. It will
-continue in the background.
+It is safe to leave this page once the status is ``Running``. It will
+continue in the background. To see if the Auto Baselining is still running,
+you can open the dialog again.
 
 .. important::
   The Analysis Cockpit generates auto\_case\_ids only for Alerts and

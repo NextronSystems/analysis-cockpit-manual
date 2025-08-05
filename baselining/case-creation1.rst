@@ -190,14 +190,9 @@ an example.
 
    Creating Cases through Regular Expressions
 
-Again, you may or may not add auto assignment for future incoming
-log lines, summary, assessment, case type, recommendations or a comment.
-After clicking the ``Create Case`` button, the matching lines will get
-removed from the log management view.
-
 .. warning:: 
-   It is recommended to use regular expressions only rarely and with
-   caution. This feature can severely impact the performance of the system.
+   We recommended to use regular expressions only **rarely** and **with
+   caution**. This feature can severely impact the performance of the system.
    Regex from cases will be applied to every single event on import.
 
 Elasticsearch uses Apache Lucene's regular expression engine to parse these

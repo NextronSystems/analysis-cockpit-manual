@@ -34,21 +34,20 @@ dealing with alerts and warnings.
 However, in some cases it makes sense to change perspective and rather
 go for a host centric approach. The Analysis Cockpit will calculate
 numbers of lines in different case types (Incident, Suspicious, Anomaly,
-etc.) on a per host basis for a given time frame. Along with information
-from ASGARD on last scan dates, labels, host availability etc. this
-gives an entirely different perspective.
+etc.) on a per host basis for a given time frame. Information from the
+ASGARD, such as last scan dates, labels, host availability, and many more
+can allow for an entirely different perspective.
 
-By using the "Asset View" you can e.g., easily answer questions like:
+By using the "Asset View" you can easily answer questions like:
 
--  Which systems appear most often in “Incident” cases?
+-  Which systems appear most often in **Incident** cases?
 -  Which systems haven't reported a single event for more than a month?
 -  Which Domain Controllers have not been scanned yet?
--  Which systems with IP addresses starting "192.168." appear in
-   "Incident" cases?
+-  Which systems in the subnet "192.168.0.0/16" appear in
+   **Incident** cases?
 
 You can also set a time when an asset was compromised. This is useful
-for example when you want to see which systems were compromised in the
-last 30 days.
+when you want to see which systems were compromised in the last 30 days.
 
 In combination with the ``ASGARD Query`` and ``Labels``, which are identical
 to your ASGARD, you can even narrow down the events by system group
