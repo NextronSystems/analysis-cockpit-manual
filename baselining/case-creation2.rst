@@ -3,6 +3,8 @@
 Automated Case Creation
 -----------------------
 
+``>Baselining\THOR Events``
+
 With Auto Baselining, the Cockpit will automatically generate cases for
 groups of logs that are similar, or in other words: Have the same
 auto\_case\_id.

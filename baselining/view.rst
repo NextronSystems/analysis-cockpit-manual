@@ -3,6 +3,9 @@
 Customize Your View
 -------------------
 
+| ``>Baselining\THOR Events``
+| ``>Events\THOR Events``
+
 .. hint:: 
    All views are personalized and changes will only affect your user.
    Please see :ref:`basic-concepts/baselining:dashboards`

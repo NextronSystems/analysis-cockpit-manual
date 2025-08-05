@@ -3,6 +3,8 @@
 Open a Case for Editing
 -----------------------
 
+``>Cases\THOR Cases``
+
 The picture below shows the Case Management view with cases that have
 been created with the ``Auto Case`` feature. You can see those cases
 by filtering the ``Name`` column to only contain the ``Auto Case``
@@ -39,6 +41,8 @@ visible to the Level 2 Analyst.
 Closing a Case
 --------------
 
+``>Cases\THOR Cases``
+
 Let's assume, that a Level 2 Analyst now picks one of the cases in
 status "Level 1 Finished" and starts working on this case.
 
@@ -61,6 +65,8 @@ status is changed to ``closed`` and the case gets updated.
 Grouping Criteria
 -----------------
 
+``>Cases\THOR Cases``
+
 The Grouping Criteria of cases are the fields that are used to assign
 events to cases. There are three types of grouping criteria:
 
@@ -76,7 +82,7 @@ should be your last resort and used only if the other two options are not
 possible, as this is the most performance intensive way to group events into
 cases.
 
-.. figure:: ../images/cockpit_grouping-criteria.png
+.. figure:: ../images/cockpit_grouping_criteria.png
    :alt: Grouping Criteria
 
    Grouping Criteria

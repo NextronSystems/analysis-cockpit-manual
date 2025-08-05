@@ -3,6 +3,8 @@
 Manual Case Creation
 --------------------
 
+``>Baselining\THOR Events``
+
 This section walks you through the manual case creation.
 This method gives you more flexibility in terms of conditions
 and details regarding the cases, but is more time consuming.
@@ -12,8 +14,6 @@ are setting during the case creation.
 
 Case Creation Basics
 ^^^^^^^^^^^^^^^^^^^^
-
-``>Baselining\THOR Events``
 
 Create a new case following these steps: 
 
