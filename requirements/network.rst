@@ -81,10 +81,6 @@ Case Intelligence Feeds from the following URLs:
      - 443/tcp
      - Analysis Cockpit
      - thor-cloud.nextron-services.com
-   * - THOR Cloud Lite Integration
-     - 443/tcp
-     - Analysis Cockpit
-     - thorcloud-lite.nextron-systems.com
    * - ChatGPt Integration
      - 443/tcp
      - Analysis Cockpit

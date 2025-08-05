@@ -50,7 +50,7 @@ how many days to sync, and paste your API key.
 If you delete a connection, the scans originating from that
 connection will **not** be deleted. You have to do this manually.
 
-Analysing THOR Cloud Logs
+Analyzing THOR Cloud Logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``>Scans\Scans``

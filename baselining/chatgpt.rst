@@ -66,7 +66,7 @@ regarding the events you are working with. To do this you can either:
 - Just right click an event and select ``Chat with ChatGPT (whole event)`` from the context
   menu
 
-You will see a sidebar which has alreay the information you selected or the whole event
+You will see a sidebar which has already the information you selected or the whole event
 filled in. You can now click on the ``Send`` button to send the information to ChatGPT.
 If you need further information you can interact with ChatGPT in the sidebar.
 

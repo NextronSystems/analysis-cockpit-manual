@@ -25,7 +25,7 @@ Matched Signatures
 
 ``>Events\Mached Signatures``
 
-This seciont shows all signatures that have been matched by the events
+This section shows all signatures that have been matched by the events
 in your Analysis Cockpit. The section provides swift identification of
 new issues.
 

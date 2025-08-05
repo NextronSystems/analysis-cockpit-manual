@@ -30,8 +30,8 @@ Once stored in a case, the logs will disappear from the Baselining section.
 
 Ideally you want to keep your baselining section as empty/organized as possible.
 The logs in your Baselining View represent potentially suspicious elements that
-have not yet been looked at. This is your best point to start triaging through
-all the THOR events.
+have not yet been looked at. This is your best point to triage through all the
+THOR events.
 
 Auto Baselining
 ~~~~~~~~~~~~~~~
@@ -110,7 +110,7 @@ by clicking on the ``Select Dashboard`` button.
    Select Dashboard
 
 You can create multiple Dashboards and also share them with other users.
-Dashboards are shared accross the ``Baselining`` view and the ``Events`` view,
+Dashboards are shared across the ``Baselining`` view and the ``Events`` view,
 meaning you can use one Dashboard for both views.
 
 Compromise Assessment Mode

@@ -25,8 +25,8 @@ Create a new case following these steps:
 2. Select on which criteria you want to base the case on. The default ``Search Result``
    is sufficient enough for beginners, but for advanced analysts this might not be the
    best way to create a case. ``Condition`` is the most flexible and readable, whereas
-   ``Regular Expression`` gives you the ultimate flexiblity with a heavy perfomance impact (we
-   recommend to not use Regular Expression for this reason)
+   ``Regular Expression`` gives you the ultimate flexibility with a heavy performance
+   impact (we recommend to not use Regular Expression for this reason)
 
 .. figure:: ../images/cockpit_case_creation2.png
 
@@ -99,8 +99,8 @@ Case Creation Using a Condition
 
 .. note::
    ``Condition`` Cases are widely used since their Condition is easier
-   to read and can be modifiy. This is why we recommend to use them, especially
-   in bigger organisations, with multiple people working on multiple cases.
+   to read and can be modify. This is why we recommend to use them, especially
+   in bigger organizations, with multiple people working on multiple cases.
 
 To create a case with a condition, click the ``Create Case`` button and
 select ``Condition``. Any filter set before clicking the ``Create Case``
@@ -130,7 +130,7 @@ Case Creation from Search Results
 
 .. note::
    Since the ``Event Assignment`` logic of ``Search Result`` cases cannot be modified,
-   we do not recommend to use this method to create cases in bigger organisations.
+   we do not recommend to use this method to create cases in bigger organizations.
    If you do not need to change the logic how events are assigned to certain cases,
    this is the best method to use.
 

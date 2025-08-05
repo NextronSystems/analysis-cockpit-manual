@@ -68,7 +68,7 @@ highest severity. The colors are identical to the ``Case Type`` colors.
 
    Case Intelligence Overview
 
-To create a case from the Case Intellignce, click on the name or the left
+To create a case from the Case Intelligence, click on the name or the left
 arrow of a case. This will open the summary of the suggested case, including
 an example event. Verify the information and click ``Create Case``.
 

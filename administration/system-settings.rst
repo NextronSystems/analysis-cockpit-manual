@@ -68,8 +68,8 @@ You can define custom notifications for the following types:
 - **Case Change**
 
   * Case Change Notifications are triggered when a new case is created
-    or an existing case is updated. You can configure what kind of casestrigger
-    a notification, based on the case's status or type.
+    or an existing case is updated. You can configure what kind of cases
+    trigger a notification, based on the case's status or type.
 
 - **Unassigned Event**
 

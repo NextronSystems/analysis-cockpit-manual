@@ -44,7 +44,7 @@ To free up some disk space, you can follow the instructions in the next
 chapter (:ref:`maintenance/disk-space:regain disk space`).
 
 If your disk usage somehow got above 95%, Elasticsearch will go into read-only mode
-nontheless. If this happened, you need to reset the Elasticsearch state after you
+nonetheless. If this happened, you need to reset the Elasticsearch state after you
 freed up some disk space. You can achieve this by running the following command:
 
 .. code-block:: console
