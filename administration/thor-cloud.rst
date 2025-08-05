@@ -49,6 +49,8 @@ how many days to sync, and paste your API key.
 
 If you delete a connection, the scans originating from that
 connection will **not** be deleted. You have to do this manually.
+Please see :ref:`maintenance/disk-space:deleting unneeded scans`
+for a reference on how to delete specific scans.
 
 Analyzing THOR Cloud Logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -58,7 +60,7 @@ Analyzing THOR Cloud Logs
 If you filter for ``Thor Cloud`` in your scans, you can find the
 scans originating from THOR Cloud. You can also find those events
 in your normal Baselining or Events view, though the events themselves
-do not indicate from which system they originate. If you want to trace
+do not indicate from which source they originate. If you want to trace
 single events, you should work with Scan-IDs.
 
 .. figure:: ../images/cockpit_thor_cloud_scans.png

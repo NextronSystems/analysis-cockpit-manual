@@ -49,11 +49,13 @@ Deleting Unneeded Scans
 
 .. warning::
     
-    Deleting old scans deletes information ASGARD Analysis Cockpit uses.
+    Deleting old scans deletes information which the Analysis Cockpit uses.
 
-    As an example: If you delete a scan with which an asset was marked
-    in an incident case, this connection is no longer made and the asset
-    will be shown with 0 incident cases.
+    Example: You have an incident case, which contains events from a certain
+    scan. Those events are associated with an endpoint, since the events originate
+    from that endpoint. When you delete this scan, no association between endpoint
+    and incident case remains, thus the endpoint has one less ``Incident Case`` in
+    the Assets View.
 
 Therefore only delete scans you no longer need. This can be done by selecting
 the scans and clicking ``Delete Events``.
