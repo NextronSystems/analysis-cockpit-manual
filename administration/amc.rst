@@ -49,11 +49,13 @@ By using the "Asset View" you can easily answer questions like:
 You can also set a time when an asset was compromised. This is useful
 when you want to see which systems were compromised in the last 30 days.
 
-In combination with the ``ASGARD Query`` and ``Labels``, which are identical
-to your ASGARD, you can even narrow down the events by system group
+In combination with the ``ASGARD Query`` and ``Labels``, which are pinned to your assets,
+you can even narrow down the events by system group
 (e.g., Domain Controllers, or certain locations).
 
 .. figure:: ../images/cockpit_asgard_query.png
    :alt: Filtering within the Assets View 
 
    Filtering within the Assets view
+
+For more ``ASGARD Query`` examples, please open the Query Help on the right of the query input field (info icon).
