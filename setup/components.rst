@@ -65,7 +65,9 @@ a browser warning when you connect the first time to
 the page. This is due to the page using a self signed
 certificate, since it will only be used to install the
 ASGARD Analysis Cockpit. You can safely ignore this
-warning and proceed to the page. Once the installation is complete, the certificate can be replaced by a signed certificate (see :ref:`administration/system-settings:tls certificate installation`)
+warning and proceed to the page. Once the installation
+is complete, the certificate can be replaced by a signed
+certificate (see :ref:`administration/system-settings:tls certificate installation`)
 
 You will be greeted with a small introduction as to what
 the Nextron Universal Installer is and what it does. After
