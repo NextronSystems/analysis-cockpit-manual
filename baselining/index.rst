@@ -16,4 +16,6 @@ something unknown/new.
 
     view
     case-creation1
+    chatgpt
     case-creation2
+    case-intelligence

@@ -45,23 +45,22 @@ no longer need and therefore can be deleted to regain disk space. This includes:
 Deleting Unneeded Scans
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+``>Scans\Scans``
+
 .. warning::
     
-    Deleting old scans deletes information ASGARD Analysis Cockpit uses.
+    Deleting old scans deletes information which the Analysis Cockpit uses.
 
-    As an example: If you delete a scan with which an asset was marked
-    in an incident case, this connection is no longer made and the asset
-    will be shown with 0 incident cases.
+    Example: You have an incident case, which contains events from a certain
+    scan. Those events are associated with an endpoint, since the events originate
+    from that endpoint. When you delete this scan, no association between endpoint
+    and incident case remains, thus the endpoint has one less ``Incident Case`` in
+    the Assets View.
 
-Therefore only delete scans you no longer need. This can be done under
-``Scans`` > ``Scans`` by selecting the scans with check marks and 
-clicking ``Delete Events``.
+Therefore only delete scans you no longer need. This can be done by selecting
+the scans and clicking ``Delete Events``.
 
-You can filter events for deletion with the time range picker in the
-completed column and e.g. selecting only scans with 0 incident and 
-0 suspicious cases. (Add columns using the ``Columns`` button). 
-
-.. figure:: ../images/cockpit_delete_old_scans.png
+.. figure:: ../images/cockpit_delete_scans.png
    :alt: Delete Old Scans
 
    Possible Filter for Selecting Scans for Deletion

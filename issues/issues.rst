@@ -135,7 +135,7 @@ You will see a scan which is in the Status ``Unknown``
 
 When you connect to your Analysis Cockpit via SSH
 and enter a root session, you can execute the following
-command to see if the error occured on one or more
+command to see if the error occurred on one or more
 log files:
 
 .. code-block:: console

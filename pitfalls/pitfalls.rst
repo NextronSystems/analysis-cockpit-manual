@@ -31,7 +31,7 @@ on Elasticsearch.
 The below message shows up in the Analysis Cockpit if the disk watermark is
 reached:
 
-.. figure:: ../images/ac_disk-watermark.png
+.. figure:: ../images/cockpit_disk_watermark.png
    :alt: Disk Watermark
 
    Disk Watermark
@@ -44,7 +44,7 @@ To free up some disk space, you can follow the instructions in the next
 chapter (:ref:`maintenance/disk-space:regain disk space`).
 
 If your disk usage somehow got above 95%, Elasticsearch will go into read-only mode
-nontheless. If this happened, you need to reset the Elasticsearch state after you
+nonetheless. If this happened, you need to reset the Elasticsearch state after you
 freed up some disk space. You can achieve this by running the following command:
 
 .. code-block:: console
@@ -119,31 +119,3 @@ creation timestamp of the log lines not the time of their import.
 This means that if you're importing log data that is old, the default
 date range set in the date range picker may be too narrowly defined so
 that you're just unable to see the imported data.
-
-Fixing a Broken Proxy Configuration
------------------------------------
-
-Sometimes during installation, proxy settings get mixed up or a typo in
-the proxy URL leads to a broken Internet connection.
-
-It is not trivial to fix this situation, since the proxy settings
-collected during installation are changed in so many different locations
-on a Linux system for all the different services and command line tools.
-
-Broken before Analysis Cockpit Installation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If you have set a wrong proxy while the Debian setup and the connectivity test fails, 
-edit the proxy settings in the Web GUI of the Nextron Universal Installer:
-
-``Settings`` > ``Proxy``
-
-Then rerun the connectivity test.
-
-Broken after the Analysis Cockpit Installation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If your infrastructure has changed and you have to change the proxy
-server sometime later, edit the proxy settings in the Web GUI.
-
-``Settings`` > ``System`` > ``Proxy``
