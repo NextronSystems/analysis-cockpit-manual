@@ -31,7 +31,7 @@ to version limitations with your master node.
 
 .. important:: 
     Your cockpit will be unavailable for an extended period of time
-    during the upgrade proccess, usually between 30 and 60 minutes.
+    during the upgrade process, usually between 30 and 60 minutes.
     Please make sure that no user is working with the Analysis Cockpit
     during the upgrade process.
 

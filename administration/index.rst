@@ -26,5 +26,6 @@ These steps are described in detail in the following sections.
     syslog
     system-settings
     log-file
+    thor-cloud
     sandbox
     api

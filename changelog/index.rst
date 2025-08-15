@@ -10,6 +10,7 @@ Cockpit version 4.
 .. toctree::
     :caption: Contents
 
+    log3
     log2
     log1
     log0

@@ -12,13 +12,10 @@ right after.
     :caption: Contents
 
     assignment-logs
-    no-events-visible
-    no-events-case
     location
     default-password
     disk-space
     reverse-proxy
-    iexplorer
     admin-pass
     2fa
     certificates

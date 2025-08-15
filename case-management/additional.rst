@@ -3,6 +3,8 @@
 Generate and Review auto\_case\_ids
 -----------------------------------
 
+``>Cases\THOR Cases``
+
 These auto\_case\_ids can be reviewed in the ``Grouping Criteria`` section
 of the case.
 

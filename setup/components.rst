@@ -65,7 +65,9 @@ a browser warning when you connect the first time to
 the page. This is due to the page using a self signed
 certificate, since it will only be used to install the
 ASGARD Analysis Cockpit. You can safely ignore this
-warning and proceed to the page.
+warning and proceed to the page. Once the installation
+is complete, the certificate can be replaced by a signed
+certificate (see :ref:`administration/system-settings:tls certificate installation`)
 
 You will be greeted with a small introduction as to what
 the Nextron Universal Installer is and what it does. After
@@ -85,7 +87,7 @@ Connectivity Check
 The Nextron Universal Installer will try to connect to our
 update server in order to download all the necessary packages
 once the installation starts. Make sure you can reach the
-update servers (see :ref:`requirements/network:internet access during installation`).
+update server (see :ref:`requirements/network:internet`).
 
 Please configure your proxy settings if you are behind a
 proxy (see :ref:`setup/components:proxy and ntp settings`).

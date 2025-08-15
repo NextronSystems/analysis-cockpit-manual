@@ -3,6 +3,8 @@
 Manual Case Creation
 --------------------
 
+``>Baselining\THOR Events``
+
 This section walks you through the manual case creation.
 This method gives you more flexibility in terms of conditions
 and details regarding the cases, but is more time consuming.
@@ -15,29 +17,39 @@ Case Creation Basics
 
 Create a new case following these steps: 
 
-1. Select on which conditions the case should be built. ``Search Result``
-   will take your filters from the baselining view into consideration, and 
-   build a case with the condition of your search.
+1. Filter your Baselining Events accordingly. In our example, we searched for
+   a specific file name with a unique hash. Click ``Create Case``
 
 .. figure:: ../images/cockpit_case_creation1.png
 
-1. Inspect the Case Assignment and Conditions. Set Auto Assign if needed.
+2. Select on which criteria you want to base the case on. The default ``Search Result``
+   is sufficient enough for beginners, but for advanced analysts this might not be the
+   best way to create a case. ``Condition`` is the most flexible and readable, whereas
+   ``Regular Expression`` gives you the ultimate flexibility with a heavy performance
+   impact (we recommend to not use Regular Expression for this reason)
 
 .. figure:: ../images/cockpit_case_creation2.png
 
-3. Set a case **name**, which serves as title - use keywords that make it
+3. Click next and you will see your resulting ``Case Assignment`` logic. Set ``Automatically
+   assign newly incoming events to this case.`` to automatically move new incoming events to this
+   case. If you want to create a case which will not receive new events, remove the checkbox.
+
+.. figure:: ../images/cockpit_case_creation3.png
+
+4. Set a case **name**, which serves as title - use keywords that make it
    easy for other analysts to find it based on a few terms (e.g. if a false
    positive was caused by matches in **savedsearch.conf**, use this filename
    in the title of your case)
-4. Select a sample event for the **summary** field 
-5. Add your **assessment**
-6. Choose one or more **recommendations**
-7. Select a **case type** (see the :ref:`glossary/case-glossary:case types` for a detailed description of every case type)
-8. Select a **case status** (usually used to mark it as 'work in progress' or to forward it to the next team)
-9. Select a **case priority** (usually used to mark the importance of the case)
-10. Submit case by clicking the **Create Case** button
 
-.. figure:: ../images/cockpit_case_creation3.png
+5. Select a sample event for the **summary** field 
+6. Add your **assessment**
+7. Choose one or more **recommendations**
+8. Select a **case type** (see the :ref:`glossary/case-glossary:case types` for a detailed description of every case type)
+9. Select a **case status** (usually used to mark it as 'work in progress' or to forward it to the next team)
+10. Select a **display priority** (usually used to mark the importance of the case)
+11. Submit case by clicking the **Create Case** button
+
+.. figure:: ../images/cockpit_case_creation4.png
 
 Select Log Messages for a Case
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -80,35 +92,66 @@ choose ``Lucene Query``.
    Lucene Query
 
 .. note:: 
-   You can Alt/Shift click items in the top field view to add them as a ``NOT`` filter to your search. 
+   You can Alt/Shift click items in the top field view to add them as a ``NOT`` filter to your search.
+
+Case Creation Using a Condition
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note::
+   ``Condition`` Cases are widely used since their Condition is easier
+   to read and can be modify. This is why we recommend to use them, especially
+   in bigger organizations, with multiple people working on multiple cases.
+
+To create a case with a condition, click the ``Create Case`` button and
+select ``Condition``. Any filter set before clicking the ``Create Case``
+button will appear automatically in this view. This makes it very easy to work with.
+
+Keywords in the same field are combined by **OR**, you can negate them by
+clicking the ``NOT`` button or combine them with **AND** by clicking the
+``Add AND Condition`` button. The filter bubbles you have generated before
+will be used as default. You are free to use, modify or delete them.
+Conditions only match on the ``raw`` field.
+
+The ``Test Condition`` button will calculate the numbers of hits and
+return some matching and some non-matching events as an example.
+
+.. figure:: ../images/cockpit_case_creation2.png
+   :alt: Creating Cases through Condition
+
+   Creating Cases through Condition
+
+Again, you may or may not add auto assignment for future incoming
+log lines, summary, assessment, case type, recommendations or a comment.
+After closing you will find the selected logs have been removed from the
+logs section.
 
 Case Creation from Search Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This is the most relevant way to create a case. Create the filters, so
+.. note::
+   Since the ``Event Assignment`` logic of ``Search Result`` cases cannot be modified,
+   we do not recommend to use this method to create cases in bigger organizations.
+   If you do not need to change the logic how events are assigned to certain cases,
+   this is the best method to use.
+
+This is the easiest way to create a case. Create the filters, so
 that you only see the logs you want to be contained in your case. Then
 click the ``Create Case`` button, select ``Search results`` and add a name,
 that makes sense to you.
 
 If you want future incoming logs with the same log lines automatically assigned to this
-case, you have to tick the checkbox ``Automatically assign newly incoming events to this case.``.
+case, you have to tick the checkbox ``Automatically assign newly incoming events to this case.``
 
-.. figure:: ../images/cockpit_assign_new_events_to_case.png
-   :alt: Assign New Events to Cases
+.. figure:: ../images/cockpit_search_result_case.png
+   :alt: Search Result Case
 
-You may add a summary to your case.
+The ``Case Details`` screen is the same regardless of which ``Event Assignment``
+logic you chose to use for your chase. After creating your case, you will find the log section
+empty. This is because the view is still using your filter, but the matching log lines
+have been removed from this section and added to the case (again, the baselining view only
+shows events which are not part of a case).
 
-.. figure:: ../images/cockpit_create_baseline_case.png
-   :alt: Baselining - Create Case
-
-   Baselining – Create Case
-
-You may or may not add assessment, case type, recommendations or a
-comment. After closing you will find the log section empty, as it is
-still using your filter, but the matching log lines have been removed
-from this section and added to the case.
-
-.. figure:: ../images/cockpit_create_baseline_case_empty_search.png
+.. figure:: ../images/cockpit_empty_search.png
    :alt: Log Section empty
 
    Log Section empty
@@ -123,7 +166,7 @@ the checkboxes at the very left side of the table and click the ``Create Case`` 
 select ``Selected events`` and add a name, that makes sense
 to you.
 
-.. figure:: ../images/cockpit_case_creation_selection1.png
+.. figure:: ../images/cockpit_case_creation_selection.png
    :alt: Creating Cases from Selection
 
    Creating Cases from Selection
@@ -131,42 +174,14 @@ to you.
 After closing you will find the selected logs have been removed from the
 logs section.
 
-Case Creation Using a Custom Condition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To create a case with a condition, click the ``Create Case`` button and
-select ``Condition``. Now you can build a condition by entering keywords
-in the field.
-
-Keywords in the same field are combined by **OR**, you can negate them by
-clicking the ``NOT`` button or combine them with **AND** by clicking the
-``Add AND Condition`` button. The filter bubbles you have generated before
-will be used as default. You are free to use, modify or delete them.
-Conditions only match on the ``raw`` field.
-
-The ``Test Condition / Regular Expression`` button will calculate the
-numbers of hits and return some matching and some non-matching events as
-an example.
-
-.. figure:: ../images/cockpit_case_creation_condition.png
-   :alt: Creating Cases through Condition
-
-   Creating Cases through Condition
-
-Again, you may or may not add auto assignment for future incoming
-log lines, summary, assessment, case type, recommendations or a comment.
-After closing you will find the selected logs have been removed from the
-logs section.
-
 Case Creation Using a Regular Expressions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In order to create a case from a regular expression just click the
-``Create Case`` button and select 
-``Regular Expression``. This lets you
+``Create Case`` button and select ``Regular Expression``. This lets you
 write and test your regular expression.
 
-The ``Test Condition / Regular Expression`` button will calculate the
+The ``Test Regular Expression`` button will calculate the
 numbers of hits and return some matching and some non-matching events as
 an example.
 
@@ -175,113 +190,12 @@ an example.
 
    Creating Cases through Regular Expressions
 
-Again, you may or may not add auto assignment for future incoming
-log lines, summary, assessment, case type, recommendations or a comment.
-After clicking the ``Create Case`` button, the matching lines will get
-removed from the log management view.
-
 .. warning:: 
-   It is recommended to use regular expressions only rarely and with
-   caution. This feature can severely impact the performance of the system. Regex from cases will be applied to every single event on import.
+   We recommended to use regular expressions only **rarely** and **with
+   caution**. This feature can severely impact the performance of the system.
+   Regex from cases will be applied to every single event on import.
 
-Elasticsearch uses Apache Lucene's regular expression engine to parse these queries. Please take a look at the Elasticsearch manual for further information about the regular expression syntax:  
+Elasticsearch uses Apache Lucene's regular expression engine to parse these
+queries. Please take a look at the Elasticsearch manual for further
+information about the regular expression syntax:  
 https://www.elastic.co/guide/en/elasticsearch/reference/current/regexp-syntax.html
-
-ChatGPT Integration
-^^^^^^^^^^^^^^^^^^^
-
-You can use our ChatGPT integration to help with case creation. To do this
-you need to have a ChatGPT API key. Navigate to ``Settings`` > ``Advanced`` >
-``ChatGPT Integration``. Here you can enter your API key. You can test the
-ChatGPT integration in the prompt at the bottom, to make sure everything is
-working.
-
-.. figure:: ../images/cockpit_chatgpt-integration.png
-   :alt: ChatGPT Integration
-
-   ChatGPT Integration
-
-.. hint::
-   If you wish to interact with ChatGPT while safeguarding sensitive information,
-   consider using the :ref:`baselining/case-creation1:event anonymization` feature.
-
-ChatGPT Case Creation Insights
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-After you configured the ChatGPT integration, you can use it in the case creation
-dialog. Click on the ChatGPT icon in the case creation dialog to gain more insights
-regarding the events you are working with.
-
-.. figure:: ../images/cockpit_chatgpt-case-creation.png
-   :alt: ChatGPT Case Creation
-
-   ChatGPT Case Creation
-
-Once you clicked the button, a new dialog will open. Here you can see which information
-will be send to ChatGPT. Once you are confident with the information, click on the
-``Approve`` button. The Analysis Cockpit will now send the information to ChatGPT and
-display the results after a short moment.
-
-.. figure:: ../images/cockpit_chatgpt-case-confirmation.png
-   :alt: ChatGPT Case Confirmation
-
-   ChatGPT Case Confirmation
-
-Once the analysis is done, you will see the results in the dialog. You can now use the
-information to create a case.
-
-.. figure:: ../images/cockpit_chatgpt-case-results.png
-   :alt: ChatGPT Case Results
-
-   ChatGPT Case Results
-
-.. hint::
-   Please note that ChatGPT will give you a summary and recommendations based on the
-   information you provided. It is always recommended to review the information and
-   adjust it if necessary.
-
-ChatGPT Event Explanation
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can use ChatGPT in your Baselining or All Events view to get more insights
-regarding the events you are working with. To do this you can either:
-
-- Mark the selected information within your event (for example ``MATCHED_1``) and
-  right click on it. You will see an option in the context menu called ``Chat with ChatGPT``
-- Just right click an event and select ``Chat with ChatGPT (whole event)`` from the context
-  menu
-
-You will see a sidebar which has alreay the information you selected or the whole event
-filled in. You can now click on the ``Send`` button to send the information to ChatGPT.
-If you need further information you can interact with ChatGPT in the sidebar.
-
-.. figure:: ../images/cockpit_chat-with-chatgpt.png
-   :alt: Chat with ChatGPT
-
-   Chat with ChatGPT
-
-The results will look something like this:
-
-.. figure:: ../images/cockpit_chat-with-chatgpt-results.png
-   :alt: ChatGPT Event Explanation
-
-   ChatGPT Event Explanation
-
-Please make sure to either review the information before sending it to ChatGPT or
-use the :ref:`baselining/case-creation1:event anonymization` feature to safeguard
-sensitive information.
-
-Event Anonymization
-~~~~~~~~~~~~~~~~~~~
-
-Event Anonymization Rules can be used to replace any text in your events when
-sending a request to ChatGPT. This is useful when you want to interact with
-ChatGPT while safeguarding sensitive information. You can create a new rule by
-clicking on the ``Create Rule`` button in ``Settings`` > ``Advanced`` > ``Event
-Anonymization``. You can add multiple rules and test them in the prompt at the
-bottom.
-
-.. figure:: ../images/cockpit_event-anon-rule.png
-   :alt: Event Anonymization Rule
-
-   Event Anonymization Rule

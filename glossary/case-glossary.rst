@@ -12,7 +12,8 @@ This group has been formed automatically by the use filters generated
 from predefined filter templates (see Glossary > Invisible > Filter
 Templates).
 
-Auto Case IDs identify a groupable set of events.
+Auto Case IDs identify a set of events which are able to be grouped
+together.
 
 The Auto Case IDs are used in case creation as the default method to
 assign new events to a case. You can review the Auto Case IDs used to

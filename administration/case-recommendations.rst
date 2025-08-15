@@ -1,9 +1,11 @@
-.. Index:: Canned Recommendations
+.. Index:: Case Recommendations
 
-Configure Canned Recommendations
---------------------------------
+Case Recommendations
+--------------------
 
-Canned recommendations are predefined actions that can be used within a
+``>Settings\Case Management\Recommendations``
+
+Case Recommendations are predefined actions that can be used within a
 case. The recommendations are fully configurable and are aimed to
 facilitate choice making regarding the action that should be applied for
 a specific case. There is no need to set this up, but we suggest doing
@@ -16,4 +18,4 @@ Recommendations can also be added by any user from within a case.
 .. figure:: ../images/cockpit_case_recommendations.png
    :alt: Case Management - Recommendations
 
-   Case Management- Recommendations
+   Case Management - Recommendations

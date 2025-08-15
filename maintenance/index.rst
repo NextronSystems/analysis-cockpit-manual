@@ -13,6 +13,7 @@ which are not found in your Web UI.
     diagnostics
     retention
     backup
+    optimize
     extending-lvm
     disk-space
     elasticsearch

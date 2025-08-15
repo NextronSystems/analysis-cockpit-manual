@@ -14,6 +14,7 @@ the following command (this will overwrite the existing certificate!):
 .. code-block:: console
 
    nextron@asgard:~$ sudo openssl req -new -newkey rsa:4096 -days 182 -nodes -x509 -subj "/O=Nextron Systems GmbH/CN=$(hostname --fqdn)" -keyout /etc/asgard-analysis-cockpit/http.key -out /etc/asgard-analysis-cockpit/http.pem
+   nextron@asgard:~$ sudo chown -R analysiscockpit: /etc/asgard-analysis-cockpit
 
 You need to restart the Analysis Cockpit in order for the changes to take effect.
 

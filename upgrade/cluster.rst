@@ -14,7 +14,7 @@ and the Analysis Cockpit itself before starting your upgrade.
 .. danger::
    Please do not update your Analysis Cockpit before you update
    your Elasticsearch Cluster Nodes. This can potentially break
-   your enviornment.
+   your environment.
 
 Preparation
 ^^^^^^^^^^^

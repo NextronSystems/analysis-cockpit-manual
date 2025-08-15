@@ -3,6 +3,8 @@
 Data Retention
 --------------
 
+``>Settings\Advanced\Data Retention``
+
 You can configure the Data Retention Policy for your Analysis Cockpit.
 This will delete old events from the database, based on the retention
 policy rules you have defined. This is useful to keep the database size
@@ -13,12 +15,10 @@ manage your disk space usage.
 
 
 .. hint::
-   Data Retention takes the import timestamp '@timestamp' into account to decide whether an event should be deleted or not.
+   Data Retention takes the import timestamp ``@timestamp`` into account
+   to decide whether an event should be deleted or not.
 
-The Data Retention Policy is configured in ``Settings`` > ``Advanced`` >
-``Data Retention``.
-
-.. figure:: ../images/cockpit_data-retention.png
+.. figure:: ../images/cockpit_data_retention.png
    :alt: Data Retention
 
    Data Retention
@@ -38,7 +38,7 @@ There are multiple options within the Data Retention Policy:
   statuses. This policy will only apply to cases which have the "default" retention
   period set (see next option).
 
-  .. figure:: ../images/cockpit_data-retention-per-case-type-status.png
+  .. figure:: ../images/cockpit_data_retention_per_case_type_status.png
       :alt: Data Retention - Case Type / Status
 
       Data Retention - Case Type / Status
@@ -52,7 +52,7 @@ There are multiple options within the Data Retention Policy:
   - **Indefinite** - keeps all events indefinitely.
   - **Custom** - allows you to specify a custom retention period in days.
 
-   .. figure:: ../images/cockpit_data-retention-per-case.png
+   .. figure:: ../images/cockpit_data_retention_per_case.png
          :alt: Data Retention - Case
    
          Data Retention - Case
@@ -66,7 +66,7 @@ There are multiple options within the Data Retention Policy:
   The reason for this is that this setting is taking precedence over the
   other settings. Please use this option with caution.
 
-  .. figure:: ../images/cockpit_data-retention-general.png
+  .. figure:: ../images/cockpit_data_retention_general.png
       :alt: Data Retention - General
 
       Data Retention - General
@@ -74,7 +74,7 @@ There are multiple options within the Data Retention Policy:
 - **Others** - this deletes raw data on disk and sandbox files older than
   the specified number of days. Default value: 0 for both.
 
-  .. figure:: ../images/cockpit_data-retention-other.png
+  .. figure:: ../images/cockpit_data_retention_other.png
       :alt: Data Retention - Others
 
       Data Retention - Others
@@ -91,7 +91,7 @@ There are multiple options within the Data Retention Policy:
   (by default, 20%). If you need more free disk space, lower this threshold.
   If you're experiencing high CPU load, you can raise it.
 
-  .. figure:: ../images/cockpit_data-retention-settings.png
+  .. figure:: ../images/cockpit_data_retention_settings.png
       :alt: Data Retention - Settings
 
       Data Retention - Settings

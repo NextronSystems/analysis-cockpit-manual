@@ -3,17 +3,15 @@
 TLS Certificate Installation
 ----------------------------
 
-Instead of using the pre-installed self-signed TLS Certificate,
-users should upload their own TLS Certificate for ASGARD. This
-will avoid browser warnings when navigating to your Analysis
-Cockpit's web interface.
+``>Settings\System\TLS``
 
-In order to achieve the best possible compatibility with the
-most common browsers, we recommend using the system's FQDN
-in both fields ``Common Name`` AND ``Hostnames``.
+Instead of using the self-signed TLS certificate which comes pre-installed
+on your Analysis Cockpit, you should consider using your own TLS certificate.
+This will avoid browser warnings when navigating to your Analysis Cockpit's
+web interface.
 
-Navigate to the ``TLS`` section via the ``Settings`` menu.
-You can click ``Generate CSR`` to open the following modal.
+You can click ``Generate CSR`` to open the following modal which
+lets you specify the information needed for the CSR.
 
 .. figure:: ../images/cockpit_new_csr.png
    :alt: Generate a Certificate Signing Request (CSR)
@@ -21,11 +19,12 @@ You can click ``Generate CSR`` to open the following modal.
    Generate a Certificate Signing Request (CSR)
 
 .. hint::
-   Please note that generating a CSR on the command line is not supported.   
+   In order to achieve the best possible compatibility with most browsers, we
+   recommend using the system's FQDN in both fields ``Common Name`` AND ``Hostnames``. 
 
-The generated CSR can be used to generate a TLS Certificate.
-Subsequently, this TLS Certificate can be uploaded in the in
-the same section of your Analysis Cockpit.
+The generated CSR can be used to generate a TLS certificate via your
+Certificate Authority. The resulting TLS certificate can then be
+uploaded in the in the same section of your Analysis Cockpit.
 
 .. figure:: ../images/cockpit_upload_certificate.png
    :alt: Upload a TLS Certificate
@@ -35,35 +34,66 @@ the same section of your Analysis Cockpit.
 Configure LDAP
 --------------
 
-The ``LDAP`` tab in the ``Users and Roles`` section lets you configure
-an LDAP server and define mappings between LDAP groups and roles within
-the Analysis Cockpit.
+``>Settings\Users and Roles\LDAP``
 
-.. figure:: ../images/cockpit_ldap.png
+This section lets you configure a remote LDAP server to integrate with your
+Analysis Cockpit. This lets you use existing LDAP/Windows Domain users to log
+into the Analysis Cockpit, as well as define mappings between LDAP groups and
+roles within the Analysis Cockpit.
+
+.. figure:: ../images/cockpit_ldap1.png
    :alt: Configure LDAP 
 
    Configure LDAP
 
-Configure Notifications
------------------------
+.. figure:: ../images/cockpit_ldap2.png
+   :alt: Configure LDAP 
 
-As described in :ref:`basic-concepts/cases:cases and log processing`, the
-Analysis Cockpit is able to forward logs to a SIEM system in case
-this particular log line was added automatically to a case with the type "Incident".
+   Configure LDAP
 
-The ``Notifications`` section in the ``Case Management`` settings allow
-you to define custom notifications for event assignments (Event Assignment
-Notifications). It is recommended to at least configure an Event Assignment
-Notification for events that get added to existing **Incident** cases.
+Cockpit Notifications
+---------------------
 
-Additionally, notifications can be defined for changes to cases (Case
-Change Notifications), so Level 2 analysts can get notified if a case
-gets added to their in-queue (e.g., Finished Level 1).
+``>Settings\Case Management\Notifications``
 
-The notification itself can be a syslog message or an email. In order to
-use email for notifications you have to setup an email account in the
-``Mail Account`` Tab. Additionally webhook support has been added to
-facilitate interfacing to services like Slack.
+You can define custom notifications for the following types:
+
+- **Case Intelligence Match**
+  
+  * Case Intelligence Notifications are triggered when incoming events
+    match a template for the first time. You can configure what kind
+    of suggested cases trigger a notification, based on the case's type.
+
+- **Case Change**
+
+  * Case Change Notifications are triggered when a new case is created
+    or an existing case is updated. You can configure what kind of cases
+    trigger a notification, based on the case's status or type.
+
+- **Unassigned Event**
+
+  * Unassigned Event Notifications are triggered when newly incoming events
+    are not automatically assigned to existing cases. You can configure what
+    kind of events trigger a notification, based on the event's level or score.
+
+- **Event Assignment**
+
+  * Event Assignment Notifications are triggered when newly incoming events are
+    automatically assigned to existing cases. You can configure what kind of
+    cases trigger a notification, based on the case's status or type.
+
+- **New Asset Affected**
+
+  * Asset Affected Notifications are triggered when an asset is affected by a
+    case for the first time. You can configure what kind of cases trigger a
+    notification, based on the case's status or type.
+
+The notification targets can be the following:
+
+- Application (This shows a notification in the Analysis Cockpit)
+- Syslog
+- Email (SMTP has to be configured to use this)
+- Webhook
 
 .. figure:: ../images/cockpit_notifications.png
    :alt: Case Management - Notifications
@@ -75,48 +105,39 @@ facilitate interfacing to services like Slack.
    one email every 15 minutes. Syslog and Webhooks are triggered in real
    time for every single event.
 
-Additionally, you can see the notifications in the top right corner (bell
-icon) and inspect them. You will see all ``Unread`` notifications, which can
-be ``Acknowledged`` by selecting one or more notification and clicking
-``Acknowledge``. Only ``Unread`` notifications will show up in the top right
-status bar of the Cockpit.
+Below you can see how **Application Notifications** look like. You can see
+the bell icon in the top right corner and view all ``unread`` notifications
+by clicking the icon. ``Unread`` notifications can be ``Acknowledged`` by
+selecting one or more notification and clicking ``Acknowledge``. The
+notification bell in the status bar will only show an indicator if you
+have unread notifications.
 
-.. figure:: ../images/cockpit_notifications2.png
+.. figure:: ../images/cockpit_notifications_indicator.png
    :alt: UI Notification Bell
 
    UI Notification Bell
 
-.. figure:: ../images/cockpit_notifications3.png
+.. figure:: ../images/cockpit_notifications_details.png
    :alt: UI Notifications
 
    UI Notifications
 
-Configure Event Assignment Notifications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+It is recommended to configure an *Event Assignment Notification* for events
+that get added to existing **Incident** cases.
 
-To configure log notifications, click the ``Add Event Assignment
-Notification`` button in the ``Notifications`` section of the 
-``Case Management`` menu. This leads you to a form that allows
-you to set a name for your notification, the notification type (syslog,
-email, webhook or notification within the Analysis Cockpit) and
-the condition that will trigger your notification.
+Configure Notifications
+^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../images/cockpit_event_assignment_notification.png
-   :alt: Event Assignment Notification
+``>Settings\Case Management\Notifications``
 
-   Event Assignment Notification
+To configure notifications, click the ``Create Notification`` button.
+This leads you to a form that allows you to set a name for your
+notification, the notification type (syslog, email, webhook or notification
+within the Analysis Cockpit) and the condition that will trigger your notification.
 
-Configure Case Change Notifications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. figure:: ../images/cockpit_create_notification.png
+   :alt: Example Notification Creation
 
-To configure Case Change Notifications, click the 
-``Add Case Change Notification`` button in the ``Notifications``
-section of the ``Case Management`` menu. This leads you to
-a form that allows setting a name for your notification, the
-notification type (syslog, email, webhook or notification within
-the Analysis Cockpit) and the condition that will trigger your notification.
+   Example Notification Creation
 
-.. figure:: ../images/cockpit_case_assignment_notification.png
-   :alt: Case Change Notification 
-
-   Case Change Notification
+You can have multiple **Notifications**, also of the same type.

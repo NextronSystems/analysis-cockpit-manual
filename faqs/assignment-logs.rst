@@ -6,7 +6,7 @@ Disabling Assignment Logs
 **Q: My assignment Logs on the server are growing quickly, how can
 I turn them off**
 
-The assignment logs located at ``/var/lib/asgard-analysis-cockpit/log/assignment.log``
+The assignment logs located at ``/var/log/asgard-analysis-cockpit/assignment.log``
 write warnings and errors for the ``Optimize`` function of the Cockpit.
 
 If you have the feeling that the log is filling up too quickly, you can
@@ -21,12 +21,12 @@ later time):
 
 .. code-block:: console
 
-   nextron@cockpit:~$ echo "REPLACE INTO config VALUES ('write-assignment-log','false')" | sudo mysql analysiscockpit
+   nextron@cockpit:~$ sudo mysql analysiscockpit -e "REPLACE INTO config VALUES ('write-assignment-log','false')"
    nextron@cockpit:~$ sudo systemctl restart asgard-analysis-cockpit.service
 
 To turn back on the ``assignment.log``, run the following command:
 
 .. code-block:: console
 
-   nextron@cockpit:~$ echo "REPLACE INTO config VALUES ('write-assignment-log','true')" | sudo mysql analysiscockpit
+   nextron@cockpit:~$ sudo mysql analysiscockpit -e "REPLACE INTO config VALUES ('write-assignment-log','true')"
    nextron@cockpit:~$ sudo systemctl restart asgard-analysis-cockpit.service
