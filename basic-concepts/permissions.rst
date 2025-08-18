@@ -3,6 +3,9 @@
 Understanding Users, Roles, Rights and Case Status
 --------------------------------------------------
 
+| ``>Settings\Users and Roles\Roles``
+| ``>Settings\Case Management\ Case Status``
+
 The rights and roles model within the cockpit is aimed to support large
 multinational organizations with different independent users working
 with the case management at the same time. An organization responsible
@@ -43,33 +46,23 @@ all Analysis Cockpit with this workable template by default. You are
 free to use, modify or delete the corresponding rights, statuses and
 roles.
 
-However, in order to explain the concepts and the setup of roles and
-statuses better we assume for a while, we had an empty cockpit with no
-roles and statuses pre-configured.
-
-In order to set up our pre-configured example, we navigate to the
-``Settings`` section and create the following roles:
-
 .. figure:: ../images/cockpit_roles.png
-   :alt: Settings - adding additional roles
+   :alt: Roles
 
-   Settings – adding additional roles
+   Roles
 
-Every role can have different rights. We will explain this in detail in
-the next section. Firstly, we create Level 1 Analyst and Level 2 Analyst
-without rights at all.
-
-After that we define the following statuses:
+Every Role can have different rights, corresponding to one specific status.
+The predefined statuses come with a **Sort Order** (you might need to display
+this column). This is the order those statuses are shown when you are
+creating/updating a case.
 
 .. figure:: ../images/cockpit_case_status.png
-   :alt: Settings - Case Status
+   :alt: Case Status
 
-   Settings – Case Status
+   Case Status
 
-.. TO-DO change screenshots
-
-In the lower table you can manage the access rights for every role and
-every Case Status. We can give the suitable rights to our generated
+In the lower table you can manage the access rights for every **Role** and
+every **Case Status**. We can give the suitable rights to our generated
 roles by clicking the ``New Rights for Case Status`` button on the right.
 
 .. figure:: ../images/cockpit_new_rights_case_status.png
@@ -77,42 +70,38 @@ roles by clicking the ``New Rights for Case Status`` button on the right.
 
    Edit Rights – Read, Write, Set
 
-For Level 1 Analyst we add the right to read and write all "Open" cases
-and change the case status to this status (set).
+The three permissions can be explained as follows:
 
-Additionally, we grant Level 1 Analyst the rights to read, write and set
-all cases for "Level 1 Working".
+- Read
+  
+  - The selected **Role** can read from the defined **Case Status**
+  - If this permission is set, any Case with this Status can be seen
 
-Finally, we grant the right to read and set cases for the status ``Level1 Finished``. 
-This allows Level 1 Analysts to set a particular case to
-"Level 1 Finished" and restricts them from modifying this case once they
-have passed it to this status.
+- Write
+  
+  - The selected **Role** can write/modify the defined **Case Status**
+  - If this permission is set, any Case with this Status can be modified
 
-For Level 2 we now add the rights to read and write cases for 
-"Level 1 Finished" and the rights to read, write and set cases for 
-"Level 2 Working". This allows Level 2 analysts to pick cases from the 
-"Level 1 Finished" status and start working on them.
+- Set
+  
+  - The selected **Role** can set a case to the defined **Case Status**
+  - Role can change the case status to this status even without having write permissions for it
 
-As we do not want Level 2 Analysts to reopen cases, that have already
-been closed we only grant them rights to read and set for the status
-"Closed".
+To visualize the role and case status relationship, we created the table below:
 
-Additionally, we give Level 2 Analyst the right to set the case status
-to "Open".
+.. list-table::
+    :header-rows: 1
+    :widths: 25 25 25 25
 
-After that, the ``Access rights for Case Status`` section looks like this:
+    * - User
+      - Role
+      - Case Status
+      - Permissions
+    * - User A
+      - Level 1 Analyst
+      - Open
+      - Read, Write, Set
 
-.. figure:: ../images/cockpit_access_rights_case_status.png
-   :alt: Settings - Access rights for Case Status
-
-   Settings – Access rights for Case Status
-
-Of course, this is only an example. You may of course decide to give
-Level 2 full access to all cases, and it may also be a good means of
-training to grant Level 1 Analysts the right to see the "Level 2 Working"
-and "Closed" cases. You may also want Level 2 Analysts to reopen 
-"Closed" cases or may restrict this right to an additional role. This just
-illustrates, that the system is highly configurable with an almost
-infinite number of statuses, roles and rights.
-
-Finally, you simply add users and add them to their particular role.
+User A, who is a member of the Role ``Level 1 Analyst``, can see (read) and modify (write)
+any case with the status ``Open``. They can also set **any** case, which they can **read**,
+to the status ``Open``.
