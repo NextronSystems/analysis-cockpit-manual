@@ -3,6 +3,22 @@
 Analysis Cockpit v4.3
 ---------------------
 
+Analysis Cockpit 4.3.1
+######################
+
+Release Date: Fri, 22 Aug 2025 07:15:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed an issue where the 'Grouping Criteria' checkbox in the 'Create Case' dialog was always treated as checked, even if unchecked
+    * - Bugfix
+      - Fixed an issue where non-admin users were logged out and temporarily blocked after a while due to repeated background bad requests
+
 Analysis Cockpit 4.3.0
 ######################
 
