@@ -3,6 +3,36 @@
 Analysis Cockpit v4.3
 ---------------------
 
+Analysis Cockpit 4.3.2
+######################
+
+Release Date: Mon, 17 Sep 2025 15:11:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed dashboard issue where the specified value count was ignored
+    * - Bugfix
+      - Fixed missing pre-filled summary field when creating a case
+    * - Bugfix
+      - Fixed case creation errors caused by missing 'scanner' field in imported or suggested cases
+    * - Bugfix
+      - Fixed problems with reconnecting the ASGARD Management Center
+    * - Bugfix
+      - Fixed wrong displayed labels on stacked bar chart 'Cases Created Over Time'
+    * - Bugfix
+      - Fixed missing context menu function in sidebar
+    * - Bugfix
+      - Fixed error message when testing event anonymization rules with invalid regex
+    * - Bugfix
+      - Fixed error in the advanced example of the Webhook Body Information section
+    * - Bugfix
+      - Fixed wrong last check timestamp for case itelligence feed
+
 Analysis Cockpit 4.3.1
 ######################
 
