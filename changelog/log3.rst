@@ -31,7 +31,7 @@ Release Date: Tue, 23 Sep 2025 13:37:00 +0200
     * - Bugfix
       - Fixed error in the advanced example of the Webhook Body Information section
     * - Bugfix
-      - Fixed wrong last check timestamp for case itelligence feed
+      - Fixed wrong last check timestamp for case intelligence feed
 
 Analysis Cockpit 4.3.1
 ######################
