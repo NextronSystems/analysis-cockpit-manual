@@ -8,7 +8,7 @@ Cockpit v4.
 
 .. note::
    If you are still using an older version of the Analysis Cockpit,
-   please click `here <https://analysis-cockpit-manual.nextron-systems.com/v3/>`__ 
+   please click `here <https://analysis-cockpit-manual.nextron-systems.com/en/v3/>`__ 
    to see the older version of the documentation.
 
 Analysis Cockpit is the central platform for analyzing THOR
