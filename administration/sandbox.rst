@@ -31,7 +31,7 @@ Click ``Add Sandbox`` in the top right corner to add a new sandbox. Keep the
    Adding a new Sandbox
 
 If you wish to enable automatic scanning for uploaded files
-(`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/administration/evidence.html>`_),
+(`Bifrost <https://asgard-manual.nextron-systems.com/latest/administration/evidence.html>`_),
 you can do so by checking the ``Automatic Mode``.
 
 Once you click ``Add`` the page will display an API token. Copy this token, you will need it later.
