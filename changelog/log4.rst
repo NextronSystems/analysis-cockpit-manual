@@ -6,7 +6,7 @@ Analysis Cockpit v4.4
 Analysis Cockpit 4.4.0
 ######################
 
-Release Date: 
+Release Date: Thu, 15 Jan 2025 16:16:00 +0100
 
 ----
 
