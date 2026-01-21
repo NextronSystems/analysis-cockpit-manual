@@ -3,10 +3,24 @@
 Analysis Cockpit v4.4
 ---------------------
 
+Analysis Cockpit 4.4.1
+######################
+
+Release Date: Tue, 20 Jan 2026 16:02:00 +0100
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed bug for imported condition when creating a new case
+
 Analysis Cockpit 4.4.0
 ######################
 
-Release Date: Thu, 15 Jan 2025 16:16:00 +0100
+Release Date: Thu, 15 Jan 2026 16:16:00 +0100
 
 ----
 
