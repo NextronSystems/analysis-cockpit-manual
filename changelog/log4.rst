@@ -3,6 +3,22 @@
 Analysis Cockpit v4.4
 ---------------------
 
+Analysis Cockpit 4.4.2
+######################
+
+Release Date: Fri, 23 Jan 2026 13:11:00 +0100
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed missing filter in affected assets
+    * - Bugfix
+      - Fixed validation bug when uploading a scan
+
 Analysis Cockpit 4.4.1
 ######################
 
