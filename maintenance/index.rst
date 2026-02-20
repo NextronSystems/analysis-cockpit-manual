@@ -3,9 +3,8 @@
 Maintenance
 ===========
 
-This chapter contains information on how you can
-regain disk space on your system or change settings
-which are not found in your Web UI.
+This chapter focuses more on general maintenance of
+yor application.
 
 .. toctree::
     :caption: Contents
@@ -14,7 +13,5 @@ which are not found in your Web UI.
     retention
     backup
     optimize
-    extending-lvm
-    disk-space
     elasticsearch
     cluster
