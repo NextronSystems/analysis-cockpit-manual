@@ -3,6 +3,26 @@
 Analysis Cockpit v4.4
 ---------------------
 
+Analysis Cockpit 4.4.3
+######################
+
+Release Date: Wed, 28 Jan 2026 16:18:00 +0100
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed autocompletion error in event-anonymization-table
+    * - Bugfix
+      - Fixed flickering tooltip on aggregation chart (events-table)
+    * - Bugfix
+      - Fixed render error when showing more information in event-details-row
+    * - UI
+      - Updated icons to be consistent for searching and filtering in the events-table
+
 Analysis Cockpit 4.4.2
 ######################
 
