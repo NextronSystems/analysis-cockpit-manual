@@ -49,8 +49,6 @@ how many days to sync, and paste your API key.
 
 If you delete a connection, the scans originating from that
 connection will **not** be deleted. You have to do this manually.
-Please see :ref:`maintenance/disk-space:deleting unneeded scans`
-for a reference on how to delete specific scans.
 
 Analyzing THOR Cloud Logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^
