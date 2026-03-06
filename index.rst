@@ -42,13 +42,11 @@ Analysis Cockpit.
    baselining/index
    case-management/index
    maintenance/index
-   pitfalls/index
-   faqs/index
+   troubleshooting/index
    issues/index
    upgrade/index
    glossary/index
    changelog/index
-
 
 Index
 =====

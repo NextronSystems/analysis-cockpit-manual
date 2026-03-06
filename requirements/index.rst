@@ -16,4 +16,3 @@ after the installation.
     hardware
     network
     verify
-    other
