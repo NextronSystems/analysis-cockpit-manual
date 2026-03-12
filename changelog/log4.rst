@@ -3,6 +3,46 @@
 Analysis Cockpit v4.4
 ---------------------
 
+Analysis Cockpit 4.4.5
+######################
+
+Release Date: Mon, 02 Mar 2026 13:15:00 +0100
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Feature
+      - Added case import from suggested cases
+    * - Security
+      - Encrypted LDAP password in configuration
+    * - Security
+      - Hardened backup validation against zip slip and rsyslog injection
+    * - Bugfix
+      - Fixed wrong operator used in AQL filter
+    * - Bugfix
+      - Fixed AQL parser silently dropping unparseable parts and mixed OR/NOT handling
+    * - Bugfix
+      - Fixed filtering multiple values in raw field with contains operator
+    * - Bugfix
+      - Fixed unsupported operators shown for raw fields
+    * - Bugfix
+      - Fixed page scrolling to top when adding filter for THOR events
+    * - Bugfix
+      - Fixed depth guard issue in AQL parser
+    * - Bugfix
+      - Fixed escape handling for backslashes and quotes in context menu search bubbles
+    * - Bugfix
+      - Fixed backslash handling in case conditions
+    * - Bugfix
+      - Fixed case import (update case) and case export (use selection)
+    * - Bugfix
+      - Fixed Case Intelligence Feed last check timestamp showing false warning
+    * - Bugfix
+      - Fixed AQL parser rejecting invalid IN/NOT IN syntax and improved type safety in condition builder
+
 Analysis Cockpit 4.4.3
 ######################
 
