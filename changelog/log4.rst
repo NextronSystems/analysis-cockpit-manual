@@ -3,6 +3,50 @@
 Analysis Cockpit v4.4
 ---------------------
 
+Analysis Cockpit 4.4.6
+######################
+
+Release Date: Tue, 07 Apr 2026 13:15:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Security
+      - Fixed MFA bypass where TFARequired was true even when TFAValid was not set
+    * - Bugfix
+      - Fixed condition builder import silently dropping certain conditions
+    * - Bugfix
+      - Fixed scrolling to top when opening bubbles menu
+    * - Bugfix
+      - Fixed retention running constantly when no policies are configured
+    * - Bugfix
+      - Added maxsize for logrotate in asgard-analysis-cockpit
+    * - Bugfix
+      - Fixed race condition in fixed bubbles updater
+    * - Bugfix
+      - Fixed filter forwarding and case statistics sync while editing
+    * - Bugfix
+      - Fixed missing THOR and signatures version in scan table
+    * - Bugfix
+      - Fixed 24-hour time format and datetime precision in incoming events
+    * - Bugfix
+      - Fixed scan parameter display for resource control badges
+    * - Bugfix
+      - Fixed double escaping in search/filter context menu actions
+    * - Bugfix
+      - Fixed backslash and quote escaping in AQL reason query for baselining
+    * - Bugfix
+      - Fixed forwarding from matching events
+    * - Bugfix
+      - Fixed duplicate filter bubbles via addEntryToBubbles
+    * - Bugfix
+      - Fixed aggregation chart filter returning no results for long strings by truncating to ES keyword limit
+    * - Bugfix
+      - Fixed aggregation detail sidebar filter always using equals operator for long strings
+
 Analysis Cockpit 4.4.5
 ######################
 
