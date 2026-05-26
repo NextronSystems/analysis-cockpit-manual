@@ -3,6 +3,30 @@
 Analysis Cockpit v4.4
 ---------------------
 
+Analysis Cockpit 4.4.7
+######################
+
+Release Date: Mon, 25 May 2026 11:38:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Security
+      - OS Security Fix
+    * - Feature
+      - Linked cases and assets from matches signatures dashboard
+    * - Feature
+      - Focused MFA input on login
+    * - Feature
+      - Reduced polling frequency when optimize is not running
+    * - Bugfix
+      - Disallowed creating cases with invalid conditions
+    * - Bugfix
+      - Fixed scans from THOR cloud not being listed
+
 Analysis Cockpit 4.4.6
 ######################
 
