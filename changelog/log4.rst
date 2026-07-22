@@ -3,6 +3,20 @@
 Analysis Cockpit v4.4
 ---------------------
 
+Analysis Cockpit 4.4.8
+######################
+
+Release Date: Mon, 25 May 2026 11:38:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Bugfix
+      - Fixed search by events filter criteria combination
+
 Analysis Cockpit 4.4.7
 ######################
 
