@@ -6,7 +6,7 @@ Analysis Cockpit v4.4
 Analysis Cockpit 4.4.8
 ######################
 
-Release Date: Mon, 25 May 2026 11:38:00 +0200
+Release Date: Tue, 21 Jul 2026 11:00:00 +0200
 
 .. list-table::
     :header-rows: 1
