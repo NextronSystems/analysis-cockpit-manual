@@ -3,6 +3,30 @@
 Analysis Cockpit v4.4
 ---------------------
 
+Analysis Cockpit 4.4.9
+######################
+
+Release Date: Mon, 17 Aug 2026 11:00:00 +0200
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15, 85
+
+    * - Type
+      - Description
+    * - Feature
+      - Added Suggested Cases metrics with matched-ratio visualization
+    * - Bugfix
+      - Added an upgrade progress page instead of logging out the user starting an upgrade
+    * - Bugfix
+      - Blocked logins while a system upgrade is running
+    * - Bugfix
+      - Fixed restore failing due to augeas backup files
+    * - Bugfix
+      - Fixed restore crash and error notifications
+    * - Bugfix
+      - Fixed optimize status not showing immediately after starting a run
+
 Analysis Cockpit 4.4.8
 ######################
 
