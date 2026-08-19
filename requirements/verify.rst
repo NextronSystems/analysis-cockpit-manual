@@ -42,7 +42,7 @@ or in Powershell
   
   Algorithm       Hash                                                                   Path
   ---------       ----                                                                   ----
-  SHA256          EFCCB4DF0A95AA8E562D42707CB5409B866BD5AE8071C4F05EEC6A10778F354B       C:\Users\user\Desktop\asgard2-installer\nextron-universal-installer.iso
+  SHA256          EFCCB4DF0A95AA8E562D42707CB5409B866BD5AE8071C4F05EEC6A10778F354B       C:\temp\nextron-universal-installer\nextron-universal-installer.iso
 
 Via Signature (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

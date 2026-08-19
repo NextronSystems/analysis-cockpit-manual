@@ -4,7 +4,7 @@ Glossary
 ========
 
 This chapter contains explanations about wording used
-in the Analysis Cockpit and our ASGARD products.
+in the Analysis Cockpit and other Nextron products.
 
 .. toctree::
     :caption: Contents

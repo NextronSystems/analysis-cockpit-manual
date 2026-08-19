@@ -3,6 +3,8 @@
 Analysis Cockpit v4.0
 ---------------------
 
+This chapter contains all the changes of the Analysis Cockpit.
+
 Analysis Cockpit 4.0.13
 #######################
 
@@ -34,9 +36,6 @@ Release Date: Tue, 20 Feb 2024 16:20:00 +0200
       - Fixed error on creating new cases based on condition and time range
     * - Bugfix
       - Fixed non-working ntp service restart after ntp configuration changes
-
-This chapter contains all the changes of the ASGARD
-Analysis Cockpit.
 
 Analysis Cockpit 4.0.10
 #######################
