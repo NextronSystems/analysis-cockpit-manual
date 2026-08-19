@@ -1,21 +1,21 @@
 .. Index:: Link Management Center
 
-Link ASGARD Management Center
------------------------------
+Link Management Center
+----------------------
 
 ``>Settings\Connected Systems\Management Center``
 
-In order to receive log data from your ASGARD Management Center(s), add
+In order to receive log data from your Management Center(s), add
 them in the corresponding section in the system settings:
 
-.. figure:: ../images/cockpit_link_asgard_mc.png
-   :alt: Link ASGARD Management Center
+.. figure:: ../images/cockpit_link_mc.png
+   :alt: Link Management Center
 
-   Link ASGARD Management Center
+   Link Management Center
 
 After you have connected the two components, all assets along with additional
-information from ASGARD will show up in the ``Assets`` section of your Analysis
-Cockpit.
+information from Management Center will show up in the ``Assets`` section of
+your Analysis Cockpit.
 
 .. figure:: ../images/cockpit_assets.png
    :alt: Asset View after a Successful Connection
@@ -35,8 +35,8 @@ However, in some cases it makes sense to change perspective and rather
 go for a host centric approach. The Analysis Cockpit will calculate
 numbers of lines in different case types (Incident, Suspicious, Anomaly,
 etc.) on a per host basis for a given time frame. Information from the
-ASGARD, such as last scan dates, labels, host availability, and many more
-can allow for an entirely different perspective.
+Management Center, such as last scan dates, labels, host availability,
+and many more can allow for an entirely different perspective.
 
 By using the "Asset View" you can easily answer questions like:
 
@@ -49,13 +49,13 @@ By using the "Asset View" you can easily answer questions like:
 You can also set a time when an asset was compromised. This is useful
 when you want to see which systems were compromised in the last 30 days.
 
-In combination with the ``ASGARD Query`` and ``Labels``, which are pinned to your assets,
+In combination with the ``AQL`` and ``Labels``, which are pinned to your assets,
 you can even narrow down the events by system group
 (e.g., Domain Controllers, or certain locations).
 
-.. figure:: ../images/cockpit_asgard_query.png
+.. figure:: ../images/cockpit_aql.png
    :alt: Filtering within the Assets View 
 
    Filtering within the Assets view
 
-For more ``ASGARD Query`` examples, please open the Query Help on the right of the query input field (info icon).
+For more ``AQL`` examples, please open the Query Help on the right of the query input field (info icon).

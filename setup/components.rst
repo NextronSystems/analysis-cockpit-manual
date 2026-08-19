@@ -1,36 +1,36 @@
 .. Index:: Install Service
 
-Install the ASGARD Analysis Cockpit Service
--------------------------------------------
+Install the Analysis Cockpit
+----------------------------
 
 The Nextron Universal Installer is a web based installer
 which will guide you through the installation of our
-ASGARD products. The Nextron Universal Installer will install
+products. The Nextron Universal Installer will install
 **one** of the following products on your server (this manual
-focuses on the ``ASGARD Analysis Cockpit``):
+focuses on the ``Analysis Cockpit``):
 
-- ASGARD Management Center; alternatively if your license permits:
+- Management Center; alternatively if your license permits:
   
-  * ASGARD Broker
-  * ASGARD Gatekeeper
-  * ASGARD Lobby
+  * Broker
+  * Gatekeeper
+  * Lobby
 
-- Master ASGARD
+- Master Management Center
 
-- ASGARD Analysis Cockpit; alternatively:
+- Analysis Cockpit; alternatively:
   
-  * Elasticsearch Cluster Node for ASGARD Analysis Cockpit
+  * Elasticsearch Cluster Node for Analysis Cockpit
 
-- ASGARD Security Center, in the following variants:
+- Security Center, in the following variants:
 
-  * ASGARD Security Center (Backend Only)
-  * ASGARD Security Center (Frontend Only)
-  * ASGARD Security Center (All-in-one, unrecommended)
+  * Security Center (Backend Only)
+  * Security Center (Frontend Only)
+  * Security Center (All-in-one, unrecommended)
 
 .. note::
    You can only install one product on one server, since the
    products are not designed to coexist on the same server.
-   The exception being the ASGARD Security Center (All-in-one).
+   The exception being the Security Center (All-in-one).
 
 The installation takes roughly between 5-15 minutes, depending
 on your internet connection and the server you are installing
@@ -42,10 +42,10 @@ If you encounter problems during your installation, please see
 Requirements
 ~~~~~~~~~~~~
 
-The installation of the ASGARD Analysis Cockpit requires
+The installation of the Analysis Cockpit requires
 the following:
 
-- A valid license file for the ASGARD Analysis Cockpit
+- A valid license file for the Analysis Cockpit
 - A configured FQDN (with some exceptions, see :ref:`setup/components:valid fqdn`)
 - Internet access during installation (see :ref:`setup/components:connectivity check`)
 
@@ -57,14 +57,14 @@ you will be greeted at the console login prompt with
 the following message:
 
 .. figure:: ../images/setup_nextronInstaller.png
-   :alt: Login prompt ASGARD Server
+   :alt: Login prompt server
 
 Follow the instructions and navigate to the webpage
 displayed on your console. You will most likely get
 a browser warning when you connect the first time to
 the page. This is due to the page using a self signed
 certificate, since it will only be used to install the
-ASGARD Analysis Cockpit. You can safely ignore this
+Analysis Cockpit. You can safely ignore this
 warning and proceed to the page. Once the installation
 is complete, the certificate can be replaced by a signed
 certificate (see :ref:`administration/system-settings:tls certificate installation`)
@@ -98,8 +98,8 @@ Valid FQDN
 The Nextron Universal Installer will prompt you to verify the
 FQDN which you configured during the installation of the base
 system (see :ref:`setup/network:network configuration`). This
-is needed in order for your ASGARD Management Center to communicate
-via a HTTPs connection with the ASGARD Analysis Cockpit. The Management
+is needed in order for your Management Center to communicate
+via a HTTPs connection with the Analysis Cockpit. The Management
 Center will use the FQDN of your Analysis Cockpit to connect to
 it and also verify the Common Name of the certificate to verify its
 authenticity. If there is a mismatch the Management Center will
@@ -126,8 +126,8 @@ button in the left menu of the Nextron Universal Installer.
 
 If you configured a proxy during the ISO installation, those
 settings will be carried over into the Universal Installer.
-The settings will also be carried over into your ASGARD
-Analysis Cockpit. The same goes for NTP.
+The settings will also be carried over into your Analysis Cockpit.
+The same goes for NTP.
 
 Diagnostic Pack
 ~~~~~~~~~~~~~~~

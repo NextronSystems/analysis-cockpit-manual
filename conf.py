@@ -1,6 +1,6 @@
 import os
 
-project = 'ASGARD Analysis Cockpit v4 Manual'
+project = 'Analysis Cockpit v4 Manual'
 version="4.0"
 copyright = '2026, Nextron Systems GmbH'
 author = 'Nextron Systems'

@@ -85,7 +85,7 @@ Release Date: Tue, 07 Apr 2026 13:15:00 +0200
     * - Bugfix
       - Fixed retention running constantly when no policies are configured
     * - Bugfix
-      - Added maxsize for logrotate in asgard-analysis-cockpit
+      - Added maxsize for logrotate
     * - Bugfix
       - Fixed race condition in fixed bubbles updater
     * - Bugfix

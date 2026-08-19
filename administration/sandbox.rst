@@ -3,6 +3,11 @@
 Sandbox Integration
 -------------------
 
+.. warning::
+
+   This chapter is deprecated due to the ``Bifrost`` Module
+   being removed from the Management Center.
+
 You can configure your Analysis Cockpit to upload files to a local sandbox.
 Currently you can use `CAPEv2 <https://github.com/kevoreilly/CAPEv2>`_ only.
 
@@ -31,7 +36,7 @@ Click ``Add Sandbox`` in the top right corner to add a new sandbox. Keep the
    Adding a new Sandbox
 
 If you wish to enable automatic scanning for uploaded files
-(`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/administration/evidence.html>`_),
+(`Bifrost <https://management-center-manual.nextron-systems.com/en/v3/administration/evidence.html>`_),
 you can do so by checking the ``Automatic Mode``.
 
 Once you click ``Add`` the page will display an API token. Copy this token, you will need it later.

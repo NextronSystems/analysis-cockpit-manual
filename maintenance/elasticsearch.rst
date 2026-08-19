@@ -21,7 +21,7 @@ you can run the following command:
 .. code-block:: console
 
     nextron@cockpit:~$ sudo dpkg-reconfigure asgard-analysis-cockpit
-    Upgrading from ASGARD Analysis Cockpit '4.2.4'
+    Upgrading from Analysis Cockpit '4.2.4'
     The server currently has 7940 MB of total RAM.
     Successfully configured heap size of 3970 MB in /etc/elasticsearch/jvm.options.d/10-cockpit.options
 

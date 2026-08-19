@@ -21,7 +21,7 @@ Release Date: Tue, 23 Sep 2025 13:37:00 +0200
     * - Bugfix
       - Fixed case creation errors caused by missing 'scanner' field in imported or suggested cases
     * - Bugfix
-      - Fixed problems with reconnecting the ASGARD Management Center
+      - Fixed problems with reconnecting the Management Center
     * - Bugfix
       - Fixed wrong displayed labels on stacked bar chart 'Cases Created Over Time'
     * - Bugfix

@@ -23,5 +23,5 @@ very end. In this case the file will just end in the middle of a log line.
 
 The Logs can be imported into the Cockpit via the ``Scans`` menu. Select the Asset which
 had a problem with the log transfer and click ``Request Events``. This will transfer
-the Events from the corresponding ASGARD. You can also use the Fields **Log Requested**,
+the Events from the corresponding Management Server. You can also use the Fields **Log Requested**,
 **Log Received** and **Log Received Error** to filter and look for other failed log transmissions.
