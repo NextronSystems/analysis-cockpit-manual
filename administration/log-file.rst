@@ -13,34 +13,34 @@ show up in the Baselining Section as they match the predefined default
 cases for these events. We strongly advise to **not** delete those
 cases, as those event levels contribute to the majority of THOR events.
 
-All logs are tagged with a specific scan id – regardless of how the log
+All logs are tagged with a specific scan id - regardless of how the log
 was integrated. This enables filtering down to all logs contained in a
 specific scan.
 
-If an ASGARD Management Center is connected and the events were generated as
+If a  Management Center is connected and the events were generated as
 part of a group scan, those events are also tagged with this particular group
 scan id. This allows for filtering down to all logs of particular group
 scan.
 
-Assets are identified through the asset ID that was issued by the ASGARD
-Management Center during the setup of the ASGARD Agent. If this ID is
+Assets are identified through the asset ID that was issued by the
+Management Center during the setup of the Endpoint Agent. If this ID is
 not available to the Analysis Cockpit (e.g. log has been uploaded
 manually or sent through syslog) the hostname (NOT the FQDN) will be
 used instead.
 
-Direct Integration with ASGARD Management Center
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Direct Integration with the Management Center
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``>Scans\Scans``
 
-If the Analysis Cockpit is linked to one or more ASGARD Management
+If the Analysis Cockpit is linked to one or more Management
 Center, all THOR logs get integrated automatically and can be found
 in your Baselining and Events section. The same is true for Aurora
 events.
 
-To see how to connect an ASGARD Management Center with your Analysis
+To see how to connect a Management Center with your Analysis
 Cockpit, follow the instructions in the chapter
-:ref:`administration/amc:link asgard management center`.
+:ref:`administration/amc:link management center`.
 
 Syslog Input
 ^^^^^^^^^^^^

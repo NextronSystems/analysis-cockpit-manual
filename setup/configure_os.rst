@@ -8,7 +8,7 @@ The IP is configured with the ``address`` variable.
 
 .. code-block:: console
 
-   nextron@asgard-ac:~$ sudo vi /etc/network/interfaces
+   nextron@cockpit:~$ sudoedit /etc/network/interfaces
 
 .. code-block::
 
@@ -22,7 +22,7 @@ You can now restart ``networking.service`` to apply the changes.
 
 .. code-block:: console
 
-   nextron@asgard-ac:~$ sudo systemctl restart networking.service
+   nextron@cockpit:~$ sudo systemctl restart networking.service
 
 .. important::
    - The network interface might have a different name, so pay attention
@@ -36,11 +36,11 @@ The new IP can be applied with the command **sudo systemctl restart networking**
 Verifying DNS Settings
 ^^^^^^^^^^^^^^^^^^^^^^
 
-To verify if ASGARD is using the correct DNS Server, you can inspect the file ``/etc/resolv.conf``:
+To verify if your server is using the correct DNS Server, you can inspect the file ``/etc/resolv.conf``:
 
 .. code-block:: console
 
-   nextron@asgard-ac:~$ cat /etc/resolv.conf 
+   nextron@cockpit:~$ cat /etc/resolv.conf 
    search example.org
    nameserver 172.16.200.2
 
@@ -48,4 +48,4 @@ If you see errors in this configuration, you can change it with the following co
 
 .. code-block:: console
 
-   nextron@asgard-ac:~$ sudoedit /etc/resolv.conf
+   nextron@cockpit:~$ sudoedit /etc/resolv.conf

@@ -3,7 +3,7 @@
 Choosing a password
 -------------------
 
-.. figure:: ../images/asgard_iso_installer_password.png
+.. figure:: ../images/nx_iso_installer_password.png
    :alt: Choosing a password
 
    Choosing a password for the nextron user
@@ -21,12 +21,12 @@ Partitioning of the Hard Disk
 
 Finally, confirm the settings, select “Yes” and click “Continue”.
 
-.. figure:: ../images/asgard_iso_installer_disk.png
+.. figure:: ../images/nx_iso_installer_disk.png
    :alt: Partition Disks - Write changes to disks 
 
    Partition Disks – Write changes to disks
 
-.. figure:: ../images/asgard_iso_installer_disk2.png
+.. figure:: ../images/nx_iso_installer_disk2.png
    :alt: Partition disks - Select disk to partition
 
    Partition disks – Select disk to partition
@@ -36,9 +36,9 @@ Proxy Configuration
 
 If you are using a proxy to access the Internet, enter the proxy details
 in the next step. Please note, Internet connectivity is required for the
-next step – the installation of the ASGARD Analysis Cockpit service.
+next step – the installation of the Analysis Cockpit service.
 
-.. figure:: ../images/asgard_iso_installer_proxy.png
+.. figure:: ../images/nx_iso_installer_proxy.png
    :alt: Proxy Configuration 
 
    Proxy Configuration

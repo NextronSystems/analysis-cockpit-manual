@@ -9,10 +9,10 @@ After this Information is submitted, the Installer tries to get network
 configurations from a DHCP-Server. If there is none to be found, it will
 prompt for a static IP-Configuration.
 
-.. figure:: ../images/asgard_iso_installer_network.png
+.. figure:: ../images/nx_iso_installer_network.png
    :alt: Network Configuration I
 
-.. figure:: ../images/asgard_iso_installer_network2.png
+.. figure:: ../images/nx_iso_installer_network2.png
    :alt: Network Configuration II
 
 Enter the IP address that Analysis Cockpit should use and optimally
@@ -20,40 +20,40 @@ directly add a netmask in CIDR notation. (see below) If you don't append
 the netmask, you'll be asked for a network mask in the following
 dialogue.
 
-.. figure:: ../images/asgard_iso_installer_network3.png
+.. figure:: ../images/nx_iso_installer_network3.png
    :alt: Network Configuration - IP addresses
 
    Network Configuration - IP addresses
 
-.. figure:: ../images/asgard_iso_installer_network4.png
+.. figure:: ../images/nx_iso_installer_network4.png
    :alt: Network Configuration - Enter the DNS server addresses 
 
    Network Configuration – Enter the DNS server addresses
 
-.. figure:: ../images/asgard_iso_installer_network5.png
+.. figure:: ../images/nx_iso_installer_network5.png
    :alt: Network Configuration - Enter the Gateway
 
    Network Configuration - Enter the Gateway
 
-.. figure:: ../images/asgard_iso_installer_hostname.png
+.. figure:: ../images/nx_iso_installer_hostname.png
    :alt: Network Configuration - Enter the Hostname 
 
    Network Configuration - Enter the Hostname
 
-.. figure:: ../images/asgard_iso_installer_domain.png
+.. figure:: ../images/nx_iso_installer_domain.png
    :alt: Network Configuration - Enter the Domain name
 
    Network Configuration - Enter the Domain name
 
 .. danger::
    **Important:** Make sure that the combination of hostname and domain
-   creates an FQDN that can be resolved from the ASGARD Management Center(s)
+   creates an FQDN that can be resolved from the Management Center(s)
    you want to connect with your Analysis Cockpit. If you've configured a
-   FQDN (hostname + domain) that cannot be resolved, your ASGARDs will
-   encounter an error during connection.
+   FQDN (hostname + domain) that cannot be resolved, you will encounter
+   an error during your setup.
 
    This is especially important since your Analysis Cockpit will create
    some certificates during the installation, which will not contain an
    IP Address as its Subject Alternative Name (SAN), but only the FQDN!
-   You will not be able to connect your ASGARD Management Center with
+   You will not be able to connect your Management Center with
    your Analysis Cockpit via IP Address.
