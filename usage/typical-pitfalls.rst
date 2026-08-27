@@ -36,13 +36,13 @@ https://github.com/NextronSystems/nextron-helper-scripts/blob/master/asgard-anal
 Recover from a Full Disk
 ------------------------
 
-If your disk is full or near full, ASGARD Analysis Cockpit will
+If your disk is full or near full, the Analysis Cockpit will
 not work properly. In order to resume its operation you need to
 make free space on the disk.
 
 We suggest to save the files to another system beforehand, if you
-want to keep the information for future usage. ASGARD will not need
-the following files to function and they can be removed safely:
+want to keep the information for future usage. The Analysis Cockpit will
+not need the following files to function and they can be removed safely:
     
 - ``/var/lib/nextron/analysiscockpit3/log/*.gz``
 - ``/var/lib/nextron/analysiscockpit3/events/*.ok``
@@ -64,7 +64,7 @@ If this is not working either, you may need to disable Elasticsearch's read-only
 :ref:`usage/typical-pitfalls:ElasticSearch Index Locked Due to Low Free Disk Space` for a how-to.
 
 Deleting the files given above should be enough to resume operation. If the disk on your
-ASGARD Analysis Cockpit is full because of growing data over time, the disk space should be
+Analysis Cockpit is full because of growing data over time, the disk space should be
 increased. If that is not an option you can delete old scans as described in section
 :ref:`Potentially Unneeded / Dated Files<usage/maintenance:Potentially Unneeded / Dated Files>`.
 
@@ -91,11 +91,11 @@ at least 50GB of free space or Elasticsearch will put itself into
 read-only mode.
 
 You can fix that issue with the following command using the command line
-on ASGARD:
+on your Analysis Cockpit:
 
 .. code-block:: console
    
-   nextron@asgard:~$ curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
+   nextron@cockpit:~$ curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
 
 
 Debug Failed File Imports

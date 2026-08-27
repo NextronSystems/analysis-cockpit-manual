@@ -103,7 +103,7 @@ very end. In this case the file will just end in the middle of a log line.
 
 The Logs can be imported into the Cockpit via the ``Scans`` menu. Select the Asset which
 had a problem with the log transfer and click ``Request Events``. This will transfer
-the Events from the corresponding ASGARD. You can also use the Fields **Log Requested**,
+the Events from the corresponding Management Center. You can also use the Fields **Log Requested**,
 **Log Received** and **Log Received Error** to filter and look for other failed log transmissions.
 
 Default password for file downloads
@@ -185,7 +185,7 @@ Multi Factor Authentication reset
 **Q: How do I reset Multi Factor Authentication for a specific user**
 
 If you or another user lost their second factor (MFA) to log into the
-ASGARD Web UI, you can reset the users MFA Settings with the following
+Web UI, you can reset the users MFA Settings with the following
 command (in this example we assume that the user is called ``john``):
 
 .. code-block:: console

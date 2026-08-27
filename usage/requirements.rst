@@ -63,8 +63,8 @@ From Analyst Workstation to Analysis Cockpit
    * - Administrative Web Interface
      - 443/tcp
 
-From ASGARD Management Center to Analysis Cockpit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+From Management Center to Analysis Cockpit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -147,8 +147,8 @@ Analysis Cockpit needs to be able to resolve internal and external IP addresses.
 .. warning:: 
   Please make sure that you install your Analysis Cockpit with a
   ``domain name`` (see :ref:`usage/setup-guide:network configuration`).
-  If you do not set the domain name and install the ASGARD package,
-  you will have problems connecting your ASGARD(s) to the Analysis Cockpit.
+  If you do not set the domain name and install the package, you will
+  have problems connecting your Management Center(s) to the Analysis Cockpit.
 
   All components you install should have a proper domain name configured to avoid issues further during the configuration.
 
@@ -212,7 +212,7 @@ or in Powershell
   
   Algorithm       Hash                                                                   Path
   ---------       ----                                                                   ----
-  SHA256          EFCCB4DF0A95AA8E562D42707CB5409B866BD5AE8071C4F05EEC6A10778F354B       C:\Users\user\Desktop\asgard2-installer\nextron-universal-installer.iso
+  SHA256          EFCCB4DF0A95AA8E562D42707CB5409B866BD5AE8071C4F05EEC6A10778F354B       C:\temp\nextron-universal-installer\nextron-universal-installer.iso
 
 Via Signature (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

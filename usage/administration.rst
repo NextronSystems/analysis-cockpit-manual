@@ -105,7 +105,7 @@ TLS Certificate Installation
 ----------------------------
 
 Instead of using the pre-installed self-signed TLS Certificate,
-users can upload their own TLS Certificate for ASGARD. 
+users can upload their own TLS Certificate for the Analysis Cockpit. 
 
 In order to achieve the best possible compatibility with the
 most common browsers, we recommend using the system's FQDN
@@ -231,29 +231,29 @@ All logs are tagged with a specific scan id – regardless of how the log
 was integrated. This enables filtering down to all logs contained in a
 specific scan.
 
-If ASGARD Management Center is connected and the events was generated as
+If a Management Center is connected and the events was generated as
 part of a group scan the event is also tagged with this particular group
 scan id. This allows for filtering down to all logs a particular group
 scan.
 
-Assets are identified through the asset ID that was issued by ASGARD
-Management Center during the setup of the ASGARD Agent. If this ID is
+Assets are identified through the asset ID that was issued by the
+Management Center during the setup of the Endpoint Agent. If this ID is
 not available to the Analysis Cockpit (e.g. log has been uploaded
 manually or sent through syslog) the hostname (NOT the FQDN) will be
 used instead.
 
-Direct Integration with ASGARD Management Center
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Direct Integration with the Management Center
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If the Analysis Cockpit is linked to one or more ASGARD Management
-Centers, all THOR logs get integrated automatically and will show up in
+If the Analysis Cockpit is linked to one or more Management Centers,
+all THOR logs get integrated automatically and will show up in
 the Baselining and/or the Events section. Aurora Events will also
 automatically show up.
 
-To see how to connect an ASGARD Management Center with your Analysis
-Cockpit, follow the instructions in the chapter :ref:`usage/administration:connect to asgard management center`.
+To see how to connect a Management Center with your Analysis
+Cockpit, follow the instructions in the chapter :ref:`usage/administration:connect to a management center`.
 
-You can retrieve old scans performed by ASGARD Management Center before
+You can retrieve old scans performed by the Management Center before
 connecting it to Analysis Cockpit using the ``Request Events`` button in
 the ``Scans`` section.
 
@@ -314,7 +314,7 @@ File Import Using the Command Line
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This option can be helpful in an environment where you scan without
-ASGARD Management Center but want to automate analysis by dropping the
+a Management Center but want to automate analysis by dropping the
 log data into that import directory.
 
 Log files can be imported by placing the files in the following
@@ -328,7 +328,7 @@ You can change the owner and group manually by using:
 
 .. code:: console
    
-   nextron@asgard-ac:~$ sudo chown cockpit:cockpit <file>
+   nextron@cockpit:~$ sudo chown cockpit:cockpit <file>
 
 Successfully imported files get a new extension named ``.ok``.
 
@@ -349,22 +349,22 @@ Copying files directly to that folder has many problematic side effects,
 e.g. files partly composed of binary zeros because the file transfer is
 still in progress.
 
-Connect to ASGARD Management Center
------------------------------------
+Connect to a Management Center
+------------------------------
 
-In order to receive log data from ASGARD Management Center systems, add
+In order to receive log data from Management Center systems, add
 them in the corresponding section in the system settings.
 
 ``Settings`` > ``Link Products`` > ``Management Center``
 
-.. figure:: ../images/cockpit_link_asgard_mc.png
-   :alt: Link ASGARD Management Center
+.. figure:: ../images/cockpit_link_mc.png
+   :alt: Link Management Center
 
-   Link ASGARD Management Center
+   Link Management Center
 
 After you have connected the two components, all assets along with additional
-information from ASGARD will show up in the ``Assets`` section of your Analysis
-Cockpit.
+information from the Management Center will show up in the ``Assets`` section
+of your Analysis Cockpit.
 
 .. figure:: ../images/cockpit_assets.png
    :alt: Asset View after a Successful Connection
@@ -382,7 +382,8 @@ However, in some cases it makes sense to change perspective and rather
 go for a host centric approach. The Analysis Cockpit will calculate
 numbers of lines in different case types (Incident, Suspicious, Anomaly,
 etc.) on a per host basis for a given time frame. Along with information
-from ASGARD on last scan dates, labels, host availability etc. this
+from the Management Center on last scan dates, labels, host availability
+etc. this
 gives an entirely different perspective.
 
 By using the "Asset View" you can e.g., easily answer questions like:
@@ -393,8 +394,8 @@ By using the "Asset View" you can e.g., easily answer questions like:
 -  Which systems with IP addresses starting "192.168." appear in
    "Incident" cases?
 
-In combination with the ``ASGARD Query`` and ``Labels``, which are identical
-to your ASGARD, you can even narrow down the events by system group
+In combination with the ``AQL`` and ``Labels``, which are identical
+to those of your Management Center, you can even narrow down the events by system group
 (e.g., Domain Controllers, or certain locations).
 
 .. figure:: ../images/cockpit_assset_query.png
@@ -608,7 +609,7 @@ Once your sandbox is set up and running, you can see the status of it in the san
    :alt: Sandbox View in the Analysis Cockpit
 
 If you wish to enable automatic scanning for uploaded files
-(`Bifrost <https://asgard-manual.nextron-systems.com/en/latest/administration/evidence.html#bifrost-quarantine>`_),
+(`Bifrost <https://management-center-manual.nextron-systems.com/en/v3/administration/evidence.html#bifrost-quarantine>`_),
 you can do so by pressing the play button to the right hand side.
 
 In the ``Files`` view you can see previously analyzed files or upload files for analysis by yourself:

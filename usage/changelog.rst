@@ -1,8 +1,7 @@
 Changelog
 =========
 
-This chapter contains all the changes of the ASGARD
-Analysis Cockpit.
+This chapter contains all the changes of the Analysis Cockpit.
 
 Analysis Cockpit 3.10
 #####################
@@ -192,7 +191,7 @@ Analysis Cockpit 3.7.4
     * - Feature
       - Switch between light and dark mode
     * - Feature
-      - Added 'ASGARD Search Query' to most tables
+      - Added 'AQL Search Query' to most tables
     * - Feature
       - Select an assessment based on your previous assessments
     * - Feature
@@ -247,7 +246,7 @@ Analysis Cockpit 3.5.6
     * - Feature
       - Baselining Modes 'Compromise Assessment' and 'Deep Inspection'
     * - Feature
-      - UUID for assets that are synchronized from ASGARD Management Center
+      - UUID for assets that are synchronized from the Management Center
     * - Feature
       - Label events with the asset's labels
     * - Change
@@ -482,9 +481,9 @@ Analysis Cockpit 3.1.3
     * - Type
       - Description
     * - Feature
-      - Added support for new ASGARD Security Center
+      - Added support for new Security Center
     * - Change
-      - Regenerated TLS certificate with SAN extension for ASGARD Management Center synchronization
+      - Regenerated TLS certificate with SAN extension for Management Center synchronization
     * - Change
       - Toggle between "show" and "hide" additional asset information in asset table to improve performance
     * - Change
@@ -590,7 +589,7 @@ Analysis Cockpit 3.0.0~pre+20210319.0
     * - Type
       - Description
     * - Change
-      - Renamed ASGARD's new Log Scanner to Log Watcher
+      - Renamed the Management Center's new Log Scanner to Log Watcher
 
 Analysis Cockpit 3.0.0~pre+20210315.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -610,7 +609,7 @@ Analysis Cockpit 3.0.0~pre+20210315.0
     * - Bugfix
       - Fixed corrupt case-insensitive search for 'contains' search
     * - Bugfix
-      - Increased ~tls certificate validity (between ASGARD and Analysis Cockpit)
+      - Increased ~tls certificate validity (between Management Center and Analysis Cockpit)
 
 Analysis Cockpit 3.0.0~pre+20210309.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -666,9 +665,9 @@ Analysis Cockpit 3.0.0~pre+20210305.1
     * - Type
       - Description
     * - Feature
-      - Receive additional asset information from ASGARD, e.g. installed software, local users, ...
+      - Receive additional asset information from the Management Center, e.g. installed software, local users, ...
     * - Feature
-      - Request THOR logs of group scan from ASGARD
+      - Request THOR logs of group scan from the Management Center
     * - Feature
       - Create empty case (in Case Management)
     * - Change
