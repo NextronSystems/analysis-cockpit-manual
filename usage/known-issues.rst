@@ -234,7 +234,7 @@ by the destination host (change the host and port values as needed)
 .. code-block:: console
   :emphasize-lines: 3, 6
 
-  nextron@asgard2:~$ openssl s_client -host cockpit3.domain.local -port 7443
+  nextron@management-center:~$ openssl s_client -host cockpit3.domain.local -port 7443
   CONNECTED(00000005)                        
   depth=0 O = Nextron Systems GmbH, CN = cockpit3.domain.local
   verify error:num=20:unable to get local issuer certificate

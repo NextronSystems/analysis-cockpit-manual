@@ -61,8 +61,8 @@ and lets you select a location and language.
 If DHCP is available, network parameters will be configured
 automatically.
 
-Without DHCP, ASGARD proceeds with the manual network configuration
-dialogue.
+Without DHCP, the installer proceeds with the manual network
+configuration dialogue.
 
 Network Configuration
 ---------------------
@@ -111,15 +111,15 @@ dialogue.
 
 .. important::
    **Important:** Make sure that the combination of hostname and domain
-   creates an FQDN that can be resolved from the ASGARD Management Center(s)
+   creates an FQDN that can be resolved from the Management Center(s)
    you want to connect with your Analysis Cockpit. If you've configured a
-   FQDN (hostname + domain) that cannot be resolved, your ASGARDs will
-   encounter an error during connection.
+   FQDN (hostname + domain) that cannot be resolved, you will encounter
+   an error during connection.
 
    This is especially important since your Analysis Cockpit will create
    some certificates during the installation, which will not contain an
    IP Address as its Subject Alternative Name (SAN), but only the FQDN!
-   You will not be able to connect your ASGARD Management Center with
+   You will not be able to connect your Management Center with
    your Analysis Cockpit via IP Address.
 
 Choosing a password
@@ -158,7 +158,7 @@ Proxy Configuration
 
 If you are using a proxy to access the Internet, enter the proxy details
 in the next step. Please note, Internet connectivity is required for the
-next step – the installation of the ASGARD Analysis Cockpit service.
+next step – the installation of the Analysis Cockpit service.
 
 .. figure:: ../images/image22.png
    :alt: Proxy Configuration 
@@ -185,7 +185,7 @@ To start the Analysis Cockpit installation run the following command:
 
 .. code:: console
    
-   nextron@asgard-ac:~$ sudo nextronInstaller -cockpit
+   nextron@cockpit:~$ sudo nextronInstaller -cockpit
 
 After the installer has completed its operations successfully, the
 system is ready to be used.
@@ -196,7 +196,7 @@ system is ready to be used.
    Message upon successful completion
 
 Note that the FQDN shown after ``https://`` has to be resolvable by the
-connected ASGARD Management Centers and users that try to access the
+connected Management Centers and users that try to access the
 Analysis Cockpit.
 
 Changing Passwords
@@ -214,7 +214,7 @@ system, to set a new password for the ``nextron`` user.
 
 .. code:: console
    
-   nextron@asgard-ac:~$ passwd
+   nextron@cockpit:~$ passwd
    Changing password for nextron.
    Current password:
    New password:
@@ -250,7 +250,7 @@ The IP is configured with the ``address`` variable.
 
 .. code-block:: console
 
-   nextron@asgard-ac:~$ sudo vi /etc/network/interfaces
+   nextron@cockpit:~$ sudo vi /etc/network/interfaces
 
 .. code-block::
 
@@ -264,7 +264,7 @@ You can now restart ``networking.service`` to apply the changes.
 
 .. code-block:: console
 
-   nextron@asgard-ac:~$ sudo systemctl restart networking.service
+   nextron@cockpit:~$ sudo systemctl restart networking.service
 
 .. important::
    - The network interface might have a different name, so pay attention
@@ -278,11 +278,11 @@ The new IP can be applied with the command **sudo systemctl restart networking**
 Verifying DNS Settings
 ^^^^^^^^^^^^^^^^^^^^^^
 
-To verify if ASGARD is using the correct DNS Server, you can inspect the file ``/etc/resolv.conf``:
+To verify if your server is using the correct DNS Server, you can inspect the file ``/etc/resolv.conf``:
 
 .. code-block:: console
 
-   nextron@asgard-ac:~$ cat /etc/resolv.conf 
+   nextron@cockpit:~$ cat /etc/resolv.conf 
    search example.org
    nameserver 172.16.200.2
 
@@ -290,4 +290,4 @@ If you see errors in this configuration, you can change it with the following co
 
 .. code-block:: console
 
-   nextron@asgard-ac:~$ sudoedit /etc/resolv.conf
+   nextron@cockpit:~$ sudoedit /etc/resolv.conf

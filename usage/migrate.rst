@@ -39,9 +39,9 @@ like your cockpit V2.x would have done.
 If you also require logs to be migrated from Cockpit v2.x to your new
 Cockpit v3.x proceed as follows:
 
-In ASGARD Management Center Version 2:
+In Management Center Version 2:
 
-* Link your new Cockpit v3 to your ASGARD Management Center(s)
+* Link your new Cockpit v3 to your Management Center(s)
 
 In Cockpit v3 navigate to ``Scans``.
 
@@ -49,16 +49,16 @@ In Cockpit v3 navigate to ``Scans``.
 * Click ``Request Events``
 
 .. figure:: ../images/cockpit_scan_request_events.png
-   :alt: Request Events from ASGARD Management Center 2.x
+   :alt: Request Events from Management Center 2.x
 
-   Request Events from ASGARD Management Center 2.x
+   Request Events from Management Center 2.x
 
 Events will show up in Analysis Cockpit shortly. Of course, this also
 works for “Group Scans”.
 
-ASGARD Management Center Version 1:
+Management Center Version 1:
 
-* On ASGARD navigate to /var/lib/bsk/asgard/log
+* On the Management Center navigate to /var/lib/bsk/asgard/log
 * Copy and upload scan.log into Analysis Cockpit via web-based GUI (see
    below)
 

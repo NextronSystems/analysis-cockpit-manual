@@ -98,7 +98,7 @@ Deleting Unneeded Scans
 
 .. warning::
     
-    Deleting old scans deletes information ASGARD Analysis Cockpit uses.
+    Deleting old scans deletes information the Analysis Cockpit uses.
 
     As an example: If you delete a scan with which an asset was marked
     in an incident case, this connection is no longer made and the asset
