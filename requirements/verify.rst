@@ -18,8 +18,8 @@ On Linux
 
 .. code-block:: console
 
-  user@unix:~/nextron-universal-installer$ sha256sum -c nextron-universal-installer.iso.sha256
-  nextron-universal-installer.iso: OK
+  user@unix:~/nextron-universal-installer$ cat nextron-universal-installer.iso.sha256
+  user@unix:~/nextron-universal-installer$ sha256sum nextron-universal-installer.iso
 
 or in Windows command prompt
 
