@@ -18,7 +18,7 @@ your own connector, for a different sandbox, if you need to:
 .. note:: 
    This section only focuses on the integration of your Analysis Cockpit
    with an existing sandbox. We will not cover how to set up the sandbox.
-   Since the CPAEv2 Sandbox is an open source tool provided by the broader
+   Since the CAPEv2 Sandbox is an open source tool provided by the broader
    community, we encourage you to read through the extensive documentation
    to get an overview of the setup process.
 
@@ -129,15 +129,15 @@ Sandbox" step in the beginning of this section) and ``verify``, which can be set
 
 Save your files after you made your changes.
 
-Now you have to create a new directory and give the ``analysiscockpit`` user permission:
+Now you have to create a new directory and grant the ``analysiscockpit`` user permission:
 
 .. code:: console
    
    root@cockpit:/usr/share/asgard-analysis-cockpit/sandbox/connector# mkdir /usr/share/asgard-analysis-cockpit/sandbox/capev2
    root@cockpit:/usr/share/asgard-analysis-cockpit/sandbox/connector# chown -R analysiscockpit: /usr/share/asgard-analysis-cockpit/sandbox/
 
-We need to create a systemd service file in order to run the CAPEv2 connector on your
-Analysis Cockpit. Below you can find a predefined service file which we will use: 
+You need to create a systemd service file in order to run the CAPEv2 connector on your
+Analysis Cockpit. Below you can find a predefined service file which you will use:
 
 .. code-block:: ini
    :linenos:

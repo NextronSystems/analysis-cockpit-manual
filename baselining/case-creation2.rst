@@ -29,7 +29,7 @@ your usual case contains before using the Auto Baselining feature.
 
 After pressing the ``Start`` button, the Cockpit will start calculating
 and create cases. Depending on the amount of events in your Analysis Cockpit,
-this may take a while and.
+this may take a while.
 
 .. figure:: ../images/cockpit_auto_baselining_status.png
    :alt: Auto Cases Status
@@ -68,7 +68,7 @@ the star symbol. They will always be shown at the top of this view. ``MESSAGE``,
 ``MODULE`` and ``hostname`` are selected by default.
 
 To search for all log lines with the same entry as this log line in a
-particular field, you can click the dropdown on the left hand side of 
+particular field, you can click the dropdown on the left-hand side of 
 the field.
 
 .. figure:: ../images/cockpit_log_lines_details.png
@@ -78,7 +78,7 @@ the field.
 
 Additionally, you can find a ``VIRUSTOTAL`` button in every hash field and a
 ``VALHALLA`` button in every reason field. By clicking ``VIRUSTOTAL`` the hash
-will be searched on Virustotal. By clicking ``VALHALLA`` you will get more
+will be searched on VirusTotal. By clicking ``VALHALLA`` you will get more
 information about the matching rule from valhalla.nextron-systems.com.
 
 Usage of the Context Menu

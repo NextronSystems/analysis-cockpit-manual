@@ -48,7 +48,7 @@ Internet
 ^^^^^^^^
 
 The Analysis Cockpit is configured to retrieve updates, THOR events, or
-Case Intelligence Feeds from the following URLs:
+the Nextron Intelligence Feed from the following URLs:
 
 .. list-table:: Mandatory Services
    :header-rows: 1

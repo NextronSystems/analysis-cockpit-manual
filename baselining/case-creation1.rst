@@ -7,7 +7,7 @@ Manual Case Creation
 
 This section walks you through the manual case creation.
 This method gives you more flexibility in terms of conditions
-and details regarding the cases, but is more time consuming.
+and details regarding the cases, but is more time-consuming.
 
 The results of the cases depending on specific settings you
 are setting during the case creation.
@@ -22,11 +22,11 @@ Create a new case following these steps:
 
 .. figure:: ../images/cockpit_case_creation1.png
 
-2. Select on which criteria you want to base the case on. The default ``Search Result``
-   is sufficient enough for beginners, but for advanced analysts this might not be the
+2. Select the criteria on which you want to base the case. The default ``Search Result``
+   is sufficient for beginners, but for advanced analysts this might not be the
    best way to create a case. ``Condition`` is the most flexible and readable, whereas
    ``Regular Expression`` gives you the ultimate flexibility with a heavy performance
-   impact (we recommend to not use Regular Expression for this reason)
+   impact (we recommend not using Regular Expression for this reason)
 
 .. figure:: ../images/cockpit_case_creation2.png
 
@@ -99,7 +99,7 @@ Case Creation Using a Condition
 
 .. note::
    ``Condition`` Cases are widely used since their Condition is easier
-   to read and can be modify. This is why we recommend to use them, especially
+   to read and can be modified. This is why we recommend using them, especially
    in bigger organizations, with multiple people working on multiple cases.
 
 To create a case with a condition, click the ``Create Case`` button and
@@ -130,7 +130,7 @@ Case Creation from Search Results
 
 .. note::
    Since the ``Event Assignment`` logic of ``Search Result`` cases cannot be modified,
-   we do not recommend to use this method to create cases in bigger organizations.
+   we do not recommend using this method to create cases in bigger organizations.
    If you do not need to change the logic how events are assigned to certain cases,
    this is the best method to use.
 
@@ -146,7 +146,7 @@ case, you have to tick the checkbox ``Automatically assign newly incoming events
    :alt: Search Result Case
 
 The ``Case Details`` screen is the same regardless of which ``Event Assignment``
-logic you chose to use for your chase. After creating your case, you will find the log section
+logic you chose to use for your case. After creating your case, you will find the log section
 empty. This is because the view is still using your filter, but the matching log lines
 have been removed from this section and added to the case (again, the baselining view only
 shows events which are not part of a case).
@@ -191,7 +191,7 @@ an example.
    Creating Cases through Regular Expressions
 
 .. warning:: 
-   We recommended to use regular expressions only **rarely** and **with
+   We recommend using regular expressions only **rarely** and **with
    caution**. This feature can severely impact the performance of the system.
    Regex from cases will be applied to every single event on import.
 

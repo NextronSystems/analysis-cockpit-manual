@@ -3,7 +3,7 @@
 Administration
 ==============
 
-This chapter assumes, that you have read the chapter
+This chapter assumes that you have read the chapter
 :ref:`basic-concepts/index:basic concepts`.
 
 In order to configure the Analysis Cockpit for the first use, the
@@ -12,7 +12,7 @@ following steps need to be done:
 * License installation
 * System update
 * Set users and set user rights
-* Define canned responses
+* Define case recommendations
 * Decide about syslog forwarding
 * Integrate your log source
 
