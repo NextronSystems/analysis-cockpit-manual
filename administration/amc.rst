@@ -14,7 +14,7 @@ them in the corresponding section in the system settings:
    Link Management Center
 
 After you have connected the two components, all assets along with additional
-information from Management Center will show up in the ``Assets`` section of
+information from the Management Center will show up in the ``Assets`` section of
 your Analysis Cockpit.
 
 .. figure:: ../images/cockpit_assets.png
@@ -32,29 +32,29 @@ can be seen as the best practice approach for setting baselines and
 dealing with alerts and warnings.
 
 However, in some cases it makes sense to change perspective and rather
-go for a host centric approach. The Analysis Cockpit will calculate
-numbers of lines in different case types (Incident, Suspicious, Anomaly,
-etc.) on a per host basis for a given time frame. Information from the
+go for a host-centric approach. The Analysis Cockpit will calculate
+numbers of lines in different case types (Incident, Suspicious, Legitimate
+Anomaly, etc.) on a per-asset basis for a given time frame. Information from the
 Management Center, such as last scan dates, labels, host availability,
 and many more can allow for an entirely different perspective.
 
 By using the "Asset View" you can easily answer questions like:
 
--  Which systems appear most often in **Incident** cases?
--  Which systems haven't reported a single event for more than a month?
+-  Which assets appear most often in **Incident** cases?
+-  Which assets haven't reported a single event for more than a month?
 -  Which Domain Controllers have not been scanned yet?
--  Which systems in the subnet "192.168.0.0/16" appear in
+-  Which assets in the subnet "192.168.0.0/16" appear in
    **Incident** cases?
 
 You can also set a time when an asset was compromised. This is useful
-when you want to see which systems were compromised in the last 30 days.
+when you want to see which assets were compromised in the last 30 days.
 
-In combination with the ``AQL`` and ``Labels``, which are pinned to your assets,
+In combination with the Advanced Query Language (``AQL``) and ``Labels``, which are pinned to your assets,
 you can even narrow down the events by system group
 (e.g., Domain Controllers, or certain locations).
 
 .. figure:: ../images/cockpit_aql.png
-   :alt: Filtering within the Assets View 
+   :alt: Filtering within the Asset View
 
    Filtering within the Assets view
 

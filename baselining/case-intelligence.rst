@@ -77,6 +77,6 @@ an example event. Verify the information and click ``Create Case``.
 
    Case Intelligence - Case Details
 
-After clicking ``Create Case`` the usual case creation modal will open, with
+After clicking ``Create Case`` the usual case creation dialog will open, with
 a few details already filled. Change any details accordingly and click ``Create
 Case``.

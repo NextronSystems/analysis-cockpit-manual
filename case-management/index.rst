@@ -3,7 +3,7 @@
 Case Management Best Practices
 ==============================
 
-This section assumes, that a 2-Level model as described in
+This section assumes that a 2-Level model as described in
 :ref:`basic-concepts/permissions:understanding users, roles, rights and case status` is used.
 
 The following actions will be explained:
