@@ -14,7 +14,7 @@ of the case.
    Reviewing Grouping Criteria
 
 In our example, three auto\_case\_ids were added that match all 1,000
-log lines. In the future all incoming logs, that match one of the three
+log lines. In the future all incoming logs that match one of the three
 “Detailed Reasons” will be added to this case directly and will not show
 up in the Log Management section.
 

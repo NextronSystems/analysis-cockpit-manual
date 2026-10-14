@@ -24,7 +24,7 @@ You can also set the visible columns in the table on the bottom in the same view
 
 You can also modify which bar charts are visible. To do this, click the name of
 the chart and choose the category you want to see. To get more details about
-a bar chart, you can click on square symbol in the heading of the bar chart.
+a bar chart, you can click on the square symbol in the heading of the bar chart.
 
 .. figure:: ../images/cockpit_bar_chart_selector.png
    :alt: Bar Chart Selector

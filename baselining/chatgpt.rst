@@ -32,7 +32,7 @@ regarding the events you are working with.
    ChatGPT Case Creation
 
 Once you clicked the button, a new dialog will open. Here you can see which information
-will be send to ChatGPT. Once you are confident with the information, click on the
+will be sent to ChatGPT. Once you are confident with the information, click on the
 ``Approve`` button. The Analysis Cockpit will now send the information to ChatGPT and
 display the results after a short moment.
 
@@ -61,8 +61,8 @@ You can use ChatGPT in your Baselining or All Events view to get more insights
 regarding the events you are working with. To do this you can either:
 
 - Mark the selected information within your event (for example ``MATCHED_1``) and
-  right click on it. You will see an option in the context menu called ``Chat with ChatGPT``
-- Just right click an event and select ``Chat with ChatGPT (whole event)`` from the context
+  right-click on it. You will see an option in the context menu called ``Chat with ChatGPT``
+- Just right-click an event and select ``Chat with ChatGPT (whole event)`` from the context
   menu
 
 You will see a sidebar which has already the information you selected or the whole event
@@ -93,7 +93,7 @@ Event Anonymization
 Event Anonymization Rules can be used to replace any text in your events when
 sending a request to ChatGPT. This is useful when you want to interact with
 ChatGPT while safeguarding sensitive information. You can create a new rule by
-clicking on the ``Create Rule``. You can add multiple rules and test them in
+clicking on the ``Create Rule`` button. You can add multiple rules and test them in
 the prompt at the bottom.
 
 .. figure:: ../images/cockpit_event_anon_rule.png

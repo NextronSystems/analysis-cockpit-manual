@@ -24,12 +24,12 @@ The following log sources are available for forwarding:
      - Analysis Cockpit Backend
      - System and operating events
      - Error diagnosis, system operation
-   * - Analysis Cockpit Audit Log 
+   * - Analysis Cockpit Audit Log
      - Analysis Cockpit (user interactions)
      - User actions, changes
      - Compliance, traceability
    * - THOR Log
-     - THOR scanner on endpoint
+     - THOR scanner on the endpoint
      - Scan results, findings
      - Forensic analysis, indicator evaluation
 

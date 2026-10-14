@@ -8,24 +8,24 @@ Basic Concepts
 
 All imported THOR logs can be found in the ``Events`` section. All
 Alerts and Warnings that are not matching a particular case will be visible
-in the ``Baselining`` section. Notices and informational events will NOT
+in the ``Baselining`` section. Notices and informational events will **not**
 show up in the Baselining Section as they match the predefined default
 cases for these events. We strongly advise to **not** delete those
 cases, as those event levels contribute to the majority of THOR events.
 
-All logs are tagged with a specific scan id - regardless of how the log
+All logs are tagged with a specific Scan ID - regardless of how the log
 was integrated. This enables filtering down to all logs contained in a
 specific scan.
 
-If a  Management Center is connected and the events were generated as
+If a Management Center is connected and the events were generated as
 part of a group scan, those events are also tagged with this particular group
-scan id. This allows for filtering down to all logs of particular group
+Scan ID. This allows for filtering down to all logs of particular group
 scan.
 
 Assets are identified through the asset ID that was issued by the
-Management Center during the setup of the Endpoint Agent. If this ID is
+Management Center during the setup of the endpoint agent. If this ID is
 not available to the Analysis Cockpit (e.g. log has been uploaded
-manually or sent through syslog) the hostname (NOT the FQDN) will be
+manually or sent through syslog) the hostname (**not** the FQDN) will be
 used instead.
 
 Direct Integration with the Management Center
@@ -34,7 +34,7 @@ Direct Integration with the Management Center
 ``>Scans\Scans``
 
 If the Analysis Cockpit is linked to one or more Management
-Center, all THOR logs get integrated automatically and can be found
+Centers, all THOR logs get integrated automatically and can be found
 in your Baselining and Events section. The same is true for Aurora
 events.
 
@@ -49,7 +49,7 @@ Another way to import log data is by using SYSLOG.
 
 The Analysis Cockpit listens on port 514/udp and 514/tcp for incoming
 log data. Incoming syslog messages get assigned to a single scan using
-the "ScanID" value, which is unique per default.
+the Scan ID value, which is unique by default.
 
 File Import Through Web-Based GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -57,8 +57,8 @@ File Import Through Web-Based GUI
 ``>Scans\Scans``
 
 THOR logs can be uploaded through the web-based interface. You can upload
-a particular log file (**.txt**) or multiple log files compressed into
-a gzip archive (**.gz**). Clicking the ``Upload Scans`` button will open
+a particular log file (**.txt** or **.log**) or multiple log files compressed into
+a gzip archive (**.txt.gz** or **.log.gz**). Clicking the ``Upload Scans`` button will open
 the upload dialog and show you the available file formats.
 
 .. note::
@@ -71,12 +71,12 @@ the upload dialog and show you the available file formats.
 
    Upload logs using the web-based interface
 
-After a successful upload, the scans should appear in **Scans** table.
+After a successful upload, the scans should appear in the **Scans** table.
 
 .. important::
-   If you can not see events in the ``Events`` or ``Baselining`` view,
+   If you cannot see events in the ``Events`` or ``Baselining`` view,
    please make sure that you've selected the correct time frame as filter.
-   Often times manually uploaded scans happened days or weeks before the
+   Often manually uploaded scans happened days or weeks before the
    upload. The log data gets indexed with the timestamp of their creation
    and not the import time, and can therefore be outside of your defined
    time range of your table.

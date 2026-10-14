@@ -26,7 +26,7 @@ Connecting your Account
 
 ``>Settings\Connected Systems\THOR Cloud``
 
-To connect your THOR account, please log into THOR Cloud and
+To connect your THOR Cloud account, please log into THOR Cloud and
 generate an API key for your user.
 
 .. figure:: ../images/cockpit_thor_cloud_api_key.png
@@ -38,7 +38,7 @@ generate an API key for your user.
    The API key has the same permissions as the user, so make
    sure not to share this key with anyone.
 
-After you generated your API key, head to back to the Analysis
+After you generated your API key, head back to the Analysis
 Cockpit and click ``New Connection``. Enter a description, set
 how many days to sync, and paste your API key.
 
@@ -55,11 +55,11 @@ Analyzing THOR Cloud Logs
 
 ``>Scans\Scans``
 
-If you filter for ``Thor Cloud`` in your scans, you can find the
+If you filter for ``THOR Cloud`` in your scans, you can find the
 scans originating from THOR Cloud. You can also find those events
 in your normal Baselining or Events view, though the events themselves
 do not indicate from which source they originate. If you want to trace
-single events, you should work with Scan-IDs.
+single events, you should work with Scan IDs.
 
 .. figure:: ../images/cockpit_thor_cloud_scans.png
    :alt: THOR Cloud Scans
