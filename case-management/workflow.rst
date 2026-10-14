@@ -33,7 +33,7 @@ comments can be added.
 Case Dispatching
 ----------------
 
-Let's assume, our Level 1 Analyst concludes, that this is a "Legitimate Anomaly". 
+Let's assume our Level 1 Analyst concludes that this is a "Legitimate Anomaly". 
 They will now set the status to "Level 1 Finished" and update
 the case. After setting the case to "Level 1 Finished" the case becomes
 visible to the Level 2 Analyst.
@@ -43,13 +43,13 @@ Closing a Case
 
 ``>Cases\THOR Cases``
 
-Let's assume, that a Level 2 Analyst now picks one of the cases in
+Let's assume that a Level 2 Analyst now picks one of the cases in
 status "Level 1 Finished" and starts working on this case.
 
-In this respect we assume, that something suspicious has been found,
+In this respect we assume that something suspicious has been found
 that needs further analysis by the system administration team. In most
 organizations this will be controlled through the organization's action
-request or ticketing system. So, we assume, that we will close the case
+request or ticketing system. So, we assume that we will close the case
 in the Analysis Cockpit as it is progressed in another system. The
 status is changed to ``closed`` and the case gets updated.
 

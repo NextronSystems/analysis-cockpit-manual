@@ -24,7 +24,7 @@ lets you specify the information needed for the CSR.
 
 The generated CSR can be used to generate a TLS certificate via your
 Certificate Authority. The resulting TLS certificate can then be
-uploaded in the in the same section of your Analysis Cockpit.
+uploaded in the same section of your Analysis Cockpit.
 
 .. figure:: ../images/cockpit_upload_certificate.png
    :alt: Upload a TLS Certificate

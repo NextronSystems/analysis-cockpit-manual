@@ -12,7 +12,7 @@ displayed in the ``Baselining`` section of the Analysis Cockpit.
 
 The Baselining Section is split into the different sources
 of our events. Additionally, you can see the :ref:`baselining/case-intelligence:case intelligence`
-menu, which will suggest cases (if enabled) based on Nextron's Intelligence Feed.
+menu, which will suggest cases (if enabled) based on the Nextron Intelligence Feed.
 
 .. figure:: ../images/cockpit_baselining_overview.png
    :alt: Baselining Section
@@ -95,7 +95,7 @@ Custom Signatures Only Mode
 The ``Custom Signatures Only`` view will only show you events, which:
 
 - Are not part of a case
-- Where found by a custom signature
+- Were found by a custom signature
 
 This view can be helpful if you only want to see events found by one of your custom
 signatures during a THOR scan. This can be helpful if you want to see only those events
@@ -124,7 +124,7 @@ Auto Baselining
 
 With ``Auto Baselining``, the Cockpit automatically calculates groups of
 "similar" log lines and creates cases for those logs. You have to specify
-an minimum amount of events per case before a case is being created.
+a minimum number of events per case before a case is being created.
 
 .. figure:: ../images/cockpit_auto_baselining.png
    :alt: Auto Baselining
